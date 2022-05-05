@@ -1,4 +1,9 @@
-
+import javax.swing.*;
+import java.awt.event.*;
+import java.awt.GridBagLayout;
+import java.awt.GridBagConstraints;
+import java.awt.Insets;
+import java.util.Random;
 
 public class EmailVerificationScreen {
     static int number_of_attempts=5;

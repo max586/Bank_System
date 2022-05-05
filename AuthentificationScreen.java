@@ -1,5 +1,4 @@
-import swing_packages.*;
-/*import javax.swing.*;
+import javax.swing.*;
 import java.sql.Statement;
 import java.awt.event.*;
 import java.sql.Connection;
@@ -7,8 +6,6 @@ import java.sql.SQLException;
 import java.awt.GridBagLayout;
 import java.awt.GridBagConstraints;
 import java.awt.Insets;
-*/
-
 
 public class AuthentificationScreen{
     static JButton exitButton;
