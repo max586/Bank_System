@@ -1,0 +1,133 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch sth",
+            "request": "launch",
+            "mainClass": "sth",
+            "projectName": "bank_system_project_61bdc6a2"
+        },
+        {
+            "type": "java",
+            "name": "Launch DataValidation",
+            "request": "launch",
+            "mainClass": "DataValidation",
+            "projectName": "bank_system_project_61bdc6a2"
+        },
+        {
+            "type": "java",
+            "name": "Launch RegistrationScreen2",
+            "request": "launch",
+            "mainClass": "RegistrationScreen2",
+            "projectName": "bank_system_project_61bdc6a2"
+        },
+        {
+            "type": "java",
+            "name": "Launch EmailVerificationScreen",
+            "request": "launch",
+            "mainClass": "EmailVerificationScreen",
+            "projectName": "bank_system_project_61bdc6a2"
+        },
+        {
+            "type": "java",
+            "name": "Launch RegistrationScreen1",
+            "request": "launch",
+            "mainClass": "RegistrationScreen1",
+            "projectName": "bank_system_project_61bdc6a2"
+        },
+        {
+            "type": "java",
+            "name": "Launch test3",
+            "request": "launch",
+            "mainClass": "test3",
+            "projectName": "bank_system_project_61bdc6a2"
+        },
+        {
+            "type": "java",
+            "name": "Launch test2",
+            "request": "launch",
+            "mainClass": "test2",
+            "projectName": "bank_system_project_61bdc6a2"
+        },
+        {
+            "type": "java",
+            "name": "Launch test1",
+            "request": "launch",
+            "mainClass": "test1",
+            "projectName": "bank_system_project_61bdc6a2"
+        },
+        {
+            "type": "java",
+            "name": "Launch db_test_connection",
+            "request": "launch",
+            "mainClass": "db_test_connection",
+            "projectName": "bank_system_project_61bdc6a2"
+        },
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch AuthentificationScreen",
+            "request": "launch",
+            "mainClass": "AuthentificationScreen",
+            "projectName": "bank_system_project_61bdc6a2"
+        },
+        {
+            "type": "java",
+            "name": "Launch NewWindowtest",
+            "request": "launch",
+            "mainClass": "GUITestPage1.NewWindowtest",
+            "projectName": "bank_system_project_61bdc6a2"
+        },
+        {
+            "type": "java",
+            "name": "Launch test1",
+            "request": "launch",
+            "mainClass": "GUITestPage2.test1",
+            "projectName": "bank_system_project_61bdc6a2"
+        },
+        {
+            "type": "java",
+            "name": "Launch testGUI",
+            "request": "launch",
+            "mainClass": "GUITestPage2.testGUI",
+            "projectName": "bank_system_project_61bdc6a2"
+        },
+        {
+            "type": "java",
+            "name": "Launch SampleAcn",
+            "request": "launch",
+            "mainClass": "JAASAuthentification.SampleAcn",
+            "projectName": "bank_system_project_61bdc6a2"
+        },
+        {
+            "type": "java",
+            "name": "Launch JavaMailTest",
+            "request": "launch",
+            "mainClass": "email_sender.JavaMailTest",
+            "projectName": "bank_system_project_61bdc6a2"
+        },
+        {
+            "type": "java",
+            "name": "Launch SecondApp",
+            "request": "launch",
+            "mainClass": "src.SecondApp",
+            "projectName": "bank_system_project_61bdc6a2"
+        },
+        {
+            "type": "java",
+            "name": "Launch db1",
+            "request": "launch",
+            "mainClass": "src.db1",
+            "projectName": "bank_system_project_61bdc6a2"
+        }
+    ]
+}
