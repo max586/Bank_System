@@ -13,6 +13,8 @@ public class RegistrationScreen2{
     static JTextField firstNameField;
     static JLabel lastNameLabel;
     static JTextField lastNameField;
+    static JLabel sexLabel;
+    static JComboBox sexComboBox;
     static JLabel cityLabel;
     static JTextField cityField;
     static JLabel addressLabel; 
@@ -64,47 +66,61 @@ public class RegistrationScreen2{
         gbc.gridx=0;
         gbc.gridy=2;
         gbc.gridwidth=1;
+        sexLabel=new JLabel("Sex");
+        gbc.insets = new Insets(5,5,5,10);
+        frame.add(sexLabel,gbc);
+
+        gbc.gridx=1;
+        gbc.gridy=2;
+        gbc.gridwidth=1;
+        sexComboBox=new JComboBox(new String[]{"M","F"});
+        gbc.insets = new Insets(5,10,5,5);
+        frame.add(sexComboBox,gbc);
+
+        gbc.gridx=0;
+        gbc.gridy=3;
+        gbc.gridwidth=1;
         cityLabel=new JLabel("City");
         gbc.insets = new Insets(5,5,5,10);
         frame.add(cityLabel,gbc);
 
         gbc.gridx=1;
-        gbc.gridy=2;
+        gbc.gridy=3;
         gbc.gridwidth=2;
         cityField = new JTextField();
         gbc.insets = new Insets(5,10,5,5);
         frame.add(cityField,gbc);
 
         gbc.gridx=0;
-        gbc.gridy=3;
+        gbc.gridy=4;
         gbc.gridwidth=1;
         addressLabel = new JLabel("Address");
         gbc.insets = new Insets(5,10,5,10);
         frame.add(addressLabel,gbc);
 
         gbc.gridx=1;
-        gbc.gridy=3;
+        gbc.gridy=4;
         gbc.gridwidth=2;
         addressField = new JTextField();
         gbc.insets = new Insets(5,10,5,10);
         frame.add(addressField,gbc);
 
         gbc.gridx=0;
-        gbc.gridy=4;
+        gbc.gridy=5;
         gbc.gridwidth=1;
         peselLabel = new JLabel("PESEL");
         gbc.insets = new Insets(5,10,5,10);
         frame.add(peselLabel, gbc);
 
         gbc.gridx=1;
-        gbc.gridy=4;
+        gbc.gridy=5;
         gbc.gridwidth=2;
         peselField = new JTextField();
         gbc.insets = new Insets(5,10,5,10);
         frame.add(peselField, gbc);
 
         gbc.gridx=1;
-        gbc.gridy=5;
+        gbc.gridy=6;
         gbc.gridwidth=1;
         Connection con = DatabaseConnection.connectToDatabase("bank_system", "root", "password");
         try{
@@ -112,15 +128,29 @@ public class RegistrationScreen2{
         submitButton = new JButton("Submit");
         submitButton.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
-                user.firstName=firstNameField.getText();
-                user.lastName=lastNameField.getText();
-                user.city=cityField.getText();
-                user.address=addressField.getText();
-                user.pesel=peselField.getText();
 
-                user.addUserData(st);
-                frame.dispose();
-                MainScreen.CreateScreen(user);
+                String firstName=firstNameField.getText();
+                String lastName=lastNameField.getText();
+                String sex=(String)sexComboBox.getSelectedItem();
+                String pesel=peselField.getText();
+                boolean lname_is_valid=DataValidation.nameIsValid(lastName), fname_is_valid=DataValidation.nameIsValid(firstName), 
+                pesel_is_valid=DataValidation.peselIsValid(pesel, (sex=="M"));
+                if(!fname_is_valid){firstNameField.setText("First name is invalid");}
+                if(!lname_is_valid){lastNameField.setText("Last name is invalid");}
+                if(!pesel_is_valid){peselField.setText("PESEL is invalid");}
+                if(fname_is_valid&&lname_is_valid&&pesel_is_valid){
+                    user.firstName=firstName;
+                    user.lastName=lastName;
+                    user.sex=sex;
+                    user.city=cityField.getText();
+                    user.address=addressField.getText();
+                    user.pesel=pesel;
+
+                    user.addUser(st);
+                    user.addUserData(st);
+                    frame.dispose();
+                    MainScreen.CreateScreen(user);
+                }
             }
         });
         }catch(SQLException e){
@@ -131,7 +161,7 @@ public class RegistrationScreen2{
         frame.add(submitButton,gbc);
 
         gbc.gridx=1;
-        gbc.gridy=6;
+        gbc.gridy=7;
         gbc.gridwidth=1;
         exitButton = new JButton("Exit");
         gbc.insets = new Insets(10,10,10,10);

@@ -14,7 +14,7 @@ public class DataValidation {
     }
 
     //PESEL check
-    static boolean peselValidation(String pesel, boolean man){
+    static boolean peselIsValid(String pesel, boolean man){
         String pattern="\\d{2}(0[0-9]|10|11|12)(0[0-9]|1[0-9]|2[0-9]|30|31)\\d{5}";
 
         if(Pattern.matches(pattern, pesel)){
@@ -39,10 +39,20 @@ public class DataValidation {
         else{
             return false;
         }
-}
+    }
+
+    static boolean nameIsValid(String name){
+        if(name.length()>=3 && name.length()<=10){
+            String pattern1="[A-Z][a-z]*", pattern2=".*[aAeEiIoOuUyY].*";
+            if(Pattern.matches(pattern1, name) && Pattern.matches(pattern2, name)){return true;}
+            return false;
+        }
+        return false;
+    }
 
     public static void main(String[] args) {
+        System.out.println(nameIsValid("Max"));
         //System.out.println(Pattern.matches("(0[0-9]|[10,11])","11"));
-        System.out.println(peselValidation("84122816732", true));
+        //System.out.println(peselIsValid("84122816732", true));
     }
 }

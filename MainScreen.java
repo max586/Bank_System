@@ -6,5 +6,6 @@ public class MainScreen {
         JFrame frame = new JFrame();
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         JOptionPane.showMessageDialog(frame, "That's all Folks!");
+        frame.dispose();
     }
 }

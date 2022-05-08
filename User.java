@@ -8,6 +8,7 @@ public class User {
     public String email;   
     public String firstName;
     public String lastName;
+    public String sex;
     public String city;
     public String address;
     public String pesel; 
@@ -33,7 +34,7 @@ public class User {
     }
     public void addUserData(Statement st){
         try {
-            st.executeUpdate("insert into UsersData values('"+username+"','"+firstName+"','"+lastName+"','"+city+"','"+address+"','"+pesel+"');");
+            st.executeUpdate("insert into UsersData values('"+username+"','"+firstName+"','"+lastName+"','"+sex+"','"+city+"','"+address+"','"+pesel+"');");
         } catch (Exception e) {
             //TODO: handle exception
             System.out.println("Couldn't execute the query");

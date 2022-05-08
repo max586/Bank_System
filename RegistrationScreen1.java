@@ -151,7 +151,7 @@ public class RegistrationScreen1{
                     username_is_taken=true;
                     usernameField.setText("username is already taken");
                 }
-                else{usernameField.setText("username is saved");username_is_taken=false;}
+                else{username_is_taken=false;}
                 new_user.password = new String(passwordField.getPassword());
                 String repeated_password = new String(repeatPasswordField.getPassword());
                 new_user.email = emailField.getText();
@@ -174,7 +174,7 @@ public class RegistrationScreen1{
                 else{passwordSpecialCharField.setText("at least one special character");password_is_valid=false;}
 
                 if(password_is_valid && !username_is_taken){
-                    new_user.addUser(st);
+                    //new_user.addUser(st);
                     frame.dispose();
                     EmailVerificationScreen.main(new_user);
                 }
