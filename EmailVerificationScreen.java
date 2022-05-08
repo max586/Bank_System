@@ -22,11 +22,19 @@ public class EmailVerificationScreen {
         gbc.insets = new Insets(5,5,5,5);
         frame.add(text,gbc);
 
+<<<<<<< HEAD
         /*JTextField codeField = new JTextField();
         gbc.gridx=0;
         gbc.gridy=1;
         gbc.insets = new Insets(5,5,5,5);
         frame.add(codeField,gbc);*/
+=======
+        JTextField codeField = new JTextField();
+        gbc.gridx=0;
+        gbc.gridy=1;
+        gbc.insets = new Insets(5,5,5,5);
+        frame.add(codeField,gbc);
+>>>>>>> 19013b2ae4def5959a53aed2fda17637f2d648a8
 
         JButton submit = new JButton("Submit");
         submit.addActionListener(new ActionListener(){
