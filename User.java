@@ -12,6 +12,8 @@ public class User {
     public String city;
     public String address;
     public String pesel; 
+    public String ordinary_account_number;
+    public String savings_account_number;
     public void addUser(Statement st){
             try {
                 st.executeUpdate("insert into Users values('"+username+"','"+password+"','"+email+"');");            
@@ -35,6 +37,24 @@ public class User {
     public void addUserData(Statement st){
         try {
             st.executeUpdate("insert into UsersData values('"+username+"','"+firstName+"','"+lastName+"','"+sex+"','"+city+"','"+address+"','"+pesel+"');");
+        } catch (Exception e) {
+            //TODO: handle exception
+            System.out.println("Couldn't execute the query");
+            System.out.println(e);
+        }
+    }
+    public void addOrdinaryAccountNumber(Statement st){
+        try {
+            st.executeUpdate("update UsersAccounts set `Ordinary account number`='"+ordinary_account_number+"' where username='"+username+"';");
+        } catch (Exception e) {
+            //TODO: handle exception
+            System.out.println("Couldn't execute the query");
+            System.out.println(e);
+        }
+    }
+    public void addSavingsAccountNumber(Statement st){
+        try {
+            st.executeUpdate("update UsersAccounts set `Savings account number`='"+savings_account_number+"' where username='"+username+"';");
         } catch (Exception e) {
             //TODO: handle exception
             System.out.println("Couldn't execute the query");
