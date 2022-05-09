@@ -146,10 +146,10 @@ public class RegistrationScreen2{
                     user.address=addressField.getText();
                     user.pesel=pesel;
 
-                    user.addUser(st);
-                    user.addUserData(st);
+                    //user.addUser(st);
+                    //user.addUserData(st);
                     frame.dispose();
-                    MainScreen.CreateScreen(user);
+                    CreateAccountNumberScreen.CreateScreen(user);
                 }
             }
         });
@@ -179,5 +179,4 @@ public class RegistrationScreen2{
     public static void main(String[] args) {
         CreateScreen(null);
     }
-
 }

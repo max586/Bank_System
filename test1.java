@@ -14,7 +14,7 @@ public class test1 {
         date=date.replace("-", "");
         account_number+=date;
         Random rnd = new Random();
-        for(int i=0;i<16;i++){
+        for(int i=0;i<12;i++){
             account_number+=Integer.toString(rnd.nextInt(10));
         }
 

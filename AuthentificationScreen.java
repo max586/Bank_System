@@ -2,6 +2,7 @@ import javax.swing.*;
 import java.sql.Statement;
 import java.awt.event.*;
 import java.sql.Connection;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.awt.GridBagLayout;
 import java.awt.GridBagConstraints;
@@ -75,11 +76,17 @@ public class AuthentificationScreen{
                 user.password=new String(passwordField.getPassword());
                 Connection con = DatabaseConnection.connectToDatabase("bank_system", "root", "password");
                 try{
-                    Statement st = con.createStatement();
+                    Statement st = con.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE,ResultSet.CONCUR_READ_ONLY);
                     if(user.verifyUser(st)){
                         JOptionPane.showMessageDialog(frame, "user successfully verified");
                         frame.dispose();
-                        MainScreen.CreateScreen(user);
+                        user.getUserAccounts(st);
+                        if(user.ordinary_account_number==null || user.savings_account_number==null){
+                            MainScreen.CreateScreen(user);
+                        }
+                        else{
+                            ChooseAccountNumberScreen.CreateScreen(user);
+                        }
                     }
                     else{
                         JOptionPane.showMessageDialog(frame, "user doesn't exist");

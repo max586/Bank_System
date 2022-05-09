@@ -37,6 +37,7 @@ public class User {
     public void addUserData(Statement st){
         try {
             st.executeUpdate("insert into UsersData values('"+username+"','"+firstName+"','"+lastName+"','"+sex+"','"+city+"','"+address+"','"+pesel+"');");
+            st.executeUpdate("insert into UsersAccounts values('"+username+"',null,null);");
         } catch (Exception e) {
             //TODO: handle exception
             System.out.println("Couldn't execute the query");
@@ -115,6 +116,20 @@ public class User {
             System.out.println(e);
         }
         return false;
+    }
+    public void getUserAccounts(Statement st){
+    try{
+        ResultSet rs = st.executeQuery("select * from UsersAccounts where username='"+username+"';");
+        rs.next();
+        ordinary_account_number = rs.getString(2);
+        //rs.previous();
+        savings_account_number = rs.getString(3);
+    }
+    catch(SQLException e){
+        System.out.println("Couldn't execute the query");
+        System.out.println(e);
+    }
+
     }
     public void displayUser(Statement st){
             System.out.println("User data:");
