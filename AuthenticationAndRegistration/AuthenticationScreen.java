@@ -1,3 +1,6 @@
+package AuthenticationAndRegistration;
+
+import src.*;
 import javax.swing.*;
 import java.sql.Statement;
 import java.awt.event.*;
@@ -8,7 +11,7 @@ import java.awt.GridBagLayout;
 import java.awt.GridBagConstraints;
 import java.awt.Insets;
 
-public class AuthentificationScreen{
+public class AuthenticationScreen{
     static JButton exitButton;
     static JLabel usernameLabel;
     static JTextField usernameField;

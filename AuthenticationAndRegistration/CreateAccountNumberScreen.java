@@ -1,3 +1,6 @@
+package AuthenticationAndRegistration;
+
+import src.*;
 import javax.swing.*;
 import java.sql.Statement;
 import java.awt.event.*;
@@ -90,14 +93,14 @@ public class CreateAccountNumberScreen {
                         user.addOrdinaryAccountNumber(st);
                         JOptionPane.showMessageDialog(frame, "Account successfully created!\nYour personal account number:\n"+user.ordinary_account_number);
                         frame.dispose();
-                        AuthentificationScreen.CreateScreen();
+                        AuthenticationScreen.CreateScreen();
                     }
                     else if(savingsAccountChoice.isSelected()){
                         user.savings_account_number = generateAccountNumber();
                         user.addSavingsAccountNumber(st);
                         JOptionPane.showMessageDialog(frame, "Account successfully created!\nYour personal account number:\n"+user.savings_account_number);
                         frame.dispose();
-                        AuthentificationScreen.CreateScreen();
+                        AuthenticationScreen.CreateScreen();
                     }
                     else{
                         JOptionPane.showMessageDialog(frame, "account type wasn't chosen!");
