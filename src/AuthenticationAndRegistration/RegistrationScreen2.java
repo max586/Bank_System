@@ -3,40 +3,32 @@ package src.AuthenticationAndRegistration;
 import src.*;
 import javax.swing.*;    
 import java.awt.event.*;
-import java.sql.Connection;
 import java.sql.Statement;
-import java.sql.SQLException;
-import java.awt.GridBagLayout;
-import java.awt.GridBagConstraints;
 import java.awt.Insets;
 
-public class RegistrationScreen2{
-    static JTextArea description;
-    static JLabel firstNameLabel;
-    static JTextField firstNameField;
-    static JLabel lastNameLabel;
-    static JTextField lastNameField;
-    static JLabel sexLabel;
-    static JComboBox sexComboBox;
-    static JLabel cityLabel;
-    static JTextField cityField;
-    static JLabel addressLabel; 
-    static JTextField addressField;
-    static JLabel peselLabel; 
-    static JTextField peselField;
-    static JButton submitButton;
-    static JButton exitButton;
-
-    public static void CreateScreen(User user){
-        JFrame frame = new JFrame();
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setTitle("Registration form2");
-
-        frame.setLayout(new GridBagLayout());
-        GridBagConstraints gbc = new GridBagConstraints();
-        gbc.fill=GridBagConstraints.HORIZONTAL;
-        gbc.weightx=0.5;
-        gbc.weighty=0.5;
+public class RegistrationScreen2 extends Screen{
+    JTextArea description;
+    JLabel firstNameLabel;
+    JTextField firstNameField;
+    JLabel lastNameLabel;
+    JTextField lastNameField;
+    JLabel sexLabel;
+    JComboBox sexComboBox;
+    JLabel cityLabel;
+    JTextField cityField;
+    JLabel addressLabel; 
+    JTextField addressField;
+    JLabel peselLabel; 
+    JTextField peselField;
+    JButton submitButton;
+    public RegistrationScreen2(){}
+    public RegistrationScreen2(User user, Screen prev_screen, Screen next_screen){
+        super(user,prev_screen,next_screen);
+    }
+    @Override
+    public void CreateScreen(){//when option is true - launch 'CreateAccountNumberScreen'
+        super.CreateScreen();
+        frame.setTitle("Registration screen2");
 
         gbc.gridx=0;
         gbc.gridy=0;
@@ -125,9 +117,8 @@ public class RegistrationScreen2{
         gbc.gridx=1;
         gbc.gridy=6;
         gbc.gridwidth=1;
-        Connection con = DatabaseConnection.connectToDatabase("bank_system", "root", "password");
-        try{
-        Statement st = con.createStatement();
+        Statement st = DatabaseConnection.connectToDatabase("bank_system", "root", "password");
+
         submitButton = new JButton("Submit");
         submitButton.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
@@ -149,30 +140,27 @@ public class RegistrationScreen2{
                     user.address=addressField.getText();
                     user.pesel=pesel;
 
-                    //user.addUser(st);
-                    //user.addUserData(st);
+                    user.addUser(st);
+                    user.addUserData(st);
+
                     frame.dispose();
-                    CreateAccountNumberScreen.CreateScreen(user);
+                    if(next_screen!=null){
+                        new CreateAccountNumberScreen(user, RegistrationScreen2.this, new Screen()).CreateScreen();
                 }
             }
+            }
         });
-        }catch(SQLException e){
-            System.out.println("Couldn't execute the query");
-            System.out.println(e);
-        }
         gbc.insets = new Insets(10,10,10,10);
         frame.add(submitButton,gbc);
 
         gbc.gridx=1;
         gbc.gridy=7;
         gbc.gridwidth=1;
-        exitButton = new JButton("Exit");
         gbc.insets = new Insets(10,10,10,10);
-        exitButton.addActionListener(new ActionListener(){  
-            public void actionPerformed(ActionEvent e){  
-                        frame.dispose();  
-                    }  
-        }); 
+        frame.add(returnButton,gbc);
+
+        gbc.gridx=1;
+        gbc.gridy=8;
         frame.add(exitButton,gbc);
 
         frame.pack();
@@ -180,6 +168,6 @@ public class RegistrationScreen2{
     }
 
     public static void main(String[] args) {
-        CreateScreen(null);
+        //CreateScreen(null,false);
     }
 }

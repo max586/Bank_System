@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch SettingsMainScreen",
+            "request": "launch",
+            "mainClass": "src.Settings.SettingsMainScreen",
+            "projectName": "bank_system_project_61bdc6a2"
+        },
+        {
+            "type": "java",
             "name": "Launch LaunchApp",
             "request": "launch",
             "mainClass": "LaunchApp",

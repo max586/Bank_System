@@ -16,15 +16,26 @@ username varchar(30) NOT NUll,
 City varchar(20),
 Address varchar(30),
 PESEL varchar(30),
-foreign KEY(username) REFERENCES Users(username)
+foreign KEY(username) REFERENCES Users(username)on update cascade on delete cascade
 );
 
 create table UsersAccounts(
 username varchar(30) not null,
 `Ordinary account number` varchar(30),
 `Savings account number` varchar(30),
-foreign key(username) references Users(username)
+foreign key(username) references Users(username) on update cascade on delete cascade
 );
+
+/*create table Credits(
+id int not null,
+username varchar(30) not null,
+amount int,
+`start date` date,
+`month payment` int,
+`rate` float,
+
+
+);*/
 
 /*create table UsersCards(
 username varchar(30) not null,

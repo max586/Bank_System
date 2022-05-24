@@ -1,29 +1,26 @@
 package src.AuthenticationAndRegistration;
 
-import src.*;
+import src.Screen;
+import src.MainScreen;
+import src.User;
 import javax.swing.*;
-import java.awt.GridBagLayout;
-import java.awt.GridBagConstraints;
 import java.awt.Insets;
 import java.awt.event.*;
 
 
-public class ChooseAccountNumberScreen {
-    static JLabel descr;
-    static JRadioButton ordinaryAccountChoice;
-    static JRadioButton savingsAccountChoice;
-    static JButton submitButton;
-    static JButton exitButton;
-    public static void CreateScreen(User user){
-        JFrame frame=new JFrame();
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setTitle("Authentification screen");
+public class ChooseAccountNumberScreen extends Screen{
+    JLabel descr;
+    JRadioButton ordinaryAccountChoice;
+    JRadioButton savingsAccountChoice;
+    JButton submitButton;
 
-        frame.setLayout(new GridBagLayout());
-        GridBagConstraints gbc = new GridBagConstraints();
-        gbc.fill = GridBagConstraints.HORIZONTAL;
-        gbc.weightx=0.5;
-        gbc.weighty=0.5;
+    public ChooseAccountNumberScreen(User user, Screen prev_screen, Screen next_screen){
+        super(user,prev_screen,next_screen);
+    }
+    @Override
+    public void CreateScreen(){
+        super.CreateScreen();
+        frame.setTitle("Choose account number screen");
 
         gbc.gridx=0;
         gbc.gridy=0;
@@ -58,13 +55,18 @@ public class ChooseAccountNumberScreen {
             @Override
             public void actionPerformed(ActionEvent e) {
                 // TODO Auto-generated method stub
+                //warning! duplicated code!!!
                 if(ordinaryAccountChoice.isSelected()){
                     frame.dispose();
-                    MainScreen.CreateScreen(user);
+                    if(next_screen!=null){
+                        new MainScreen(user, ChooseAccountNumberScreen.this, new Screen()).CreateScreen();
+                    }
                 }
                 else if(savingsAccountChoice.isSelected()){
                     frame.dispose();
-                    MainScreen.CreateScreen(user);
+                    if(next_screen!=null){
+                        new MainScreen(user, ChooseAccountNumberScreen.this, new Screen()).CreateScreen();
+                    }
                 }
                 else{
                     JOptionPane.showMessageDialog(frame, "account wasn't chosen!");
@@ -77,13 +79,11 @@ public class ChooseAccountNumberScreen {
         gbc.gridx=0;
         gbc.gridy=3;
         gbc.gridwidth=2;
-        exitButton = new JButton("Exit");
-        exitButton.addActionListener(new ActionListener(){  
-            public void actionPerformed(ActionEvent e){  
-                        frame.dispose();  
-                    }  
-        }); 
         gbc.insets = new Insets(5,5,5,5);
+        frame.add(returnButton,gbc);
+
+        gbc.gridx=0;
+        gbc.gridy=4;
         frame.add(exitButton,gbc);
 
         frame.pack();

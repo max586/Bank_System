@@ -14,8 +14,8 @@ public class JavaMail{
 
       properties.put("mail.smtp.auth","true");
       properties.put("mail.smtp.starttls.enable","true");
-      properties.put("mail.smtp.host","smtp.gmail.com");
-      properties.put("mail.smtp.port","587");
+      properties.put("mail.smtp.host","smtp.gmail.com");//send email from gmail domain
+      properties.put("mail.smtp.port","587");//587 port is usually used for smtp protocol
 
       String myAccountEmail = "azazsxsxkmkm@gmail.com";
       String password = "1qaz-pl,";

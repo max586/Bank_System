@@ -3,20 +3,20 @@ package src.AuthenticationAndRegistration;
 import java.util.regex.*;
 
 public class DataValidation {
-    static boolean passwordMatches(String password1,String password2){return password1.equals(password2);}
-    static boolean passwordLength(String password){return password.length()>=12;}
-    static boolean letterInPassword(String password){
+    public static boolean passwordMatches(String password1,String password2){return password1.equals(password2);}
+    public static boolean passwordLength(String password){return password.length()>=12;}
+    public static boolean letterInPassword(String password){
         return Pattern.matches(".*[a-z].*",password)&&Pattern.matches(".*[A-Z].*", password);
     }
-    static boolean digitInPassword(String password){
+    public static boolean digitInPassword(String password){
         return Pattern.matches(".*[0-9].*",password);
     }
-    static boolean specialCharInPassword(String password){
+    public static boolean specialCharInPassword(String password){
         return Pattern.matches(".*\\W.*",password);
     }
 
-    //PESEL check
-    static boolean peselIsValid(String pesel, boolean man){
+    public static boolean peselIsValid(String pesel, boolean man){
+        //numer pesel
         String pattern="\\d{2}(0[0-9]|10|11|12)(0[0-9]|1[0-9]|2[0-9]|30|31)\\d{5}";
 
         if(Pattern.matches(pattern, pesel)){
@@ -43,7 +43,7 @@ public class DataValidation {
         }
     }
 
-    static boolean nameIsValid(String name){
+    public static boolean nameIsValid(String name){
         if(name.length()>=3 && name.length()<=10){
             String pattern1="[A-Z][a-z]*", pattern2=".*[aAeEiIoOuUyY].*";
             if(Pattern.matches(pattern1, name) && Pattern.matches(pattern2, name)){return true;}

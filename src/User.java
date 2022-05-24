@@ -5,6 +5,7 @@ import java.sql.SQLException;
 import java.sql.ResultSet;
 
 public class User {
+    //attributes may not be initialized
     public String username;
     public String password;
     public String email;   
@@ -16,6 +17,7 @@ public class User {
     public String pesel; 
     public String ordinary_account_number;
     public String savings_account_number;
+    
     public void addUser(Statement st){
             try {
                 st.executeUpdate("insert into Users values('"+username+"','"+password+"','"+email+"');");            
@@ -66,7 +68,7 @@ public class User {
     }
     public void changeUsername(Statement st, String new_username){
         try {
-            st.executeUpdate("update Users set username='"+new_username+"'where username='"+username+"'';");
+            st.executeUpdate("update Users set username='"+new_username+"'where username='"+username+"';");
             username=new_username;
         } catch (SQLException e) {
             //TODO: handle exception
@@ -76,7 +78,7 @@ public class User {
     }
     public void changePassword(Statement st, String new_password){
         try {
-            st.executeQuery("update Users set password='"+new_password+"'where password='"+password+"';");
+            st.executeUpdate("update Users set password='"+new_password+"'where password='"+password+"';");
             password = new_password;
         } catch (SQLException e) {
             //TODO: handle exception
@@ -86,7 +88,7 @@ public class User {
     }
     public void changeEmail(Statement st,String new_email){
         try {
-            st.executeQuery("update Users set username='"+new_email+"'where username='"+email+"'';");
+            st.executeQuery("update Users set username='"+new_email+"'where username='"+email+"';");
         } catch (SQLException e) {
             //TODO: handle exception
             System.out.println("Couldn't execute the query");
@@ -94,7 +96,7 @@ public class User {
         }
     }
     public void updateUserData(){}
-    public boolean isUsernameTaken(Statement st){
+    public boolean isUsernameTaken(Statement st, String username){
         try{
             ResultSet rs = st.executeQuery("select count(*) from Users where username='"+username+"';");
             rs.next();
@@ -131,7 +133,6 @@ public class User {
         System.out.println("Couldn't execute the query");
         System.out.println(e);
     }
-
     }
     public void displayUser(Statement st){
             System.out.println("User data:");

@@ -4,33 +4,25 @@ import src.*;
 import javax.swing.*;
 import java.sql.Statement;
 import java.awt.event.*;
-import java.sql.Connection;
-import java.sql.SQLException;
-import java.awt.GridBagLayout;
-import java.awt.GridBagConstraints;
 import java.awt.Insets;
 import java.util.Random;
 import java.time.LocalDateTime;
 
-public class CreateAccountNumberScreen {
-    static JLabel descr;
-    static JLabel ordinaryAccountDescr;
-    static JRadioButton ordinaryAccountChoice;
-    static JLabel savingsAccountDescr;
-    static JRadioButton savingsAccountChoice;
-    static JButton createAccountButton;
-    static JButton exitButton;
+public class CreateAccountNumberScreen extends Screen{
+    JLabel descr;
+    JLabel ordinaryAccountDescr;
+    JRadioButton ordinaryAccountChoice;
+    JLabel savingsAccountDescr;
+    JRadioButton savingsAccountChoice;
+    JButton createAccountButton;
     
-    public static void CreateScreen(User user){
-        JFrame frame=new JFrame();
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    public CreateAccountNumberScreen(User user, Screen prev_screen, Screen next_screen){
+        super(user,prev_screen,next_screen);
+    }
+    @Override
+    public void CreateScreen(){
+        super.CreateScreen();
         frame.setTitle("Create account number screen");
-
-        frame.setLayout(new GridBagLayout());
-        GridBagConstraints gbc = new GridBagConstraints();
-        gbc.fill = GridBagConstraints.HORIZONTAL;
-        gbc.weightx=0.5;
-        gbc.weighty=0.5;
 
         gbc.gridx=0;
         gbc.gridy=0;
@@ -81,9 +73,7 @@ public class CreateAccountNumberScreen {
         gbc.gridy=3;
         gbc.gridwidth=2;
         createAccountButton = new JButton("Create account");
-        Connection con = DatabaseConnection.connectToDatabase("bank_system", "root", "password");
-        try{
-            Statement st = con.createStatement();
+        Statement st = DatabaseConnection.connectToDatabase("bank_system", "root", "password");
             createAccountButton.addActionListener(new ActionListener(){
                 @Override
                 public void actionPerformed(ActionEvent e) {
@@ -93,37 +83,36 @@ public class CreateAccountNumberScreen {
                         user.addOrdinaryAccountNumber(st);
                         JOptionPane.showMessageDialog(frame, "Account successfully created!\nYour personal account number:\n"+user.ordinary_account_number);
                         frame.dispose();
-                        AuthenticationScreen.CreateScreen();
+                        if(next_screen != null){
+                            new AuthenticationScreen(user, CreateAccountNumberScreen.this, new Screen()).CreateScreen();
+                        }
                     }
+                    //warning! duplicated code!!!
                     else if(savingsAccountChoice.isSelected()){
                         user.savings_account_number = generateAccountNumber();
                         user.addSavingsAccountNumber(st);
                         JOptionPane.showMessageDialog(frame, "Account successfully created!\nYour personal account number:\n"+user.savings_account_number);
                         frame.dispose();
-                        AuthenticationScreen.CreateScreen();
+                        if(next_screen!=null){
+                            new AuthenticationScreen(user, CreateAccountNumberScreen.this, new Screen()).CreateScreen();
+                        }
                     }
                     else{
                         JOptionPane.showMessageDialog(frame, "account type wasn't chosen!");
                     }               
                 }
-        });}
-        catch(SQLException e){
-            System.out.println("Couldn't execute the query");
-            System.out.println(e);
-        }
+        });
+
         gbc.insets = new Insets(5,5,5,5);
         frame.add(createAccountButton,gbc);
 
         gbc.gridx=0;
         gbc.gridy=4;
         gbc.gridwidth=2;
-        exitButton = new JButton("Exit");
-        exitButton.addActionListener(new ActionListener(){  
-            public void actionPerformed(ActionEvent e){  
-                        frame.dispose();  
-                    }  
-        }); 
-        gbc.insets = new Insets(5,5,5,5);
+        frame.add(returnButton,gbc);
+
+        gbc.gridx=0;
+        gbc.gridy=5;
         frame.add(exitButton,gbc);
 
         frame.pack();
@@ -131,7 +120,7 @@ public class CreateAccountNumberScreen {
     }
 
     static String generateAccountNumber(){
-        String account_number="1100";
+        String account_number="1137";
         String date = LocalDateTime.now().toString().substring(0,10);
         date=date.replace("-", "");
         account_number+=date;
@@ -152,7 +141,7 @@ public class CreateAccountNumberScreen {
             if(coef==7){coef=1;}
         }
         checksum=checksum%100;
-        account_number=Integer.toString((checksum-checksum%10)/10)+Integer.toString(checksum%10)+account_number;
+        account_number="PL"+Integer.toString((checksum-checksum%10)/10)+Integer.toString(checksum%10)+account_number;
         return account_number;
     }
 
@@ -160,6 +149,6 @@ public class CreateAccountNumberScreen {
         User test_user = new User();
         test_user.username="test_user";
         test_user.password="password";
-        CreateScreen(test_user);        
+        new CreateAccountNumberScreen(test_user, null, null).CreateScreen();        
     }    
 }

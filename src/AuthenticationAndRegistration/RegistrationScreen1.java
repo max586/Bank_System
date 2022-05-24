@@ -3,44 +3,36 @@ package src.AuthenticationAndRegistration;
 import src.*;
 import javax.swing.*;    
 import java.awt.event.*;
-import java.sql.Connection;
 import java.sql.Statement;
-import java.sql.SQLException;
-import java.awt.GridBagLayout;
-import java.awt.GridBagConstraints;
 import java.awt.Insets;
 
-public class RegistrationScreen1{
-    static JTextArea description;
-    static JLabel usernameLabel;
-    static JTextField usernameField;
-    static JLabel loginLabel;
-    static JTextField loginField;
-    static JLabel passwordLabel;
-    static JPasswordField passwordField;
-    static JLabel repeatPasswordLabel; 
-    static JPasswordField repeatPasswordField;
-    static JLabel passwordMatchesField;
-    static JLabel passwordLengthField;
-    static JLabel passwordLetterField;
-    static JLabel passwordDigitField;
-    static JLabel passwordSpecialCharField;
-    static JLabel emailLabel;
-    static JTextField emailField;
-    static JButton submitButton;
-    static JButton exitButton;
+public class RegistrationScreen1 extends Screen{
+    JTextArea description;
+    JLabel usernameLabel;
+    JTextField usernameField;
+    JLabel loginLabel;
+    JTextField loginField;
+    JLabel passwordLabel;
+    JPasswordField passwordField;
+    JLabel repeatPasswordLabel; 
+    JPasswordField repeatPasswordField;
+    JLabel passwordMatchesField;
+    JLabel passwordLengthField;
+    JLabel passwordLetterField;
+    JLabel passwordDigitField;
+    JLabel passwordSpecialCharField;
+    JLabel emailLabel;
+    JTextField emailField;
+    JButton submitButton;
 
-    public static void CreateScreen(){
-        JFrame frame = new JFrame();
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setTitle("Registration form1");
 
-        frame.setLayout(new GridBagLayout());
-        GridBagConstraints gbc = new GridBagConstraints();
-        gbc.fill=GridBagConstraints.HORIZONTAL;
-        gbc.weightx=0.5;
-        gbc.weighty=0.5;
-
+    public RegistrationScreen1(User user, Screen prev_screen, Screen next_screen){
+        super(user,prev_screen,next_screen);
+    }
+    @Override
+    public void CreateScreen(){
+        super.CreateScreen();
+        frame.setTitle("Registration screen1");
         gbc.gridx=0;
         gbc.gridy=0;
         gbc.gridwidth=1;
@@ -140,23 +132,21 @@ public class RegistrationScreen1{
         gbc.gridx=1;
         gbc.gridy=9;
         gbc.gridwidth=1;
-        Connection con = DatabaseConnection.connectToDatabase("bank_system", "root", "password");
-        try{
-        Statement st = con.createStatement();
+        Statement st = DatabaseConnection.connectToDatabase("bank_system", "root", "password");
         submitButton = new JButton("Submit");
         submitButton.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
                 Boolean password_is_valid=true,username_is_taken;
-                User new_user = new User();
-                new_user.username = usernameField.getText();
-                if(new_user.isUsernameTaken(st)){
+                user = new User();
+                user.username = usernameField.getText();
+                if(user.isUsernameTaken(st,user.username)){
                     username_is_taken=true;
                     usernameField.setText("username is already taken");
                 }
                 else{username_is_taken=false;}
-                new_user.password = new String(passwordField.getPassword());
+                user.password = new String(passwordField.getPassword());
                 String repeated_password = new String(repeatPasswordField.getPassword());
-                new_user.email = emailField.getText();
+                user.email = emailField.getText();
 
                 passwordMatchesField.setVisible(true);
                 passwordLengthField.setVisible(true);
@@ -164,49 +154,45 @@ public class RegistrationScreen1{
                 passwordSpecialCharField.setVisible(true);
                 passwordDigitField.setVisible(true);
 
-                if(DataValidation.passwordMatches(new_user.password, repeated_password)){passwordMatchesField.setText("ok");}
+                if(DataValidation.passwordMatches(user.password, repeated_password)){passwordMatchesField.setText("ok");}
                 else{passwordMatchesField.setText("passwords dont match");password_is_valid=false;}
-                if(DataValidation.passwordLength(new_user.password)){passwordLengthField.setText("ok");}
+                if(DataValidation.passwordLength(user.password)){passwordLengthField.setText("ok");}
                 else{passwordLengthField.setText("password too short");password_is_valid=false;}
-                if(DataValidation.letterInPassword(new_user.password)){passwordLetterField.setText("ok");}
+                if(DataValidation.letterInPassword(user.password)){passwordLetterField.setText("ok");}
                 else{passwordLetterField.setText("at least one upper or lowercase letter");password_is_valid=false;}
-                if(DataValidation.digitInPassword(new_user.password)){passwordDigitField.setText("ok");}
+                if(DataValidation.digitInPassword(user.password)){passwordDigitField.setText("ok");}
                 else{passwordDigitField.setText("at least one digit");password_is_valid=false;}
-                if(DataValidation.specialCharInPassword(new_user.password)){passwordSpecialCharField.setText("ok");}
+                if(DataValidation.specialCharInPassword(user.password)){passwordSpecialCharField.setText("ok");}
                 else{passwordSpecialCharField.setText("at least one special character");password_is_valid=false;}
 
                 if(password_is_valid && !username_is_taken){
                     //new_user.addUser(st);
                     frame.dispose();
-                    EmailVerificationScreen.main(new_user);
+                    if(next_screen!=null){
+                        new EmailVerificationScreen(user, RegistrationScreen1.this, new RegistrationScreen2()).CreateScreen();
+                    }
                 }
             }
         });
-        }catch(SQLException e){
-            System.out.println("Couldn't execute the query");
-            System.out.println(e);
-        }
         gbc.insets = new Insets(10,10,10,10);
         frame.add(submitButton,gbc);
 
         gbc.gridx=1;
-        gbc.gridy=10;
+        gbc.gridy=9;
         gbc.gridwidth=1;
-        exitButton = new JButton("Exit");
         gbc.insets = new Insets(10,10,10,10);
-        exitButton.addActionListener(new ActionListener(){  
-            public void actionPerformed(ActionEvent e){  
-                        frame.dispose();  
-                    }  
-        }); 
         frame.add(exitButton,gbc);
+
+        gbc.gridx=1;
+        gbc.gridy=10;
+        frame.add(returnButton,gbc);
 
         frame.pack();
         frame.setVisible(true);
     }
 
     public static void main(String[] args) {
-        CreateScreen();
+        //CreateScreen();
     }
 
 }
