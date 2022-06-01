@@ -26,14 +26,14 @@ foreign key(username) references Users(username) on update cascade on delete cas
 create table OrdinaryAccounts(
 username varchar(30),
 nr varchar(30) not null primary key,
-balance float check(balance>0),
+balance float check(balance>=0),
 foreign key(username) references Users(username) on update cascade on delete cascade
 );
 
 create table SavingsAccounts(
 username varchar(30),
 nr varchar(30) not null primary key,
-balance float check(balance>0),
+balance float check(balance>=0),
 rate float check(rate between 0 and 100),
 foreign key(username) references Users(username) on update cascade on delete cascade
 );
@@ -41,7 +41,7 @@ foreign key(username) references Users(username) on update cascade on delete cas
 create table Credits(
 id int not null auto_increment primary key,
 username varchar(30) not null,
-amount float check(amount>0 and amount<=50000),
+amount float check(amount>=0 and amount<=50000),
 `start date` date,
 `duration` int,#in months
 rate float check(rate between 0 and 100),

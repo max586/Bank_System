@@ -1,44 +1,27 @@
 package src.Settings;
 
 import src.AuthenticationAndRegistration.EmailVerificationScreen;
-import src.User;
 import src.Screen;
+import src.User;
+
 import javax.swing.*;
-import java.awt.Insets;
-import java.awt.event.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class ChangeEmailScreen extends Screen{
-    JLabel emailLabel;
-    JTextField emailField;
-    JButton submitButton;
-
+    private JPanel panel;
+    private JTextField emailField;
+    private JButton submitButton;
+    private JButton returnButton;
+    private JButton exitButton;
+    private JLabel emailLabel;
     public ChangeEmailScreen(User user, Screen prev_screen, Screen next_screen){
         super(user,prev_screen,next_screen);
     }
-    @Override
     public void CreateScreen(){
         super.CreateScreen();
-        frame.setTitle("Change email screen");
+        frame.setContentPane(panel);
 
-        gbc.gridx=0;
-        gbc.gridy=0;
-        gbc.gridwidth=1;
-        gbc.insets = new Insets(5,10,5,5);
-        emailLabel = new JLabel("Enter new email address");
-        frame.add(emailLabel,gbc);
-
-        gbc.gridx=1;
-        gbc.gridy=0;
-        gbc.gridwidth=2;
-        gbc.insets = new Insets(5,5,5,10);
-        emailField = new JTextField();
-        frame.add(emailField,gbc);
-
-        gbc.gridx=1;
-        gbc.gridy=1;
-        gbc.gridwidth=1;
-        gbc.insets = new Insets(5,5,5,5);
-        submitButton = new JButton("Submit");
         submitButton.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -48,20 +31,23 @@ public class ChangeEmailScreen extends Screen{
                 new EmailVerificationScreen(user, ChangeEmailScreen.this, prev_screen).CreateScreen();
             }
         });
-        frame.add(submitButton,gbc);
+        returnButton.addActionListener(new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent e){
+                frame.dispose();
+                if(prev_screen!=null){
+                    prev_screen.CreateScreen();
+                }
+            }
+        });
+        exitButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                frame.dispose();
+            }
+        });
 
-        gbc.gridx=1;
-        gbc.gridy=2;
-        gbc.gridwidth=1;
-        gbc.insets = new Insets(5,5,5,5);
-        frame.add(returnButton,gbc);
-
-        gbc.gridx=1;
-        gbc.gridy=3;
-        frame.add(exitButton,gbc);
-        
-        frame.pack();
+        frame.setSize(800,600);
         frame.setVisible(true);
     }
 }
-

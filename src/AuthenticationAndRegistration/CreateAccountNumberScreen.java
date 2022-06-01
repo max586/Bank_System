@@ -103,7 +103,7 @@ public class CreateAccountNumberScreen extends Screen {
     }
     public static void main(String[] args) {
         User test_user = new User();
-        test_user.username="_user";
+        test_user.username="test_user";
         test_user.password="password";
         new CreateAccountNumberScreen(test_user, null, null).CreateScreen();
     }

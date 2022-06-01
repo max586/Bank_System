@@ -1,45 +1,28 @@
 package src.Settings;
 
 import src.Database;
-import src.User;
 import src.Screen;
+import src.User;
+
 import javax.swing.*;
-import java.awt.Insets;
-import java.awt.event.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.sql.Statement;
 
 public class ChangeUsernameScreen extends Screen{
-    JLabel usernameLabel;
-    JTextField usernameField;
-    JButton submitButton;
-
+    private JPanel panel;
+    private JTextField usernameField;
+    private JButton submitButton;
+    private JButton returnButton;
+    private JButton exitButton;
+    private JLabel usernameLabel;
     public ChangeUsernameScreen(User user, Screen prev_screen, Screen next_screen){
         super(user,prev_screen,next_screen);
     }
-    @Override
-    public void CreateScreen(){
+    public void CreateScreen() {
         super.CreateScreen();
-        frame.setTitle("Change username screen");
+        frame.setContentPane(panel);
 
-        gbc.gridx=0;
-        gbc.gridy=0;
-        gbc.gridwidth=1;
-        gbc.insets = new Insets(5,10,5,5);
-        usernameLabel = new JLabel("Username");
-        frame.add(usernameLabel,gbc);
-
-        gbc.gridx=1;
-        gbc.gridy=0;
-        gbc.gridwidth=2;
-        gbc.insets = new Insets(5,5,5,10);
-        usernameField = new JTextField();
-        frame.add(usernameField,gbc);
-
-        gbc.gridx=1;
-        gbc.gridy=1;
-        gbc.gridwidth=1;
-        gbc.insets = new Insets(5,5,5,5);
-        submitButton = new JButton("Submit");
         submitButton.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -58,22 +41,22 @@ public class ChangeUsernameScreen extends Screen{
                     prev_screen.CreateScreen();
                 }
             };});
-        frame.add(submitButton, gbc);
-
-        gbc.gridx=1;
-        gbc.gridy=2;
-        gbc.gridwidth=1;
-        gbc.insets = new Insets(5,5,5,5);
-        frame.add(returnButton,gbc);
-
-        gbc.gridx=1;
-        gbc.gridy=3;
-        frame.add(exitButton,gbc);
-
-        frame.pack();
+        returnButton.addActionListener(new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent e){
+                frame.dispose();
+                if(prev_screen!=null){
+                    prev_screen.CreateScreen();
+                }
+            }
+        });
+        exitButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                frame.dispose();
+            }
+        });
+        frame.setSize(800,600);
         frame.setVisible(true);
-    }
-    public static void main(String[] args) {
-        //CreateScreen(null, null);
     }
 }

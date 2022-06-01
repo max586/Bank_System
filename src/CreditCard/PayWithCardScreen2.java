@@ -33,7 +33,7 @@ public class PayWithCardScreen2 extends Screen{
             public void actionPerformed(ActionEvent actionEvent) {
                 float payment = Float.parseFloat(paymentField.getText());
                 if(payment>user.ordinary_account_balance){
-                    paymentField.setText("Too little money on account to make a payment");
+                   JOptionPane.showMessageDialog(frame,"Too little money on account to make a payment");
                 }
                 else{
                     Database.setOrdinaryAccountBalance(st,user.username,user.ordinary_account_balance-payment);

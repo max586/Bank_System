@@ -1,42 +1,25 @@
 package src;
 
-import javax.swing.*;
 import src.Settings.SettingsMainScreen;
-import java.awt.event.*;
-import java.awt.Insets;
+
+import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.sql.Statement;
 import java.util.Random;
 
 public class MainScreen extends Screen{
-    JButton settingsButton;
-    JButton createCardButton;
+    private JPanel panel;
+    private JButton createCardButton;
+    private JButton settingsButton;
+    private JButton returnButton;
+    private JButton exitButton;
     public MainScreen(User user, Screen prev_screen, Screen next_screen){
         super(user,prev_screen,next_screen);
     }
-    @Override
-    public void CreateScreen(){
+    public void CreateScreen() {
         super.CreateScreen();
-        frame.setTitle("Main screen");
-
-        gbc.gridx=0;
-        gbc.gridy=0;
-        gbc.gridwidth=1;
-        gbc.insets = new Insets(5,5,5,5);
-        settingsButton = new JButton("Settings");
-        settingsButton.addActionListener(new ActionListener(){
-        @Override
-        public void actionPerformed(ActionEvent e) {
-            if(next_screen!=null){
-                frame.dispose();
-                new SettingsMainScreen(user,MainScreen.this, new Screen()).CreateScreen();
-            }
-        }
-        });
-        frame.add(settingsButton, gbc);
-
-        gbc.gridx=0;
-        gbc.gridy=1;
-        createCardButton = new JButton("Create credit card");
+        frame.setContentPane(panel);
         createCardButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
@@ -52,17 +35,32 @@ public class MainScreen extends Screen{
                 }
             }
         });
-        frame.add(createCardButton,gbc);
+        settingsButton.addActionListener(new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if(next_screen!=null){
+                    frame.dispose();
+                    new SettingsMainScreen(user, MainScreen.this, new Screen()).CreateScreen();
+                }
+            }
+        });
 
-        gbc.gridx=0;
-        gbc.gridy=2;
-        frame.add(returnButton,gbc);
-
-        gbc.gridx=0;
-        gbc.gridy=3;
-        frame.add(exitButton,gbc);
-
-        frame.pack();
+        returnButton.addActionListener(new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent e){
+                frame.dispose();
+                if(prev_screen!=null){
+                    prev_screen.CreateScreen();
+                }
+            }
+        });
+        exitButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                frame.dispose();
+            }
+        });
+        frame.setSize(800,600);
         frame.setVisible(true);
     }
     public String generateCardNumber(){
