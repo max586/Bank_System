@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch form1",
+            "request": "launch",
+            "mainClass": "newm.src.form1",
+            "projectName": "bank_system_project_61bdc6a2"
+        },
+        {
+            "type": "java",
+            "name": "Launch form1",
+            "request": "launch",
+            "mainClass": "form1",
+            "projectName": "bank_system_project_61bdc6a2"
+        },
+        {
+            "type": "java",
             "name": "Launch SettingsMainScreen",
             "request": "launch",
             "mainClass": "src.Settings.SettingsMainScreen",

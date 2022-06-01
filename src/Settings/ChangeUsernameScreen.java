@@ -1,6 +1,6 @@
 package src.Settings;
 
-import src.DatabaseConnection;
+import src.Database;
 import src.User;
 import src.Screen;
 import javax.swing.*;
@@ -44,14 +44,15 @@ public class ChangeUsernameScreen extends Screen{
             @Override
             public void actionPerformed(ActionEvent e) {
                 // TODO Auto-generated method stub
-                Statement st = DatabaseConnection.connectToDatabase("bank_system", "root", "password");
-                String username = usernameField.getText();
-                if(user.isUsernameTaken(st, username)){
+                Statement st = Database.connectToDatabase("bank_system", "root", "password");
+                String new_username = usernameField.getText();
+                if(Database.isUsernameTaken(st, new_username)){
                     usernameField.setText("username is already taken");
                 }
                 else{
-                    user.changeUsername(st, username);
+                    Database.setUsername(st, user.username, new_username);
                     JOptionPane.showMessageDialog(frame, "username successfully changed!");
+                    user.username = new_username;
                     frame.dispose();
                     prev_screen.user = user;
                     prev_screen.CreateScreen();

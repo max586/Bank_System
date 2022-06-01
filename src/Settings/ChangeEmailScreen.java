@@ -1,12 +1,11 @@
 package src.Settings;
 
-import src.User;
 import src.AuthenticationAndRegistration.EmailVerificationScreen;
+import src.User;
 import src.Screen;
 import javax.swing.*;
 import java.awt.Insets;
 import java.awt.event.*;
-import java.sql.Statement;
 
 public class ChangeEmailScreen extends Screen{
     JLabel emailLabel;
@@ -46,7 +45,7 @@ public class ChangeEmailScreen extends Screen{
                 // TODO Auto-generated method stub
                 user.email = emailField.getText();
                 frame.dispose();
-                new EmailVerificationScreen(user, ChangeEmailScreen.this, prev_screen).CreateScreen();                
+                new EmailVerificationScreen(user, ChangeEmailScreen.this, prev_screen).CreateScreen();
             }
         });
         frame.add(submitButton,gbc);

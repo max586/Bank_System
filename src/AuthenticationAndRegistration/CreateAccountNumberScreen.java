@@ -1,124 +1,81 @@
 package src.AuthenticationAndRegistration;
 
-import src.*;
-import javax.swing.*;
-import java.sql.Statement;
-import java.awt.event.*;
-import java.awt.Insets;
-import java.util.Random;
-import java.time.LocalDateTime;
+import src.Database;
+import src.Screen;
+import src.User;
 
-public class CreateAccountNumberScreen extends Screen{
-    JLabel descr;
-    JLabel ordinaryAccountDescr;
-    JRadioButton ordinaryAccountChoice;
-    JLabel savingsAccountDescr;
-    JRadioButton savingsAccountChoice;
-    JButton createAccountButton;
-    
+import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.sql.Statement;
+import java.time.LocalDateTime;
+import java.util.Random;
+
+public class CreateAccountNumberScreen extends Screen {
+    private JPanel panel;
+    private JRadioButton ordinaryAccountRadioButton;
+    private JRadioButton savingsAccountRadioButton;
+    private JLabel descr1Label;
+    private JLabel descr2Label;
+    private JLabel descr3Label;
+    private JButton createAccountButton;
+    private JButton returnButton;
+    private JButton exitButton;
+
     public CreateAccountNumberScreen(User user, Screen prev_screen, Screen next_screen){
         super(user,prev_screen,next_screen);
     }
-    @Override
-    public void CreateScreen(){
+    public void CreateScreen() {
         super.CreateScreen();
-        frame.setTitle("Create account number screen");
+        frame.setContentPane(panel);
 
-        gbc.gridx=0;
-        gbc.gridy=0;
-        gbc.gridwidth=2;
-        descr = new JLabel("Choose account type you want to create");
-        gbc.insets = new Insets(5,5,5,5);
-        frame.add(descr,gbc);
-    
-        ordinaryAccountChoice = new JRadioButton("Ordinary account");
-        savingsAccountChoice = new JRadioButton("Savings account");
-        ButtonGroup group = new ButtonGroup();
-        group.add(ordinaryAccountChoice);
-        group.add(savingsAccountChoice);
-
-        gbc.gridx=0;
-        gbc.gridy=1;
-        gbc.gridwidth=1;
-        gbc.insets = new Insets(5,5,5,10);     
-        frame.add(ordinaryAccountChoice,gbc);
-
-        gbc.gridx=1;
-        gbc.gridy=1;
-        gbc.gridwidth=1;
-        gbc.insets = new Insets(5,10,5,5);
-        frame.add(savingsAccountChoice,gbc);
-
-        gbc.gridx=0;
-        gbc.gridy=2;
-        gbc.gridwidth=1;
-        ordinaryAccountDescr = new JLabel("<html>Ordinary Account:<br>"+
-        "-free cash deposit and withdrawal;<br>"+
-        "-free national and internal transactions;<br>"+
-        "-standard credit card for free, or with personal outlook for 15zl;<br> </html>");
-        gbc.insets = new Insets(5,5,5,10);
-        frame.add(ordinaryAccountDescr,gbc);
-
-        gbc.gridx=1;
-        gbc.gridy=2;
-        gbc.gridwidth=1;
-        savingsAccountDescr = new JLabel("<html>Savings Account:<br>"+
-        "-free cash deposit and withdrawal;<br>"+
-        "-free internal transactions;<br>"+
-        "-1.0% interest;</html>");
-        gbc.insets = new Insets(5,10,5,5);
-        frame.add(savingsAccountDescr,gbc);
-
-        gbc.gridx=0;
-        gbc.gridy=3;
-        gbc.gridwidth=2;
-        createAccountButton = new JButton("Create account");
-        Statement st = DatabaseConnection.connectToDatabase("bank_system", "root", "password");
-            createAccountButton.addActionListener(new ActionListener(){
-                @Override
-                public void actionPerformed(ActionEvent e) {
-                    // TODO Auto-generated method stub
-                    if(ordinaryAccountChoice.isSelected()){
-                        user.ordinary_account_number = generateAccountNumber();
-                        user.addOrdinaryAccountNumber(st);
-                        JOptionPane.showMessageDialog(frame, "Account successfully created!\nYour personal account number:\n"+user.ordinary_account_number);
-                        frame.dispose();
-                        if(next_screen != null){
-                            new AuthenticationScreen(user, CreateAccountNumberScreen.this, new Screen()).CreateScreen();
-                        }
+        Statement st = Database.connectToDatabase("bank_system", "root", "password");
+        createAccountButton.addActionListener(new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // TODO Auto-generated method stub
+                if(ordinaryAccountRadioButton.isSelected()){
+                    user.ordinary_account_number = generateAccountNumber();
+                    Database.addOrdinaryAccountNumber(st, user.username, user.ordinary_account_number);
+                    JOptionPane.showMessageDialog(frame, "Account successfully created!\nYour personal account number:\n"+user.ordinary_account_number);
+                    frame.dispose();
+                    if(next_screen != null){
+                        new AuthenticationScreen(user, CreateAccountNumberScreen.this, new Screen()).CreateScreen();
                     }
-                    //warning! duplicated code!!!
-                    else if(savingsAccountChoice.isSelected()){
-                        user.savings_account_number = generateAccountNumber();
-                        user.addSavingsAccountNumber(st);
-                        JOptionPane.showMessageDialog(frame, "Account successfully created!\nYour personal account number:\n"+user.savings_account_number);
-                        frame.dispose();
-                        if(next_screen!=null){
-                            new AuthenticationScreen(user, CreateAccountNumberScreen.this, new Screen()).CreateScreen();
-                        }
-                    }
-                    else{
-                        JOptionPane.showMessageDialog(frame, "account type wasn't chosen!");
-                    }               
                 }
+                //warning! duplicated code!!!
+                else if(savingsAccountRadioButton.isSelected()){
+                    user.savings_account_number = generateAccountNumber();
+                    Database.addSavingsAccountNumber(st,user.username,user.savings_account_number);
+                    JOptionPane.showMessageDialog(frame, "Account successfully created!\nYour personal account number:\n"+user.savings_account_number);
+                    frame.dispose();
+                    if(next_screen!=null){
+                        new AuthenticationScreen(user, CreateAccountNumberScreen.this, new Screen()).CreateScreen();
+                    }
+                }
+                else{
+                    JOptionPane.showMessageDialog(frame, "account type wasn't chosen!");
+                }
+            }
         });
-
-        gbc.insets = new Insets(5,5,5,5);
-        frame.add(createAccountButton,gbc);
-
-        gbc.gridx=0;
-        gbc.gridy=4;
-        gbc.gridwidth=2;
-        frame.add(returnButton,gbc);
-
-        gbc.gridx=0;
-        gbc.gridy=5;
-        frame.add(exitButton,gbc);
-
-        frame.pack();
+        returnButton.addActionListener(new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent e){
+                frame.dispose();
+                if(prev_screen!=null){
+                    prev_screen.CreateScreen();
+                }
+            }
+        });
+        exitButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                frame.dispose();
+            }
+        });
+        frame.setSize(800,600);
         frame.setVisible(true);
     }
-
     static String generateAccountNumber(){
         String account_number="1137";
         String date = LocalDateTime.now().toString().substring(0,10);
@@ -144,11 +101,10 @@ public class CreateAccountNumberScreen extends Screen{
         account_number="PL"+Integer.toString((checksum-checksum%10)/10)+Integer.toString(checksum%10)+account_number;
         return account_number;
     }
-
     public static void main(String[] args) {
         User test_user = new User();
-        test_user.username="test_user";
+        test_user.username="_user";
         test_user.password="password";
-        new CreateAccountNumberScreen(test_user, null, null).CreateScreen();        
-    }    
+        new CreateAccountNumberScreen(test_user, null, null).CreateScreen();
+    }
 }

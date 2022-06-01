@@ -1,4 +1,4 @@
-package src.AuthenticationAndRegistration;
+package src;
 
 import java.util.regex.*;
 

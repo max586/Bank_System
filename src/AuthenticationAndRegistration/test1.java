@@ -67,8 +67,8 @@ public class test1 {
         String cn=generateCardNumber(an);
         System.out.println(an);
         System.out.println(cn);
-        //System.out.println(Pattern.matches(".*\\p{Lower}.*","AAAAa"));
-        //System.out.println(Pattern.matches(".*\\p{Lower}.*","AAAAa"));
+        //System.out.println(Pattern.matches(".*\\p{Lower}.*","bank_systemAa"));
+        //System.out.println(Pattern.matches(".*\\p{Lower}.*","bank_systemAa"));
     }
     
 }

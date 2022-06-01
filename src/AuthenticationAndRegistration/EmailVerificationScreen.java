@@ -1,23 +1,27 @@
 package src.AuthenticationAndRegistration;
 
+import src.JavaMail;
 import src.Screen;
 import src.User;
-import src.JavaMail;
+
 import javax.swing.*;
-import java.awt.event.*;
-import java.awt.Insets;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.Random;
 
 public class EmailVerificationScreen extends Screen{
+    private JPanel panel;
+    private JTextField codeField;
+    private JButton submitButton;
+    private JButton returnButton;
+    private JButton exitButton;
+    private JLabel descrLabel;
     public int number_of_attempts=5;
-    public boolean isEmailVerifed;
 
     public EmailVerificationScreen(User user, Screen prev_screen, Screen next_screen){
         super(user,prev_screen,next_screen);
     }
-    @Override
-    public void CreateScreen(){
-        //sending a code on email
+    public void CreateScreen() {
         String code = generateCode(6);
         try {
             JavaMail.SendMail(user.email, code);
@@ -28,21 +32,9 @@ public class EmailVerificationScreen extends Screen{
         }
 
         super.CreateScreen();
-        frame.setTitle("Email verification screen");
-        JLabel text = new JLabel("<html>We've sent 6-digit verification code on your email address.<br> Enter it in the text field below</html>");        
-        gbc.gridx=0;
-        gbc.gridy=0;
-        gbc.insets = new Insets(5,5,5,5);
-        frame.add(text,gbc);
+        frame.setContentPane(panel);
 
-        JTextField codeField = new JTextField();
-        gbc.gridx=0;
-        gbc.gridy=1;
-        gbc.insets = new Insets(5,5,5,5);
-        frame.add(codeField,gbc);
-
-        JButton submit = new JButton("Submit");
-        submit.addActionListener(new ActionListener(){
+        submitButton.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e) {
                 if(codeField.getText().equals(code)){
@@ -70,21 +62,23 @@ public class EmailVerificationScreen extends Screen{
                 }
             }
         });
-        gbc.gridx=0;
-        gbc.gridy=2;
-        gbc.insets = new Insets(5,5,5,5);
-        frame.add(submit, gbc);
+        returnButton.addActionListener(new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent e){
+                frame.dispose();
+                if(prev_screen!=null){
+                    prev_screen.CreateScreen();
+                }
+            }
+        });
+        exitButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                frame.dispose();
+            }
+        });
 
-        gbc.gridx=0;
-        gbc.gridy=4;
-        gbc.gridwidth=2;
-        frame.add(returnButton,gbc);
-
-        gbc.gridx=0;
-        gbc.gridy=5;
-        frame.add(exitButton,gbc);
-
-        frame.pack();
+        frame.setSize(800,600);
         frame.setVisible(true);
     }
     public static String generateCode(int length){
@@ -94,10 +88,13 @@ public class EmailVerificationScreen extends Screen{
             code+=Integer.toString(rnd.nextInt(9));
         }
         return code;
-    };
+    }
 
-    public static void main(User user, boolean option) {   
-        
-        //CreateScreen(user,code, option);
-    }    
+    public static void main(String[] args) {
+        User user = new User();
+        user.username = "new_user";
+        user.password = "password";
+        user.email = "maks.ovsienko2@gmail.com";
+        new EmailVerificationScreen(user,null,new RegistrationScreen2()).CreateScreen();
+    }
 }

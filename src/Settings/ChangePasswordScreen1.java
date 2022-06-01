@@ -1,9 +1,9 @@
 package src.Settings;
 
-import src.DatabaseConnection;
-import src.User;
-import src.AuthenticationAndRegistration.DataValidation;
 import src.AuthenticationAndRegistration.EmailVerificationScreen;
+import src.Database;
+import src.User;
+import src.DataValidation;
 import src.Screen;
 
 import javax.swing.*;
@@ -109,7 +109,7 @@ public class ChangePasswordScreen1 extends Screen{
             @Override
             public void actionPerformed(ActionEvent e) {
                 // TODO Auto-generated method stub
-                Statement st = DatabaseConnection.connectToDatabase("bank_system", "root", "password");
+                Statement st = Database.connectToDatabase("bank_system", "root", "password");
 
                 passwordMatchesField.setVisible(true);
                 passwordLengthField.setVisible(true);
@@ -132,7 +132,7 @@ public class ChangePasswordScreen1 extends Screen{
                 else{passwordSpecialCharField.setText("at least one special character");password_is_valid=false;}
 
                 if(password_is_valid){
-                    user.changePassword(st, new_password);
+                    Database.setPassword(st, user.username,new_password);
                     JOptionPane.showMessageDialog(frame, "password successfully changed!");
                     frame.dispose();
                     prev_screen.user = user;
@@ -151,7 +151,7 @@ public class ChangePasswordScreen1 extends Screen{
             public void actionPerformed(ActionEvent arg0) {
                 // TODO Auto-generated method stub
                 frame.dispose();
-                new EmailVerificationScreen(user, ChangePasswordScreen1.this, new ChangePasswordScreen2()).CreateScreen();          
+                new EmailVerificationScreen(user, ChangePasswordScreen1.this, new ChangePasswordScreen2()).CreateScreen();
             }
         });
         frame.add(forgotPasswordButton, gbc);

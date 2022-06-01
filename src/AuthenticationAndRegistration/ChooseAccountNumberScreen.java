@@ -1,68 +1,40 @@
 package src.AuthenticationAndRegistration;
 
-import src.Screen;
 import src.MainScreen;
+import src.Screen;
 import src.User;
-import javax.swing.*;
-import java.awt.Insets;
-import java.awt.event.*;
 
+import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class ChooseAccountNumberScreen extends Screen{
-    JLabel descr;
-    JRadioButton ordinaryAccountChoice;
-    JRadioButton savingsAccountChoice;
-    JButton submitButton;
-
+    private JPanel panel;
+    private JRadioButton ordinaryAccountRadioButton;
+    private JRadioButton savingsAccountRadioButton;
+    private JLabel descrLabel;
+    private JButton submitButton;
+    private JButton returnButton;
+    private JButton exitButton;
     public ChooseAccountNumberScreen(User user, Screen prev_screen, Screen next_screen){
         super(user,prev_screen,next_screen);
     }
-    @Override
-    public void CreateScreen(){
+    public void CreateScreen() {
         super.CreateScreen();
-        frame.setTitle("Choose account number screen");
+        frame.setContentPane(panel);
 
-        gbc.gridx=0;
-        gbc.gridy=0;
-        gbc.gridwidth=2;
-        descr = new JLabel("Choose your account");
-        gbc.insets = new Insets(5,5,5,5);
-        frame.add(descr,gbc);
-
-        ordinaryAccountChoice = new JRadioButton("Ordinary account");
-        savingsAccountChoice = new JRadioButton("Savings account");
-        ButtonGroup group = new ButtonGroup();
-        group.add(ordinaryAccountChoice);
-        group.add(savingsAccountChoice);
-
-        gbc.gridx=0;
-        gbc.gridy=1;
-        gbc.gridwidth=1;
-        gbc.insets = new Insets(5,5,5,10);     
-        frame.add(ordinaryAccountChoice,gbc);
-
-        gbc.gridx=1;
-        gbc.gridy=1;
-        gbc.gridwidth=1;
-        gbc.insets = new Insets(5,10,5,5);
-        frame.add(savingsAccountChoice,gbc);
-
-        gbc.gridx=0;
-        gbc.gridy=2;
-        gbc.gridwidth=2;
-        submitButton = new JButton("Submit");
         submitButton.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e) {
                 // TODO Auto-generated method stub
                 //warning! duplicated code!!!
-                if(ordinaryAccountChoice.isSelected()){
+                if(ordinaryAccountRadioButton.isSelected()){
                     frame.dispose();
                     if(next_screen!=null){
                         new MainScreen(user, ChooseAccountNumberScreen.this, new Screen()).CreateScreen();
                     }
                 }
-                else if(savingsAccountChoice.isSelected()){
+                else if(savingsAccountRadioButton.isSelected()){
                     frame.dispose();
                     if(next_screen!=null){
                         new MainScreen(user, ChooseAccountNumberScreen.this, new Screen()).CreateScreen();
@@ -73,20 +45,31 @@ public class ChooseAccountNumberScreen extends Screen{
                 }
             }
         });
-        gbc.insets = new Insets(5,5,5,5);
-        frame.add(submitButton,gbc);
+        returnButton.addActionListener(new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent e){
+                frame.dispose();
+                if(prev_screen!=null){
+                    prev_screen.CreateScreen();
+                }
+            }
+        });
+        exitButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                frame.dispose();
+            }
+        });
 
-        gbc.gridx=0;
-        gbc.gridy=3;
-        gbc.gridwidth=2;
-        gbc.insets = new Insets(5,5,5,5);
-        frame.add(returnButton,gbc);
-
-        gbc.gridx=0;
-        gbc.gridy=4;
-        frame.add(exitButton,gbc);
-
-        frame.pack();
+        frame.setSize(800,600);
         frame.setVisible(true);
+    }
+
+    public static void main(String[] args) {
+        User test_user = new User();
+        test_user.username = "test_user";
+        test_user.password = "password";
+        test_user.email = "maks.ovsienko2@gmail.com";
+        new ChooseAccountNumberScreen(test_user,null,new Screen()).CreateScreen();
     }
 }
