@@ -4,10 +4,9 @@ import javax.swing.*;
 
 import src.User;
 
-import java.awt.event.ActionEvent;
 import java.io.IOException;
 import javax.swing.JPanel;
-
+import java.awt.event.*;
 
 public class AuthTest {
     private JFrame jFrame;
@@ -20,6 +19,8 @@ public class AuthTest {
     private JButton zróbPrzelewButton;
     private JButton nextButton;
     private JButton prevButton;
+    private JLabel timeCounter;
+    private int counter = 0;
     String []options = {"one","two"};
 
     public User user;
@@ -37,8 +38,29 @@ public class AuthTest {
         jFrame.setSize(1080,720);
         jFrame.setTitle("MainScreen");
         jFrame.setDefaultCloseOperation(jFrame.EXIT_ON_CLOSE);
-
         list1.setListData(options);
+
+
+        //Auto close the window
+        jFrame.addMouseListener(new MouseAdapter() {
+            public void mousePressed(MouseEvent me) {
+                counter = 0;
+            }
+        });
+        new Thread() {
+            public void run() {
+                while(counter <= 5) {
+                    timeCounter.setText("Test" + (counter++));
+                    try{
+                        Thread.sleep(1000);
+                    } catch(Exception e) {}
+                }
+                jFrame.dispose();
+            }
+        }.start();
+        //Auto close the window
+
+
         list1.getSelectionModel().addListSelectionListener(e ->
         {
             int index = list1.getSelectedIndex();
@@ -84,11 +106,6 @@ public class AuthTest {
             }
 
         });
-
-
-
-
-
 
         jFrame.setContentPane(AuthPanel);
         jFrame.setVisible(true);

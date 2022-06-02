@@ -20,6 +20,8 @@ public class ChangePasswordScreen2 extends Screen{
     private JLabel letterLabel;
     private JLabel digitLabel;
     private JLabel specialCharLabel;
+    private JLabel prevPasswordLabel;
+
     private JButton submitButton;
     private JButton ForgotPasswordButton;
     private JButton returnButton;
