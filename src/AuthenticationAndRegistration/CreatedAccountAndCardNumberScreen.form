@@ -24,6 +24,7 @@
         </constraints>
         <properties>
           <font size="18"/>
+          <horizontalAlignment value="0"/>
           <text value="Credit card number"/>
         </properties>
       </component>
@@ -90,6 +91,7 @@
           <gridbag weightx="1.0" weighty="0.0"/>
         </constraints>
         <properties>
+          <font size="18"/>
           <preferredSize width="250" height="40"/>
           <text value=""/>
         </properties>
@@ -101,6 +103,7 @@
         </constraints>
         <properties>
           <font size="18"/>
+          <horizontalAlignment value="0"/>
           <preferredSize width="600" height="40"/>
           <text value="Your personal credit card number and pin code:"/>
         </properties>
@@ -108,40 +111,29 @@
       <vspacer id="39b68">
         <constraints>
           <grid row="3" column="0" row-span="1" col-span="4" vsize-policy="6" hsize-policy="1" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
-          <gridbag weightx="0.0" weighty="0.3"/>
+          <gridbag weightx="0.0" weighty="1.0"/>
         </constraints>
       </vspacer>
       <component id="c6714" class="javax.swing.JLabel" binding="ordinaryAccountdescrLabel">
         <constraints>
-          <grid row="1" column="0" row-span="1" col-span="4" vsize-policy="0" hsize-policy="0" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="0" column="0" row-span="1" col-span="4" vsize-policy="0" hsize-policy="0" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
           <gridbag top="0" left="20" bottom="0" right="0" weightx="0.0" weighty="0.6"/>
         </constraints>
         <properties>
-          <font size="16"/>
+          <font size="18"/>
           <preferredSize width="400" height="200"/>
           <text value="&lt;html&gt;Ordinary Account:&lt;br&gt;- free cash deposit and withdrawal;&lt;br&gt; - free national and internal transactions;&lt;br&gt;- standard credit card for free, or with personal outlook for 15zl;&lt;br&gt; &lt;/html&gt;"/>
         </properties>
       </component>
       <component id="d4a06" class="javax.swing.JLabel" binding="savingsAccountdescrLabel">
         <constraints>
-          <grid row="1" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="0" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
           <gridbag top="0" left="20" bottom="0" right="0" weightx="0.0" weighty="0.0"/>
         </constraints>
         <properties>
-          <font size="16"/>
+          <font size="18"/>
           <preferredSize width="400" height="200"/>
           <text value="&lt;html&gt;Savings Account:&lt;br&gt; - free cash deposit and withdrawal;&lt;br&gt;- free internal transactions;&lt;br&gt;- 1.0% interest;&lt;/html&gt;"/>
-        </properties>
-      </component>
-      <component id="3a247" class="javax.swing.JLabel" binding="accountsDescrLabel">
-        <constraints>
-          <grid row="0" column="0" row-span="1" col-span="5" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
-          <gridbag weightx="0.0" weighty="0.2"/>
-        </constraints>
-        <properties>
-          <font size="18"/>
-          <preferredSize width="600" height="40"/>
-          <text value="Your personal ordinary and savings account numbers:"/>
         </properties>
       </component>
       <component id="bb052" class="javax.swing.JTextField" binding="savingsAccountField">
@@ -153,7 +145,8 @@
         </constraints>
         <properties>
           <font size="18"/>
-          <preferredSize width="250" height="40"/>
+          <horizontalAlignment value="0"/>
+          <preferredSize width="350" height="40"/>
           <text value=""/>
         </properties>
       </component>
@@ -162,11 +155,12 @@
           <grid row="2" column="1" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
           </grid>
-          <gridbag weightx="1.0" weighty="0.2"/>
+          <gridbag weightx="40.0" weighty="0.2"/>
         </constraints>
         <properties>
           <font size="18"/>
-          <preferredSize width="250" height="40"/>
+          <horizontalAlignment value="0"/>
+          <preferredSize width="350" height="40"/>
           <text value=""/>
         </properties>
       </component>
@@ -176,6 +170,18 @@
           <gridbag weightx="0.0" weighty="0.3"/>
         </constraints>
       </vspacer>
+      <component id="3a247" class="javax.swing.JLabel" binding="accountsDescrLabel">
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="5" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.2"/>
+        </constraints>
+        <properties>
+          <font size="18"/>
+          <horizontalAlignment value="0"/>
+          <preferredSize width="600" height="50"/>
+          <text value="Your personal ordinary and savings account numbers:"/>
+        </properties>
+      </component>
     </children>
   </grid>
 </form>

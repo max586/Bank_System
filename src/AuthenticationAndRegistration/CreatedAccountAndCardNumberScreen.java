@@ -79,7 +79,7 @@ public class CreatedAccountAndCardNumberScreen extends Screen {
             }
         });
 
-        frame.setSize(800,600);
+        frame.setSize(1000,800);
         frame.setVisible(true);
     }
 
@@ -122,6 +122,8 @@ public class CreatedAccountAndCardNumberScreen extends Screen {
     }
 
     public static void main(String[] args) {
-
+        User test_user = new User();
+        test_user.username="test_user";
+        new CreatedAccountAndCardNumberScreen(test_user,null,new Screen()).CreateScreen();
     }
 }

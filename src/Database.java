@@ -28,7 +28,6 @@ public class Database {
     public static void addUserData(Statement st, String username, String firstName, String lastName, String sex, String city, String address, String pesel){
         try {
             st.executeUpdate("insert into UsersData values('"+username+"','"+firstName+"','"+lastName+"','"+sex+"','"+city+"','"+address+"','"+pesel+"');");
-            st.executeUpdate("insert into UsersAccounts values('"+username+"',null,null);");
         } catch (Exception e) {
             //TODO: handle exception
             System.out.println("Couldn't execute the query");
@@ -38,7 +37,7 @@ public class Database {
 
     public static void addOrdinaryAccountNumber(Statement st, String username, String ordinary_account_number){
         try {
-            st.executeUpdate("update UsersAccounts set `Ordinary account number`='"+ordinary_account_number+"' where username='"+username+"';");
+            st.executeUpdate("insert into OrdinaryAccounts values('"+username+"','"+ordinary_account_number+"',0);");
         } catch (Exception e) {
             //TODO: handle exception
             System.out.println("Couldn't execute the query");
@@ -47,7 +46,7 @@ public class Database {
     }
     public static void addSavingsAccountNumber(Statement st, String username, String savings_account_number){
         try {
-            st.executeUpdate("update UsersAccounts set `Savings account number`='"+savings_account_number+"' where username='"+username+"';");
+            st.executeUpdate("insert into SavingsAccounts values('"+username+"','"+savings_account_number+"',0,1);");
         } catch (Exception e) {
             //TODO: handle exception
             System.out.println("Couldn't execute the query");
@@ -56,7 +55,7 @@ public class Database {
     }
     public static void addCard(Statement st, String username, String card_number, String pin_code){
         try{
-            st.executeUpdate("insert into Cards values ('"+username+"','"+card_number+"','"+pin_code+"',10000);");
+            st.executeUpdate("insert into Cards values ('"+username+"','"+card_number+"','"+pin_code+"');");
         }catch(SQLException e) {
             System.out.println("Couldn't execute the query");
             System.out.println(e);
@@ -76,9 +75,9 @@ public class Database {
     }
     public static String getOrdinaryAccountNumber(Statement st, String username){
         try{
-            ResultSet rs = st.executeQuery("select * from OrdinaryAccounts where username='"+username+"';");
+            ResultSet rs = st.executeQuery("select nr from OrdinaryAccounts where username='"+username+"';");
             rs.next();
-            return rs.getString(2);
+            return rs.getString(1);
         }
         catch(SQLException e){
             System.out.println("Couldn't execute the query");
@@ -88,9 +87,9 @@ public class Database {
     }
     public static String getSavingsAccountNumber(Statement st, String username){
         try{
-            ResultSet rs = st.executeQuery("select * from SavingsAccounts where username='"+username+"';");
+            ResultSet rs = st.executeQuery("select nr from SavingsAccounts where username='"+username+"';");
             rs.next();
-            return rs.getString(2);
+            return rs.getString(1);
         }
         catch(SQLException e){
             System.out.println("Couldn't execute the query");

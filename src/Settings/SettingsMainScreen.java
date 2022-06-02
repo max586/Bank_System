@@ -38,6 +38,7 @@ public class SettingsMainScreen extends Screen {
             @Override
             public void actionPerformed(ActionEvent e) {
                 frame.dispose();
+                changePasswordButton.resetKeyboardActions();
                 if(next_screen!=null){
                     new ChangePasswordScreen1(user, SettingsMainScreen.this, new Screen()).CreateScreen();
                 }
@@ -76,5 +77,13 @@ public class SettingsMainScreen extends Screen {
         });
         frame.setSize(800,600);
         frame.setVisible(true);
+    }
+
+    public static void main(String[] args) {
+        User test_user = new User();
+        test_user.username="test_user";
+        test_user.password="password";
+        test_user.email="maks.ovsienko2@gmail.com";
+        new SettingsMainScreen(test_user,null,new Screen()).CreateScreen();
     }
 }

@@ -45,21 +45,24 @@ public class RegistrationScreen2 extends Screen{
                 String lastName=lastNameField.getText();
                 String sex=(String)sexComboBox.getSelectedItem();
                 String pesel=peselField.getText();
+                String city = cityField.getText();
+                String address = addressField.getText();
                 boolean lname_is_valid= DataValidation.nameIsValid(lastName), fname_is_valid=DataValidation.nameIsValid(firstName),
                         pesel_is_valid=DataValidation.peselIsValid(pesel, (sex=="M"));
                 if(!fname_is_valid){firstNameField.setText("First name is invalid");}
                 if(!lname_is_valid){lastNameField.setText("Last name is invalid");}
                 if(!pesel_is_valid){peselField.setText("PESEL is invalid");}
                 if(fname_is_valid&&lname_is_valid&&pesel_is_valid){
-                    user.firstName=firstName;
-                    user.lastName=lastName;
-                    user.sex=sex;
-                    user.city=cityField.getText();
-                    user.address=addressField.getText();
-                    user.pesel=pesel;
 
                     Database.addUser(st, user.username, user.password, user.email);
                     Database.addUserData(st, user.username, user.firstName, user.lastName, user.sex, user.city, user.address, user.pesel);
+
+                    user.firstName=firstName;
+                    user.lastName=lastName;
+                    user.sex=sex;
+                    user.city=city;
+                    user.address=address;
+                    user.pesel=pesel;
 
                     frame.dispose();
                     if(next_screen!=null){

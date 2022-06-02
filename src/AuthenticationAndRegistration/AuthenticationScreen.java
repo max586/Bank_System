@@ -1,9 +1,6 @@
 package src.AuthenticationAndRegistration;
 
-import src.Database;
-import src.MainScreen;
-import src.Screen;
-import src.User;
+import src.*;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -36,15 +33,11 @@ public class AuthenticationScreen extends Screen {
                 if(Database.verifyUser(st,user.username,user.password)){
                     JOptionPane.showMessageDialog(frame, "user successfully verified");
                     frame.dispose();
+                    user.email = Database.getEmail(st, user.username);
                     user.ordinary_account_number = Database.getOrdinaryAccountNumber(st, user.username);
                     user.savings_account_number = Database.getSavingsAccountNumber(st, user.username);
                     if(next_screen!=null){
-                        if(user.ordinary_account_number==null || user.savings_account_number==null){
-                            new MainScreen(user, prev_screen, new Screen()).CreateScreen();
-                        }
-                        else{
-                            new ChooseAccountNumberScreen(user, AuthenticationScreen.this,new Screen()).CreateScreen();
-                        }
+                        new ChooseAccountNumberScreen(user, AuthenticationScreen.this,new Screen()).CreateScreen();
                     }
                 }
                 else{

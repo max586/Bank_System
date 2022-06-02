@@ -27,6 +27,7 @@ public class ChangePasswordScreen1 extends Screen{
     private JButton ForgotPasswordButton;
     private JButton returnButton;
     private JButton exitButton;
+
     public ChangePasswordScreen1(){}
     public ChangePasswordScreen1(User user, Screen prev_screen, Screen next_screen){
         super(user,prev_screen,next_screen);
@@ -40,12 +41,6 @@ public class ChangePasswordScreen1 extends Screen{
             public void actionPerformed(ActionEvent e) {
                 // TODO Auto-generated method stub
                 Statement st = Database.connectToDatabase("bank_system", "root", "password");
-
-                /*matchLabel.setVisible(true);
-                lengthLabel.setVisible(true);
-                letterLabel.setVisible(true);
-                specialCharLabel.setVisible(true);
-                digitLabel.setVisible(true);*/
 
                 String prev_password = new String(prevPasswordField.getPassword());
                 String new_password = new String(newPasswordField.getPassword());

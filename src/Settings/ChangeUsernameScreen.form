@@ -14,7 +14,8 @@
         </constraints>
         <properties>
           <font size="18"/>
-          <preferredSize width="200" height="40"/>
+          <horizontalAlignment value="0"/>
+          <preferredSize width="300" height="40"/>
           <text value="Enter new username"/>
         </properties>
       </component>
@@ -27,7 +28,7 @@
         </constraints>
         <properties>
           <font size="18"/>
-          <preferredSize width="250" height="40"/>
+          <preferredSize width="300" height="40"/>
         </properties>
       </component>
       <component id="9c9cf" class="javax.swing.JButton" binding="submitButton" default-binding="true">
