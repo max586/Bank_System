@@ -38,6 +38,7 @@ public class AuthTest {
         jFrame.setSize(1080,720);
         jFrame.setTitle("MainScreen");
         jFrame.setDefaultCloseOperation(jFrame.EXIT_ON_CLOSE);
+
         list1.setListData(options);
 
 
