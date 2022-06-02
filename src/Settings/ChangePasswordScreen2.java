@@ -12,9 +12,10 @@ import java.sql.Statement;
 
 public class ChangePasswordScreen2 extends Screen{
     private JPanel panel;
-    private JPasswordField prevPasswordField;
     private JLabel newPasswordLabel;
     private JPasswordField newPasswordField;
+    private JLabel repeatedPasswordLabel;
+    private JPasswordField repeatedPasswordField;
     private JLabel matchLabel;
     private JLabel lengthLabel;
     private JLabel letterLabel;
@@ -39,8 +40,8 @@ public class ChangePasswordScreen2 extends Screen{
                 // TODO Auto-generated method stub
                 Statement st = Database.connectToDatabase("bank_system", "root", "password");
 
-                String new_password = new String(prevPasswordField.getPassword());
-                String repeated_password = new String(newPasswordField.getPassword());
+                String new_password = new String(newPasswordField.getPassword());
+                String repeated_password = new String(repeatedPasswordField.getPassword());
                 boolean password_is_valid=true;
                 if(DataValidation.passwordMatches(new_password, repeated_password)){matchLabel.setText("ok");}
                 else{matchLabel.setText("passwords dont match");password_is_valid=false;}
