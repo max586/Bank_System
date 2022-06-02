@@ -76,9 +76,12 @@
       <recent name="$PROJECT_DIR$/src/AuthenticationAndRegistration" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.AuthenticationScreen">
+  <component name="RunManager" selected="Application.src.AuthenticationAndRegistration.AuthenticationScreen">
     <configuration name="AuthTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="15" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="src.AuthenticationAndRegistration.AuthTest" />
+      <module name="src" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="src.AuthenticationAndRegistration.*" />
@@ -89,8 +92,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AuthenticationScreen" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="src.AuthenticationAndRegistration.AuthenticationScreen" />
+    <configuration name="CreateAccountNumberScreen" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="src.AuthenticationAndRegistration.CreateAccountNumberScreen" />
       <module name="bank_system_project" />
       <extension name="coverage">
         <pattern>
@@ -123,10 +126,7 @@
       </method>
     </configuration>
     <configuration name="src.AuthenticationAndRegistration.AuthTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="15" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="src.AuthenticationAndRegistration.AuthTest" />
-      <module name="src" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="src.AuthenticationAndRegistration.*" />
@@ -137,8 +137,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="src.AuthenticationAndRegistration.CreateAccountNumberScreen" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="src.AuthenticationAndRegistration.CreateAccountNumberScreen" />
+    <configuration name="src.AuthenticationAndRegistration.AuthenticationScreen" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="src.AuthenticationAndRegistration.AuthenticationScreen" />
       <module name="bank_system_project" />
       <extension name="coverage">
         <pattern>
@@ -152,16 +152,15 @@
     </configuration>
     <list>
       <item itemvalue="Application.Unnamed" />
-      <item itemvalue="Application.AuthTest" />
+      <item itemvalue="Application.src.AuthenticationAndRegistration.AuthenticationScreen" />
       <item itemvalue="Application.src.AuthenticationAndRegistration.AuthTest" />
-      <item itemvalue="Application.AuthenticationScreen" />
       <item itemvalue="Application.src.AuthenticationAndRegistration.CreateAccountNumberScreen" />
       <item itemvalue="Application.PayWithCardScreen1" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.AuthenticationScreen" />
-        <item itemvalue="Application.AuthTest" />
+        <item itemvalue="Application.src.AuthenticationAndRegistration.AuthenticationScreen" />
+        <item itemvalue="Application.src.AuthenticationAndRegistration.AuthTest" />
         <item itemvalue="Application.src.AuthenticationAndRegistration.AuthTest" />
         <item itemvalue="Application.PayWithCardScreen1" />
         <item itemvalue="Application.src.AuthenticationAndRegistration.CreateAccountNumberScreen" />

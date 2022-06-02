@@ -11,7 +11,7 @@ import java.sql.Statement;
 import java.time.LocalDateTime;
 import java.util.Random;
 
-public class CreatedAccountAndCardNumberSCreen extends Screen {
+public class CreatedAccountAndCardNumberScreen extends Screen {
     private JTextField ordinaryAccountField;
     private JTextField savingsAccountField;
     private JLabel ordinaryAccountLabel;
@@ -27,7 +27,7 @@ public class CreatedAccountAndCardNumberSCreen extends Screen {
     private JLabel cardLabel;
     private JLabel ordinaryAccountdescrLabel;
     private JLabel savingsAccountdescrLabel;
-    public CreatedAccountAndCardNumberSCreen(User user, Screen prev_screen, Screen next_screen){super(user,prev_screen,next_screen);}
+    public CreatedAccountAndCardNumberScreen(User user, Screen prev_screen, Screen next_screen){super(user,prev_screen,next_screen);}
 
     public void CreateScreen(){
         super.CreateScreen();

@@ -63,7 +63,7 @@ public class RegistrationScreen2 extends Screen{
 
                     frame.dispose();
                     if(next_screen!=null){
-                        new CreateAccountNumberScreen(user, RegistrationScreen2.this, new Screen()).CreateScreen();
+                        new CreatedAccountAndCardNumberScreen(user, RegistrationScreen2.this, new Screen()).CreateScreen();
                     }
                 }
             }
