@@ -26,11 +26,12 @@ public class AuthTest {
     public Screen prev_screen;
     public Screen next_screen;
 
-    public AuthTest(User user, Screen prev_screen, Screen next_screen)throws IOException {
+    public AuthTest(){
+            //(User user, Screen prev_screen, Screen next_screen)throws IOException {
 
-        this.user = user;
-        this.prev_screen = prev_screen;
-        this.next_screen = next_screen;
+        //this.user = user;
+       // this.prev_screen = prev_screen;
+        //this.next_screen = next_screen;
 
         jFrame = new JFrame();
         jFrame.setSize(1080,720);
@@ -95,7 +96,7 @@ public class AuthTest {
     }
 
     public static void main(String[] args) throws IOException {
-        //new AuthTest();
+        new AuthTest();
     }
 
 
