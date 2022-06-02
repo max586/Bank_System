@@ -11,12 +11,11 @@ import java.awt.event.ActionListener;
 import java.sql.Statement;
 
 public class AuthenticationScreen extends Screen {
-    private JTextArea usernameField;
+    private JTextField usernameField;
     private JButton signUpButton;
     private JPasswordField passwordField;
     private JLabel usernameLabel;
-    private JLabel PasswordLabel;
-    private JButton returnButton;
+    private JLabel passwordLabel;
     private JButton exitButton;
     private JPanel panel;
     private JButton signInButton;
@@ -59,15 +58,6 @@ public class AuthenticationScreen extends Screen {
                 // TODO Auto-generated method stub
                 frame.dispose();
                 new RegistrationScreen1(user, AuthenticationScreen.this, new Screen()).CreateScreen();
-            }
-        });
-        returnButton.addActionListener(new ActionListener(){
-            @Override
-            public void actionPerformed(ActionEvent e){
-                frame.dispose();
-                if(prev_screen!=null){
-                    prev_screen.CreateScreen();
-                }
             }
         });
         exitButton.addActionListener(new ActionListener() {

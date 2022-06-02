@@ -5,43 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bea002ff-8e44-4e85-a29b-66b1294d710d" name="Changes" comment="sth">
+      <change afterPath="$PROJECT_DIR$/src/AuthenticationAndRegistration/AuthenticationScreen.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Inzynieria-Oprogramowania/LaunchApp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Inzynieria-Oprogramowania/src/AuthenticationAndRegistration/AuthTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Inzynieria-Oprogramowania/src/AuthenticationAndRegistration/AuthenticationScreen$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Inzynieria-Oprogramowania/src/AuthenticationAndRegistration/AuthenticationScreen$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Inzynieria-Oprogramowania/src/AuthenticationAndRegistration/AuthenticationScreen.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Inzynieria-Oprogramowania/src/AuthenticationAndRegistration/ChooseAccountNumberScreen$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Inzynieria-Oprogramowania/src/AuthenticationAndRegistration/ChooseAccountNumberScreen.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Inzynieria-Oprogramowania/src/AuthenticationAndRegistration/CreateAccountNumberScreen$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Inzynieria-Oprogramowania/src/AuthenticationAndRegistration/CreateAccountNumberScreen.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Inzynieria-Oprogramowania/src/AuthenticationAndRegistration/EmailVerificationScreen$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Inzynieria-Oprogramowania/src/AuthenticationAndRegistration/EmailVerificationScreen.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Inzynieria-Oprogramowania/src/AuthenticationAndRegistration/RegistrationScreen1$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Inzynieria-Oprogramowania/src/AuthenticationAndRegistration/RegistrationScreen1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Inzynieria-Oprogramowania/src/AuthenticationAndRegistration/RegistrationScreen2$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Inzynieria-Oprogramowania/src/AuthenticationAndRegistration/RegistrationScreen2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Inzynieria-Oprogramowania/src/AuthenticationAndRegistration/test1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Inzynieria-Oprogramowania/src/JavaMail$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Inzynieria-Oprogramowania/src/JavaMail.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Inzynieria-Oprogramowania/src/MainScreen$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Inzynieria-Oprogramowania/src/MainScreen.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Inzynieria-Oprogramowania/src/Screen.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Inzynieria-Oprogramowania/src/Settings/ChangeEmailScreen$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Inzynieria-Oprogramowania/src/Settings/ChangeEmailScreen.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Inzynieria-Oprogramowania/src/Settings/ChangePasswordScreen1$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Inzynieria-Oprogramowania/src/Settings/ChangePasswordScreen1$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Inzynieria-Oprogramowania/src/Settings/ChangePasswordScreen1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Inzynieria-Oprogramowania/src/Settings/ChangePasswordScreen2$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Inzynieria-Oprogramowania/src/Settings/ChangePasswordScreen2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Inzynieria-Oprogramowania/src/Settings/ChangeUsernameScreen$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Inzynieria-Oprogramowania/src/Settings/ChangeUsernameScreen.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Inzynieria-Oprogramowania/src/Settings/SettingsMainScreen$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Inzynieria-Oprogramowania/src/Settings/SettingsMainScreen$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Inzynieria-Oprogramowania/src/Settings/SettingsMainScreen$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Inzynieria-Oprogramowania/src/Settings/SettingsMainScreen.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Inzynieria-Oprogramowania/src/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationAndRegistration/AuthTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AuthenticationAndRegistration/AuthTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AuthenticationAndRegistration/AuthenticationScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AuthenticationAndRegistration/AuthenticationScreen.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +19,13 @@
       <list>
         <option value="Class" />
       </list>
+    </option>
+  </component>
+  <component name="Git.Pull.Settings">
+    <option name="OPTIONS">
+      <set>
+        <option value="NO_VERIFY" />
+      </set>
     </option>
   </component>
   <component name="Git.Settings">
@@ -72,15 +45,6 @@
       </UrlAndAccount>
     </option>
   </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/src/AuthenticationAndRegistration/AuthenticationScreen.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/AuthenticationAndRegistration/CreateAccountNumberScreen.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/AuthenticationAndRegistration/test1.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/CreditCard/PayWithCardScreen2.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/DataValidation.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/Screen.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/User.java" root0="FORCE_HIGHLIGHTING" />
-  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -90,30 +54,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW&quot;: &quot;true&quot;,
-    &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW&quot;: &quot;true&quot;,
-    &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH&quot;: &quot;221&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;11 (2)&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/max/my_files/io/bank_system_project/src/Settings&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.tabs&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW": "true",
+    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW": "true",
+    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "213",
+    "WebServerToolWindowFactoryState": "false",
+    "jdk.selected.JAVA_MODULE": "11 (2)",
+    "last_opened_file_path": "/home/max/my_files/io/bank_system_project/src/Settings",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "editor.preferences.tabs"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/Settings" />
       <recent name="$PROJECT_DIR$/src/AuthenticationAndRegistration" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.AuthTest">
+  <component name="RunManager" selected="Application.AuthenticationScreen">
     <configuration name="AuthTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="src.AuthenticationAndRegistration.AuthTest" />
       <extension name="coverage">
@@ -197,11 +161,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.AuthenticationScreen" />
         <item itemvalue="Application.AuthTest" />
         <item itemvalue="Application.src.AuthenticationAndRegistration.AuthTest" />
         <item itemvalue="Application.PayWithCardScreen1" />
         <item itemvalue="Application.src.AuthenticationAndRegistration.CreateAccountNumberScreen" />
-        <item itemvalue="Application.AuthenticationScreen" />
       </list>
     </recent_temporary>
   </component>
