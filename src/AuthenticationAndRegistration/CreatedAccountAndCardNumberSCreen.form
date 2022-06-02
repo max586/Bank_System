@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="src.AuthenticationAndRegistration.CreatedAccountAndCardNumberSCreen">
+  <grid id="27dc6" binding="panel" layout-manager="GridBagLayout">
+    <constraints>
+      <xy x="20" y="20" width="850" height="711"/>
+    </constraints>
+    <properties/>
+    <border type="none"/>
+    <children>
+      <component id="cb3c1" class="javax.swing.JLabel" binding="ordinaryAccountLabel">
+        <constraints>
+          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.5" weighty="1.0"/>
+        </constraints>
+        <properties>
+          <font size="18"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="51f12" class="javax.swing.JLabel" binding="cardLabel">
+        <constraints>
+          <grid row="5" column="0" row-span="1" col-span="4" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag top="0" left="20" bottom="0" right="0" weightx="0.5" weighty="0.2"/>
+        </constraints>
+        <properties>
+          <font size="18"/>
+          <text value="Credit card number"/>
+        </properties>
+      </component>
+      <component id="b6282" class="javax.swing.JLabel" binding="pinLabel">
+        <constraints>
+          <grid row="6" column="0" row-span="1" col-span="4" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag top="0" left="20" bottom="0" right="0" weightx="0.5" weighty="0.2"/>
+        </constraints>
+        <properties>
+          <font size="18"/>
+          <text value="PIN"/>
+        </properties>
+      </component>
+      <component id="c2467" class="javax.swing.JButton" binding="OKButton" default-binding="true">
+        <constraints>
+          <grid row="8" column="0" row-span="1" col-span="5" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="1.0" weighty="0.2"/>
+        </constraints>
+        <properties>
+          <font size="18"/>
+          <preferredSize width="250" height="50"/>
+          <text value="OK"/>
+        </properties>
+      </component>
+      <component id="ab07d" class="javax.swing.JButton" binding="returnButton" default-binding="true">
+        <constraints>
+          <grid row="9" column="0" row-span="1" col-span="5" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="1.0" weighty="0.2"/>
+        </constraints>
+        <properties>
+          <font size="18"/>
+          <preferredSize width="250" height="50"/>
+          <text value="Return"/>
+        </properties>
+      </component>
+      <component id="7f5b2" class="javax.swing.JButton" binding="exitButton" default-binding="true">
+        <constraints>
+          <grid row="10" column="0" row-span="1" col-span="5" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="1.0" weighty="0.2"/>
+        </constraints>
+        <properties>
+          <font size="18"/>
+          <preferredSize width="250" height="50"/>
+          <text value="Exit"/>
+        </properties>
+      </component>
+      <component id="1237a" class="javax.swing.JTextField" binding="cardNumberField">
+        <constraints>
+          <grid row="5" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+          <gridbag weightx="1.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font size="18"/>
+          <preferredSize width="250" height="40"/>
+        </properties>
+      </component>
+      <component id="9af05" class="javax.swing.JTextField" binding="pinField">
+        <constraints>
+          <grid row="6" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+          <gridbag weightx="1.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <preferredSize width="250" height="40"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="bac0f" class="javax.swing.JLabel" binding="cardDescrLabel">
+        <constraints>
+          <grid row="4" column="0" row-span="1" col-span="5" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.2"/>
+        </constraints>
+        <properties>
+          <font size="18"/>
+          <preferredSize width="600" height="40"/>
+          <text value="Your personal credit card number and pin code:"/>
+        </properties>
+      </component>
+      <vspacer id="39b68">
+        <constraints>
+          <grid row="3" column="0" row-span="1" col-span="4" vsize-policy="6" hsize-policy="1" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.3"/>
+        </constraints>
+      </vspacer>
+      <component id="c6714" class="javax.swing.JLabel" binding="ordinaryAccountdescrLabel">
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="4" vsize-policy="0" hsize-policy="0" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag top="0" left="20" bottom="0" right="0" weightx="0.0" weighty="0.6"/>
+        </constraints>
+        <properties>
+          <font size="16"/>
+          <preferredSize width="400" height="200"/>
+          <text value="&lt;html&gt;Ordinary Account:&lt;br&gt;- free cash deposit and withdrawal;&lt;br&gt; - free national and internal transactions;&lt;br&gt;- standard credit card for free, or with personal outlook for 15zl;&lt;br&gt; &lt;/html&gt;"/>
+        </properties>
+      </component>
+      <component id="d4a06" class="javax.swing.JLabel" binding="savingsAccountdescrLabel">
+        <constraints>
+          <grid row="1" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag top="0" left="20" bottom="0" right="0" weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font size="16"/>
+          <preferredSize width="400" height="200"/>
+          <text value="&lt;html&gt;Savings Account:&lt;br&gt; - free cash deposit and withdrawal;&lt;br&gt;- free internal transactions;&lt;br&gt;- 1.0% interest;&lt;/html&gt;"/>
+        </properties>
+      </component>
+      <component id="3a247" class="javax.swing.JLabel" binding="accountsDescrLabel">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="5" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.2"/>
+        </constraints>
+        <properties>
+          <font size="18"/>
+          <preferredSize width="600" height="40"/>
+          <text value="Your personal ordinary and savings account numbers:"/>
+        </properties>
+      </component>
+      <component id="bb052" class="javax.swing.JTextField" binding="savingsAccountField">
+        <constraints>
+          <grid row="2" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+          <gridbag weightx="1.0" weighty="0.2"/>
+        </constraints>
+        <properties>
+          <font size="18"/>
+          <preferredSize width="250" height="40"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="9326c" class="javax.swing.JTextField" binding="ordinaryAccountField">
+        <constraints>
+          <grid row="2" column="1" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+          <gridbag weightx="1.0" weighty="0.2"/>
+        </constraints>
+        <properties>
+          <font size="18"/>
+          <preferredSize width="250" height="40"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <vspacer id="5a7e6">
+        <constraints>
+          <grid row="7" column="4" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.3"/>
+        </constraints>
+      </vspacer>
+    </children>
+  </grid>
+</form>

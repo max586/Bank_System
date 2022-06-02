@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bea002ff-8e44-4e85-a29b-66b1294d710d" name="Changes" comment="sth">
-      <change afterPath="$PROJECT_DIR$/src/AuthenticationAndRegistration/AuthenticationScreen.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationAndRegistration/AuthenticationScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AuthenticationAndRegistration/AuthenticationScreen.java" afterDir="false" />
+    <list default="true" id="bea002ff-8e44-4e85-a29b-66b1294d710d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/AuthenticationAndRegistration/CreatedAccountAndCardNumberSCreen.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AuthenticationAndRegistration/CreatedAccountAndCardNumberSCreen.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -203,7 +202,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654153919128</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="AuthenticationScreen.form added">
+      <created>1654174648187</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1654174648187</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -236,6 +242,7 @@
     <MESSAGE value="- changed database&#10;- separated user from operations with database. Now all of them are static methods in class Database&#10;- refactored all screens(classes) in AuthenticationAndRegistration package" />
     <MESSAGE value="refactored screens in Settings package" />
     <MESSAGE value="sth" />
-    <option name="LAST_COMMIT_MESSAGE" value="sth" />
+    <MESSAGE value="AuthenticationScreen.form added" />
+    <option name="LAST_COMMIT_MESSAGE" value="AuthenticationScreen.form added" />
   </component>
 </project>
