@@ -22,7 +22,7 @@ public class AuthenticationScreen extends Screen {
     }
     @Override
     public void CreateScreen(){
-        super.CreateScreen();
+        
         frame.setContentPane(panel);
         signInButton.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){

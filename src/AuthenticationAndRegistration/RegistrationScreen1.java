@@ -34,7 +34,7 @@ public class RegistrationScreen1 extends Screen {
     }
 
     public void CreateScreen() {
-        super.CreateScreen();
+        
         frame.setContentPane(panel);
 
         Statement st = Database.connectToDatabase("bank_system", "root", "password");

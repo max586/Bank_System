@@ -7,21 +7,9 @@
     <properties/>
     <border type="none"/>
     <children>
-      <component id="4a87b" class="javax.swing.JButton" binding="createCardButton" default-binding="true">
-        <constraints>
-          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
-          <gridbag weightx="1.0" weighty="0.1"/>
-        </constraints>
-        <properties>
-          <enabled value="true"/>
-          <font size="18"/>
-          <preferredSize width="250" height="50"/>
-          <text value="Create card"/>
-        </properties>
-      </component>
       <component id="4c426" class="javax.swing.JButton" binding="settingsButton" default-binding="true">
         <constraints>
-          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
           <gridbag weightx="0.0" weighty="0.1"/>
         </constraints>
         <properties>
@@ -32,8 +20,8 @@
       </component>
       <component id="28e50" class="javax.swing.JButton" binding="returnButton" default-binding="true">
         <constraints>
-          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
-          <gridbag weightx="0.0" weighty="0.1"/>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="1.0" weighty="0.1"/>
         </constraints>
         <properties>
           <font size="18"/>
@@ -43,7 +31,7 @@
       </component>
       <component id="75f2" class="javax.swing.JButton" binding="exitButton" default-binding="true">
         <constraints>
-          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
           <gridbag weightx="0.0" weighty="0.1"/>
         </constraints>
         <properties>

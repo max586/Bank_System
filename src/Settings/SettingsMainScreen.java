@@ -22,7 +22,7 @@ public class SettingsMainScreen extends Screen {
         super(user,prev_screen,next_screen);
     }
     public void CreateScreen(){
-        super.CreateScreen();
+        
         frame.setContentPane(panel);
 
         changeUsernameButton.addActionListener(new ActionListener(){

@@ -31,7 +31,7 @@ public class EmailVerificationScreen extends Screen{
             System.out.println(e);
         }
 
-        super.CreateScreen();
+        
         frame.setContentPane(panel);
 
         submitButton.addActionListener(new ActionListener(){

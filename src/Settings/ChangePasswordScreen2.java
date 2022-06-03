@@ -33,7 +33,7 @@ public class ChangePasswordScreen2 extends Screen{
         super(user,prev_screen,next_screen);
     }
     public void CreateScreen() {
-        super.CreateScreen();
+        
         frame.setContentPane(panel);
 
         submitButton.addActionListener(new ActionListener(){

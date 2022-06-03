@@ -21,7 +21,7 @@ public class PayWithCardScreen2 extends Screen{
         super(user,prev_screen,next_screen);
     }
     public void CreateScreen(){
-        super.CreateScreen();
+        
         frame.setContentPane(panel);
 
         Statement st = Database.connectToDatabase("bank_system","root","password");

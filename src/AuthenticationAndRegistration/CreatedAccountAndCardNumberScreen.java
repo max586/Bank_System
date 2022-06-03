@@ -30,7 +30,7 @@ public class CreatedAccountAndCardNumberScreen extends Screen {
     public CreatedAccountAndCardNumberScreen(User user, Screen prev_screen, Screen next_screen){super(user,prev_screen,next_screen);}
 
     public void CreateScreen(){
-        super.CreateScreen();
+        
         frame.setContentPane(panel);
 
         String ordinary_account_number = generateAccountNumber();

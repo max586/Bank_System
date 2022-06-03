@@ -15,9 +15,8 @@ public class Screen {
         this.user = user;
         this.prev_screen = prev_screen;
         this.next_screen = next_screen;
-    }
-    public void CreateScreen(){
-        frame=new JFrame();
+        frame = new JFrame();
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
+    public void CreateScreen(){}
 }

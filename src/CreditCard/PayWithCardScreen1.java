@@ -23,7 +23,7 @@ public class PayWithCardScreen1 extends Screen {
     }
     @Override
     public void CreateScreen(){
-        super.CreateScreen();
+        
         frame.setContentPane(panel);
 
         submitButton.addActionListener(new ActionListener() {
