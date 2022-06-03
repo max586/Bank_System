@@ -79,7 +79,7 @@ public class ChangePasswordScreen1 extends Screen{
             public void actionPerformed(ActionEvent e){
                 frame.dispose();
                 if(prev_screen!=null){
-                    prev_screen.CreateScreen();
+                    prev_screen.frame.setVisible(true);
                 }
             }
         });

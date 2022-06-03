@@ -56,7 +56,7 @@ public class EmailVerificationScreen extends Screen{
                     else{
                         frame.dispose();
                         if(prev_screen!=null){
-                            prev_screen.CreateScreen();
+                            prev_screen.frame.setVisible(true);
                         }
                     }
                 }
@@ -67,7 +67,7 @@ public class EmailVerificationScreen extends Screen{
             public void actionPerformed(ActionEvent e){
                 frame.dispose();
                 if(prev_screen!=null){
-                    prev_screen.CreateScreen();
+                    prev_screen.frame.setVisible(true);
                 }
             }
         });
