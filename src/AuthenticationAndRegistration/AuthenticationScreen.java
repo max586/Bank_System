@@ -29,7 +29,7 @@ public class AuthenticationScreen extends Screen {
                 user = new User();
                 user.username=usernameField.getText();
                 user.password=new String(passwordField.getPassword());
-                Statement st = Database.connectToDatabase("bank_system", "root", "17391425");
+                Statement st = Database.connectToDatabase("bank_system", "root", "password");
                 if(Database.verifyUser(st,user.username,user.password)){
                     JOptionPane.showMessageDialog(frame, "user successfully verified");
                     frame.dispose();

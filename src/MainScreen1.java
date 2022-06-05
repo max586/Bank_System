@@ -36,7 +36,7 @@ public class MainScreen1 extends Screen {
         frame.setSize(1080,720);
         frame.setTitle("MainScreen");
 
-        Statement st = Database.connectToDatabase("bank_system", "root", "17391425");
+        Statement st = Database.connectToDatabase("bank_system", "root", "password");
         if(chosenAcc == "ordinary")
         {
             AccNumber.setText(Database.getOrdinaryAccountNumber(st, user.username));

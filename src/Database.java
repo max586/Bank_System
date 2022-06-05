@@ -224,6 +224,6 @@ public class Database {
     }
 
     public static void main(String[] args) {
-        connectToDatabase("bank_system", "root","17391425");
+        connectToDatabase("bank_system", "root","root");
     }
 }
