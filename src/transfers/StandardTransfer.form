@@ -1,0 +1,784 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="transfers.StandardTransfer">
+  <grid id="27dc6" binding="transferPanel1" layout-manager="GridBagLayout">
+    <constraints>
+      <xy x="20" y="88" width="1386" height="1011"/>
+    </constraints>
+    <properties/>
+    <border type="none"/>
+    <children>
+      <component id="3454c" class="javax.swing.JLabel" binding="panelTitleLabel">
+        <constraints>
+          <grid row="3" column="4" row-span="1" col-span="22" vsize-policy="0" hsize-policy="0" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="1.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <alignmentY value="0.0"/>
+          <background color="-12836031"/>
+          <enabled value="true"/>
+          <focusable value="true"/>
+          <font name="Futura" size="30" style="1"/>
+          <foreground color="-13475626"/>
+          <horizontalAlignment value="0"/>
+          <horizontalTextPosition value="0"/>
+          <maximumSize width="400" height="25"/>
+          <minimumSize width="400" height="41"/>
+          <preferredSize width="400" height="40"/>
+          <text value="Przelew krajowy"/>
+          <verticalAlignment value="1"/>
+          <verticalTextPosition value="1"/>
+        </properties>
+      </component>
+      <component id="d5916" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="7" column="4" row-span="1" col-span="4" vsize-policy="0" hsize-policy="0" anchor="9" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font name="Futura" size="24" style="0"/>
+          <text value="Na"/>
+        </properties>
+      </component>
+      <component id="8f385" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="7" column="19" row-span="1" col-span="7" vsize-policy="0" hsize-policy="0" anchor="9" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="1.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font name="Futura" size="24" style="0"/>
+          <text value="Szczegóły"/>
+        </properties>
+      </component>
+      <component id="b8eaf" class="javax.swing.JLabel" binding="accountNumberLabel">
+        <constraints>
+          <grid row="9" column="4" row-span="1" col-span="7" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font name="Futura" size="18" style="0"/>
+          <text value="Numer rachunku"/>
+        </properties>
+      </component>
+      <component id="39a2f" class="javax.swing.JTextField" binding="accountNumberTxt">
+        <constraints>
+          <grid row="10" column="7" row-span="1" col-span="9" vsize-policy="0" hsize-policy="6" anchor="4" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font name="Futura" size="16" style="0"/>
+          <preferredSize width="540" height="32"/>
+        </properties>
+      </component>
+      <component id="6b233" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="9" column="19" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font name="Futura" size="18" style="0"/>
+          <text value="Kwota"/>
+        </properties>
+      </component>
+      <component id="96b2c" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="13" column="4" row-span="1" col-span="7" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font name="Futura" size="16" style="0"/>
+          <text value="Nazwa odbiorcy"/>
+        </properties>
+      </component>
+      <component id="e9984" class="javax.swing.JComboBox" binding="receiverNameCombo">
+        <constraints>
+          <grid row="15" column="10" row-span="1" col-span="6" vsize-policy="0" hsize-policy="2" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font name="Futura" size="14" style="0"/>
+          <model>
+            <item value="Wybierz"/>
+            <item value="Firma"/>
+            <item value="Osoba"/>
+          </model>
+        </properties>
+      </component>
+      <component id="2c533" class="javax.swing.JTextField" binding="receiverName1Txt">
+        <constraints>
+          <grid row="16" column="12" row-span="1" col-span="4" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font name="Futura" size="14" style="0"/>
+          <preferredSize width="250" height="30"/>
+        </properties>
+      </component>
+      <component id="3d7e5" class="javax.swing.JTextField" binding="receiverName2Txt">
+        <constraints>
+          <grid row="18" column="12" row-span="1" col-span="4" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font name="Futura" size="14" style="0"/>
+          <preferredSize width="250" height="30"/>
+        </properties>
+      </component>
+      <component id="9beb6" class="javax.swing.JLabel" binding="townNameLabel">
+        <constraints>
+          <grid row="25" column="4" row-span="1" col-span="4" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font name="Futura" size="16" style="0"/>
+          <text value="Miejscowość"/>
+        </properties>
+      </component>
+      <component id="6e89c" class="javax.swing.JTextField" binding="townNameTxt">
+        <constraints>
+          <grid row="25" column="8" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font name="Futura" size="14" style="0"/>
+          <minimumSize width="49" height="30"/>
+          <preferredSize width="90" height="30"/>
+        </properties>
+      </component>
+      <component id="127a2" class="javax.swing.JLabel" binding="streetNameLabel">
+        <constraints>
+          <grid row="27" column="4" row-span="1" col-span="4" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font name="Futura" size="16" style="0"/>
+          <text value="Ulica"/>
+        </properties>
+      </component>
+      <component id="d0188" class="javax.swing.JTextField" binding="streetNameTxt">
+        <constraints>
+          <grid row="27" column="8" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font name="Futura" size="14" style="0"/>
+          <preferredSize width="120" height="30"/>
+        </properties>
+      </component>
+      <hspacer id="71ac1">
+        <constraints>
+          <grid row="7" column="16" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+      </hspacer>
+      <hspacer id="374d9">
+        <constraints>
+          <grid row="7" column="17" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="1.0" weighty="0.0"/>
+        </constraints>
+      </hspacer>
+      <hspacer id="7bec">
+        <constraints>
+          <grid row="7" column="18" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+      </hspacer>
+      <component id="540fa" class="javax.swing.JLabel" binding="postcodeLabel">
+        <constraints>
+          <grid row="25" column="12" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font name="Futura" size="16" style="0"/>
+          <text value="Kod pocztowy"/>
+        </properties>
+      </component>
+      <component id="c80aa" class="javax.swing.JTextField" binding="postcode1Txt">
+        <constraints>
+          <grid row="25" column="13" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font name="Futura" size="14" style="0"/>
+          <preferredSize width="40" height="30"/>
+        </properties>
+      </component>
+      <component id="38ca0" class="javax.swing.JLabel" binding="postcodeDashLabel">
+        <constraints>
+          <grid row="25" column="14" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font name="Futura" size="16" style="0"/>
+          <text value=" - "/>
+        </properties>
+      </component>
+      <component id="1cddd" class="javax.swing.JTextField" binding="postcode2Txt">
+        <constraints>
+          <grid row="25" column="15" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font name="Futura" size="14" style="0"/>
+          <preferredSize width="60" height="30"/>
+        </properties>
+      </component>
+      <component id="2d3f" class="javax.swing.JLabel" binding="streetNumberLabel">
+        <constraints>
+          <grid row="27" column="12" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font name="Futura" size="16" style="0"/>
+          <text value="Nr. domu/ lokalu"/>
+        </properties>
+      </component>
+      <component id="afa65" class="javax.swing.JTextField" binding="streetNumber1Txt">
+        <constraints>
+          <grid row="27" column="13" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font name="Futura" size="14" style="0"/>
+        </properties>
+      </component>
+      <component id="61603" class="javax.swing.JLabel" binding="streetNumberSlashLabel">
+        <constraints>
+          <grid row="27" column="14" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font name="Futura" size="16" style="0"/>
+          <text value=" / "/>
+        </properties>
+      </component>
+      <component id="6c0f5" class="javax.swing.JTextField" binding="streetNumber2Txt">
+        <constraints>
+          <grid row="27" column="15" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font name="Futura" size="14" style="0"/>
+        </properties>
+      </component>
+      <hspacer id="4fa21">
+        <constraints>
+          <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+      </hspacer>
+      <component id="d6711" class="javax.swing.JLabel" binding="receiverName1Label">
+        <constraints>
+          <grid row="16" column="10" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font name="Futura" size="16" style="0"/>
+          <text value="Imię"/>
+        </properties>
+      </component>
+      <component id="2a353" class="javax.swing.JLabel" binding="receiverName2Label">
+        <constraints>
+          <grid row="18" column="10" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font name="Futura" size="16" style="0"/>
+          <text value="Nazwisko"/>
+        </properties>
+      </component>
+      <hspacer id="f7676">
+        <constraints>
+          <grid row="7" column="27" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+      </hspacer>
+      <vspacer id="62ce3">
+        <constraints>
+          <grid row="8" column="4" row-span="1" col-span="4" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+      </vspacer>
+      <component id="7b456" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="13" column="19" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font name="Futura" size="16" style="0"/>
+          <text value="Tytuł"/>
+        </properties>
+      </component>
+      <component id="b0672" class="javax.swing.JLabel" binding="transferAmountCurrencyLabel">
+        <constraints>
+          <grid row="10" column="23" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font name="Futura" size="18" style="0"/>
+          <text value="PLN"/>
+        </properties>
+      </component>
+      <component id="15ab0" class="javax.swing.JTextField" binding="transferAmount2Txt">
+        <constraints>
+          <grid row="10" column="22" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font name="Futura" size="16" style="0"/>
+          <preferredSize width="40" height="30"/>
+          <text value="00"/>
+        </properties>
+      </component>
+      <component id="36ae1" class="javax.swing.JTextField" binding="transferAmount1Txt">
+        <constraints>
+          <grid row="10" column="19" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font name="Futura" size="16" style="0"/>
+          <preferredSize width="100" height="30"/>
+        </properties>
+      </component>
+      <component id="14d85" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="10" column="21" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font name="Futura" size="18" style="0"/>
+          <text value=". "/>
+        </properties>
+      </component>
+      <component id="b6473" class="javax.swing.JTextArea" binding="transferTitleTextArea">
+        <constraints>
+          <grid row="15" column="19" row-span="4" col-span="7" vsize-policy="6" hsize-policy="6" anchor="9" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="50"/>
+          </grid>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font name="Futura" size="14" style="0"/>
+          <lineWrap value="true"/>
+          <maximumSize width="200" height="90"/>
+          <preferredSize width="200" height="90"/>
+          <wrapStyleWord value="false"/>
+        </properties>
+      </component>
+      <component id="651ff" class="javax.swing.JRadioButton" binding="expressTransferRadioButton">
+        <constraints>
+          <grid row="25" column="19" row-span="1" col-span="7" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font name="Futura" size="14" style="0"/>
+          <text value="Przelew natychmiastowy (+5.00 PLN)"/>
+        </properties>
+      </component>
+      <vspacer id="416e8">
+        <constraints>
+          <grid row="4" column="13" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+      </vspacer>
+      <vspacer id="d8f03">
+        <constraints>
+          <grid row="22" column="4" row-span="1" col-span="4" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+      </vspacer>
+      <vspacer id="13135">
+        <constraints>
+          <grid row="20" column="4" row-span="1" col-span="4" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+      </vspacer>
+      <vspacer id="fe9c9">
+        <constraints>
+          <grid row="14" column="4" row-span="1" col-span="4" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+      </vspacer>
+      <component id="2ed12" class="javax.swing.JButton" binding="nextButton">
+        <constraints>
+          <grid row="30" column="19" row-span="1" col-span="7" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font name="Futura" size="18" style="0"/>
+          <foreground color="-14566656"/>
+          <preferredSize width="265" height="50"/>
+          <text value="Dalej"/>
+        </properties>
+      </component>
+      <vspacer id="e4931">
+        <constraints>
+          <grid row="28" column="4" row-span="1" col-span="4" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+      </vspacer>
+      <vspacer id="2d82d">
+        <constraints>
+          <grid row="29" column="4" row-span="1" col-span="4" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+      </vspacer>
+      <vspacer id="ebbb4">
+        <constraints>
+          <grid row="31" column="10" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="1.0"/>
+        </constraints>
+      </vspacer>
+      <component id="f6971" class="javax.swing.JButton" binding="cancelButton">
+        <constraints>
+          <grid row="30" column="4" row-span="1" col-span="9" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font name="Futura" size="18" style="0"/>
+          <foreground color="-4520960"/>
+          <hideActionText value="false"/>
+          <preferredSize width="265" height="50"/>
+          <text value="Anuluj"/>
+        </properties>
+      </component>
+      <hspacer id="97896">
+        <constraints>
+          <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+      </hspacer>
+      <hspacer id="49df1">
+        <constraints>
+          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+      </hspacer>
+      <hspacer id="866cb">
+        <constraints>
+          <grid row="3" column="29" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+      </hspacer>
+      <hspacer id="7fae2">
+        <constraints>
+          <grid row="3" column="28" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+      </hspacer>
+      <vspacer id="f1218">
+        <constraints>
+          <grid row="1" column="13" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+      </vspacer>
+      <vspacer id="8d652">
+        <constraints>
+          <grid row="0" column="13" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+      </vspacer>
+      <component id="f3876" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="5" column="4" row-span="1" col-span="4" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font name="Futura" size="24" style="0"/>
+          <text value="Dostępne środki"/>
+        </properties>
+      </component>
+      <vspacer id="3bea8">
+        <constraints>
+          <grid row="6" column="4" row-span="1" col-span="4" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+      </vspacer>
+      <component id="cec33" class="javax.swing.JLabel" binding="availableFundsLabel">
+        <constraints>
+          <grid row="5" column="10" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font name="Futura" size="24" style="0"/>
+          <foreground color="-16729233"/>
+          <text value="Label"/>
+        </properties>
+      </component>
+      <hspacer id="99909">
+        <constraints>
+          <grid row="5" column="8" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+      </hspacer>
+      <hspacer id="1e6ec">
+        <constraints>
+          <grid row="5" column="9" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+      </hspacer>
+      <component id="889e9" class="javax.swing.JLabel" binding="expressTransferWarning">
+        <constraints>
+          <grid row="26" column="19" row-span="1" col-span="7" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font name="Futura" size="10" style="0"/>
+          <foreground color="-4521984"/>
+          <text value="Nie masz wystarczających środków "/>
+        </properties>
+      </component>
+      <component id="2b2d5" class="javax.swing.JLabel" binding="postcodeWarning">
+        <constraints>
+          <grid row="26" column="12" row-span="1" col-span="4" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font name="Futura" size="10" style="0"/>
+          <foreground color="-4521984"/>
+          <text value="Niepoprawny kod pocztowy"/>
+        </properties>
+      </component>
+      <component id="2ef83" class="javax.swing.JLabel" binding="transferTitleWarning">
+        <constraints>
+          <grid row="19" column="19" row-span="1" col-span="7" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font name="Futura" size="10" style="0"/>
+          <foreground color="-4521984"/>
+          <text value="To pole jest wymagane"/>
+        </properties>
+      </component>
+      <component id="bb7ed" class="javax.swing.JLabel" binding="receiverName1Warning">
+        <constraints>
+          <grid row="17" column="10" row-span="1" col-span="6" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font name="Futura" size="10" style="0"/>
+          <foreground color="-4521984"/>
+          <text value="To pole jest wymagane"/>
+        </properties>
+      </component>
+      <component id="208d6" class="javax.swing.JLabel" binding="receiverName2Warning">
+        <constraints>
+          <grid row="19" column="10" row-span="1" col-span="6" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font name="Futura" size="10" style="0"/>
+          <foreground color="-4521984"/>
+          <text value="To pole jest wymagane"/>
+        </properties>
+      </component>
+      <component id="d8359" class="javax.swing.JLabel" binding="townNameWarning">
+        <constraints>
+          <grid row="26" column="8" row-span="1" col-span="3" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font name="Futura" size="10" style="0"/>
+          <foreground color="-4521984"/>
+          <text value="To pole jest wymagane"/>
+        </properties>
+      </component>
+      <component id="f0876" class="javax.swing.JLabel" binding="streetNameWarning">
+        <constraints>
+          <grid row="28" column="8" row-span="1" col-span="3" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font name="Futura" size="10" style="0"/>
+          <foreground color="-4521984"/>
+          <text value="To pole jest wymagane"/>
+        </properties>
+      </component>
+      <component id="d5d3b" class="javax.swing.JLabel" binding="streetNumberWarning">
+        <constraints>
+          <grid row="28" column="12" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font name="Futura" size="10" style="0"/>
+          <foreground color="-4521984"/>
+          <text value="To pole jest wymagane"/>
+        </properties>
+      </component>
+      <component id="ce894" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="5" column="12" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font name="Futura" size="24" style="0"/>
+          <foreground color="-16729233"/>
+          <text value="PLN"/>
+        </properties>
+      </component>
+      <hspacer id="1a329">
+        <constraints>
+          <grid row="5" column="11" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+      </hspacer>
+      <component id="1f4f2" class="javax.swing.JLabel" binding="accountNumberCountryLabel">
+        <constraints>
+          <grid row="10" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font name="Futura" size="18" style="0"/>
+          <text value="PL"/>
+        </properties>
+      </component>
+      <hspacer id="fccf1">
+        <constraints>
+          <grid row="10" column="6" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+      </hspacer>
+      <component id="71cd4" class="javax.swing.JLabel" binding="countryNameLabel">
+        <constraints>
+          <grid row="23" column="4" row-span="1" col-span="4" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font name="Futura" size="16" style="0"/>
+          <text value="Kraj"/>
+        </properties>
+      </component>
+      <vspacer id="b97ef">
+        <constraints>
+          <grid row="24" column="7" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+      </vspacer>
+      <component id="5de1c" class="javax.swing.JTextField" binding="countryNameTxt">
+        <constraints>
+          <grid row="23" column="8" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font name="Futura" size="14" style="0"/>
+        </properties>
+      </component>
+      <component id="54a23" class="javax.swing.JLabel" binding="countryNameWarning">
+        <constraints>
+          <grid row="24" column="8" row-span="1" col-span="3" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font name="Futura" size="10" style="0"/>
+          <foreground color="-4521984"/>
+          <text value="To pole jest wymagane"/>
+        </properties>
+      </component>
+      <component id="73e91" class="javax.swing.JRadioButton" binding="receiverAddressRadioButton">
+        <constraints>
+          <grid row="21" column="4" row-span="1" col-span="4" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font name="Futura" size="16" style="0"/>
+          <text value="Adres odbiorcy"/>
+        </properties>
+      </component>
+      <component id="8444" class="javax.swing.JComboBox" binding="currencyComboBox">
+        <constraints>
+          <grid row="10" column="24" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font name="Futura" size="18" style="0"/>
+          <minimumSize width="60" height="35"/>
+          <model/>
+          <preferredSize width="120" height="35"/>
+        </properties>
+      </component>
+      <vspacer id="48473">
+        <constraints>
+          <grid row="12" column="7" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+      </vspacer>
+      <component id="2d2c4" class="javax.swing.JLabel" binding="currencyInfoLabel">
+        <constraints>
+          <grid row="11" column="24" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font name="Futura" size="10" style="0"/>
+          <text value="Label"/>
+        </properties>
+      </component>
+      <component id="c9f3a" class="javax.swing.JLabel" binding="transferAmountWarning">
+        <constraints>
+          <grid row="11" column="19" row-span="1" col-span="4" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font name="Futura" size="10" style="0"/>
+          <foreground color="-4521984"/>
+          <text value="Nie masz wystarczających środków"/>
+        </properties>
+      </component>
+      <component id="a13b7" class="javax.swing.JLabel" binding="accountNumberWarning">
+        <constraints>
+          <grid row="11" column="4" row-span="1" col-span="9" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font name="Futura" size="10" style="0"/>
+          <foreground color="-4521984"/>
+          <text value="Niepoprawny numer rachunku"/>
+        </properties>
+      </component>
+      <component id="b5734" class="javax.swing.JComboBox" binding="accountNumberCountryComboBox">
+        <constraints>
+          <grid row="10" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font name="Futura" size="18" style="0"/>
+          <preferredSize width="80" height="35"/>
+        </properties>
+      </component>
+      <hspacer id="aeb0f">
+        <constraints>
+          <grid row="3" column="3" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="1.0" weighty="0.0"/>
+        </constraints>
+      </hspacer>
+      <hspacer id="50bf">
+        <constraints>
+          <grid row="3" column="26" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="1.0" weighty="0.0"/>
+        </constraints>
+      </hspacer>
+    </children>
+  </grid>
+</form>

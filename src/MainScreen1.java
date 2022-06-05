@@ -104,11 +104,12 @@ public class MainScreen1 extends Screen {
         new Thread() {
             public void run() {
                 while(counter <= 120) {
-                    timeCounter.setText("Test" + (counter++));
+                    timeCounter.setText("Time before log out: " + (120 - counter++));
                     try{
                         Thread.sleep(1000);
                     } catch(Exception e) {}
                 }
+
                 frame.dispose();
             }
         }.start();
