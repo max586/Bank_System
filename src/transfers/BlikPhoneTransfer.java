@@ -1,12 +1,12 @@
 package transfers;
 
+import mainFrame.MainFrame;
+
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
-import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Vector;
@@ -48,10 +48,10 @@ public class BlikPhoneTransfer implements Transfer{
     private Vector<Boolean> validation;
 
 
-    public BlikPhoneTransfer(MainFrame mainFrame, Map<String, String> senderData1, double senderAmount1) {
+    public BlikPhoneTransfer(MainFrame mainFrame, Map<String, String> senderData1) {
         frame = mainFrame;
         senderData = senderData1;
-        senderAmount = senderAmount1;
+        senderAmount = Double.parseDouble(senderData.get("kontosrodki"));
         receiverData = new HashMap<>();
         transferData = new HashMap<>();
         numbersOnly = new OnlyNumbers().getKeyAdapter();
@@ -251,7 +251,7 @@ public class BlikPhoneTransfer implements Transfer{
                     transferData.put("kwota", transferAmount1Txt.getText()+"."+ transferAmount2Txt.getText());
                     transferData.put("oplata","0.00");
                     transferData.put("typ",panelTitleLabel.getText());
-                    TransferNextStep pCd = new TransferNextStep(frame, blikPhonePanel,senderData,receiverData, transferData,senderAmount);
+                    TransferNextStep pCd = new TransferNextStep(frame, blikPhonePanel,senderData,receiverData, transferData);
                     frame.getjFrame().setContentPane(pCd.getTransferNextStepPanel());
                     frame.getjFrame().setVisible(true);
                 }

@@ -1,5 +1,7 @@
 package transfers;
 
+import mainFrame.MainFrame;
+
 import javax.swing.*;
 import javax.swing.event.TreeSelectionEvent;
 import javax.swing.event.TreeSelectionListener;

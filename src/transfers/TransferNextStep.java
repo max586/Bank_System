@@ -1,5 +1,7 @@
 package transfers;
 
+import mainFrame.MainFrame;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -45,7 +47,7 @@ public class TransferNextStep {
     private JPanel cancelPanel;
     private MainFrame frame;
 
-    public TransferNextStep(MainFrame mainFrame, JPanel transferPanel, Map<String,String> senderData1, Map<String,String> receiverData1, Map<String,String> transferData1, double senderAmount){
+    public TransferNextStep(MainFrame mainFrame, JPanel transferPanel, Map<String,String> senderData1, Map<String,String> receiverData1, Map<String,String> transferData1){
         frame = mainFrame;
         cancelPanel = transferPanel;
         senderData = senderData1;
