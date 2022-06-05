@@ -8,7 +8,7 @@ public class Database {
         Statement st=null;
         try{  
             Class.forName("com.mysql.cj.jdbc.Driver");  
-            con=DriverManager.getConnection("jdbc:mysql://localhost:3306/"+database_name,username,password); 
+            con=DriverManager.getConnection("jdbc:mysql://localhost:3306/"+database_name,username,password);
             st = con.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE,ResultSet.CONCUR_READ_ONLY);
             System.out.println("Succesfully connected to "+ database_name+" database!"); 
         }catch(Exception e){ 
@@ -221,5 +221,9 @@ public class Database {
             System.out.println(e);
         }
         return false;
+    }
+
+    public static void main(String[] args) {
+        connectToDatabase("bank_system", "root","17391425");
     }
 }
