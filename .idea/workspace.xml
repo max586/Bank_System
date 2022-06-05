@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="bea002ff-8e44-4e85-a29b-66b1294d710d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationAndRegistration/RegistrationScreen2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AuthenticationAndRegistration/RegistrationScreen2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Screen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Screen.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +74,7 @@
       <recent name="$PROJECT_DIR$/src/AuthenticationAndRegistration" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.RegistrationScreen2">
+  <component name="RunManager" selected="Application.App">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="src.przelew.App" />
       <module name="bank_system_project" />
@@ -145,11 +143,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.App" />
         <item itemvalue="Application.RegistrationScreen2" />
         <item itemvalue="Application.RegistrationScreen1" />
         <item itemvalue="Application.Unnamed" />
         <item itemvalue="Application.src.AuthenticationAndRegistration.AuthenticationScreen" />
-        <item itemvalue="Application.App" />
       </list>
     </recent_temporary>
   </component>
@@ -229,7 +227,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654255869454</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="some diagrams added">
+      <created>1654439127461</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1654439127461</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -266,7 +271,8 @@
     <MESSAGE value="added screen with generated accounts and credit card numbers after registration(CreatedAccountAndCardNumberScreen)" />
     <MESSAGE value="sth added" />
     <MESSAGE value="duplicated windows bug solved" />
-    <option name="LAST_COMMIT_MESSAGE" value="duplicated windows bug solved" />
+    <MESSAGE value="some diagrams added" />
+    <option name="LAST_COMMIT_MESSAGE" value="some diagrams added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
