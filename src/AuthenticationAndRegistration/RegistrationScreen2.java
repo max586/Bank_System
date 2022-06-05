@@ -54,6 +54,7 @@ public class RegistrationScreen2 extends Screen{
                 if(!pesel_is_valid){peselField.setText("PESEL is invalid");}
                 if(fname_is_valid&&lname_is_valid&&pesel_is_valid){
 
+                    System.out.println(sex);
                     Database.addUser(st, user.username, user.password, user.email);
                     Database.addUserData(st, user.username, user.firstName, user.lastName, user.sex, user.city, user.address, user.pesel);
 
@@ -94,7 +95,7 @@ public class RegistrationScreen2 extends Screen{
 
     public static void main(String[] args) {
         User user = new User();
-        user.username = "new_user";
+        user.username = "test_user";
         user.password = "password";
         user.email = "maks.ovsienko2@gmail.com";
         new RegistrationScreen2(user,null,new Screen()).CreateScreen();

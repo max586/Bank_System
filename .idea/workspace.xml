@@ -6,12 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="bea002ff-8e44-4e85-a29b-66b1294d710d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationAndRegistration/ChooseAccountNumberScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AuthenticationAndRegistration/ChooseAccountNumberScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationAndRegistration/CreatedAccountAndCardNumberScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AuthenticationAndRegistration/CreatedAccountAndCardNumberScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationAndRegistration/EmailVerificationScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AuthenticationAndRegistration/EmailVerificationScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationAndRegistration/RegistrationScreen1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AuthenticationAndRegistration/RegistrationScreen1.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AuthenticationAndRegistration/RegistrationScreen2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AuthenticationAndRegistration/RegistrationScreen2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MainScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Screen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Screen.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +76,7 @@
       <recent name="$PROJECT_DIR$/src/AuthenticationAndRegistration" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Unnamed">
+  <component name="RunManager" selected="Application.RegistrationScreen2">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="src.przelew.App" />
       <module name="bank_system_project" />
@@ -94,8 +90,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CreatedAccountAndCardNumberScreen" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="src.AuthenticationAndRegistration.CreatedAccountAndCardNumberScreen" />
+    <configuration name="RegistrationScreen1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="src.AuthenticationAndRegistration.RegistrationScreen1" />
       <module name="bank_system_project" />
       <extension name="coverage">
         <pattern>
@@ -107,12 +103,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SettingsMainScreen" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="src.Settings.SettingsMainScreen" />
+    <configuration name="RegistrationScreen2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="src.AuthenticationAndRegistration.RegistrationScreen2" />
       <module name="bank_system_project" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="src.Settings.*" />
+          <option name="PATTERN" value="src.AuthenticationAndRegistration.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -120,21 +116,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
+    <configuration name="Unnamed" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="LaunchApp" />
       <module name="bank_system_project" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="src.AuthenticationAndRegistration.AuthTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="src.AuthenticationAndRegistration.AuthTest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="src.AuthenticationAndRegistration.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -153,20 +137,19 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.RegistrationScreen1" />
+      <item itemvalue="Application.RegistrationScreen2" />
       <item itemvalue="Application.Unnamed" />
       <item itemvalue="Application.App" />
-      <item itemvalue="Application.CreatedAccountAndCardNumberScreen" />
-      <item itemvalue="Application.SettingsMainScreen" />
       <item itemvalue="Application.src.AuthenticationAndRegistration.AuthenticationScreen" />
-      <item itemvalue="Application.src.AuthenticationAndRegistration.AuthTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.RegistrationScreen2" />
+        <item itemvalue="Application.RegistrationScreen1" />
+        <item itemvalue="Application.Unnamed" />
         <item itemvalue="Application.src.AuthenticationAndRegistration.AuthenticationScreen" />
         <item itemvalue="Application.App" />
-        <item itemvalue="Application.SettingsMainScreen" />
-        <item itemvalue="Application.CreatedAccountAndCardNumberScreen" />
-        <item itemvalue="Application.src.AuthenticationAndRegistration.AuthTest" />
       </list>
     </recent_temporary>
   </component>
@@ -239,7 +222,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654245622568</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="duplicated windows bug solved">
+      <created>1654255869454</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1654255869454</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -275,7 +265,8 @@
     <MESSAGE value="AuthenticationScreen.form added" />
     <MESSAGE value="added screen with generated accounts and credit card numbers after registration(CreatedAccountAndCardNumberScreen)" />
     <MESSAGE value="sth added" />
-    <option name="LAST_COMMIT_MESSAGE" value="sth added" />
+    <MESSAGE value="duplicated windows bug solved" />
+    <option name="LAST_COMMIT_MESSAGE" value="duplicated windows bug solved" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
