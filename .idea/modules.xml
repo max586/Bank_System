@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/bank_system_project.iml" filepath="$PROJECT_DIR$/bank_system_project.iml" />
-      <module fileurl="file://$PROJECT_DIR$/SwingGUITests/src/src.iml" filepath="$PROJECT_DIR$/SwingGUITests/src/src.iml" />
     </modules>
   </component>
 </project>
