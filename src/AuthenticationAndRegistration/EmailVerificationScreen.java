@@ -10,19 +10,25 @@ import java.awt.event.ActionListener;
 import java.util.Random;
 
 public class EmailVerificationScreen extends Screen{
-    private JPanel panel;
-    private JTextField codeField;
-    private JButton submitButton;
-    private JButton returnButton;
-    private JButton exitButton;
-    private JLabel descrLabel;
+    public JPanel panel;
+    public JTextField codeField;
+    public JButton submitButton;
+    public JButton returnButton;
+    public JButton exitButton;
+    public JLabel descrLabel;
+    public JOptionPane jpane;
+    public JDialog jdialog;
     public int number_of_attempts=5;
+    public String code;
 
     public EmailVerificationScreen(User user, Screen prev_screen, Screen next_screen){
         super(user,prev_screen,next_screen);
+        jpane = new JOptionPane();
+        jpane.setMessageType(JOptionPane.INFORMATION_MESSAGE);
+        jdialog=jpane.createDialog(panel,"Info");
     }
     public void CreateScreen() {
-        String code = generateCode(6);
+        code = generateCode(6);
         try {
             JavaMail.SendMail(user.email, code);
         } catch (Exception e) {
@@ -30,15 +36,15 @@ public class EmailVerificationScreen extends Screen{
             System.out.println("failed to send an email");
             System.out.println(e);
         }
-
-        
         frame.setContentPane(panel);
 
         submitButton.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e) {
                 if(codeField.getText().equals(code)){
-                    JOptionPane.showMessageDialog(frame, "Well done!!!");
+                    jpane.setMessage("Well done!!!");
+                    jpane.setMessageType(JOptionPane.INFORMATION_MESSAGE);
+                    jdialog.setTitle("Info");
                     frame.dispose();
                     if(next_screen!=null){
                         frame.dispose();
@@ -51,7 +57,9 @@ public class EmailVerificationScreen extends Screen{
                 else{
                     number_of_attempts--;
                     if(number_of_attempts>0){
-                        JOptionPane.showMessageDialog(frame, "Wrong code! "+number_of_attempts+" attempts left","Warning",JOptionPane.WARNING_MESSAGE);
+                        jpane.setMessage("Wrong code! "+number_of_attempts+" attempts left");
+                        jpane.setMessageType(JOptionPane.WARNING_MESSAGE);
+                        jdialog.setTitle("Warning");
                     }
                     else{
                         frame.dispose();

@@ -10,12 +10,12 @@ import java.awt.event.ActionListener;
 import java.sql.Statement;
 
 public class ChangeUsernameScreen extends Screen{
-    private JPanel panel;
-    private JTextField usernameField;
-    private JButton submitButton;
-    private JButton returnButton;
-    private JButton exitButton;
-    private JLabel usernameLabel;
+    public JPanel panel;
+    public JTextField usernameField;
+    public JButton submitButton;
+    public JButton returnButton;
+    public JButton exitButton;
+    public JLabel usernameLabel;
     public ChangeUsernameScreen(User user, Screen prev_screen, Screen next_screen){
         super(user,prev_screen,next_screen);
     }

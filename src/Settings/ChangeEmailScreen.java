@@ -9,12 +9,12 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class ChangeEmailScreen extends Screen{
-    private JPanel panel;
-    private JTextField emailField;
-    private JButton submitButton;
-    private JButton returnButton;
-    private JButton exitButton;
-    private JLabel emailLabel;
+    public JPanel panel;
+    public JTextField emailField;
+    public JButton submitButton;
+    public JButton returnButton;
+    public JButton exitButton;
+    public JLabel emailLabel;
     public ChangeEmailScreen(User user, Screen prev_screen, Screen next_screen){
         super(user,prev_screen,next_screen);
     }

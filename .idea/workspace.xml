@@ -4,10 +4,55 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bea002ff-8e44-4e85-a29b-66b1294d710d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/tests/src/AuthenticationAndRegistration/AuthenticationScreenTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="bea002ff-8e44-4e85-a29b-66b1294d710d" name="Changes" comment="junit test classes added(tests folder)">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/hamcrest_core.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/junit.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/junit-4.12.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/src/AuthenticationAndRegistration/EmailVerificationScreenTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/src/AuthenticationAndRegistration/RegistrationScreen1Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/src/AuthenticationAndRegistration/RegistrationScreen2Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentation/class_diagram1.mdj" beforeDir="false" afterPath="$PROJECT_DIR$/Documentation/class_diagram1.mdj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bank_system_project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/bank_system_project.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AuthenticationAndRegistration/AuthenticationScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AuthenticationAndRegistration/AuthenticationScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AuthenticationAndRegistration/ChooseAccountNumberScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AuthenticationAndRegistration/ChooseAccountNumberScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AuthenticationAndRegistration/CreatedAccountAndCardNumberScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AuthenticationAndRegistration/CreatedAccountAndCardNumberScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AuthenticationAndRegistration/EmailVerificationScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AuthenticationAndRegistration/EmailVerificationScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AuthenticationAndRegistration/RegistrationScreen1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AuthenticationAndRegistration/RegistrationScreen1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AuthenticationAndRegistration/RegistrationScreen2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AuthenticationAndRegistration/RegistrationScreen2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CreditCard/PayWithCardScreen1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditCard/PayWithCardScreen1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CreditCard/PayWithCardScreen2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditCard/PayWithCardScreen2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataValidation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataValidation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Database.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/JavaMail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/JavaMail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MainScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MainScreen1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainScreen1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Settings/ChangeEmailScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Settings/ChangeEmailScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Settings/ChangePasswordScreen1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Settings/ChangePasswordScreen1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Settings/ChangePasswordScreen2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Settings/ChangePasswordScreen2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Settings/ChangeUsernameScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Settings/ChangeUsernameScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Settings/SettingsMainScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Settings/SettingsMainScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainFrame/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainFrame/MainFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/transfers/BlikPhoneTransfer.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/transfers/BlikPhoneTransfer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/transfers/CurrenciesExchangeRate.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/transfers/FileSystem.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/transfers/ForeignStandardTransfer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/transfers/OwnTransfer.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/transfers/OwnTransfer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/transfers/PdfGenerator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/transfers/StandardTransfer.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/transfers/StandardTransfer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/transfers/StandingOrder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/transfers/StandingOrderNextStep.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/transfers/StandingOrderNextStep.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/transfers/Transfer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/transfers/TransferConfirm.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/transfers/TransferConfirm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/transfers/TransferFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/transfers/TransferNextStep.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/transfers/TransferNextStep.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/src/AuthenticationAndRegistration/AuthenticationScreenTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/src/AuthenticationAndRegistration/AuthenticationScreenTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,8 +111,13 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Downloaded.Files.Path.Enabled": "true",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW": "true",
     "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW": "true",
     "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "213",
@@ -76,7 +126,7 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4": "",
     "jdk.selected.JAVA_MODULE": "11 (2)",
     "last_opened_file_path": "/home/max/my_files/io/bank_system_project/libs",
-    "project.structure.last.edited": "Libraries",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "run.code.analysis.last.selected.profile": "pProject Default",
@@ -88,10 +138,15 @@
       <recent name="$PROJECT_DIR$/src/Settings" />
       <recent name="$PROJECT_DIR$/src/AuthenticationAndRegistration" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="src.AuthenticationAndRegistration" />
+    </key>
   </component>
-  <component name="RunManager" selected="Application.MainScreen1">
-    <configuration name="AuthenticationScreen" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="src.AuthenticationAndRegistration.AuthenticationScreen" />
+  <component name="RunManager" selected="JUnit.RegistrationScreen2Test">
+    <configuration name="RegistrationScreen2Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="bank_system_project" />
       <extension name="coverage">
         <pattern>
@@ -99,70 +154,91 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="src.AuthenticationAndRegistration" />
+      <option name="MAIN_CLASS_NAME" value="src.AuthenticationAndRegistration.RegistrationScreen2Test" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Database" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="src.Database" />
+    <configuration name="RegistrationScreen2Test.invalidAddress" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="bank_system_project" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="src.*" />
+          <option name="PATTERN" value="src.AuthenticationAndRegistration.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="src.AuthenticationAndRegistration" />
+      <option name="MAIN_CLASS_NAME" value="src.AuthenticationAndRegistration.RegistrationScreen2Test" />
+      <option name="METHOD_NAME" value="invalidAddress" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MainScreen" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="src.MainScreen" />
+    <configuration name="RegistrationScreen2Test.invalidCity" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="bank_system_project" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="src.*" />
+          <option name="PATTERN" value="src.AuthenticationAndRegistration.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="src.AuthenticationAndRegistration" />
+      <option name="MAIN_CLASS_NAME" value="src.AuthenticationAndRegistration.RegistrationScreen2Test" />
+      <option name="METHOD_NAME" value="invalidCity" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MainScreen1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="src.MainScreen1" />
+    <configuration name="RegistrationScreen2Test.invalidPesel" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="bank_system_project" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="src.*" />
+          <option name="PATTERN" value="src.AuthenticationAndRegistration.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="src.AuthenticationAndRegistration" />
+      <option name="MAIN_CLASS_NAME" value="src.AuthenticationAndRegistration.RegistrationScreen2Test" />
+      <option name="METHOD_NAME" value="invalidPesel" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Unnamed" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="LaunchApp" />
+    <configuration name="RegistrationScreen2Test.validData" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="bank_system_project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="src.AuthenticationAndRegistration.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="src.AuthenticationAndRegistration" />
+      <option name="MAIN_CLASS_NAME" value="src.AuthenticationAndRegistration.RegistrationScreen2Test" />
+      <option name="METHOD_NAME" value="validData" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.AuthenticationScreen" />
-      <item itemvalue="Application.Database" />
-      <item itemvalue="Application.MainScreen" />
-      <item itemvalue="Application.MainScreen1" />
-      <item itemvalue="Application.Unnamed" />
+      <item itemvalue="JUnit.RegistrationScreen2Test" />
+      <item itemvalue="JUnit.RegistrationScreen2Test.invalidAddress" />
+      <item itemvalue="JUnit.RegistrationScreen2Test.invalidCity" />
+      <item itemvalue="JUnit.RegistrationScreen2Test.invalidPesel" />
+      <item itemvalue="JUnit.RegistrationScreen2Test.validData" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.MainScreen1" />
-        <item itemvalue="Application.AuthenticationScreen" />
-        <item itemvalue="Application.MainScreen" />
-        <item itemvalue="Application.Unnamed" />
-        <item itemvalue="Application.Database" />
+        <item itemvalue="JUnit.RegistrationScreen2Test" />
+        <item itemvalue="JUnit.RegistrationScreen2Test.validData" />
+        <item itemvalue="JUnit.RegistrationScreen2Test.invalidPesel" />
+        <item itemvalue="JUnit.RegistrationScreen2Test.invalidCity" />
+        <item itemvalue="JUnit.RegistrationScreen2Test.invalidAddress" />
       </list>
     </recent_temporary>
   </component>
@@ -243,7 +319,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654255869454</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="duplicated windows bug solved">
+      <created>1654525866490</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1654525866490</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -280,7 +363,8 @@
     <MESSAGE value="added screen with generated accounts and credit card numbers after registration(CreatedAccountAndCardNumberScreen)" />
     <MESSAGE value="sth added" />
     <MESSAGE value="duplicated windows bug solved" />
-    <option name="LAST_COMMIT_MESSAGE" value="duplicated windows bug solved" />
+    <MESSAGE value="junit test classes added(tests folder)" />
+    <option name="LAST_COMMIT_MESSAGE" value="junit test classes added(tests folder)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

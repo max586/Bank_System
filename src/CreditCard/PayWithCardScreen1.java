@@ -9,14 +9,14 @@ import java.awt.event.ActionListener;
 import java.sql.Statement;
 
 public class PayWithCardScreen1 extends Screen {
-    private JTextField nrField;
-    private JTextField pinField;
-    private JLabel nrLabel;
-    private JLabel pinLabel;
-    private JPanel panel;
-    private JButton submitButton;
-    private JButton exitButton;
-    private JLabel descrLabel;
+    public JTextField nrField;
+    public JTextField pinField;
+    public JLabel nrLabel;
+    public JLabel pinLabel;
+    public JPanel panel;
+    public JButton submitButton;
+    public JButton exitButton;
+    public JLabel descrLabel;
 
     public PayWithCardScreen1(User user, Screen prev_screen, Screen next_screen){
         super(user,prev_screen,next_screen);

@@ -9,14 +9,14 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class SettingsMainScreen extends Screen {
-    private JPanel panel;
-    private JButton showUserDataButton;
-    private JButton logOutButton;
-    private JButton changeUsernameButton;
-    private JButton changePasswordButton;
-    private JButton changeEmailButton;
-    private JButton returnButton;
-    private JButton exitButton;
+    public JPanel panel;
+    public JButton showUserDataButton;
+    public JButton logOutButton;
+    public JButton changeUsernameButton;
+    public JButton changePasswordButton;
+    public JButton changeEmailButton;
+    public JButton returnButton;
+    public JButton exitButton;
 
     public SettingsMainScreen(User user, Screen prev_screen, Screen next_screen){
         super(user,prev_screen,next_screen);

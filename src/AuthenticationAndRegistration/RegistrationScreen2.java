@@ -12,22 +12,22 @@ import java.awt.event.ActionListener;
 import java.sql.Statement;
 
 public class RegistrationScreen2 extends Screen{
-    private JTextField lastNameField;
-    private JTextField firstNameField;
-    private JTextField cityField;
-    private JTextField addressField;
-    private JComboBox sexComboBox;
-    private JTextField peselField;
-    private JButton submitButton;
-    private JButton returnButton;
-    private JButton exitButton;
-    private JLabel firstNameLabel;
-    private JLabel lastNameLabel;
-    private JLabel cityLabel;
-    private JLabel addressLabel;
-    private JLabel peselLabel;
-    private JLabel sexLabel;
-    private JPanel panel;
+    public JTextField lastNameField;
+    public JTextField firstNameField;
+    public JTextField cityField;
+    public JTextField addressField;
+    public JComboBox sexComboBox;
+    public JTextField peselField;
+    public JButton submitButton;
+    public JButton returnButton;
+    public JButton exitButton;
+    public JLabel firstNameLabel;
+    public JLabel lastNameLabel;
+    public JLabel cityLabel;
+    public JLabel addressLabel;
+    public JLabel peselLabel;
+    public JLabel sexLabel;
+    public JPanel panel;
 
     public RegistrationScreen2(){}
     public RegistrationScreen2(User user, Screen prev_screen, Screen next_screen){
@@ -48,13 +48,21 @@ public class RegistrationScreen2 extends Screen{
                 String city = cityField.getText();
                 String address = addressField.getText();
                 boolean lname_is_valid= DataValidation.nameIsValid(lastName), fname_is_valid=DataValidation.nameIsValid(firstName),
-                        pesel_is_valid=DataValidation.peselIsValid(pesel, (sex=="M"));
+                        pesel_is_valid=DataValidation.peselIsValid(pesel, (sex=="M")),
+                        address_is_valid=DataValidation.addressIsValid(address),
+                        city_is_valid=DataValidation.cityIsValid(city);
                 if(!fname_is_valid){firstNameField.setText("First name is invalid");}
+                else{firstNameField.setText("ok");}
                 if(!lname_is_valid){lastNameField.setText("Last name is invalid");}
+                else{lastNameField.setText("ok");}
+                if(!address_is_valid){addressField.setText("Address is invalid");}
+                else{addressField.setText("ok");}
+                if(!city_is_valid){cityField.setText("City is invalid");}
+                else{cityField.setText("ok");}
                 if(!pesel_is_valid){peselField.setText("PESEL is invalid");}
-                if(fname_is_valid&&lname_is_valid&&pesel_is_valid){
+                else{peselField.setText("ok");}
+                if(fname_is_valid&&lname_is_valid&&address_is_valid&&city_is_valid&&pesel_is_valid){
 
-                    System.out.println(sex);
                     Database.addUser(st, user.username, user.password, user.email);
                     Database.addUserData(st, user.username, user.firstName, user.lastName, user.sex, user.city, user.address, user.pesel);
 

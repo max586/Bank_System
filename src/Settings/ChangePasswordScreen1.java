@@ -12,21 +12,21 @@ import java.awt.event.ActionListener;
 import java.sql.Statement;
 
 public class ChangePasswordScreen1 extends Screen{
-    private JPanel panel;
-    private JButton forgotPasswordButton;
-    private JLabel prevPasswordLabel;
-    private JPasswordField prevPasswordField;
-    private JLabel newPasswordLabel;
-    private JPasswordField newPasswordField;
-    private JLabel matchLabel;
-    private JLabel lengthLabel;
-    private JLabel letterLabel;
-    private JLabel digitLabel;
-    private JLabel specialCharLabel;
-    private JButton submitButton;
-    private JButton ForgotPasswordButton;
-    private JButton returnButton;
-    private JButton exitButton;
+    public JPanel panel;
+    public JButton forgotPasswordButton;
+    public JLabel prevPasswordLabel;
+    public JPasswordField prevPasswordField;
+    public JLabel newPasswordLabel;
+    public JPasswordField newPasswordField;
+    public JLabel matchLabel;
+    public JLabel lengthLabel;
+    public JLabel letterLabel;
+    public JLabel digitLabel;
+    public JLabel specialCharLabel;
+    public JButton submitButton;
+    public JButton ForgotPasswordButton;
+    public JButton returnButton;
+    public JButton exitButton;
 
     public ChangePasswordScreen1(){}
     public ChangePasswordScreen1(User user, Screen prev_screen, Screen next_screen){

@@ -8,17 +8,22 @@ import java.awt.event.ActionListener;
 import java.sql.Statement;
 
 public class AuthenticationScreen extends Screen {
-    private JTextField usernameField;
-    private JButton signUpButton;
-    private JPasswordField passwordField;
-    private JLabel usernameLabel;
-    private JLabel passwordLabel;
-    private JButton exitButton;
-    private JPanel panel;
-    private JButton signInButton;
+    public JTextField usernameField;
+    public JButton signUpButton;
+    public JPasswordField passwordField;
+    public JLabel usernameLabel;
+    public JLabel passwordLabel;
+    public JButton exitButton;
+    public JPanel panel;
+    public JButton signInButton;
+    public JOptionPane jpane;
+    public JDialog jdialog;
 
     public AuthenticationScreen(User user, Screen prev_screen, Screen next_screen){
         super(user,prev_screen,next_screen);
+        jpane = new JOptionPane();
+        jpane.setMessageType(JOptionPane.INFORMATION_MESSAGE);
+        jdialog=jpane.createDialog(panel,"info");
     }
     @Override
     public void CreateScreen(){
@@ -30,8 +35,10 @@ public class AuthenticationScreen extends Screen {
                 user.username=usernameField.getText();
                 user.password=new String(passwordField.getPassword());
                 Statement st = Database.connectToDatabase("bank_system", "root", "password");
+
                 if(Database.verifyUser(st,user.username,user.password)){
-                    JOptionPane.showMessageDialog(frame, "user successfully verified");
+                    jpane.setMessage("user successfully verified");
+                    jdialog.setVisible(true);
                     frame.dispose();
                     user.email = Database.getEmail(st, user.username);
                     user.ordinary_account_number = Database.getOrdinaryAccountNumber(st, user.username);
@@ -41,7 +48,8 @@ public class AuthenticationScreen extends Screen {
                     }
                 }
                 else{
-                    JOptionPane.showMessageDialog(frame, "user doesn't exist");
+                    jpane.setMessage("user doesn't exist");
+                    jdialog.setVisible(true);
                 }
             }
         });

@@ -7,7 +7,6 @@ import javax.mail.internet.*;
 
 
 public class JavaMail{
-
    public static void SendMail(String recepient,String code) throws Exception {
       System.out.println("Preparing to send an email");
       Properties properties = new Properties();
@@ -34,7 +33,7 @@ public class JavaMail{
       System.out.println("Message successfully sent!");
    }
 
-   private static Message prepareMessage(Session session, String myAccountEmail,String recepient,String code){
+   public static Message prepareMessage(Session session, String myAccountEmail,String recepient,String code){
       try {
          Message message = new MimeMessage(session);
          message.setFrom(new InternetAddress(myAccountEmail));

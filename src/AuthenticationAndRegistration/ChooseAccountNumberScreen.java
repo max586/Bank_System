@@ -9,13 +9,13 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class ChooseAccountNumberScreen extends Screen{
-    private JPanel panel;
-    private JRadioButton ordinaryAccountRadioButton;
-    private JRadioButton savingsAccountRadioButton;
-    private JLabel descrLabel;
-    private JButton submitButton;
-    private JButton returnButton;
-    private JButton exitButton;
+    public JPanel panel;
+    public JRadioButton ordinaryAccountRadioButton;
+    public JRadioButton savingsAccountRadioButton;
+    public JLabel descrLabel;
+    public JButton submitButton;
+    public JButton returnButton;
+    public JButton exitButton;
     public ChooseAccountNumberScreen(User user, Screen prev_screen, Screen next_screen){
         super(user,prev_screen,next_screen);
     }

@@ -222,6 +222,14 @@ public class Database {
         }
         return false;
     }
+    public static void deleteUser(Statement st,String username){
+       try{
+           st.executeUpdate("delete from Users where username='"+username+"';");
+       }catch(SQLException e) {
+           System.out.println("Couldn't execute the query");
+           System.out.println(e);
+       }
+    }
 
     public static void main(String[] args) {
         connectToDatabase("bank_system", "root","root");

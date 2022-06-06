@@ -10,12 +10,12 @@ import java.awt.event.ActionListener;
 import java.sql.Statement;
 
 public class PayWithCardScreen2 extends Screen{
-    private JLabel balanceLabel;
-    private JTextField paymentField;
-    private JButton submitButton;
-    private JButton exitButton;
-    private JLabel amountLabel;
-    private JPanel panel;
+    public JLabel balanceLabel;
+    public JTextField paymentField;
+    public JButton submitButton;
+    public JButton exitButton;
+    public JLabel amountLabel;
+    public JPanel panel;
 
     public PayWithCardScreen2(User user, Screen prev_screen, Screen next_screen){
         super(user,prev_screen,next_screen);

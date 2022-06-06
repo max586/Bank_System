@@ -51,9 +51,25 @@ public class DataValidation {
         }
         return false;
     }
-
+    public static boolean addressIsValid(String address){
+        if(address.length()>=5 && address.length()<=30){
+            String pattern="ul\\. [A-Z]\\w*, \\d+";
+            return Pattern.matches(pattern,address);
+        }
+        return false;
+    }
+    public static boolean cityIsValid(String address){
+        if(address.length()>=3 && address.length()<=20){
+            String pattern="[A-Z]\\w*";
+            return Pattern.matches(pattern,address);
+        }
+        return false;
+    }
     public static void main(String[] args) {
         System.out.println(nameIsValid("Max"));
+        System.out.println(addressIsValid("ul. Ankm, 10"));
+        System.out.println(cityIsValid("Abc"));
+
         //System.out.println(Pattern.matches("(0[0-9]|[10,11])","11"));
         //System.out.println(peselIsValid("84122816732", true));
     }

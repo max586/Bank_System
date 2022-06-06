@@ -1002,7 +1002,7 @@
 										"$ref": "AAAAAAGBLuGAcha9I/A="
 									},
 									"name": "user",
-									"visibility": "private"
+									"visibility": "public"
 								},
 								{
 									"_type": "UMLAttribute",
@@ -1011,7 +1011,7 @@
 										"$ref": "AAAAAAGBLuGAcha9I/A="
 									},
 									"name": "Attribute2",
-									"visibility": "private",
+									"visibility": "public",
 									"type": ""
 								},
 								{
@@ -1021,7 +1021,7 @@
 										"$ref": "AAAAAAGBLuGAcha9I/A="
 									},
 									"name": "Attribute3",
-									"visibility": "private",
+									"visibility": "public",
 									"type": ""
 								},
 								{
@@ -1031,7 +1031,7 @@
 										"$ref": "AAAAAAGBLuGAcha9I/A="
 									},
 									"name": "Attribute4",
-									"visibility": "private",
+									"visibility": "public",
 									"type": ""
 								},
 								{
@@ -1041,7 +1041,7 @@
 										"$ref": "AAAAAAGBLuGAcha9I/A="
 									},
 									"name": "Attribute5",
-									"visibility": "private",
+									"visibility": "public",
 									"type": ""
 								},
 								{
@@ -1051,7 +1051,7 @@
 										"$ref": "AAAAAAGBLuGAcha9I/A="
 									},
 									"name": "Attribute6",
-									"visibility": "private",
+									"visibility": "public",
 									"type": ""
 								}
 							],

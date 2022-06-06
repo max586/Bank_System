@@ -9,10 +9,10 @@ import java.sql.Statement;
 import java.util.Random;
 
 public class MainScreen extends Screen{
-    private JPanel panel;
-    private JButton settingsButton;
-    private JButton returnButton;
-    private JButton exitButton;
+    public JPanel panel;
+    public JButton settingsButton;
+    public JButton returnButton;
+    public JButton exitButton;
     public MainScreen(User user, Screen prev_screen, Screen next_screen){
         super(user,prev_screen,next_screen);
     }

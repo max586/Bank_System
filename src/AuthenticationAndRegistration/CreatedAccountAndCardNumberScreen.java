@@ -12,21 +12,21 @@ import java.time.LocalDateTime;
 import java.util.Random;
 
 public class CreatedAccountAndCardNumberScreen extends Screen {
-    private JTextField ordinaryAccountField;
-    private JTextField savingsAccountField;
-    private JLabel ordinaryAccountLabel;
-    private JButton OKButton;
-    private JButton returnButton;
-    private JButton exitButton;
-    private JPanel panel;
-    private JTextField cardNumberField;
-    private JTextField pinField;
-    private JLabel cardDescrLabel;
-    private JLabel accountsDescrLabel;
-    private JLabel pinLabel;
-    private JLabel cardLabel;
-    private JLabel ordinaryAccountdescrLabel;
-    private JLabel savingsAccountdescrLabel;
+    public JTextField ordinaryAccountField;
+    public JTextField savingsAccountField;
+    public JLabel ordinaryAccountLabel;
+    public JButton OKButton;
+    public JButton returnButton;
+    public JButton exitButton;
+    public JPanel panel;
+    public JTextField cardNumberField;
+    public JTextField pinField;
+    public JLabel cardDescrLabel;
+    public JLabel accountsDescrLabel;
+    public JLabel pinLabel;
+    public JLabel cardLabel;
+    public JLabel ordinaryAccountdescrLabel;
+    public JLabel savingsAccountdescrLabel;
     public CreatedAccountAndCardNumberScreen(User user, Screen prev_screen, Screen next_screen){super(user,prev_screen,next_screen);}
 
     public void CreateScreen(){

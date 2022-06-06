@@ -9,18 +9,18 @@ import java.awt.event.*;
 import java.sql.Statement;
 
 public class MainScreen1 extends Screen {
-    private JPanel AuthPanel;
-    private JButton PROFILButton;
-    private JButton BLIKButton;
-    private JButton KREDYTYButton;
-    private JButton wylogujButton;
-    private JList list1;
-    private JButton zróbPrzelewButton;
-    private JButton prevButton;
-    private JLabel timeCounter;
-    private JLabel AccNumber;
-    private JLabel AccType;
-    private int counter = 0;
+    public JPanel AuthPanel;
+    public JButton PROFILButton;
+    public JButton BLIKButton;
+    public JButton KREDYTYButton;
+    public JButton wylogujButton;
+    public JList list1;
+    public JButton zróbPrzelewButton;
+    public JButton prevButton;
+    public JLabel timeCounter;
+    public JLabel AccNumber;
+    public JLabel AccType;
+    public int counter = 0;
     String chosenAcc;
     String []options = {"one","two"};
 

@@ -11,23 +11,23 @@ import java.awt.event.ActionListener;
 import java.sql.Statement;
 
 public class RegistrationScreen1 extends Screen {
-    private JPanel panel;
-    private JTextField usernameField;
-    private JTextField emailField;
-    private JPasswordField passwordField;
-    private JPasswordField repeatPasswordField;
-    private JButton submitButton;
-    private JButton returnButton;
-    private JButton exitButton;
-    private JLabel usernameLabel;
-    private JLabel emailLabel;
-    private JLabel passwordLabel;
-    private JLabel repeatPasswordLabel;
-    private JLabel matchLabel;
-    private JLabel lengthLabel;
-    private JLabel letterLabel;
-    private JLabel digitLabel;
-    private JLabel specialCharLabel;
+    public JPanel panel;
+    public JTextField usernameField;
+    public JTextField emailField;
+    public JPasswordField passwordField;
+    public JPasswordField repeatPasswordField;
+    public JButton submitButton;
+    public JButton returnButton;
+    public JButton exitButton;
+    public JLabel usernameLabel;
+    public JLabel emailLabel;
+    public JLabel passwordLabel;
+    public JLabel repeatPasswordLabel;
+    public JLabel matchLabel;
+    public JLabel lengthLabel;
+    public JLabel letterLabel;
+    public JLabel digitLabel;
+    public JLabel specialCharLabel;
 
     public RegistrationScreen1(User user, Screen prev_screen, Screen next_screen){
         super(user,prev_screen,next_screen);
@@ -47,17 +47,12 @@ public class RegistrationScreen1 extends Screen {
                     username_is_taken = true;
                     usernameField.setText("username is already taken");
                 } else {
+                    usernameField.setText("ok");
                     username_is_taken = false;
                 }
                 user.password = new String(passwordField.getPassword());
                 String repeated_password = new String(repeatPasswordField.getPassword());
                 user.email = emailField.getText();
-
-                /*matchLabel.setVisible(true);
-                lengthLabel.setVisible(true);
-                letterLabel.setVisible(true);
-                specialCharLabel.setVisible(true);
-                digitLabel.setVisible(true);*/
 
                 if (DataValidation.passwordMatches(user.password, repeated_password)) {
                     matchLabel.setText("ok");
