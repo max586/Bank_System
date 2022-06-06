@@ -1,5 +1,7 @@
 package transfers;
 
+import mainFrame.MainFrame;
+
 import javax.swing.*;
 import javax.swing.event.MenuEvent;
 import javax.swing.event.MenuListener;
@@ -42,7 +44,7 @@ public class OwnTransfer implements Transfer{
     private Vector<Boolean> validation;
     private String choosedAcount="";
 
-    public OwnTransfer(MainFrame mainFrame,Map<String,String> senderData1,double senderAmount1) {
+    public OwnTransfer(MainFrame mainFrame, Map<String,String> senderData1) {
         try {
             setFonts();
         } catch (IOException e) {
@@ -233,7 +235,7 @@ public class OwnTransfer implements Transfer{
                     transferData.put("kwota", transferAmount1Txt.getText()+"."+ transferAmount2Txt.getText());
                     transferData.put("oplata","0.00");
                     transferData.put("typ",panelTitleLabel.getText());
-                    TransferNextStep pCd = new TransferNextStep(frame, OwnTransferPanel,senderData,receiverData, transferData,senderAmount);
+                    TransferNextStep pCd = new TransferNextStep(frame, OwnTransferPanel,senderData,receiverData, transferData);
                     frame.getjFrame().setContentPane(pCd.getTransferNextStepPanel());
                     frame.getjFrame().setVisible(true);
                 }

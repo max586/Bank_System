@@ -1,5 +1,7 @@
 package transfers;
 
+import mainFrame.MainFrame;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.KeyAdapter;
@@ -16,8 +18,8 @@ public class ForeignStandardTransfer extends StandardTransfer implements Transfe
     private String currency;
     private double converter;
     private java.util.List<String> countriesISO;
-    ForeignStandardTransfer(MainFrame mainFrame, Map<String, String> senderData1, double senderAmount1) throws IOException, FontFormatException {
-        super(mainFrame,senderData1,senderAmount1);
+    ForeignStandardTransfer(MainFrame mainFrame, Map<String, String> senderData1) throws IOException, FontFormatException {
+        super(mainFrame,senderData1);
         isCountry = true;
         panelTitleLabel.setText("Przelew zagraniczny");
         accountNumberCountryLabel.setVisible(false);

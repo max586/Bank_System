@@ -1,5 +1,7 @@
 package transfers;
 
+import mainFrame.MainFrame;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -9,8 +11,8 @@ import java.util.Map;
 import java.util.Vector;
 
 public class StandingOrder extends StandardTransfer implements Transfer{
-    public StandingOrder(MainFrame mainFrame, Map<String, String> senderData1, double senderAmount1) throws IOException, FontFormatException {
-        super(mainFrame,senderData1,senderAmount1);
+    public StandingOrder(MainFrame mainFrame, Map<String, String> senderData1) throws IOException, FontFormatException {
+        super(mainFrame,senderData1);
         panelTitleLabel.setText("Zlecenie stałe");
         expressTransferRadioButton.setVisible(false);
     }
@@ -166,7 +168,7 @@ public class StandingOrder extends StandardTransfer implements Transfer{
                         transferData.put("typ",panelTitleLabel.getText()+" zwykły");
                     }
                     try {
-                        StandingOrderNextStep nextStep = new StandingOrderNextStep(frame, transferPanel1,senderData,receiverData, transferData,senderAmount);
+                        StandingOrderNextStep nextStep = new StandingOrderNextStep(frame, transferPanel1,senderData,receiverData, transferData);
                         frame.getjFrame().setContentPane(nextStep.getStandingOrderNextPanel());
                         frame.getjFrame().setVisible(true);
                     } catch (IOException ioException) {

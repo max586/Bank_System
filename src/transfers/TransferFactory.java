@@ -1,5 +1,7 @@
 package transfers;
 
+import mainFrame.MainFrame;
+
 import java.awt.*;
 import java.io.IOException;
 import java.util.Map;
@@ -10,20 +12,18 @@ public class TransferFactory {
     }
     private MainFrame frame;
     private Map<String,String> senderData;
-    double senderAmount;
 
-    public TransferFactory(MainFrame mainFrame, Map<String,String> senderData1, double senderAmount1){
+    public TransferFactory(MainFrame mainFrame, Map<String,String> senderData1){
         frame = mainFrame;
         senderData = senderData1;
-        senderAmount = senderAmount1;
     }
     public Transfer getTransfer(TransferType transferType) throws IOException, FontFormatException {
         return switch (transferType) {
-            case KRAJOWY -> new StandardTransfer(frame, senderData, senderAmount);
-            case ZAGRANICZNY -> new ForeignStandardTransfer(frame, senderData, senderAmount);
-            case ZLECENIESTALE -> new StandingOrder(frame, senderData, senderAmount);
-            case TELEFONBLIK -> new BlikPhoneTransfer(frame, senderData, senderAmount);
-            case WLASNY -> new OwnTransfer(frame,senderData,senderAmount);
+            case KRAJOWY -> new StandardTransfer(frame, senderData);
+            case ZAGRANICZNY -> new ForeignStandardTransfer(frame, senderData);
+            case ZLECENIESTALE -> new StandingOrder(frame, senderData);
+            case TELEFONBLIK -> new BlikPhoneTransfer(frame, senderData);
+            case WLASNY -> new OwnTransfer(frame,senderData);
         };
     }
 }

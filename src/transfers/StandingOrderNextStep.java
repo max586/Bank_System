@@ -1,6 +1,7 @@
 package transfers;
 
 import com.toedter.calendar.JDateChooser;
+import mainFrame.MainFrame;
 
 import javax.swing.*;
 import java.awt.*;
@@ -53,11 +54,11 @@ public class StandingOrderNextStep {
     private Map<String,String> transferData;
     private double senderAmount;
 
-    public StandingOrderNextStep(MainFrame mainFrame, JPanel standingOrderPanel, Map<String,String> senderData1, Map<String,String> receiverData1, Map<String,String> transferData1, double senderAmount1) throws IOException, FontFormatException {
+    public StandingOrderNextStep(MainFrame mainFrame, JPanel standingOrderPanel, Map<String,String> senderData1, Map<String,String> receiverData1, Map<String,String> transferData1) throws IOException, FontFormatException {
         senderData = senderData1;
         receiverData = receiverData1;
         transferData = transferData1;
-        senderAmount = senderAmount1;
+        senderAmount = Double.parseDouble(senderData.get("kontosrodki"));
         frame = mainFrame;
         cancelPanel = standingOrderPanel;
         timeUnitsValid = false;
@@ -133,7 +134,7 @@ public class StandingOrderNextStep {
                         SimpleDateFormat formatter = new SimpleDateFormat("dd.MM.yyyy");
                         transferData.put("startdata",formatter.format(dateChooserFrom.getDate()));
                         if(isEndDateSelected) transferData.put("enddata",formatter.format(dateChooserTo.getDate()));
-                        TransferNextStep transferNextStep = new TransferNextStep(frame, StandingOrderNextPanel,senderData,receiverData,transferData,senderAmount);
+                        TransferNextStep transferNextStep = new TransferNextStep(frame, StandingOrderNextPanel,senderData,receiverData,transferData);
                         frame.getjFrame().setContentPane(transferNextStep.getTransferNextStepPanel());
                         frame.getjFrame().setVisible(true);
                     }

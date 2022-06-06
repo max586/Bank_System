@@ -1,7 +1,6 @@
-package transfers;
+package mainFrame;
 
 import javax.swing.*;
-
 public class MainFrame {
     private JFrame jFrame;
     public MainFrame(){

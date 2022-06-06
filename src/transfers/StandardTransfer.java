@@ -1,5 +1,7 @@
 package transfers;
 
+import mainFrame.MainFrame;
+
 import javax.swing.*;
 import javax.swing.text.AttributeSet;
 import javax.swing.text.BadLocationException;
@@ -81,12 +83,12 @@ public class StandardTransfer implements Transfer{
     protected boolean isCountry;
     protected MainFrame frame;
     public StandardTransfer(){}
-    public StandardTransfer(MainFrame mainFrame, Map<String, String> senderData1, double senderAmount1) throws IOException, FontFormatException {
+    public StandardTransfer(MainFrame mainFrame, Map<String, String> senderData1) throws IOException, FontFormatException {
         isCountry = false;
         countryISO = "PL ";
         frame = mainFrame;
         senderData = senderData1;
-        senderAmount = senderAmount1;
+        senderAmount = Double.parseDouble(senderData.get("kontosrodki"));
         receiverData = new HashMap<>();
         transferData = new HashMap<>();
         numbersOnly = new OnlyNumbers().getKeyAdapter();
@@ -98,7 +100,7 @@ public class StandardTransfer implements Transfer{
         setPostcodeTxt(postcode1Txt);
         setPostcodeTxt(postcode2Txt);
         setAccountNumberTxt(accountNumberTxt);
-        setExpressTransferRadioButton(expressTransferRadioButton,senderAmount1);
+        setExpressTransferRadioButton(expressTransferRadioButton);
         setReceiverAddressRadioButton(receiverAddressRadioButton);
         setNextButton(nextButton);
         transferPanel1.revalidate();
@@ -208,7 +210,7 @@ public class StandardTransfer implements Transfer{
         });
     }
 
-    void setExpressTransferRadioButton(JRadioButton expressTransferRadioButton, double senderAmount) {
+    void setExpressTransferRadioButton(JRadioButton expressTransferRadioButton) {
         expressTransferRadioButton.addItemListener(new ItemListener() {
             @Override
             public void itemStateChanged(ItemEvent e) {
@@ -467,7 +469,7 @@ public class StandardTransfer implements Transfer{
                         transferData.put("oplata","0.00");
                         transferData.put("typ",panelTitleLabel.getText()+" zwykły");
                     }
-                    TransferNextStep pCd = new TransferNextStep(frame, transferPanel1,senderData,receiverData, transferData,senderAmount);
+                    TransferNextStep pCd = new TransferNextStep(frame, transferPanel1,senderData,receiverData, transferData);
                     frame.getjFrame().setContentPane(pCd.getTransferNextStepPanel());
                     frame.getjFrame().setVisible(true);
                 }
