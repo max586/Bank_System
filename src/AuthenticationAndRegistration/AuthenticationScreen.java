@@ -22,8 +22,7 @@ public class AuthenticationScreen extends Screen {
     public AuthenticationScreen(User user, Screen prev_screen, Screen next_screen){
         super(user,prev_screen,next_screen);
         jpane = new JOptionPane();
-        jpane.setMessageType(JOptionPane.INFORMATION_MESSAGE);
-        jdialog=jpane.createDialog(panel,"info");
+        jdialog=jpane.createDialog(panel,"");
     }
     @Override
     public void CreateScreen(){
@@ -38,6 +37,8 @@ public class AuthenticationScreen extends Screen {
 
                 if(Database.verifyUser(st,user.username,user.password)){
                     jpane.setMessage("user successfully verified");
+                    jpane.setMessageType(JOptionPane.INFORMATION_MESSAGE);
+                    jdialog.setTitle("Info");
                     jdialog.setVisible(true);
                     frame.dispose();
                     user.email = Database.getEmail(st, user.username);
@@ -49,6 +50,8 @@ public class AuthenticationScreen extends Screen {
                 }
                 else{
                     jpane.setMessage("user doesn't exist");
+                    jpane.setMessageType(JOptionPane.WARNING_MESSAGE);
+                    jdialog.setTitle("Warning");
                     jdialog.setVisible(true);
                 }
             }

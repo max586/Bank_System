@@ -25,7 +25,7 @@ public class EmailVerificationScreen extends Screen{
         super(user,prev_screen,next_screen);
         jpane = new JOptionPane();
         jpane.setMessageType(JOptionPane.INFORMATION_MESSAGE);
-        jdialog=jpane.createDialog(panel,"Info");
+        jdialog=jpane.createDialog(panel,"");
     }
     public void CreateScreen() {
         code = generateCode(6);
@@ -45,6 +45,7 @@ public class EmailVerificationScreen extends Screen{
                     jpane.setMessage("Well done!!!");
                     jpane.setMessageType(JOptionPane.INFORMATION_MESSAGE);
                     jdialog.setTitle("Info");
+                    jdialog.setVisible(true);
                     frame.dispose();
                     if(next_screen!=null){
                         frame.dispose();
@@ -60,6 +61,7 @@ public class EmailVerificationScreen extends Screen{
                         jpane.setMessage("Wrong code! "+number_of_attempts+" attempts left");
                         jpane.setMessageType(JOptionPane.WARNING_MESSAGE);
                         jdialog.setTitle("Warning");
+                        jdialog.setVisible(true);
                     }
                     else{
                         frame.dispose();

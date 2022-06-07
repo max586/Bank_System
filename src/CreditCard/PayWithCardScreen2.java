@@ -16,9 +16,14 @@ public class PayWithCardScreen2 extends Screen{
     public JButton exitButton;
     public JLabel amountLabel;
     public JPanel panel;
+    public JOptionPane jpane;
+    public JDialog jdialog;
 
     public PayWithCardScreen2(User user, Screen prev_screen, Screen next_screen){
         super(user,prev_screen,next_screen);
+        jpane = new JOptionPane();
+        jdialog=jpane.createDialog(panel,"");
+        jdialog.setSize(300,150);
     }
     public void CreateScreen(){
         
@@ -31,12 +36,24 @@ public class PayWithCardScreen2 extends Screen{
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
                 float payment = Float.parseFloat(paymentField.getText());
-                if(payment>user.ordinary_account_balance){
-                   JOptionPane.showMessageDialog(frame,"Too little money on account to make a payment");
+                if(payment>user.ordinary_account_balance) {
+                    jpane.setMessage("Too little money on account to make a payment");
+                    jpane.setMessageType(JOptionPane.WARNING_MESSAGE);
+                    jdialog.setTitle("Warning");
+                    jdialog.setVisible(true);
+                }
+                else if(payment<0){
+                    jpane.setMessage("Incorrect payment amount");
+                    jpane.setMessageType(JOptionPane.WARNING_MESSAGE);
+                    jdialog.setTitle("Warning");
+                    jdialog.setVisible(true);
                 }
                 else{
                     Database.setOrdinaryAccountBalance(st,user.username,user.ordinary_account_balance-payment);
-                    JOptionPane.showMessageDialog(frame,"payment successfully processed");
+                    jpane.setMessage("Payment successfully processed");
+                    jpane.setMessageType(JOptionPane.INFORMATION_MESSAGE);
+                    jdialog.setTitle("Info");
+                    jdialog.setVisible(true);
                     frame.dispose();
                 }
             }

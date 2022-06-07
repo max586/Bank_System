@@ -16,7 +16,7 @@ public class AuthenticationScreenTest {
     @Before
     public void initiate(){
         auth_screen = new AuthenticationScreen(null,null,null);
-        
+        st=Database.connectToDatabase("bank_system","root","password");
         username="new_user";
         password="password";
         email="email";

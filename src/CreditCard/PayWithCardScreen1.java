@@ -17,15 +17,18 @@ public class PayWithCardScreen1 extends Screen {
     public JButton submitButton;
     public JButton exitButton;
     public JLabel descrLabel;
+    public JOptionPane jpane;
+    public JDialog jdialog;
 
     public PayWithCardScreen1(User user, Screen prev_screen, Screen next_screen){
         super(user,prev_screen,next_screen);
+        jpane = new JOptionPane();
+        jdialog=jpane.createDialog(panel,"");
     }
     @Override
     public void CreateScreen(){
         
         frame.setContentPane(panel);
-
         submitButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
@@ -35,11 +38,20 @@ public class PayWithCardScreen1 extends Screen {
                     user.card_number = nr;
                     user.pin_code = pin;
                     user.username = Database.getUsernameByCard(st,user.card_number);
+                    jpane.setMessage("card successfully verified");
+                    jpane.setMessageType(JOptionPane.INFORMATION_MESSAGE);
+                    jdialog.setTitle("Info");
+                    jdialog.setVisible(true);
                     frame.dispose();
-                    new PayWithCardScreen2(user,null,null).CreateScreen();
+                    if(next_screen!=null) {
+                        new PayWithCardScreen2(user, null, null).CreateScreen();
+                    }
                 }
                 else{
-                    JOptionPane.showMessageDialog(frame,"wrong card number or pin","Alert",JOptionPane.WARNING_MESSAGE);
+                    jpane.setMessage("wrong card number or pin");
+                    jpane.setMessageType(JOptionPane.WARNING_MESSAGE);
+                    jdialog.setTitle("Warning");
+                    jdialog.setVisible(true);
                 }
             }
         });

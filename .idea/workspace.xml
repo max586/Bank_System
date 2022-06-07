@@ -5,40 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bea002ff-8e44-4e85-a29b-66b1294d710d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/tests/src/CreditCard/PayWithCardScreen1Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/src/CreditCard/PayWithCardScreen2Test.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database_scripts/CreateTables.sql" beforeDir="false" afterPath="$PROJECT_DIR$/database_scripts/CreateTables.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationAndRegistration/ChooseAccountNumberScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AuthenticationAndRegistration/ChooseAccountNumberScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationAndRegistration/CreatedAccountAndCardNumberScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AuthenticationAndRegistration/CreatedAccountAndCardNumberScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AuthenticationAndRegistration/AuthenticationScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AuthenticationAndRegistration/AuthenticationScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AuthenticationAndRegistration/EmailVerificationScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AuthenticationAndRegistration/EmailVerificationScreen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CreditCard/PayWithCardScreen1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditCard/PayWithCardScreen1.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CreditCard/PayWithCardScreen2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditCard/PayWithCardScreen2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MainScreen.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainScreen.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MainScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MainScreen1.form" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MainScreen1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Screen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Screen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/transfers/BlikPhoneTransfer.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfers/BlikPhoneTransfer.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/transfers/BlikPhoneTransfer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfers/BlikPhoneTransfer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/transfers/CurrenciesExchangeRate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfers/CurrenciesExchangeRate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/transfers/FileSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfers/FileSystem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/transfers/ForeignStandardTransfer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfers/ForeignStandardTransfer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/transfers/OwnTransfer.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfers/OwnTransfer.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/transfers/OwnTransfer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfers/OwnTransfer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/transfers/PdfGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfers/PdfGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/transfers/StandardTransfer.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfers/StandardTransfer.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/transfers/StandardTransfer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfers/StandardTransfer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/transfers/StandingOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfers/StandingOrder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/transfers/StandingOrderNextStep.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfers/StandingOrderNextStep.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/transfers/StandingOrderNextStep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfers/StandingOrderNextStep.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/transfers/Transfer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfers/Transfer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/transfers/TransferConfirm.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfers/TransferConfirm.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/transfers/TransferConfirm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfers/TransferConfirm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/transfers/TransferFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfers/TransferFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/transfers/TransferNextStep.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfers/TransferNextStep.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/transfers/TransferNextStep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfers/TransferNextStep.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/src/AuthenticationAndRegistration/AuthenticationScreenTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/src/AuthenticationAndRegistration/AuthenticationScreenTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/src/AuthenticationAndRegistration/RegistrationScreen1Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/src/AuthenticationAndRegistration/RegistrationScreen1Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/src/AuthenticationAndRegistration/RegistrationScreen2Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/src/AuthenticationAndRegistration/RegistrationScreen2Test.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,100 +103,103 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="src.CreditCard" />
       <recent name="src.AuthenticationAndRegistration" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.App">
-    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="src.App" />
+  <component name="RunManager" selected="JUnit.PayWithCardScreen2Test">
+    <configuration name="PayWithCardScreen1Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="bank_system_project" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="src.*" />
+          <option name="PATTERN" value="src.CreditCard.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RegistrationScreen2Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="bank_system_project" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="src.AuthenticationAndRegistration.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="src.AuthenticationAndRegistration" />
-      <option name="MAIN_CLASS_NAME" value="src.AuthenticationAndRegistration.RegistrationScreen2Test" />
+      <option name="PACKAGE_NAME" value="src.CreditCard" />
+      <option name="MAIN_CLASS_NAME" value="src.CreditCard.PayWithCardScreen1Test" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RegistrationScreen2Test.invalidCity" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PayWithCardScreen1Test.correctData" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="bank_system_project" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="src.AuthenticationAndRegistration.*" />
+          <option name="PATTERN" value="src.CreditCard.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="src.AuthenticationAndRegistration" />
-      <option name="MAIN_CLASS_NAME" value="src.AuthenticationAndRegistration.RegistrationScreen2Test" />
-      <option name="METHOD_NAME" value="invalidCity" />
+      <option name="PACKAGE_NAME" value="src.CreditCard" />
+      <option name="MAIN_CLASS_NAME" value="src.CreditCard.PayWithCardScreen1Test" />
+      <option name="METHOD_NAME" value="correctData" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RegistrationScreen2Test.invalidPesel" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PayWithCardScreen2Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="bank_system_project" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="src.AuthenticationAndRegistration.*" />
+          <option name="PATTERN" value="src.CreditCard.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="src.AuthenticationAndRegistration" />
-      <option name="MAIN_CLASS_NAME" value="src.AuthenticationAndRegistration.RegistrationScreen2Test" />
-      <option name="METHOD_NAME" value="invalidPesel" />
+      <option name="PACKAGE_NAME" value="src.CreditCard" />
+      <option name="MAIN_CLASS_NAME" value="src.CreditCard.PayWithCardScreen2Test" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PayWithCardScreen2Test.correctAmount" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="bank_system_project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="src.CreditCard.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="src.CreditCard" />
+      <option name="MAIN_CLASS_NAME" value="src.CreditCard.PayWithCardScreen2Test" />
+      <option name="METHOD_NAME" value="correctAmount" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RegistrationScreen2Test.validData" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PayWithCardScreen2Test.incorecctAmount" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="bank_system_project" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="src.AuthenticationAndRegistration.*" />
+          <option name="PATTERN" value="src.CreditCard.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="src.AuthenticationAndRegistration" />
-      <option name="MAIN_CLASS_NAME" value="src.AuthenticationAndRegistration.RegistrationScreen2Test" />
-      <option name="METHOD_NAME" value="validData" />
+      <option name="PACKAGE_NAME" value="src.CreditCard" />
+      <option name="MAIN_CLASS_NAME" value="src.CreditCard.PayWithCardScreen2Test" />
+      <option name="METHOD_NAME" value="incorecctAmount" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.App" />
-      <item itemvalue="JUnit.RegistrationScreen2Test" />
-      <item itemvalue="JUnit.RegistrationScreen2Test.invalidCity" />
-      <item itemvalue="JUnit.RegistrationScreen2Test.invalidPesel" />
-      <item itemvalue="JUnit.RegistrationScreen2Test.validData" />
+      <item itemvalue="JUnit.PayWithCardScreen1Test" />
+      <item itemvalue="JUnit.PayWithCardScreen1Test.correctData" />
+      <item itemvalue="JUnit.PayWithCardScreen2Test" />
+      <item itemvalue="JUnit.PayWithCardScreen2Test.correctAmount" />
+      <item itemvalue="JUnit.PayWithCardScreen2Test.incorecctAmount" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.App" />
-        <item itemvalue="JUnit.RegistrationScreen2Test" />
-        <item itemvalue="JUnit.RegistrationScreen2Test.validData" />
-        <item itemvalue="JUnit.RegistrationScreen2Test.invalidPesel" />
-        <item itemvalue="JUnit.RegistrationScreen2Test.invalidCity" />
+        <item itemvalue="JUnit.PayWithCardScreen2Test" />
+        <item itemvalue="JUnit.PayWithCardScreen2Test.correctAmount" />
+        <item itemvalue="JUnit.PayWithCardScreen2Test.incorecctAmount" />
+        <item itemvalue="JUnit.PayWithCardScreen1Test" />
+        <item itemvalue="JUnit.PayWithCardScreen1Test.correctData" />
       </list>
     </recent_temporary>
   </component>
@@ -323,7 +301,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654540511815</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="refactored">
+      <created>1654582583727</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1654582583727</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -362,7 +347,8 @@
     <MESSAGE value="duplicated windows bug solved" />
     <MESSAGE value="junit test classes added(tests folder)" />
     <MESSAGE value="123" />
-    <option name="LAST_COMMIT_MESSAGE" value="123" />
+    <MESSAGE value="refactored" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactored" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -376,6 +362,11 @@
           <url>file://$PROJECT_DIR$/LaunchApp.java</url>
           <line>6</line>
           <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/tests/src/CreditCard/PayWithCardScreen2Test.java</url>
+          <line>51</line>
+          <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

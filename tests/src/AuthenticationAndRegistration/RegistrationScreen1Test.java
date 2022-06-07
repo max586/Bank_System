@@ -17,7 +17,6 @@ public class RegistrationScreen1Test {
     @Before
     public void initiate(){
         reg_screen = new RegistrationScreen1(null,null,null);
-        
 
         username="new_user";
         password="6X-q(A(s?g!k";
