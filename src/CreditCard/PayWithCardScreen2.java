@@ -7,6 +7,8 @@ import src.User;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 import java.sql.Statement;
 
 public class PayWithCardScreen2 extends Screen{
@@ -16,8 +18,10 @@ public class PayWithCardScreen2 extends Screen{
     public JButton exitButton;
     public JLabel amountLabel;
     public JPanel panel;
+    public JLabel timerLabel;
     public JOptionPane jpane;
     public JDialog jdialog;
+    public int counter=0;
 
     public PayWithCardScreen2(User user, Screen prev_screen, Screen next_screen){
         super(user,prev_screen,next_screen);
@@ -66,6 +70,33 @@ public class PayWithCardScreen2 extends Screen{
             }
         });
 
+        panel.addMouseListener(new MouseListener() {
+            @Override
+            public void mouseClicked(MouseEvent e) {counter=0;}
+            @Override
+            public void mousePressed(MouseEvent e) {}
+            @Override
+            public void mouseReleased(MouseEvent e) {counter=0;}
+            @Override
+            public void mouseEntered(MouseEvent e) {counter=0;}
+            @Override
+            public void mouseExited(MouseEvent e) {}
+        });
+        new Thread() {
+            public void run() {
+                while (counter <= 120) {
+                    if(!frame.isDisplayable()){counter=0;}
+                    else {
+                        timerLabel.setText("Time before log out: " + (120 - counter++));
+                        try {
+                            Thread.sleep(1000);
+                        } catch (Exception e) {
+                        }
+                    }
+                }
+                frame.dispose();
+            }
+        }.start();
         frame.setSize(400,300);
         frame.setVisible(true);
     }

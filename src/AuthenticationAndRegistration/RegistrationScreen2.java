@@ -9,6 +9,8 @@ import src.User;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 import java.sql.Statement;
 
 public class RegistrationScreen2 extends Screen{
@@ -28,6 +30,8 @@ public class RegistrationScreen2 extends Screen{
     public JLabel peselLabel;
     public JLabel sexLabel;
     public JPanel panel;
+    public JLabel timerLabel;
+    public int counter=0;
 
     public RegistrationScreen2(){}
     public RegistrationScreen2(User user, Screen prev_screen, Screen next_screen){
@@ -96,7 +100,33 @@ public class RegistrationScreen2 extends Screen{
                 frame.dispose();
             }
         });
-
+        panel.addMouseListener(new MouseListener() {
+            @Override
+            public void mouseClicked(MouseEvent e) {counter=0;}
+            @Override
+            public void mousePressed(MouseEvent e) {}
+            @Override
+            public void mouseReleased(MouseEvent e) {counter=0;}
+            @Override
+            public void mouseEntered(MouseEvent e) {counter=0;}
+            @Override
+            public void mouseExited(MouseEvent e) {}
+        });
+        new Thread() {
+            public void run() {
+                while (counter <= 120) {
+                    if(!frame.isDisplayable()){counter=0;}
+                    else {
+                        timerLabel.setText("Time before log out: " + (120 - counter++));
+                        try {
+                            Thread.sleep(1000);
+                        } catch (Exception e) {
+                        }
+                    }
+                }
+                frame.dispose();
+            }
+        }.start();
         frame.setSize(800,600);
         frame.setVisible(true);
     }

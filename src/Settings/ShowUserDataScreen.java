@@ -1,6 +1,5 @@
-package src.AuthenticationAndRegistration;
+package src.Settings;
 
-import src.MainScreen;
 import src.Screen;
 import src.User;
 
@@ -10,45 +9,58 @@ import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
-public class ChooseAccountNumberScreen extends Screen{
-    public JPanel panel;
-    public JRadioButton ordinaryAccountRadioButton;
-    public JRadioButton savingsAccountRadioButton;
-    public JLabel descrLabel;
-    public JButton submitButton;
+public class ShowUserDataScreen extends Screen{
+    public JLabel usernameLabel;
+    public JTextField usernameField;
+    public JTextField emailField;
+    public JTextField passwordField;
+    public JLabel emailLabel;
+    public JLabel passwordLabel;
+    public JTextField firstNameField;
+    public JTextField lastNameField;
+    public JTextField sexField;
+    public JTextField cityField;
+    public JTextField addressField;
+    public JTextField peselField;
+    public JTextField ordinaryField;
+    public JTextField savingsField;
+    public JTextField cardField;
+    public JTextField pinField;
     public JButton returnButton;
     public JButton exitButton;
+    public JLabel firstNameLabel;
+    public JLabel cityLabel;
+    public JLabel sexLabel;
+    public JLabel addressLabel;
+    public JLabel ordinaryLabel;
+    public JLabel savingsLabel;
+    public JLabel cardLabel;
+    public JLabel pinLabel;
+    public JLabel lastNameLabel;
+    public JPanel panel;
     public JLabel timerLabel;
+    private JLabel peselLabel;
     public int counter=0;
-    public ChooseAccountNumberScreen(User user, Screen prev_screen, Screen next_screen){
+    public ShowUserDataScreen(User user, Screen prev_screen, Screen next_screen){
         super(user,prev_screen,next_screen);
     }
     public void CreateScreen() {
-        
         frame.setContentPane(panel);
 
-        submitButton.addActionListener(new ActionListener(){
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                // TODO Auto-generated method stub
-                //warning! duplicated code!!!
-                if(ordinaryAccountRadioButton.isSelected()){
-                    frame.dispose();
-                    if(next_screen!=null){
-                        new MainScreen(user, ChooseAccountNumberScreen.this, new Screen(), "ordinary").CreateScreen();
-                    }
-                }
-                else if(savingsAccountRadioButton.isSelected()){
-                    frame.dispose();
-                    if(next_screen!=null){
-                        new MainScreen(user, ChooseAccountNumberScreen.this, new Screen(),"saving").CreateScreen();
-                    }
-                }
-                else{
-                    JOptionPane.showMessageDialog(frame, "account wasn't chosen!");
-                }
-            }
-        });
+        usernameField.setText(user.username);
+        passwordField.setText(user.password);
+        emailField.setText(user.email);
+        firstNameField.setText(user.firstName);
+        lastNameField.setText(user.lastName);
+        sexField.setText(user.sex);
+        cityField.setText(user.city);
+        addressField.setText(user.address);
+        peselField.setText(user.pesel);
+        ordinaryField.setText(user.ordinary_account_number);
+        savingsField.setText(user.savings_account_number);
+        cardField.setText(user.card_number);
+        pinField.setText(user.pin_code);
+
         returnButton.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e){
@@ -91,15 +103,7 @@ public class ChooseAccountNumberScreen extends Screen{
                 frame.dispose();
             }
         }.start();
-        frame.setSize(800,600);
+        frame.setSize(1000,800);
         frame.setVisible(true);
-    }
-
-    public static void main(String[] args) {
-        User test_user = new User();
-        test_user.username = "test_user";
-        test_user.password = "password";
-        test_user.email = "maks.ovsienko2@gmail.com";
-        new ChooseAccountNumberScreen(test_user,null,new Screen()).CreateScreen();
     }
 }

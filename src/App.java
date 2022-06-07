@@ -25,6 +25,6 @@ public class App {
         nadawcaDane.put("kod pocztowy","30-348");
         nadawcaDane.put("ulica","Grota-Roweckiego");
         nadawcaDane.put("nr domu","37/17");
-        Transfer t1 = new TransferFactory(new MainFrame(),nadawcaDane).getTransfer(TransferFactory.TransferType.KRAJOWY);
+        Transfer t1 = new TransferFactory(new MainFrame(),nadawcaDane).getTransfer(TransferFactory.TransferType.ZLECENIESTALE);
     }
 }

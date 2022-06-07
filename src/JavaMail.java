@@ -1,7 +1,6 @@
 package src;
 
 import java.util.Properties;
-import java.util.logging.*;
 import javax.mail.*;
 import javax.mail.internet.*;
 
@@ -11,40 +10,42 @@ public class JavaMail{
       System.out.println("Preparing to send an email");
       Properties properties = new Properties();
 
-      properties.put("mail.smtp.auth","true");
-      properties.put("mail.smtp.starttls.enable","true");
-      properties.put("mail.smtp.host","smtp.gmail.com");//send email from gmail domain
-      properties.put("mail.smtp.port","587");//587 port is usually used for smtp protocol
+      properties.put("mail.smtp.auth", "true");
+      properties.put("mail.smtp.starttls.enable", "true");
+      properties.put("mail.smtp.host", "outlook.office365.com");//send email from gmail domain
+      properties.put("mail.smtp.port", "587");//587 port is usually used for smtp protocol
 
-      String myAccountEmail = "azazsxsxkmkm@gmail.com";
+      String myAccountEmail = "maks.ovsiienko@student.uj.edu.pl";
       String password = "1qaz-pl,";
 
-      Authenticator auth = new Authenticator() {
-         //override the getPasswordAuthentication method
-         @Override
-         protected PasswordAuthentication getPasswordAuthentication() {
-            return new PasswordAuthentication(myAccountEmail, password);
-         }
-      };
+      Session session = Session.getInstance(properties,
+              new javax.mail.Authenticator() {
+                 protected PasswordAuthentication getPasswordAuthentication() {
+                    return new PasswordAuthentication(myAccountEmail, password);
+                 }
+              });
 
-      Session session = Session.getInstance(properties,auth);
-      Message message = prepareMessage(session,myAccountEmail,recepient,code);
-      Transport.send(message);
-      System.out.println("Message successfully sent!");
-   }
-
-   public static Message prepareMessage(Session session, String myAccountEmail,String recepient,String code){
       try {
+
          Message message = new MimeMessage(session);
          message.setFrom(new InternetAddress(myAccountEmail));
-         message.setRecipient(Message.RecipientType.TO, new InternetAddress(recepient));
+         message.setRecipients(Message.RecipientType.TO,
+                 InternetAddress.parse(recepient));
          message.setSubject("Bank App verification code");
-         message.setText("Hi,\nIt's your auto-generated code:\n"+code);
-         return message;
-      } catch (Exception e) {
-         //TODO: handle exception
-         Logger.getLogger(JavaMail.class.getName()).log(Level.SEVERE,null,e);
+         message.setText("Hi,\nIt's your auto-generated code:\n" + code);
+
+         Transport.send(message);
+
+         System.out.println("Message successfully sent");
+
+      } catch (MessagingException e) {
+         System.out.println("Couldn't send a message");
+         throw new RuntimeException(e);
       }
-      return null;
+   }
+
+   public static void main(String[] args) throws Exception {
+      SendMail("maks.ovsienko2@gmail.com","123456");
+      System.out.println(System.console().readLine());
    }
 }

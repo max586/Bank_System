@@ -10,5 +10,5 @@ insert into OrdinaryAccounts values("test_user","PL666",1000),("user1","PL777",9
 insert into SavingsAccounts values("test_user","PL999",10000,4);
 
 insert into Cards values("test_user","123456","1234");
-
+insert into Credits values("test_user","26-08-2002","12",)
 #select * from Users u1 join UsersData u2 on u1.username = u2.username join OrdinaryAccountNumbers o on u1.username = o.username join SavingsAccountNumbers s on u1.username = s.username;

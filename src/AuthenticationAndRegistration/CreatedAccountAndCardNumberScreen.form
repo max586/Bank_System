@@ -40,7 +40,7 @@
       </component>
       <component id="c2467" class="javax.swing.JButton" binding="OKButton" default-binding="true">
         <constraints>
-          <grid row="8" column="0" row-span="1" col-span="5" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="8" column="1" row-span="1" col-span="4" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
           <gridbag weightx="1.0" weighty="0.2"/>
         </constraints>
         <properties>
@@ -51,7 +51,7 @@
       </component>
       <component id="ab07d" class="javax.swing.JButton" binding="returnButton" default-binding="true">
         <constraints>
-          <grid row="9" column="0" row-span="1" col-span="5" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="9" column="1" row-span="1" col-span="4" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
           <gridbag weightx="1.0" weighty="0.2"/>
         </constraints>
         <properties>
@@ -62,7 +62,7 @@
       </component>
       <component id="7f5b2" class="javax.swing.JButton" binding="exitButton" default-binding="true">
         <constraints>
-          <grid row="10" column="0" row-span="1" col-span="5" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="10" column="1" row-span="1" col-span="4" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
           <gridbag weightx="1.0" weighty="0.2"/>
         </constraints>
         <properties>
@@ -166,7 +166,7 @@
       </component>
       <vspacer id="5a7e6">
         <constraints>
-          <grid row="7" column="4" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+          <grid row="7" column="1" row-span="1" col-span="3" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
           <gridbag weightx="0.0" weighty="0.3"/>
         </constraints>
       </vspacer>
@@ -180,6 +180,16 @@
           <horizontalAlignment value="0"/>
           <preferredSize width="600" height="50"/>
           <text value="Your personal ordinary and savings account numbers:"/>
+        </properties>
+      </component>
+      <component id="2fc87" class="javax.swing.JLabel" binding="timerLabel">
+        <constraints>
+          <grid row="10" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font size="16"/>
+          <text value=""/>
         </properties>
       </component>
     </children>

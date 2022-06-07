@@ -61,6 +61,14 @@ public class Database {
             System.out.println(e);
         }
     }
+    public static void addCredit(Statement st, String username, float amount, String start_date, int duration, float rate){
+        try{
+            st.executeUpdate("insert into Credits values('"+username+"','"+amount+"','"+start_date+"','"+duration+"','"+rate+"');");
+        }catch(SQLException e) {
+        System.out.println("Couldn't execute the query");
+        System.out.println(e);
+    }
+    }
     public static String getEmail(Statement st, String username){
         try {
             ResultSet rs = st.executeQuery("select email from Users where username='"+username+"';");
@@ -129,6 +137,36 @@ public class Database {
             System.out.println(e);
         }
         return null;
+    }
+    public static String[] getCard(Statement st, String username){
+        String[] card = new String[2];
+        try {
+            ResultSet rs = st.executeQuery("select nr,pin from Cards where username='"+username+"';");
+            rs.next();
+            card[0] = rs.getString(1);
+            card[1] = rs.getString(2);
+        }catch(SQLException e) {
+            System.out.println("Couldn't execute the query");
+            System.out.println(e);
+        }
+        return card;
+    }
+    public static String[] getUserData(Statement st, String username){
+        String[] user_data = new String[6];
+        try{
+            ResultSet rs = st.executeQuery("select * from UsersData where username='"+username+"';");
+            rs.next();
+            user_data[0]=rs.getString(2);
+            user_data[1]=rs.getString(3);
+            user_data[2]=rs.getString(4);
+            user_data[3]=rs.getString(5);
+            user_data[4]=rs.getString(6);
+            user_data[5]=rs.getString(7);
+        }catch(SQLException e) {
+            System.out.println("Couldn't execute the query");
+            System.out.println(e);
+        }
+        return user_data;
     }
     public static void setUsername(Statement st,String username, String new_username){
         try {
@@ -232,6 +270,8 @@ public class Database {
     }
 
     public static void main(String[] args) {
-        connectToDatabase("bank_system", "root","root");
+    Statement st = connectToDatabase("bank_system", "root","password");
+    String[] card = getCard(st,"test_user");
+    for(int i=0;i<2;i++){System.out.println(card[i]);}
     }
 }
