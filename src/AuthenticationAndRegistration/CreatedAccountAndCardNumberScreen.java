@@ -38,7 +38,6 @@ public class CreatedAccountAndCardNumberScreen extends Screen {
         String card_number = generateCardNumber();
         String pin_code = generatePIN();
 
-        Statement st = Database.connectToDatabase("bank_system","root","password");
         Database.addOrdinaryAccountNumber(st, user.username, ordinary_account_number);
         Database.addSavingsAccountNumber(st, user.username, savings_account_number);
         Database.addCard(st, user.username, card_number, pin_code);

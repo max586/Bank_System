@@ -24,7 +24,6 @@ public class PayWithCardScreen2 extends Screen{
         
         frame.setContentPane(panel);
 
-        Statement st = Database.connectToDatabase("bank_system","root","password");
         user.ordinary_account_balance = Database.getOrdinaryAccountBalance(st, user.username);
         balanceLabel.setText("Current balance is: "+Float.toString(user.ordinary_account_balance));
 

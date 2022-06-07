@@ -1,4 +1,4 @@
-package transfers;
+package src.transfers;
 
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.pdmodel.PDPage;

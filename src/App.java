@@ -1,6 +1,7 @@
+package src;
 
-import mainFrame.MainFrame;
-import transfers.*;
+import src.mainFrame.MainFrame;
+import src.transfers.*;
 
 import java.awt.*;
 import java.io.IOException;

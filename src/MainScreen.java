@@ -1,57 +1,130 @@
 package src;
-
+import src.AuthenticationAndRegistration.AuthenticationScreen;
 import src.Settings.SettingsMainScreen;
 
 import javax.swing.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import java.io.IOException;
+import javax.swing.JPanel;
+import java.awt.event.*;
 import java.sql.Statement;
-import java.util.Random;
 
-public class MainScreen extends Screen{
-    public JPanel panel;
-    public JButton settingsButton;
-    public JButton returnButton;
-    public JButton exitButton;
-    public MainScreen(User user, Screen prev_screen, Screen next_screen){
+public class MainScreen extends Screen {
+    public JPanel AuthPanel;
+    public JButton PROFILButton;
+    public JButton BLIKButton;
+    public JButton KREDYTYButton;
+    public JButton wylogujButton;
+    public JList list1;
+    public JButton zróbPrzelewButton;
+    public JButton prevButton;
+    public JLabel timeCounter;
+    public JLabel AccNumber;
+    public JLabel AccType;
+    public int counter = 0;
+    String chosenAcc;
+    String []options = {"one","two"};
+
+
+    public MainScreen(User user, Screen prev_screen, Screen next_screen, String option){
         super(user,prev_screen,next_screen);
+        chosenAcc = option;
     }
-    public void CreateScreen() {
 
-        frame.setContentPane(panel);
+    public void CreateScreen(){
 
-        settingsButton.addActionListener(new ActionListener(){
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                if(next_screen!=null){
-                    frame.dispose();
-                    new SettingsMainScreen(user, MainScreen.this, new Screen()).CreateScreen();
+        frame = new JFrame();
+        frame.setSize(1080,720);
+        frame.setTitle("MainScreen");
+
+        Statement st = Database.connectToDatabase("bank_system", "root", "password");
+        if(chosenAcc == "ordinary")
+        {
+            AccNumber.setText(Database.getOrdinaryAccountNumber(st, user.username));
+            AccType.setText("Wybrane konto: ordinary");
+        }
+        else if(chosenAcc == "saving")
+        {
+            AccNumber.setText(Database.getSavingsAccountNumber(st, user.username));
+            AccType.setText("Wybrane konto: saving");
+        }
+        list1.setListData(options);
+        list1.getSelectionModel().addListSelectionListener(e ->
+        {
+            int index = list1.getSelectedIndex();
+            if(index!=-1) {
+                if (options[index] == "one") {
+
+                    JFrame okienko = new JFrame();
+                    okienko.setVisible(true);
+
+                }else if(options[index] == "two")
+                {
+
                 }
             }
         });
 
-        returnButton.addActionListener(new ActionListener(){
-            @Override
-            public void actionPerformed(ActionEvent e){
-                frame.dispose();
-                if(prev_screen!=null){
-                    prev_screen.frame.setVisible(true);
+        BLIKButton.addActionListener(e->
+                                     {
+
+                                     });
+        KREDYTYButton.addActionListener(e->
+        {
+
+        });
+        PROFILButton.addActionListener(e->
+        {
+            frame.dispose();
+            new SettingsMainScreen(user, MainScreen.this, new Screen()).CreateScreen();
+        });
+
+        wylogujButton.addActionListener(e->
+        {
+            frame.dispose();
+            new AuthenticationScreen(null,null,new Screen()).CreateScreen();
+        });
+
+        prevButton.addActionListener(e->
+        {
+            frame.dispose();
+            if(prev_screen!=null){
+                prev_screen.frame.setVisible(true);
+        }
+
+        });
+
+
+
+        //Auto close the window
+        frame.addMouseListener(new MouseAdapter() {
+            public void mousePressed(MouseEvent me) {
+                counter = 0;
+            }
+        });
+        new Thread() {
+            public void run() {
+                while(counter <= 120) {
+                    timeCounter.setText("Time before log out: " + (120 - counter++));
+                    try{
+                        Thread.sleep(1000);
+                    } catch(Exception e) {}
                 }
-            }
-        });
-        exitButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent actionEvent) {
+
                 frame.dispose();
             }
-        });
-        frame.setSize(800,600);
+        }.start();
+        //Auto close the window
+
+        frame.setContentPane(AuthPanel);
         frame.setVisible(true);
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         User test_user = new User();
         test_user.username="test_user";
-        new MainScreen(test_user,null,null).CreateScreen();
+        new MainScreen(test_user,null,null, "ordinary").CreateScreen();
     }
+
+
 }
+

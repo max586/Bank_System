@@ -1,7 +1,7 @@
-package transfers;
+package src.transfers;
 
 import com.toedter.calendar.JDateChooser;
-import mainFrame.MainFrame;
+import src.mainFrame.MainFrame;
 
 import javax.swing.*;
 import java.awt.*;

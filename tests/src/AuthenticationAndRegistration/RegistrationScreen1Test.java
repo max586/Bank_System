@@ -17,7 +17,7 @@ public class RegistrationScreen1Test {
     @Before
     public void initiate(){
         reg_screen = new RegistrationScreen1(null,null,null);
-        st = Database.connectToDatabase("bank_system","root","password");
+        
 
         username="new_user";
         password="6X-q(A(s?g!k";

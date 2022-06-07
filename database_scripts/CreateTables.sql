@@ -16,7 +16,7 @@ create table UsersData(
 username varchar(30),
 `First name` varchar(20),
 `Last name` varchar(20),
-`Sex` varchar(1),
+`Sex` varchar(5),
 City varchar(20),
 Address varchar(30),
 PESEL varchar(30),

@@ -1,4 +1,4 @@
-package transfers;
+package src.transfers;
 
 import javax.money.NumberValue;
 import javax.money.convert.ExchangeRate;

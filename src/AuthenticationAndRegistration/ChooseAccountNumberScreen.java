@@ -1,6 +1,6 @@
 package src.AuthenticationAndRegistration;
 
-import src.MainScreen1;
+import src.MainScreen;
 import src.Screen;
 import src.User;
 
@@ -31,13 +31,13 @@ public class ChooseAccountNumberScreen extends Screen{
                 if(ordinaryAccountRadioButton.isSelected()){
                     frame.dispose();
                     if(next_screen!=null){
-                        new MainScreen1(user, ChooseAccountNumberScreen.this, new Screen(), "ordinary").CreateScreen();
+                        new MainScreen(user, ChooseAccountNumberScreen.this, new Screen(), "ordinary").CreateScreen();
                     }
                 }
                 else if(savingsAccountRadioButton.isSelected()){
                     frame.dispose();
                     if(next_screen!=null){
-                        new MainScreen1(user, ChooseAccountNumberScreen.this, new Screen(),"saving").CreateScreen();
+                        new MainScreen(user, ChooseAccountNumberScreen.this, new Screen(),"saving").CreateScreen();
                     }
                 }
                 else{

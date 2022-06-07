@@ -1,6 +1,6 @@
-package transfers;
+package src.transfers;
 
-import mainFrame.MainFrame;
+import src.mainFrame.MainFrame;
 
 import javax.swing.*;
 import javax.swing.event.MenuEvent;

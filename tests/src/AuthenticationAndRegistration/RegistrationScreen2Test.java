@@ -21,7 +21,7 @@ public class RegistrationScreen2Test {
         user.username="new_user";
         user.password="6X-q(A(s?g!k";
         user.email="@email";
-        st = Database.connectToDatabase("bank_system","root","password");
+        
         screen = new RegistrationScreen2(user,null,null);
         screen.CreateScreen();
         screen.frame.dispose();

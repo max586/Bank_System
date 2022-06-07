@@ -4,18 +4,21 @@ import javax.swing.*;
 import java.awt.GridBagLayout;
 import java.awt.GridBagConstraints;
 import java.awt.event.*;
+import java.sql.Statement;
 
 public class Screen {
     public User user;
     public Screen prev_screen;
     public Screen next_screen;
     public JFrame frame;
+    public Statement st;
     public Screen(User user, Screen prev_screen, Screen next_screen){
         this.user = user;
         this.prev_screen = prev_screen;
         this.next_screen = next_screen;
         frame = new JFrame();
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        st = Database.connectToDatabase("bank_system","root","password");
     }
     public Screen(){
         frame = new JFrame();

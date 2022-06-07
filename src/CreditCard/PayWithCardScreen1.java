@@ -29,7 +29,6 @@ public class PayWithCardScreen1 extends Screen {
         submitButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-                Statement st = Database.connectToDatabase("bank_system","root","password");
                 String nr = nrField.getText();
                 String pin = pinField.getText();
                 if(Database.verifyCard(st,nr,pin)){
