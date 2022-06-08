@@ -1,5 +1,6 @@
 package src;
 import src.AuthenticationAndRegistration.AuthenticationScreen;
+import src.Credits.Credit;
 import src.Settings.SettingsMainScreen;
 
 import javax.swing.*;
@@ -36,7 +37,7 @@ public class MainScreen extends Screen {
         frame.setSize(1080,720);
         frame.setTitle("MainScreen");
 
-        Statement st = Database.connectToDatabase("bank_system", "root", "password");
+        Statement st = Database.connectToDatabase("bank_system", "root", "17391425");
         if(chosenAcc == "ordinary")
         {
             AccNumber.setText(Database.getOrdinaryAccountNumber( user.username));
@@ -47,22 +48,24 @@ public class MainScreen extends Screen {
             AccNumber.setText(Database.getSavingsAccountNumber( user.username));
             AccType.setText("Wybrane konto: saving");
         }
-        list1.setListData(options);
-        list1.getSelectionModel().addListSelectionListener(e ->
-        {
-            int index = list1.getSelectedIndex();
-            if(index!=-1) {
-                if (options[index] == "one") {
+        /*
+            list1.setListData(options);
+            list1.getSelectionModel().addListSelectionListener(e ->
+            {
+                int index = list1.getSelectedIndex();
+                if(index!=-1) {
+                    if (options[index] == "one") {
 
-                    JFrame okienko = new JFrame();
-                    okienko.setVisible(true);
+                        JFrame okienko = new JFrame();
+                        okienko.setVisible(true);
 
-                }else if(options[index] == "two")
-                {
+                    }else if(options[index] == "two")
+                    {
 
+                    }
                 }
-            }
-        });
+            });
+        */
 
         BLIKButton.addActionListener(e->
                                      {
@@ -70,7 +73,8 @@ public class MainScreen extends Screen {
                                      });
         KREDYTYButton.addActionListener(e->
         {
-
+            frame.dispose();
+            new Credit(user, MainScreen.this, new Screen()).CreateScreen();
         });
         PROFILButton.addActionListener(e->
         {
@@ -102,12 +106,18 @@ public class MainScreen extends Screen {
             }
         });
         new Thread() {
-            public void run() {
-                while(counter <= 120) {
-                    timeCounter.setText("Time before log out: " + (120 - counter++));
-                    try{
+            public void run()
+            {
+                while(counter <= 120)
+                {
+                    if(frame.isActive())
+                        timeCounter.setText("Time before log out: " + (120 - counter++));
+                        else
+                        counter = 0;
+
+                    try {
                         Thread.sleep(1000);
-                    } catch(Exception e) {}
+                    } catch (Exception e) {}
                 }
 
                 frame.dispose();

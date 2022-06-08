@@ -22,9 +22,9 @@ public class AuthenticationScreenTest {
         email="email";
         ordinary_account_number="PL555";
         savings_account_number="PL333";
-        Database.addUser(st,username,password,email);
-        Database.addOrdinaryAccountNumber(st,username,ordinary_account_number);
-        Database.addSavingsAccountNumber(st,username,savings_account_number);
+        Database.addUser(username,password,email);
+        Database.addOrdinaryAccountNumber(username,ordinary_account_number);
+        Database.addSavingsAccountNumber(username,savings_account_number);
         auth_screen.CreateScreen();
         auth_screen.frame.dispose();
     }
@@ -49,6 +49,6 @@ public class AuthenticationScreenTest {
     }
     @After
     public void deleteUser(){
-        Database.deleteUser(st,username);
+        Database.deleteUser(username);
     }
 }

@@ -103,6 +103,6 @@ public class RegistrationScreen2Test {
         assertEquals("ok",screen.peselField.getText());
     }
     @After
-    public void deleteUser(){Database.deleteUser(st,user.username);}
+    public void deleteUser(){Database.deleteUser(user.username);}
 
 }

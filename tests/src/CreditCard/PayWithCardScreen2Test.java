@@ -25,10 +25,10 @@ public class PayWithCardScreen2Test {
         pin="1234";
         ord_nr="PL123";
         balance= 1000.0F;
-        Database.addUser(st,username,password,email);
-        Database.addCard(st,username,card,pin);
-        Database.addOrdinaryAccountNumber(st,username,ord_nr);
-        Database.setOrdinaryAccountBalance(st,username,balance);
+        Database.addUser(username,password,email);
+        Database.addCard(username,card,pin);
+        Database.addOrdinaryAccountNumber(username,ord_nr);
+        Database.setOrdinaryAccountBalance(username,balance);
         User user = new User();
         user.username=username;
         user.card_number=card;
@@ -51,9 +51,9 @@ public class PayWithCardScreen2Test {
         screen.paymentField.setText("999.99");
         screen.submitButton.doClick();
         assertEquals("Payment successfully processed",screen.jpane.getMessage());
-        assertEquals(0.01,Database.getOrdinaryAccountBalance(st,username),0.009);
+        assertEquals(0.01,Database.getOrdinaryAccountBalance(username),0.009);
     }
     @After
-    public void deleteUser(){Database.deleteUser(st,username);}
+    public void deleteUser(){Database.deleteUser(username);}
 
 }

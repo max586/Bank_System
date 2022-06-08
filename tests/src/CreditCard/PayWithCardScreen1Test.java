@@ -22,8 +22,8 @@ public class PayWithCardScreen1Test {
         email="@email";
         card="1234567887654321";
         pin="1234";
-        Database.addUser(st,username,password,email);
-        Database.addCard(st,username,card,pin);
+        Database.addUser(username,password,email);
+        Database.addCard(username,card,pin);
         screen = new PayWithCardScreen1(new User(),null,null);
         screen.CreateScreen();
         screen.frame.dispose();
@@ -49,5 +49,5 @@ public class PayWithCardScreen1Test {
         assertEquals("card successfully verified",screen.jpane.getMessage());
     }
     @After
-    public void deleteUser(){Database.deleteUser(st,username);}
+    public void deleteUser(){Database.deleteUser(username);}
 }

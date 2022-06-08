@@ -4,16 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bea002ff-8e44-4e85-a29b-66b1294d710d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/tests/src/CreditCard/PayWithCardScreen1Test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/src/CreditCard/PayWithCardScreen2Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationAndRegistration/AuthenticationScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AuthenticationAndRegistration/AuthenticationScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationAndRegistration/EmailVerificationScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AuthenticationAndRegistration/EmailVerificationScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreditCard/PayWithCardScreen1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditCard/PayWithCardScreen1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreditCard/PayWithCardScreen2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditCard/PayWithCardScreen2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/src/AuthenticationAndRegistration/AuthenticationScreenTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/src/AuthenticationAndRegistration/AuthenticationScreenTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/src/AuthenticationAndRegistration/RegistrationScreen1Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/src/AuthenticationAndRegistration/RegistrationScreen1Test.java" afterDir="false" />
+    <list default="true" id="bea002ff-8e44-4e85-a29b-66b1294d710d" name="Changes" comment="refactored">
+      <change afterPath="$PROJECT_DIR$/lib/jcalendar-1.4.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/jgoodies-looks-2.4.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Credits/Credit.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Credits/Credit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MainScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/transfers/StandardTransfer.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfers/StandardTransfer.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/src/CreditCard/PayWithCardScreen1Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/src/CreditCard/PayWithCardScreen1Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/src/CreditCard/PayWithCardScreen2Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/src/CreditCard/PayWithCardScreen2Test.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +53,6 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/AuthenticationAndRegistration/AuthenticationScreen.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/AuthenticationAndRegistration/test1.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/CreditCard/PayWithCardScreen2.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/DataValidation.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Screen.java" root0="FORCE_HIGHLIGHTING" />
@@ -308,7 +307,21 @@
       <option name="project" value="LOCAL" />
       <updated>1654582583727</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="refactored">
+      <created>1654692537551</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1654692537551</updated>
+    </task>
+    <task id="LOCAL-00015" summary="refactored">
+      <created>1654692551255</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1654692551255</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -355,7 +368,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Settings/ChangePasswordScreen1.java</url>
-          <line>80</line>
+          <line>83</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
