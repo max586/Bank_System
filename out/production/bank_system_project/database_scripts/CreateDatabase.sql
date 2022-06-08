@@ -13,19 +13,20 @@ create table Users(
 username varchar(30) not NULL PRIMARY key,
 `password` varchar(30) not null,
 email varchar(30),
-AppCode varchar(4) not null
+appCode varchar(4)
 );
 
 create table UsersData(
 username varchar(30),
 `First name` varchar(20),
 `Last name` varchar(20),
-PESEL varchar(30),
+sex varchar(7),
 `Phone number` varchar(9),
 Town varchar(30),
 Postcode varchar(6),
 Street varchar(30),
 `Street number` varchar(10),
+pesel varchar(11),
 foreign key(username) references Users(username) on update cascade on delete cascade
 );
 
@@ -48,9 +49,9 @@ create table Credits(
 id int not null auto_increment primary key,
 username varchar(30) not null,
 amount float check(amount>=0 and amount<=50000),
+`amount payed` float check(`amount payed`>=0 and `amount payed`<=50000),
 `start date` date,
-`duration` int,#in months
-rate float check(rate between 0 and 100),
+`duration` int,#in years
 foreign key(username) references Users(username) on update cascade on delete cascade
 );
 

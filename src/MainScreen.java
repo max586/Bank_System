@@ -15,12 +15,13 @@ public class MainScreen extends Screen {
     public JButton BLIKButton;
     public JButton KREDYTYButton;
     public JButton wylogujButton;
-    public JList list1;
-    public JButton zróbPrzelewButton;
     public JButton prevButton;
     public JLabel timeCounter;
     public JLabel AccNumber;
     public JLabel AccType;
+    private JButton foreignTransferButton;
+    private JButton ownTransferButton;
+    private JButton standingOrderTransferButton;
     public int counter = 0;
     String chosenAcc;
     String []options = {"one","two"};
@@ -66,7 +67,7 @@ public class MainScreen extends Screen {
                 }
             });
         */
-
+//Incountry Transfer, Foreign Transfer, Own Transfer, Standing Order Transfer, BLIK Phone Transfer
         BLIKButton.addActionListener(e->
                                      {
 
