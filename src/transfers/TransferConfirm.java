@@ -49,8 +49,9 @@ public class TransferConfirm {
     private Map<String,String> transferData;
     private PdfGenerator pdfGenerator;
     private Statement st;
-
-    public TransferConfirm(MainFrame mainFrame, JPanel transferNextStepPanel, Map<String,String> senderData1, Map<String,String>receiverData1, Map<String,String> transferData1){
+    private User user;
+    public TransferConfirm(User user1,MainFrame mainFrame, JPanel transferNextStepPanel, Map<String,String> senderData1, Map<String,String>receiverData1, Map<String,String> transferData1){
+        user = user1;
         frame = mainFrame;
         AppTimer appTimer = new AppTimer(timeLabel,frame);
         transferConfirmPanel.addMouseMotionListener(new MouseAction(appTimer));
@@ -159,21 +160,45 @@ public class TransferConfirm {
                         streetNumber = receiverData.getOrDefault("nr domu","");
                         appCodeWarning.setVisible(false);
                         if(transferPanelTitle.equals("Zlecenie stałe")){
-                            /*Database.addOutgoingHistoryOrdinary("OutgoingHistoryOrdinary",generationDate,senderData.get("typ"),
+                            Database.addToHistory(st,"OutgoingHistoryOrdinary",generationDate,transferData.get("typ"),
                                     senderData.get("nr konta"),receiverData.get("nr konta"),"",Double.parseDouble(transferData.get("kwota")),
                                     transferData.get("waluta"),Double.parseDouble(transferData.get("kwotaPLN")),transferData.get("tytul"),
                                     transferData.get("startdata"),transferData.get("enddata"),Integer.parseInt(transferData.get("cykle")),
                                     transferData.get("jednostkaczasu"),receiverData.get("nazwa odbiorcy"),receiverData.get("nazwa odbiorcy cd"),
-                                    town,postCode,street,streetNumber);*/
+                                    town,postCode,street,streetNumber);
+
                         }
                         else if(transferPanelTitle.equals("Przelew BLIK na telefon")){
-
+                            Database.addToHistory(st,"OutgoingHistoryOrdinary",generationDate,transferData.get("typ"),
+                                    senderData.get("nr konta"),"",receiverData.get("nr telefonu"),Double.parseDouble(transferData.get("kwota")),
+                                    "PLN",Double.parseDouble(transferData.get("kwota")),transferData.get("tytul"),
+                                    "","",0,"",receiverData.get("nazwa odbiorcy"),receiverData.get("nazwa odbiorcy cd"),
+                                    "","","","");
                         }
                         else if(transferPanelTitle.equals("Przelew własny")){
-
+                            if(senderData.get("nr konta").equals(user.ordinary_account_number)) {
+                                System.out.println("a");
+                                Database.addToHistory(st, "OutgoingHistoryOrdinary", generationDate, transferData.get("typ"),
+                                        senderData.get("nr konta"), receiverData.get("nr konta"), "", Double.parseDouble(transferData.get("kwota")),
+                                        "PLN", Double.parseDouble(transferData.get("kwota")), transferData.get("tytul"),
+                                        "", "", 0, "", receiverData.get("nazwa odbiorcy"), receiverData.get("nazwa odbiorcy cd"),
+                                        "", "", "", "");
+                            }
+                            else if(senderData.get("nr konta").equals(user.savings_account_number)){
+                                System.out.println("b");
+                                Database.addToHistory(st, "OutgoingHistorySavings", generationDate, transferData.get("typ"),
+                                        senderData.get("nr konta"), "", receiverData.get("nr telefonu"), Double.parseDouble(transferData.get("kwota")),
+                                        "PLN", Double.parseDouble(transferData.get("kwota")), transferData.get("tytul"),
+                                        "", "", 0, "", receiverData.get("nazwa odbiorcy"), receiverData.get("nazwa odbiorcy cd"),
+                                        "", "", "", "");
+                            }
                         }
                         else {
-
+                            Database.addToHistory(st,"OutgoingHistoryOrdinary",generationDate,transferData.get("typ"),
+                                    senderData.get("nr konta"),receiverData.get("nr konta"),"",Double.parseDouble(transferData.get("kwota")),
+                                    transferData.get("waluta"),Double.parseDouble(transferData.get("kwotaPLN")),transferData.get("tytul"),
+                                    "","",0,"",receiverData.get("nazwa odbiorcy"),receiverData.get("nazwa odbiorcy cd"),
+                                    town,postCode,street,streetNumber);
                         }
                         if(isTransferConfirmation){
                             if(transferPanelTitle.equals("Zlecenie stałe")) {

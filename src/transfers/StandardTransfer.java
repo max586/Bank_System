@@ -2,6 +2,8 @@ package src.transfers;
 
 import src.mainFrame.MainFrame;
 import src.timer.*;
+import src.User;
+
 import javax.swing.*;
 import javax.swing.text.AttributeSet;
 import javax.swing.text.BadLocationException;
@@ -13,7 +15,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Vector;
 
-public class StandardTransfer implements Transfer{
+public class StandardTransfer implements src.transfers.Transfer {
     protected JTextField accountNumberTxt;
     protected JTextField transferAmount1Txt;
     protected JComboBox receiverNameCombo;
@@ -84,14 +86,16 @@ public class StandardTransfer implements Transfer{
     protected String countryISO;
     protected boolean isCountry;
     protected MainFrame frame;
+    protected User user;
     public StandardTransfer(){}
-    public StandardTransfer(MainFrame mainFrame, Map<String, String> senderData1) throws IOException, FontFormatException {
+    public StandardTransfer(User user1,MainFrame mainFrame, Map<String, String> senderData1) throws IOException, FontFormatException {
+        user = user1;
         frame = mainFrame;
         AppTimer appTimer = new AppTimer(timeLabel,frame);
         transferPanel1.addMouseMotionListener(new MouseAction(appTimer));
         appTimer.start();
         isCountry = false;
-        countryISO = "PL ";
+        countryISO = "PL";
         senderData = senderData1;
         senderAmount = Double.parseDouble(senderData.get("kontosrodki"));
         receiverData = new HashMap<>();
@@ -439,18 +443,8 @@ public class StandardTransfer implements Transfer{
                 if(!isAccountNumberValid) validation.add(false);
                 buttonValid = !validation.contains(false);
                 if(buttonValid){
-                    String nrKontaOdbiorcy = accountNumberTxt.getText();
-                    StringBuilder result = new StringBuilder();
-                    result.append(nrKontaOdbiorcy.charAt(0));
-                    result.append(nrKontaOdbiorcy.charAt(1));
-                    result.append(" ");
-                    int j = 0;
-                    for(int i=2; i<nrKontaOdbiorcy.length();++i){
-                        result.append(nrKontaOdbiorcy.charAt(i));
-                        ++j;
-                        if(j%4==0) result.append(" ");
-                    }
-                    receiverData.put("nr konta",countryISO+String.valueOf(result));
+
+                    receiverData.put("nr konta",countryISO+String.valueOf(accountNumberTxt.getText().length()));
                     receiverData.put("nazwa odbiorcy", receiverName1Txt.getText());
                     if(receiverNameCombo.getSelectedItem() == "Osoba") receiverData.put("nazwa odbiorcy cd", receiverName2Txt.getText());
                     else receiverData.put("nazwa odbiorcy cd","");
@@ -474,7 +468,7 @@ public class StandardTransfer implements Transfer{
                         transferData.put("oplata","0.00");
                         transferData.put("typ",panelTitleLabel.getText()+" zwykły");
                     }
-                    TransferNextStep pCd = new TransferNextStep(frame, transferPanel1,senderData,receiverData, transferData);
+                    TransferNextStep pCd = new TransferNextStep(user,frame, transferPanel1,senderData,receiverData, transferData);
                     frame.getjFrame().setContentPane(pCd.getTransferNextStepPanel());
                     frame.getjFrame().setVisible(true);
                 }

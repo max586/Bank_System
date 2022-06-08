@@ -4,6 +4,7 @@ import com.toedter.calendar.JDateChooser;
 import src.mainFrame.MainFrame;
 import src.timer.AppTimer;
 import src.timer.MouseAction;
+import src.User;
 
 import javax.swing.*;
 import java.awt.*;
@@ -57,8 +58,9 @@ public class StandingOrderNextStep {
     private Map<String,String> receiverData;
     private Map<String,String> transferData;
     private double senderAmount;
-
-    public StandingOrderNextStep(MainFrame mainFrame, JPanel standingOrderPanel, Map<String,String> senderData1, Map<String,String> receiverData1, Map<String,String> transferData1) throws IOException, FontFormatException {
+    private User user;
+    public StandingOrderNextStep(User user1, MainFrame mainFrame, JPanel standingOrderPanel, Map<String,String> senderData1, Map<String,String> receiverData1, Map<String,String> transferData1) throws IOException, FontFormatException {
+        user = user1;
         frame = mainFrame;
         AppTimer appTimer = new AppTimer(timeLabel,frame);
         StandingOrderNextPanel.addMouseMotionListener(new MouseAction(appTimer));
@@ -143,7 +145,7 @@ public class StandingOrderNextStep {
                         SimpleDateFormat formatter = new SimpleDateFormat("dd.MM.yyyy");
                         transferData.put("startdata",formatter.format(dateChooserFrom.getDate()));
                         if(isEndDateSelected) transferData.put("enddata",formatter.format(dateChooserTo.getDate()));
-                        TransferNextStep transferNextStep = new TransferNextStep(frame, StandingOrderNextPanel,senderData,receiverData,transferData);
+                        TransferNextStep transferNextStep = new TransferNextStep(user, frame, StandingOrderNextPanel,senderData,receiverData,transferData);
                         frame.getjFrame().setContentPane(transferNextStep.getTransferNextStepPanel());
                         frame.getjFrame().setVisible(true);
                     }
@@ -209,30 +211,30 @@ public class StandingOrderNextStep {
         endPaymentLabel.setVisible(false);
         endPaymentWarning.setVisible(false);
         dateChooserTo.getDateEditor().addPropertyChangeListener(
-                    new PropertyChangeListener() {
-                        @Override
-                        public void propertyChange(PropertyChangeEvent e) {
-                            if ("date".equals(e.getPropertyName())) {
-                                dateTo = (Date) e.getNewValue();
-                                switch (timeUnit) {
-                                    case "dni" -> timeAmount = LocalDateTime.from(dateFrom.toInstant().atZone(ZoneId.of(ZoneId.systemDefault().getId()))).plusDays(Integer.parseInt(timeUnitsTxt.getText()));
-                                    case "tygodnie" -> timeAmount = LocalDateTime.from(dateFrom.toInstant().atZone(ZoneId.of(ZoneId.systemDefault().getId()))).plusWeeks(Integer.parseInt(timeUnitsTxt.getText()));
-                                    case "miesiące" -> timeAmount = LocalDateTime.from(dateFrom.toInstant().atZone(ZoneId.of(ZoneId.systemDefault().getId()))).plusMonths(Integer.parseInt(timeUnitsTxt.getText()));
-                                }
+                new PropertyChangeListener() {
+                    @Override
+                    public void propertyChange(PropertyChangeEvent e) {
+                        if ("date".equals(e.getPropertyName())) {
+                            dateTo = (Date) e.getNewValue();
+                            switch (timeUnit) {
+                                case "dni" -> timeAmount = LocalDateTime.from(dateFrom.toInstant().atZone(ZoneId.of(ZoneId.systemDefault().getId()))).plusDays(Integer.parseInt(timeUnitsTxt.getText()));
+                                case "tygodnie" -> timeAmount = LocalDateTime.from(dateFrom.toInstant().atZone(ZoneId.of(ZoneId.systemDefault().getId()))).plusWeeks(Integer.parseInt(timeUnitsTxt.getText()));
+                                case "miesiące" -> timeAmount = LocalDateTime.from(dateFrom.toInstant().atZone(ZoneId.of(ZoneId.systemDefault().getId()))).plusMonths(Integer.parseInt(timeUnitsTxt.getText()));
+                            }
 
-                                if(dateTo.before(java.util.Date.from(timeAmount.atZone(ZoneId.systemDefault())
-                                                .toInstant()))){
-                                    dateToValid = false;
-                                    endPaymentWarning.setText("Zbyt krótki odstęp czasu!");
-                                    endPaymentWarning.setVisible(true);
-                                }
-                                else{
-                                    dateToValid = true;
-                                    endPaymentWarning.setVisible(false);
-                                }
+                            if(dateTo.before(java.util.Date.from(timeAmount.atZone(ZoneId.systemDefault())
+                                    .toInstant()))){
+                                dateToValid = false;
+                                endPaymentWarning.setText("Zbyt krótki odstęp czasu!");
+                                endPaymentWarning.setVisible(true);
+                            }
+                            else{
+                                dateToValid = true;
+                                endPaymentWarning.setVisible(false);
                             }
                         }
-                    });
+                    }
+                });
         endPaymentPanel.add(dateChooserTo);
     }
     void setEndDateRadioButton() {

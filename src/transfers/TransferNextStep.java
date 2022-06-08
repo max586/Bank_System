@@ -3,21 +3,13 @@ package src.transfers;
 import src.mainFrame.MainFrame;
 import src.timer.AppTimer;
 import src.timer.MouseAction;
+import src.User;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.Statement;
 import java.util.Map;
-
-
-/*
-data: nr. konra, imie, nazwisko, {adres: Miejscowosc, Kod pocztowy, ulica, Nr. domu/ mieszkania}
- */
-
-/*
-    danePrzelewu: tytuł, kwota, oplata, typ
- */
 
 public class TransferNextStep {
     private JLabel senderName;
@@ -51,8 +43,9 @@ public class TransferNextStep {
     private String transferPanelTitle;
     private JPanel cancelPanel;
     private MainFrame frame;
-
-    public TransferNextStep(MainFrame mainFrame, JPanel transferPanel, Map<String,String> senderData1, Map<String,String> receiverData1, Map<String,String> transferData1){
+    private User user;
+    public TransferNextStep(User user1, MainFrame mainFrame, JPanel transferPanel, Map<String,String> senderData1, Map<String,String> receiverData1, Map<String,String> transferData1){
+        user = user1;
         frame = mainFrame;
         AppTimer appTimer = new AppTimer(timeLabel,mainFrame);
         transferNextStepPanel.addMouseMotionListener(new MouseAction(appTimer));
@@ -126,7 +119,7 @@ public class TransferNextStep {
         nextButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                TransferConfirm pO = new TransferConfirm(frame, transferNextStepPanel,senderData,receiverData,transferData);
+                TransferConfirm pO = new TransferConfirm(user,frame, transferNextStepPanel,senderData,receiverData,transferData);
                 frame.getjFrame().setContentPane(pO.getTransferConfirmPanel());
                 frame.getjFrame().setVisible(true);
             }

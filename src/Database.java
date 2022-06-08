@@ -269,6 +269,58 @@ public class Database {
            System.out.println(e);
        }
     }
+
+    public static void addToHistory(Statement st, String database, String operationDate, String transferType,
+                                    String senderAccountNumber, String receiverAccountNumber, String phoneNumber,
+                                    double transferAmount, String transferCurrency, double totalTransferCost,
+                                    String transferTitle, String startDate, String endDate, int transferCycle,
+                                    String transferCycleUnits, String receiverFirstName, String receiverLastName,
+                                    String receiverTown, String receiverPostCode, String receiverStreet, String receiverStreetNumber){
+        switch(database){
+            case "OutgoingHistoryOrdinary":
+                try {
+                    st.executeUpdate("insert into OutgoingHistoryOrdinary values('"+operationDate+"','"+transferType+"','"+senderAccountNumber+"','"
+                            +receiverAccountNumber+"','"+phoneNumber+"','"+transferAmount+"','"+transferCurrency+"','"+totalTransferCost+"','"
+                            +transferTitle+"','"+startDate+"','"+endDate+"','"+transferCycle+"','"+transferCycleUnits+"','"+receiverFirstName+"','"
+                            +receiverLastName+"','"+receiverTown+"','"+receiverPostCode+"','"+receiverStreet+"','"+receiverStreetNumber+"');");
+                } catch (Exception e) {
+                    System.out.println(e);
+                }
+                break;
+            case "OutgoingHistorySavings":
+                try {
+                    st.executeUpdate("insert into OutgoingHistorySavings values('"+operationDate+"','"+transferType+"','"+senderAccountNumber+"','"
+                            +receiverAccountNumber+"','"+phoneNumber+"','"+transferAmount+"','"+transferCurrency+"','"+totalTransferCost+"','"
+                            +transferTitle+"','"+startDate+"','"+endDate+"','"+transferCycle+"','"+transferCycleUnits+"','"+receiverFirstName+"','"
+                            +receiverLastName+"','"+receiverTown+"','"+receiverPostCode+"','"+receiverStreet+"','"+receiverStreetNumber+"');");
+                } catch (Exception e) {
+                    System.out.println(e);
+                }
+                break;
+            case "IncomingHistoryOrdinary":
+                try {
+                    st.executeUpdate("insert into IncomingHistoryOrdinary values('"+operationDate+"','"+transferType+"','"+senderAccountNumber+"','"
+                            +receiverAccountNumber+"','"+phoneNumber+"','"+transferAmount+"','"+transferCurrency+"','"+totalTransferCost+"','"
+                            +transferTitle+"','"+startDate+"','"+endDate+"','"+transferCycle+"','"+transferCycleUnits+"','"+receiverFirstName+"','"
+                            +receiverLastName+"','"+receiverTown+"','"+receiverPostCode+"','"+receiverStreet+"','"+receiverStreetNumber+"');");
+                } catch (Exception e) {
+                    System.out.println(e);
+                }
+                break;
+            case "IncomingHistorySavings":
+                try {
+                    st.executeUpdate("insert into IncomingHistorySavings values('"+operationDate+"','"+transferType+"','"+senderAccountNumber+"','"
+                            +receiverAccountNumber+"','"+phoneNumber+"','"+transferAmount+"','"+transferCurrency+"','"+totalTransferCost+"','"
+                            +transferTitle+"','"+startDate+"','"+endDate+"','"+transferCycle+"','"+transferCycleUnits+"','"+receiverFirstName+"','"
+                            +receiverLastName+"','"+receiverTown+"','"+receiverPostCode+"','"+receiverStreet+"','"+receiverStreetNumber+"');");
+                } catch (Exception e) {
+                    System.out.println(e);
+                }
+                break;
+            default:
+                System.out.println("Incorrect database!");
+        }
+    }
     public static void main(String[] args) {
     Statement st = connectToDatabase("bank_system", "root","password");
     String[] card = getCard("test_user");

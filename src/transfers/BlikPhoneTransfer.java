@@ -3,6 +3,7 @@ package src.transfers;
 import src.mainFrame.MainFrame;
 import src.timer.AppTimer;
 import src.timer.MouseAction;
+import src.User;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -50,9 +51,10 @@ public class BlikPhoneTransfer implements Transfer{
     private double transferAmount2 = 0.0;
     private double finalTransferAmount = 0.0;
     private Vector<Boolean> validation;
+    private User user;
 
-
-    public BlikPhoneTransfer(MainFrame mainFrame, Map<String, String> senderData1) {
+    public BlikPhoneTransfer(User user1, MainFrame mainFrame, Map<String, String> senderData1) {
+        user = user1;
         frame = mainFrame;
         AppTimer appTimer = new AppTimer(timeLabel,frame);
         blikPhonePanel.addMouseMotionListener(new MouseAction(appTimer));
@@ -258,7 +260,7 @@ public class BlikPhoneTransfer implements Transfer{
                     transferData.put("kwota", transferAmount1Txt.getText()+"."+ transferAmount2Txt.getText());
                     transferData.put("oplata","0.00");
                     transferData.put("typ",panelTitleLabel.getText());
-                    TransferNextStep pCd = new TransferNextStep(frame, blikPhonePanel,senderData,receiverData, transferData);
+                    TransferNextStep pCd = new TransferNextStep(user,frame, blikPhonePanel,senderData,receiverData, transferData);
                     frame.getjFrame().setContentPane(pCd.getTransferNextStepPanel());
                     frame.getjFrame().setVisible(true);
                 }
@@ -266,3 +268,4 @@ public class BlikPhoneTransfer implements Transfer{
         });
     }
 }
+

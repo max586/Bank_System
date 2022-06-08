@@ -3,6 +3,7 @@ package src.transfers;
 import src.mainFrame.MainFrame;
 import src.timer.AppTimer;
 import src.timer.MouseAction;
+import src.User;
 
 import javax.swing.*;
 import javax.swing.event.MenuEvent;
@@ -15,7 +16,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Vector;
 
-public class OwnTransfer implements Transfer{
+public class OwnTransfer implements src.transfers.Transfer {
     private MainFrame frame;
     private JPanel OwnTransferPanel;
     private JLabel panelTitleLabel;
@@ -47,8 +48,9 @@ public class OwnTransfer implements Transfer{
     private Map<String,String> transferData;
     private Vector<Boolean> validation;
     private String choosedAcount="";
-
-    public OwnTransfer(MainFrame mainFrame, Map<String,String> senderData1) {
+    private User user;
+    public OwnTransfer(User user1, MainFrame mainFrame, Map<String,String> senderData1) {
+        user = user1;
         frame = mainFrame;
         AppTimer appTimer = new AppTimer(timeLabel,frame);
         OwnTransferPanel.addMouseMotionListener(new MouseAction(appTimer));
@@ -236,13 +238,19 @@ public class OwnTransfer implements Transfer{
                 }
                 if(!validation.contains(false)){
                     receiverData.put("nr konta",choosedAcount);
+                    if(isMainAccountSelected){
+                        senderData.put("nr konta",user.ordinary_account_number);
+                    }
+                    else {
+                        senderData.put("nr konta",user.savings_account_number);
+                    }
                     receiverData.put("nazwa odbiorcy", senderData.get("nazwa odbiorcy"));
                     receiverData.put("nazwa odbiorcy cd",senderData.get("nazwa odbiorcy cd"));
                     transferData.put("tytul", transferTitleTextArea.getText());
                     transferData.put("kwota", transferAmount1Txt.getText()+"."+ transferAmount2Txt.getText());
                     transferData.put("oplata","0.00");
                     transferData.put("typ",panelTitleLabel.getText());
-                    TransferNextStep pCd = new TransferNextStep(frame, OwnTransferPanel,senderData,receiverData, transferData);
+                    TransferNextStep pCd = new TransferNextStep(user,frame, OwnTransferPanel,senderData,receiverData, transferData);
                     frame.getjFrame().setContentPane(pCd.getTransferNextStepPanel());
                     frame.getjFrame().setVisible(true);
                 }

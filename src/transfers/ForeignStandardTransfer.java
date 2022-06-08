@@ -1,6 +1,6 @@
 package src.transfers;
-
 import src.mainFrame.MainFrame;
+import src.User;
 
 import javax.swing.*;
 import java.awt.*;
@@ -12,14 +12,14 @@ import java.util.Arrays;
 import java.util.Locale;
 import java.util.Map;
 
-public class ForeignStandardTransfer extends StandardTransfer implements Transfer{
+public class ForeignStandardTransfer extends StandardTransfer implements src.transfers.Transfer {
     private final Map<String,String> currencies;
     private final CurrenciesExchangeRate currenciesExchangeRate;
     private String currency;
     private double converter;
     private java.util.List<String> countriesISO;
-    ForeignStandardTransfer(MainFrame mainFrame, Map<String, String> senderData1) throws IOException, FontFormatException {
-        super(mainFrame,senderData1);
+    ForeignStandardTransfer(User user1,MainFrame mainFrame, Map<String, String> senderData1) throws IOException, FontFormatException {
+        super(user1,mainFrame,senderData1);
         isCountry = true;
         panelTitleLabel.setText("Przelew zagraniczny");
         accountNumberCountryLabel.setVisible(false);

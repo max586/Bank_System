@@ -1,6 +1,7 @@
 package src.transfers;
 
 import src.mainFrame.MainFrame;
+import src.User;
 
 import javax.swing.*;
 import java.awt.*;
@@ -10,9 +11,9 @@ import java.io.IOException;
 import java.util.Map;
 import java.util.Vector;
 
-public class StandingOrder extends StandardTransfer implements Transfer{
-    public StandingOrder(MainFrame mainFrame, Map<String, String> senderData1) throws IOException, FontFormatException {
-        super(mainFrame,senderData1);
+public class StandingOrder extends StandardTransfer implements src.transfers.Transfer {
+    public StandingOrder(User user1,MainFrame mainFrame, Map<String, String> senderData1) throws IOException, FontFormatException {
+        super(user1,mainFrame,senderData1);
         panelTitleLabel.setText("Zlecenie stałe");
         expressTransferRadioButton.setVisible(false);
     }
@@ -133,17 +134,7 @@ public class StandingOrder extends StandardTransfer implements Transfer{
                 buttonValid = !validation.contains(false);
                 if(buttonValid){
                     String nrKontaOdbiorcy = accountNumberTxt.getText();
-                    StringBuilder result = new StringBuilder();
-                    result.append(nrKontaOdbiorcy.charAt(0));
-                    result.append(nrKontaOdbiorcy.charAt(1));
-                    result.append(" ");
-                    int j = 0;
-                    for(int i=2; i<nrKontaOdbiorcy.length();++i){
-                        result.append(nrKontaOdbiorcy.charAt(i));
-                        ++j;
-                        if(j%4==0) result.append(" ");
-                    }
-                    receiverData.put("nr konta",countryISO+String.valueOf(result));
+                    receiverData.put("nr konta",countryISO+String.valueOf(accountNumberTxt.getText()));
                     receiverData.put("nazwa odbiorcy", receiverName1Txt.getText());
                     if(receiverNameCombo.getSelectedItem() == "Osoba") receiverData.put("nazwa odbiorcy cd", receiverName2Txt.getText());
                     else receiverData.put("nazwa odbiorcy cd","");
@@ -168,7 +159,7 @@ public class StandingOrder extends StandardTransfer implements Transfer{
                         transferData.put("typ",panelTitleLabel.getText()+" zwykły");
                     }
                     try {
-                        StandingOrderNextStep nextStep = new StandingOrderNextStep(frame, transferPanel1,senderData,receiverData, transferData);
+                        StandingOrderNextStep nextStep = new StandingOrderNextStep(user,frame, transferPanel1,senderData,receiverData, transferData);
                         frame.getjFrame().setContentPane(nextStep.getStandingOrderNextPanel());
                         frame.getjFrame().setVisible(true);
                     } catch (IOException ioException) {
