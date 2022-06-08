@@ -391,6 +391,60 @@ public class Database {
         }
         return false;
     }
+    public static boolean verifyOrdinaryAccountNumber(String ordinaryAccountNumber){
+        try{
+            ResultSet rs = st.executeQuery("select count(*) from OrdinaryAccounts where `Account number`='"+ordinaryAccountNumber+"';");
+            rs.next();
+            int res=rs.getInt(1);
+            return(res == 1);
+        }
+        catch(SQLException e){
+            System.out.println("Couldn't execute the query");
+            System.out.println(e);
+        }
+        return false;
+    }
+
+    public static boolean verifySavingsAccountNumber(String savingsAccountNumber){
+        try{
+            ResultSet rs = st.executeQuery("select count(*) from SavingsAccounts where `Account number`='"+savingsAccountNumber+"';");
+            rs.next();
+            int res=rs.getInt(1);
+            return(res == 1);
+        }
+        catch(SQLException e){
+            System.out.println("Couldn't execute the query");
+            System.out.println(e);
+        }
+        return false;
+    }
+
+    public static boolean verifyPhoneNumber(String phoneNumber){
+        try{
+            ResultSet rs = st.executeQuery("select count(*) from UsersData where `Phone number`='"+phoneNumber+"';");
+            rs.next();
+            int res=rs.getInt(1);
+            return(res == 1);
+        }
+        catch(SQLException e){
+            System.out.println("Couldn't execute the query");
+            System.out.println(e);
+        }
+        return false;
+    }
+
+    public static String getUserByPhone(String phoneNumber){
+        String userName = "";
+        try{
+            ResultSet rs = st.executeQuery("select * from UsersData where `Phone number`='"+phoneNumber+"';");
+            rs.next();
+            userName=rs.getString(1);
+        }catch(SQLException e) {
+            System.out.println("Couldn't execute the query");
+            System.out.println(e);
+        }
+        return userName;
+    }
     public static void deleteUser(String username){
        try{
            st.executeUpdate("delete from Users where username='"+username+"';");
