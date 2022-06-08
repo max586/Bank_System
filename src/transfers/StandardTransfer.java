@@ -3,6 +3,7 @@ package src.transfers;
 import src.mainFrame.MainFrame;
 import src.timer.*;
 import src.User;
+import src.Database;
 
 import javax.swing.*;
 import javax.swing.text.AttributeSet;
@@ -76,29 +77,38 @@ public class StandardTransfer implements src.transfers.Transfer {
     protected double transferAmount1 = 0.0;
     protected double transferAmount2 = 0.0;
     protected double finalTransferAmount = 0.0;
-    protected Map<String,String> receiverData;
     protected Map<String,String> transferData;
     protected boolean buttonValid;
     protected Vector<Boolean> validation;
     protected boolean isAddress;
-    protected Map<String,String> senderData;
     protected double senderAmount;
     protected String countryISO;
     protected boolean isCountry;
     protected MainFrame frame;
     protected User user;
+    protected String userAccountNumber;
+    protected AccountChoosed accountChoosedUser;
+    protected AccountChoosed accountChoosedReceiver;
+    protected User receiver;
     public StandardTransfer(){}
-    public StandardTransfer(User user1,MainFrame mainFrame, Map<String, String> senderData1) throws IOException, FontFormatException {
+    public StandardTransfer(AccountChoosed accountChoosed1, User user1, MainFrame mainFrame) throws IOException, FontFormatException {
+        receiver = new User();
+        accountChoosedUser = accountChoosed1;
         user = user1;
+        if(accountChoosedUser ==AccountChoosed.ORDINARYACCOUNT){
+            userAccountNumber = user.ordinary_account_number;
+            senderAmount = Math.round(user.ordinary_account_balance*100.0)/100.0;
+        }
+        else{
+            userAccountNumber = user.savings_account_number;
+            senderAmount = Math.round(user.savings_account_balance*100.0)/100.0;
+        }
         frame = mainFrame;
         AppTimer appTimer = new AppTimer(timeLabel,frame);
         transferPanel1.addMouseMotionListener(new MouseAction(appTimer));
         appTimer.start();
         isCountry = false;
         countryISO = "PL";
-        senderData = senderData1;
-        senderAmount = Double.parseDouble(senderData.get("kontosrodki"));
-        receiverData = new HashMap<>();
         transferData = new HashMap<>();
         numbersOnly = new OnlyNumbers().getKeyAdapter();
         setLabels();
@@ -145,7 +155,7 @@ public class StandardTransfer implements src.transfers.Transfer {
         receiverName2Label.setVisible(false);
         receiverName1Txt.setVisible(false);
         receiverName2Txt.setVisible(false);
-        availableFundsLabel.setText(String.valueOf(senderAmount));
+        availableFundsLabel.setText(String.valueOf(Math.round(senderAmount * 100.0) / 100.0));
     }
 
     void setReceiverNameCombo(){
@@ -341,6 +351,25 @@ public class StandardTransfer implements src.transfers.Transfer {
                     accountNumberWarning.setVisible(false);
                     validation.add(true);
                 }
+                if(!Database.verifyOrdinaryAccountNumber(countryISO+accountNumberTxt.getText())){
+                    if(!Database.verifySavingsAccountNumber(countryISO+accountNumberTxt.getText())){
+                        validation.add(false);
+                        accountNumberWarning.setText("Podany numer konta nie istnieje");
+                        accountNumberWarning.setVisible(true);
+                    }
+                    else{
+                        validation.add(true);
+                        receiver.savings_account_number = countryISO+accountNumberTxt.getText();
+                        accountChoosedReceiver = AccountChoosed.SAVINGSACCOUNT;
+                        accountNumberWarning.setVisible(false);
+                    }
+                }
+                else{
+                    validation.add(true);
+                    receiver.ordinary_account_number = countryISO+accountNumberTxt.getText();
+                    accountChoosedReceiver = AccountChoosed.ORDINARYACCOUNT;
+                    accountNumberWarning.setVisible(false);
+                }
                 if(receiverNameCombo.getSelectedItem() == "Wybierz"){
                     receiverName1Warning.setVisible(true);
                     validation.add(false);
@@ -443,19 +472,17 @@ public class StandardTransfer implements src.transfers.Transfer {
                 if(!isAccountNumberValid) validation.add(false);
                 buttonValid = !validation.contains(false);
                 if(buttonValid){
-
-                    receiverData.put("nr konta",countryISO+String.valueOf(accountNumberTxt.getText().length()));
-                    receiverData.put("nazwa odbiorcy", receiverName1Txt.getText());
-                    if(receiverNameCombo.getSelectedItem() == "Osoba") receiverData.put("nazwa odbiorcy cd", receiverName2Txt.getText());
-                    else receiverData.put("nazwa odbiorcy cd","");
+                    receiver.firstName = receiverName1Txt.getText();
+                    if(receiverNameCombo.getSelectedItem() == "Osoba") receiver.lastName = receiverName2Txt.getText();
+                    else receiver.lastName="";
                     if(isAddress) {
-                        if(isCountry) receiverData.put("kraj",countryNameTxt.getText());
-                        receiverData.put("miejscowosc", townNameTxt.getText());
-                        receiverData.put("kod pocztowy", postcode1Txt.getText() + "-" + postcode2Txt.getText());
-                        receiverData.put("ulica", streetNameTxt.getText());
+                        //if(isCountry) receiverData.put("kraj",countryNameTxt.getText());
+                        receiver.city = townNameTxt.getText();
+                        receiver.post_code = postcode1Txt.getText()+"-"+postcode2Txt.getText();
+                        receiver.street = streetNameTxt.getText();
                         if (streetNumber2Txt.getText().length() > 0)
-                            receiverData.put("nr domu", streetNumber1Txt.getText() + "/" + streetNumber2Txt.getText());
-                        else receiverData.put("nr domu", streetNumber1Txt.getText());
+                            receiver.street_nr =  streetNumber1Txt.getText() + "/" + streetNumber2Txt.getText();
+                        else receiver.street_nr = streetNumber1Txt.getText();
                     }
                     transferData.put("tytul", transferTitleTextArea.getText());
                     transferData.put("kwota", transferAmount1Txt.getText()+"."+ transferAmount2Txt.getText());
@@ -468,7 +495,7 @@ public class StandardTransfer implements src.transfers.Transfer {
                         transferData.put("oplata","0.00");
                         transferData.put("typ",panelTitleLabel.getText()+" zwykły");
                     }
-                    TransferNextStep pCd = new TransferNextStep(user,frame, transferPanel1,senderData,receiverData, transferData);
+                    TransferNextStep pCd = new TransferNextStep(accountChoosedUser, user, accountChoosedReceiver,receiver, transferData, frame, transferPanel1);
                     frame.getjFrame().setContentPane(pCd.getTransferNextStepPanel());
                     frame.getjFrame().setVisible(true);
                 }

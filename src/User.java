@@ -6,7 +6,6 @@ import java.sql.SQLException;
 import java.sql.ResultSet;
 
 public class User {
-    //attributes may not be initialized
     public String username;
     public String password;
     public String email;
@@ -18,7 +17,7 @@ public class User {
     public String city;
     public String post_code;
     public String street;
-    public int street_nr;
+    public String street_nr;
     public String pesel; 
     public String ordinary_account_number;
     public float ordinary_account_balance;
