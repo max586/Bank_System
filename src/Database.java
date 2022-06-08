@@ -17,18 +17,18 @@ public class Database {
             System.out.println(e);}  
         return st;
     }
-    public static void addUser(String username, String password, String email){
+    public static void addUser(String username, String password, String email, String app_code){
         try {
-            st.executeUpdate("insert into Users values('"+username+"','"+password+"','"+email+"');");
+            st.executeUpdate("insert into Users values('"+username+"','"+password+"','"+email+"','"+app_code+"');");
         } catch (SQLException e) {
             //TODO: handle exception
             System.out.println("Couldn't execute the query");
             System.out.println(e);
         }
     }
-    public static void addUserData(String username, String firstName, String lastName, String sex, String city, String address, String pesel){
+    public static void addUserData(String username, String firstName, String lastName, String sex,String phoneNumber, String city, String postcode, String street,int street_numb, String pesel){
         try {
-            st.executeUpdate("insert into UsersData values('"+username+"','"+firstName+"','"+lastName+"','"+sex+"','"+city+"','"+address+"','"+pesel+"');");
+            st.executeUpdate("insert into UsersData values('"+username+"','"+firstName+"','"+lastName+"','"+sex+"','"+phoneNumber+"','"+city+"','"+postcode+"','"+street+"','"+street_numb+"','"+pesel+"');");
         } catch (Exception e) {
             //TODO: handle exception
             System.out.println("Couldn't execute the query");
@@ -62,9 +62,9 @@ public class Database {
             System.out.println(e);
         }
     }
-    public static void addCredit(String username, float amount, String start_date, int duration, float rate){
+    public static void addCredit(String username, float amount, float amount_payed, String start_date, int duration){
         try{
-            st.executeUpdate("insert into Credits values('"+username+"','"+amount+"','"+start_date+"','"+duration+"','"+rate+"');");
+            st.executeUpdate("insert into Credits values('"+username+"','"+amount+"','"+amount_payed+"','"+start_date+"','"+duration+"');");
         }catch(SQLException e) {
         System.out.println("Couldn't execute the query");
         System.out.println(e);

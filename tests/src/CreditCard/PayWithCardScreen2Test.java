@@ -13,7 +13,7 @@ import static org.junit.Assert.*;
 public class PayWithCardScreen2Test {
     PayWithCardScreen2 screen;
     Statement st;
-    String username,password,email,card,pin,ord_nr;
+    String username,password,email,card,pin,ord_nr,app_code;
     float balance;
     @Before
     public void initiate(){
@@ -24,8 +24,9 @@ public class PayWithCardScreen2Test {
         card="1234567887654321";
         pin="1234";
         ord_nr="PL123";
+        app_code="1234";
         balance= 1000.0F;
-        Database.addUser(username,password,email);
+        Database.addUser(username,password,email,app_code);
         Database.addCard(username,card,pin);
         Database.addOrdinaryAccountNumber(username,ord_nr);
         Database.setOrdinaryAccountBalance(username,balance);

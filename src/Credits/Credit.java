@@ -65,7 +65,7 @@ public class Credit extends Screen
     public void CreateScreen() {
 
         frame = new JFrame();
-        frame.setSize(1080, 720);
+
         frame.setTitle("Credit");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setContentPane(CreditPanel);
@@ -83,6 +83,7 @@ public class Credit extends Screen
             }
 
         });
+        frame.setSize(1080, 720);
         frame.setVisible(true);
     }
     private double checkDebt(User user)

@@ -150,6 +150,12 @@ public class CreatedAccountAndCardNumberScreen extends Screen {
         for(int i=0;i<4;i++){pin+=Integer.toString(rnd.nextInt(10));}
         return pin;
     }
+    public String generateAppCode(){
+        String pin="";
+        Random rnd = new Random();
+        for(int i=0;i<4;i++){pin+=Integer.toString(rnd.nextInt(10));}
+        return pin;
+    }
 
     public static void main(String[] args) {
         User test_user = new User();

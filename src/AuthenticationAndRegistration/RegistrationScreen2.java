@@ -48,6 +48,7 @@ public class RegistrationScreen2 extends Screen{
                 String firstName=firstNameField.getText();
                 String lastName=lastNameField.getText();
                 String sex=(String)sexComboBox.getSelectedItem();
+                String phone_nr=()
                 String pesel=peselField.getText();
                 String city = cityField.getText();
                 String address = addressField.getText();

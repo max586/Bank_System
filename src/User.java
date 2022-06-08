@@ -13,6 +13,7 @@ public class User {
     public String firstName;
     public String lastName;
     public String sex;
+    public String phone_number;
     public String city;
     public String address;
     public String pesel; 
