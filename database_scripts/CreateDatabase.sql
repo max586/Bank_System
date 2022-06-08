@@ -43,15 +43,13 @@ Rate float check(Rate between 0 and 100),
 foreign key(username) references Users(username) on update cascade on delete cascade
 );
 
-create table Credits
-(
+create table Credits(
 id int not null auto_increment primary key,
 username varchar(30) not null,
-amount float check(amount>=0 and amount<=1000000000),
-`amount payed` float check(`amount payed`>=0 and `amount payed`<=1000000000),
+amount float check(amount>=0 and amount<=50000),
+`amount payed` float check(`amount payed`>=0 and `amount payed`<=50000),
 `start date` date,
-`duration` int,
-#in years
+`duration` int,#in years
 foreign key(username) references Users(username) on update cascade on delete cascade
 );
 
@@ -75,7 +73,6 @@ create table HistoryOrdinary(
 `End Date` varchar(30),
 `Transfer Cycle` int,
 `Transfer Cycle Units` varchar(10),
-#foreign key(`Account nr to`) references OrdinaryAccounts(`Account number`),
 foreign key(`Account nr from`) references OrdinaryAccounts(`Account number`)
 );
 
@@ -93,6 +90,5 @@ create table HistorySavings(
 `Transfer Cycle` int,
 `Transfer Cycle Units` varchar(10),
 `Sender Street number` varchar(10),
-#foreign key(`Account nr to`) references SavingsAccounts(`Account number`),
 foreign key(`Account nr from`) references SavingsAccounts(`Account number`)
 );
