@@ -115,7 +115,7 @@ public class Credit extends Screen
         float currentCreditPayment = Float.parseFloat(CreditInfo[1]);
         float yearsAll = Float.parseFloat(CreditInfo[3]);
         Date StartDate = new Date(Integer.parseInt(CreditInfo[2].substring(0,3)),Integer.parseInt(CreditInfo[2].substring(5,6)),Integer.parseInt(CreditInfo[2].substring(8,9)));
-        int currentYear = (int)((new Date().getTime() - StartDate.getTime())/(1000*60*60*24*365));
+        int currentYear = (int)((new Date().getTime() - StartDate.getTime())/(long)(1000*60*60*24*365));
         float needToPay = 0;
         float percent = (float)0.05;
         for (int i = 0; i < currentYear; i++)
