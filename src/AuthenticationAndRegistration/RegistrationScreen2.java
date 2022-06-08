@@ -58,7 +58,7 @@ public class RegistrationScreen2 extends Screen{
                 String city = cityField.getText();
                 String post_code = postCodeField.getText();
                 String street = streetField.getText();
-                int street_nr = Integer.parseInt(streetNrField.getText());
+                String street_nr = streetNrField.getText();
                 boolean lname_is_valid= DataValidation.nameIsValid(lastName), fname_is_valid=DataValidation.nameIsValid(firstName),
                         pesel_is_valid=DataValidation.peselIsValid(pesel, (sex=="M")),post_code_is_valid=true,
                         city_is_valid=DataValidation.cityIsValid(city),street_is_valid=true,street_nr_is_valid=true,

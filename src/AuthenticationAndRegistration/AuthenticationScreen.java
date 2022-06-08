@@ -51,7 +51,7 @@ public class AuthenticationScreen extends Screen {
                     user.city=user_data[4];
                     user.post_code=user_data[5];
                     user.street=user_data[6];
-                    user.street_nr=Integer.parseInt(user_data[7]);
+                    user.street_nr=user_data[7];
                     user.pesel=user_data[8];
                     user.ordinary_account_number = Database.getOrdinaryAccountNumber( user.username);
                     user.savings_account_number = Database.getSavingsAccountNumber( user.username);

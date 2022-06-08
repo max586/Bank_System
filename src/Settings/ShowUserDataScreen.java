@@ -66,7 +66,7 @@ public class ShowUserDataScreen extends Screen{
         phoneNrField.setText(user.phone_number);
         postCodeField.setText(user.post_code);
         streetField.setText(user.street);
-        streetNrField.setText(Integer.toString(user.street_nr));
+        streetNrField.setText(user.street_nr);
         peselField.setText(user.pesel);
         ordinaryField.setText(user.ordinary_account_number);
         savingsField.setText(user.savings_account_number);

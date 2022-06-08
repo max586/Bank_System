@@ -43,14 +43,16 @@ public class OwnTransfer implements src.transfers.Transfer {
     public double finalTransferAmount = 0.0;
     public double senderAmount = 0.0;
     public KeyAdapter numbersOnly;
-    public Map<String,String> senderData;
-    public Map<String,String> receiverData;
     public Map<String,String> transferData;
     public Vector<Boolean> validation;
     public String choosedAcount="";
     public User user;
-    public OwnTransfer(User user1, MainFrame mainFrame, Map<String,String> senderData1) {
+    public User receiver;
+    public AccountChoosed accountChoosedUser;
+    public AccountChoosed accountChoosedReceiver;
+    public OwnTransfer(User user1, MainFrame mainFrame) {
         user = user1;
+        receiver = new User();
         frame = mainFrame;
         AppTimer appTimer = new AppTimer(timeLabel,frame);
         OwnTransferPanel.addMouseMotionListener(new MouseAction(appTimer));
@@ -63,8 +65,6 @@ public class OwnTransfer implements src.transfers.Transfer {
             e.printStackTrace();
         }
         numbersOnly = new OnlyNumbers().getKeyAdapter();
-        senderData = senderData1;
-        receiverData = new HashMap<>();
         transferData = new HashMap<>();
         transferData.put("waluta","PLN");
         setLabels();
@@ -85,10 +85,10 @@ public class OwnTransfer implements src.transfers.Transfer {
         MenuInfo.m2 = new JMenu("Konto oszczędnościowe");
         MenuInfo.m1.setPreferredSize(new Dimension(350,100));
         MenuInfo.m2.setPreferredSize(new Dimension(350,100));
-        MenuInfo.accountNumber1 = senderData.get("nrkonta1");
-        MenuInfo.accountAmount1 = senderData.get("konto1srodki")+" "+"PLN";
-        MenuInfo.accountNumber2 = senderData.get("nrkonta2");
-        MenuInfo.accountAmount2 = senderData.get("konto2srodki")+" "+"PLN";
+        MenuInfo.accountNumber1 = user.ordinary_account_number;
+        MenuInfo.accountAmount1 = String.format("%.2f",user.ordinary_account_balance)+" PLN";
+        MenuInfo.accountNumber2 = user.savings_account_number;
+        MenuInfo.accountAmount2 = String.format("%.2f",user.savings_account_balance)+" PLN";
         MenuInfo.previnfo1 = MenuInfo.m1.getText();
         MenuInfo.previnfo2 = MenuInfo.m2.getText();
         jMenu.setFont(customFont);
@@ -123,7 +123,7 @@ public class OwnTransfer implements src.transfers.Transfer {
                 receiverInfoLabel.setText("<html>"+MenuInfo.previnfo2+"<br>"+MenuInfo.accountAmount2 +"<br>"+MenuInfo.accountNumber2+"</html>");
                 receiverInfoLabel.setVisible(true);
                 senderAccountWarning.setVisible(false);
-                senderAmount = Double.parseDouble(senderData.get("konto1srodki"));
+                senderAmount = Math.round(user.ordinary_account_balance*100.0)/100.0;
                 choosedAcount = MenuInfo.accountNumber2;
             }
         });
@@ -139,7 +139,7 @@ public class OwnTransfer implements src.transfers.Transfer {
                 receiverInfoLabel.setText("<html>"+MenuInfo.previnfo1+"<br>"+MenuInfo.accountAmount1 +"<br>"+MenuInfo.accountNumber1+"</html>");
                 receiverInfoLabel.setVisible(true);
                 senderAccountWarning.setVisible(false);
-                senderAmount = Double.parseDouble(senderData.get("konto2srodki"));
+                senderAmount = Math.round(user.savings_account_balance*100.0)/100.0;
                 choosedAcount = MenuInfo.accountNumber1;
             }
         });
@@ -237,20 +237,23 @@ public class OwnTransfer implements src.transfers.Transfer {
                     validation.add(false);
                 }
                 if(!validation.contains(false)){
-                    receiverData.put("nr konta",choosedAcount);
+
                     if(isMainAccountSelected){
-                        senderData.put("nr konta",user.ordinary_account_number);
+                        accountChoosedUser = AccountChoosed.ORDINARYACCOUNT;
+                        accountChoosedReceiver = AccountChoosed.SAVINGSACCOUNT;
+                        receiver.savings_account_number = choosedAcount;
                     }
                     else {
-                        senderData.put("nr konta",user.savings_account_number);
+                        accountChoosedUser = AccountChoosed.SAVINGSACCOUNT;
+                        accountChoosedReceiver = AccountChoosed.ORDINARYACCOUNT;
+                        receiver.ordinary_account_number = choosedAcount;
                     }
-                    receiverData.put("nazwa odbiorcy", senderData.get("nazwa odbiorcy"));
-                    receiverData.put("nazwa odbiorcy cd",senderData.get("nazwa odbiorcy cd"));
+                    receiver.firstName = user.lastName;
                     transferData.put("tytul", transferTitleTextArea.getText());
                     transferData.put("kwota", transferAmount1Txt.getText()+"."+ transferAmount2Txt.getText());
                     transferData.put("oplata","0.00");
                     transferData.put("typ",panelTitleLabel.getText());
-                    TransferNextStep pCd = new TransferNextStep(user,frame, OwnTransferPanel,senderData,receiverData, transferData);
+                    TransferNextStep pCd = new TransferNextStep(accountChoosedUser,user,accountChoosedReceiver,receiver,transferData,frame, OwnTransferPanel);
                     frame.getjFrame().setContentPane(pCd.getTransferNextStepPanel());
                     frame.getjFrame().setVisible(true);
                 }

@@ -22,7 +22,7 @@ public class AuthenticationScreenTest {
         email="email";
         ordinary_account_number="PL555";
         savings_account_number="PL333";
-        Database.addUser(username,password,email);
+        Database.addUser(username,password,email,"1234");
         Database.addOrdinaryAccountNumber(username,ordinary_account_number);
         Database.addSavingsAccountNumber(username,savings_account_number);
         auth_screen.CreateScreen();

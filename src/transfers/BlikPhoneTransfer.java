@@ -1,5 +1,6 @@
 package src.transfers;
 
+import src.Database;
 import src.mainFrame.MainFrame;
 import src.timer.AppTimer;
 import src.timer.MouseAction;
@@ -37,8 +38,6 @@ public class BlikPhoneTransfer implements Transfer{
     public JPanel timerPanel;
     public JLabel timeLabel;
     public MainFrame frame;
-    public Map<String,String> senderData;
-    protected Map<String,String> receiverData;
     protected Map<String,String> transferData;
     public double senderAmount;
     public KeyAdapter numbersOnly;
@@ -52,16 +51,26 @@ public class BlikPhoneTransfer implements Transfer{
     public double finalTransferAmount = 0.0;
     public Vector<Boolean> validation;
     public User user;
+    public User receiver;
+    public AccountChoosed accountChoosed;
+    public String userAccountNumber;
 
-    public BlikPhoneTransfer(User user1, MainFrame mainFrame, Map<String, String> senderData1) {
+    public BlikPhoneTransfer(AccountChoosed accountChoosed1, User user1, MainFrame mainFrame) {
+        accountChoosed = accountChoosed1;
         user = user1;
+        receiver = new User();
+        if(accountChoosed==AccountChoosed.ORDINARYACCOUNT){
+            userAccountNumber = user.ordinary_account_number;
+            senderAmount = Math.round(user.ordinary_account_balance*100.0)/100.0;
+        }
+        else{
+            userAccountNumber = user.savings_account_number;
+            senderAmount = Math.round(user.savings_account_balance*100.0)/100.0;
+        }
         frame = mainFrame;
         AppTimer appTimer = new AppTimer(timeLabel,frame);
         blikPhonePanel.addMouseMotionListener(new MouseAction(appTimer));
         appTimer.start();
-        senderData = senderData1;
-        senderAmount = Double.parseDouble(senderData.get("kontosrodki"));
-        receiverData = new HashMap<>();
         transferData = new HashMap<>();
         numbersOnly = new OnlyNumbers().getKeyAdapter();
         setCurrency();
@@ -186,6 +195,18 @@ public class BlikPhoneTransfer implements Transfer{
                     phoneNumberWarning.setVisible(false);
                     validation.add(true);
                 }
+                if(!Database.verifyPhoneNumber(phoneNumberTxt.getText())){
+                    validation.add(false);
+                    phoneNumberWarning.setText("Nie ma takiego numeru telefonu");
+                    phoneNumberWarning.setVisible(true);
+                }
+                else{
+                    validation.add(true);
+                    phoneNumberWarning.setVisible(false);
+                    String userName = Database.getUserByPhone(phoneNumberTxt.getText());
+                    receiver.phone_number = phoneNumberTxt.getText();
+                    receiver.ordinary_account_number = Database.getOrdinaryAccountNumber(userName);
+                }
                 if(receiverNameCombo.getSelectedItem() == "Wybierz"){
                     receiverName1Warning.setVisible(true);
                     validation.add(false);
@@ -252,15 +273,14 @@ public class BlikPhoneTransfer implements Transfer{
                         result.append(phoneNumber.charAt(i));
                         if((i+1)%3==0) result.append(" ");
                     }
-                    receiverData.put("nr telefonu",String.valueOf(result));
-                    receiverData.put("nazwa odbiorcy", receiverName1Txt.getText());
-                    if(receiverNameCombo.getSelectedItem() == "Osoba") receiverData.put("nazwa odbiorcy cd", receiverName2Txt.getText());
-                    else receiverData.put("nazwa odbiorcy cd","");
+                    receiver.firstName =  receiverName1Txt.getText();
+                    if(receiverNameCombo.getSelectedItem() == "Osoba") receiver.lastName = receiverName2Txt.getText();
+                    else receiver.lastName = "";
                     transferData.put("tytul", transferTitleTextArea.getText());
                     transferData.put("kwota", transferAmount1Txt.getText()+"."+ transferAmount2Txt.getText());
                     transferData.put("oplata","0.00");
                     transferData.put("typ",panelTitleLabel.getText());
-                    TransferNextStep pCd = new TransferNextStep(user,frame, blikPhonePanel,senderData,receiverData, transferData);
+                    TransferNextStep pCd = new TransferNextStep(accountChoosed,user,AccountChoosed.ORDINARYACCOUNT,receiver,transferData,frame, blikPhonePanel);
                     frame.getjFrame().setContentPane(pCd.getTransferNextStepPanel());
                     frame.getjFrame().setVisible(true);
                 }

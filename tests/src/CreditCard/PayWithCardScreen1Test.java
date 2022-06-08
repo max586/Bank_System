@@ -22,7 +22,7 @@ public class PayWithCardScreen1Test {
         email="@email";
         card="1234567887654321";
         pin="1234";
-        Database.addUser(username,password,email);
+        Database.addUser(username,password,email,pin);
         Database.addCard(username,card,pin);
         screen = new PayWithCardScreen1(new User(),null,null);
         screen.CreateScreen();

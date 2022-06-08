@@ -1,5 +1,6 @@
 package src.transfers;
 
+import src.Database;
 import src.mainFrame.MainFrame;
 import src.User;
 
@@ -12,8 +13,10 @@ import java.util.Map;
 import java.util.Vector;
 
 public class StandingOrder extends StandardTransfer implements src.transfers.Transfer {
-    public StandingOrder(User user1,MainFrame mainFrame, Map<String, String> senderData1) throws IOException, FontFormatException {
-        super(user1,mainFrame,senderData1);
+    private AccountChoosed accountchoosedUser;
+    public StandingOrder(AccountChoosed accountChoosed1,User user1,MainFrame mainFrame) throws IOException, FontFormatException {
+        super(accountChoosed1,user1,mainFrame);
+        accountchoosedUser = accountChoosed1;
         panelTitleLabel.setText("Zlecenie stałe");
         expressTransferRadioButton.setVisible(false);
     }
@@ -30,6 +33,25 @@ public class StandingOrder extends StandardTransfer implements src.transfers.Tra
                 else {
                     accountNumberWarning.setVisible(false);
                     validation.add(true);
+                }
+                if(!Database.verifyOrdinaryAccountNumber(countryISO+accountNumberTxt.getText())){
+                    if(!Database.verifySavingsAccountNumber(countryISO+accountNumberTxt.getText())){
+                        validation.add(false);
+                        accountNumberWarning.setText("Podany numer konta nie istnieje");
+                        accountNumberWarning.setVisible(true);
+                    }
+                    else{
+                        validation.add(true);
+                        receiver.savings_account_number = countryISO+accountNumberTxt.getText();
+                        accountChoosedReceiver = AccountChoosed.SAVINGSACCOUNT;
+                        accountNumberWarning.setVisible(false);
+                    }
+                }
+                else{
+                    validation.add(true);
+                    receiver.ordinary_account_number = countryISO+accountNumberTxt.getText();
+                    accountChoosedReceiver = AccountChoosed.ORDINARYACCOUNT;
+                    accountNumberWarning.setVisible(false);
                 }
                 if(receiverNameCombo.getSelectedItem() == "Wybierz"){
                     receiverName1Warning.setVisible(true);
@@ -134,18 +156,16 @@ public class StandingOrder extends StandardTransfer implements src.transfers.Tra
                 buttonValid = !validation.contains(false);
                 if(buttonValid){
                     String nrKontaOdbiorcy = accountNumberTxt.getText();
-                    receiverData.put("nr konta",countryISO+String.valueOf(accountNumberTxt.getText()));
-                    receiverData.put("nazwa odbiorcy", receiverName1Txt.getText());
-                    if(receiverNameCombo.getSelectedItem() == "Osoba") receiverData.put("nazwa odbiorcy cd", receiverName2Txt.getText());
-                    else receiverData.put("nazwa odbiorcy cd","");
+                    receiver.firstName = receiverName1Txt.getText();
+                    if(receiverNameCombo.getSelectedItem() == "Osoba") receiver.lastName = receiverName2Txt.getText();
+                    else receiver.lastName = "";
                     if(isAddress) {
-                        if(isCountry) receiverData.put("kraj",countryNameTxt.getText());
-                        receiverData.put("miejscowosc", townNameTxt.getText());
-                        receiverData.put("kod pocztowy", postcode1Txt.getText() + "-" + postcode2Txt.getText());
-                        receiverData.put("ulica", streetNameTxt.getText());
+                        receiver.city = townNameTxt.getText();
+                        receiver.post_code = postcode1Txt.getText() + "-" + postcode2Txt.getText();
+                        receiver.street = streetNameTxt.getText();
                         if (streetNumber2Txt.getText().length() > 0)
-                            receiverData.put("nr domu", streetNumber1Txt.getText() + "/" + streetNumber2Txt.getText());
-                        else receiverData.put("nr domu", streetNumber1Txt.getText());
+                            receiver.street_nr = streetNumber1Txt.getText() + "/" + streetNumber2Txt.getText();
+                        else receiver.street_nr = streetNumber1Txt.getText();
                     }
                     transferData.put("tytul", transferTitleTextArea.getText());
                     transferData.put("kwota", transferAmount1Txt.getText()+"."+ transferAmount2Txt.getText());
@@ -159,7 +179,7 @@ public class StandingOrder extends StandardTransfer implements src.transfers.Tra
                         transferData.put("typ",panelTitleLabel.getText()+" zwykły");
                     }
                     try {
-                        StandingOrderNextStep nextStep = new StandingOrderNextStep(user,frame, transferPanel1,senderData,receiverData, transferData);
+                        StandingOrderNextStep nextStep = new StandingOrderNextStep(accountchoosedUser,user,accountChoosedReceiver, receiver, transferData, frame, transferPanel1);
                         frame.getjFrame().setContentPane(nextStep.getStandingOrderNextPanel());
                         frame.getjFrame().setVisible(true);
                     } catch (IOException ioException) {
