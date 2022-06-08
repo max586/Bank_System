@@ -5,25 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bea002ff-8e44-4e85-a29b-66b1294d710d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/tests/src/CreditCard/PayWithCardScreen1Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/src/CreditCard/PayWithCardScreen2Test.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainFrame/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainFrame/MainFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/transfers/BlikPhoneTransfer.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfers/BlikPhoneTransfer.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/transfers/BlikPhoneTransfer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfers/BlikPhoneTransfer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/transfers/CurrenciesExchangeRate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfers/CurrenciesExchangeRate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/transfers/FileSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfers/FileSystem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/transfers/ForeignStandardTransfer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfers/ForeignStandardTransfer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/transfers/OwnTransfer.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfers/OwnTransfer.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/transfers/OwnTransfer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfers/OwnTransfer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/transfers/StandardTransfer.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfers/StandardTransfer.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/transfers/StandardTransfer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfers/StandardTransfer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/transfers/StandingOrderNextStep.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfers/StandingOrderNextStep.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/transfers/StandingOrderNextStep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfers/StandingOrderNextStep.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/transfers/TransferConfirm.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfers/TransferConfirm.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/transfers/TransferConfirm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfers/TransferConfirm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/transfers/TransferFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfers/TransferFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/transfers/TransferNextStep.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfers/TransferNextStep.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/transfers/TransferNextStep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfers/TransferNextStep.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AuthenticationAndRegistration/AuthenticationScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AuthenticationAndRegistration/AuthenticationScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AuthenticationAndRegistration/EmailVerificationScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AuthenticationAndRegistration/EmailVerificationScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CreditCard/PayWithCardScreen1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditCard/PayWithCardScreen1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CreditCard/PayWithCardScreen2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditCard/PayWithCardScreen2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/src/AuthenticationAndRegistration/AuthenticationScreenTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/src/AuthenticationAndRegistration/AuthenticationScreenTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/src/AuthenticationAndRegistration/RegistrationScreen1Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/src/AuthenticationAndRegistration/RegistrationScreen1Test.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,8 +23,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JUnit4 Test Class" />
         <option value="Class" />
+        <option value="JUnit4 Test Class" />
       </list>
     </option>
   </component>
@@ -63,6 +53,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/AuthenticationAndRegistration/AuthenticationScreen.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/AuthenticationAndRegistration/test1.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/CreditCard/PayWithCardScreen2.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/DataValidation.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Screen.java" root0="FORCE_HIGHLIGHTING" />
@@ -95,7 +86,7 @@
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit4&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4&quot;: &quot;&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;11 (2)&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/max/my_files/io/new_proj&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/max/my_files/io/bank_system_project/libs&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
@@ -112,85 +103,103 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
-      <recent name="src" />
       <recent name="src.CreditCard" />
       <recent name="src.AuthenticationAndRegistration" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.JavaMail">
-    <configuration name="AuthenticationScreen" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="src.AuthenticationAndRegistration.AuthenticationScreen" />
+  <component name="RunManager" selected="JUnit.PayWithCardScreen2Test">
+    <configuration name="PayWithCardScreen1Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="bank_system_project" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="src.AuthenticationAndRegistration.*" />
+          <option name="PATTERN" value="src.CreditCard.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="src.CreditCard" />
+      <option name="MAIN_CLASS_NAME" value="src.CreditCard.PayWithCardScreen1Test" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Database" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="src.Database" />
+    <configuration name="PayWithCardScreen1Test.correctData" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="bank_system_project" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="src.*" />
+          <option name="PATTERN" value="src.CreditCard.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="src.CreditCard" />
+      <option name="MAIN_CLASS_NAME" value="src.CreditCard.PayWithCardScreen1Test" />
+      <option name="METHOD_NAME" value="correctData" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="JavaMail" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="src.JavaMail" />
+    <configuration name="PayWithCardScreen2Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="bank_system_project" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="src.*" />
+          <option name="PATTERN" value="src.CreditCard.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="src.CreditCard" />
+      <option name="MAIN_CLASS_NAME" value="src.CreditCard.PayWithCardScreen2Test" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LaunchApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="LaunchApp" />
+    <configuration name="PayWithCardScreen2Test.correctAmount" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="bank_system_project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="src.CreditCard.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="src.CreditCard" />
+      <option name="MAIN_CLASS_NAME" value="src.CreditCard.PayWithCardScreen2Test" />
+      <option name="METHOD_NAME" value="correctAmount" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="src.Settings.SettingsMainScreen" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="src.Settings.SettingsMainScreen" />
+    <configuration name="PayWithCardScreen2Test.incorecctAmount" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="bank_system_project" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="src.Settings.*" />
+          <option name="PATTERN" value="src.CreditCard.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="src.CreditCard" />
+      <option name="MAIN_CLASS_NAME" value="src.CreditCard.PayWithCardScreen2Test" />
+      <option name="METHOD_NAME" value="incorecctAmount" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.AuthenticationScreen" />
-      <item itemvalue="Application.JavaMail" />
-      <item itemvalue="Application.Database" />
-      <item itemvalue="Application.src.Settings.SettingsMainScreen" />
-      <item itemvalue="Application.LaunchApp" />
+      <item itemvalue="JUnit.PayWithCardScreen1Test" />
+      <item itemvalue="JUnit.PayWithCardScreen1Test.correctData" />
+      <item itemvalue="JUnit.PayWithCardScreen2Test" />
+      <item itemvalue="JUnit.PayWithCardScreen2Test.correctAmount" />
+      <item itemvalue="JUnit.PayWithCardScreen2Test.incorecctAmount" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.JavaMail" />
-        <item itemvalue="Application.AuthenticationScreen" />
-        <item itemvalue="Application.LaunchApp" />
-        <item itemvalue="Application.src.Settings.SettingsMainScreen" />
-        <item itemvalue="Application.Database" />
+        <item itemvalue="JUnit.PayWithCardScreen2Test" />
+        <item itemvalue="JUnit.PayWithCardScreen2Test.correctAmount" />
+        <item itemvalue="JUnit.PayWithCardScreen2Test.incorecctAmount" />
+        <item itemvalue="JUnit.PayWithCardScreen1Test" />
+        <item itemvalue="JUnit.PayWithCardScreen1Test.correctData" />
       </list>
     </recent_temporary>
   </component>
@@ -299,28 +308,7 @@
       <option name="project" value="LOCAL" />
       <updated>1654582583727</updated>
     </task>
-    <task id="LOCAL-00014" summary="new test added">
-      <created>1654586833113</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1654586833113</updated>
-    </task>
-    <task id="LOCAL-00015" summary="-added test for JavaMail&#10;-added ShowScreen in Settings&#10;-fixed timer">
-      <created>1654645145195</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1654645145195</updated>
-    </task>
-    <task id="LOCAL-00016" summary="sth added">
-      <created>1654684438688</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1654684438688</updated>
-    </task>
-    <option name="localTasksCounter" value="17" />
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -355,21 +343,19 @@
     <MESSAGE value="sth" />
     <MESSAGE value="AuthenticationScreen.form added" />
     <MESSAGE value="added screen with generated accounts and credit card numbers after registration(CreatedAccountAndCardNumberScreen)" />
+    <MESSAGE value="sth added" />
     <MESSAGE value="duplicated windows bug solved" />
     <MESSAGE value="junit test classes added(tests folder)" />
     <MESSAGE value="123" />
     <MESSAGE value="refactored" />
-    <MESSAGE value="new test added" />
-    <MESSAGE value="-added test for JavaMail&#10;-added ShowScreen in Settings&#10;-fixed timer" />
-    <MESSAGE value="sth added" />
-    <option name="LAST_COMMIT_MESSAGE" value="sth added" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactored" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Settings/ChangePasswordScreen1.java</url>
-          <line>83</line>
+          <line>80</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -381,25 +367,6 @@
           <url>file://$PROJECT_DIR$/tests/src/CreditCard/PayWithCardScreen2Test.java</url>
           <line>51</line>
           <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Settings/SettingsMainScreen.java</url>
-          <line>70</line>
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/JavaMail.java</url>
-          <line>55</line>
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/Settings/SettingsMainScreen.java</url>
-          <line>69</line>
-          <properties method="actionPerformed">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="12" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
