@@ -52,15 +52,15 @@ public class RegistrationScreen2Test {
     }
     @Test
     public void invalidAddress(){
-        screen.addressField.setText("ul. pol");
+        screen.streetField.setText("ul. pol");
         screen.submitButton.doClick();
-        assertEquals("Address is invalid",screen.addressField.getText());
-        screen.addressField.setText("ul Ret");
+        assertEquals("Address is invalid",screen.streetField.getText());
+        screen.streetField.setText("ul Ret");
         screen.submitButton.doClick();
-        assertEquals("Address is invalid",screen.addressField.getText());
-        screen.addressField.setText("ul, 1234");
+        assertEquals("Address is invalid",screen.streetField.getText());
+        screen.streetField.setText("ul, 1234");
         screen.submitButton.doClick();
-        assertEquals("Address is invalid",screen.addressField.getText());
+        assertEquals("Address is invalid",screen.streetField.getText());
     }
     @Test
     public void invalidCity(){
@@ -80,10 +80,10 @@ public class RegistrationScreen2Test {
         screen.peselField.setText("sioa./.,1234");
         screen.submitButton.doClick();
         assertEquals("PESEL is invalid",screen.peselField.getText());
-        screen.addressField.setText("123456789101");
+        screen.streetField.setText("123456789101");
         screen.submitButton.doClick();
         assertEquals("PESEL is invalid",screen.peselField.getText());
-        screen.addressField.setText("92030786312");
+        screen.streetField.setText("92030786312");
         screen.submitButton.doClick();
         assertEquals("PESEL is invalid",screen.peselField.getText());
     }
@@ -92,13 +92,13 @@ public class RegistrationScreen2Test {
         screen.firstNameField.setText("Abc");
         screen.lastNameField.setText("Def");
         screen.sexComboBox.setSelectedItem("M");
-        screen.addressField.setText("ul. Aa, 123");
+        screen.streetField.setText("ul. Aa, 123");
         screen.cityField.setText("Qwerty");
         screen.peselField.setText("92030786311");
         screen.submitButton.doClick();
         assertEquals("ok",screen.firstNameField.getText());
         assertEquals("ok",screen.lastNameField.getText());
-        assertEquals("ok",screen.addressField.getText());
+        assertEquals("ok",screen.streetField.getText());
         assertEquals("ok",screen.cityField.getText());
         assertEquals("ok",screen.peselField.getText());
     }
