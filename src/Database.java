@@ -69,42 +69,20 @@ public class Database {
                                      String transferCycleUnits, String receiverFirstName, String receiverLastName,
                                      String receiverTown, String receiverPostCode, String receiverStreet, String receiverStreetNumber){
         switch(database){
-            case "OutgoingHistoryOrdinary":
+            case "HistoryOrdinary":
                 try {
-                    st.executeUpdate("insert into OutgoingHistoryOrdinary values('"+operationDate+"','"+transferType+"','"+senderAccountNumber+"','"
-                            +receiverAccountNumber+"','"+phoneNumber+"','"+transferAmount+"','"+transferCurrency+"','"+totalTransferCost+"','"
-                            +transferTitle+"','"+startDate+"','"+endDate+"','"+transferCycle+"','"+transferCycleUnits+"','"+receiverFirstName+"','"
-                            +receiverLastName+"','"+receiverTown+"','"+receiverPostCode+"','"+receiverStreet+"','"+receiverStreetNumber+"');");
+                    st.executeUpdate("insert into HistoryOrdinary values('"+operationDate+"','"+transferType+"','"+senderAccountNumber+"','"
+                            +receiverAccountNumber+"','"+transferAmount+"','"+transferCurrency+"','"+totalTransferCost+"','"
+                            +transferTitle+"','"+startDate+"','"+endDate+"','"+transferCycle+"','"+transferCycleUnits+"');");
                 } catch (Exception e) {
                     System.out.println(e);
                 }
                 break;
-            case "OutgoingHistorySavings":
+            case "HistorySavings":
                 try {
-                    st.executeUpdate("insert into OutgoingHistorySavings values('"+operationDate+"','"+transferType+"','"+senderAccountNumber+"','"
-                            +receiverAccountNumber+"','"+phoneNumber+"','"+transferAmount+"','"+transferCurrency+"','"+totalTransferCost+"','"
-                            +transferTitle+"','"+startDate+"','"+endDate+"','"+transferCycle+"','"+transferCycleUnits+"','"+receiverFirstName+"','"
-                            +receiverLastName+"','"+receiverTown+"','"+receiverPostCode+"','"+receiverStreet+"','"+receiverStreetNumber+"');");
-                } catch (Exception e) {
-                    System.out.println(e);
-                }
-                break;
-            case "IncomingHistoryOrdinary":
-                try {
-                    st.executeUpdate("insert into IncomingHistoryOrdinary values('"+operationDate+"','"+transferType+"','"+senderAccountNumber+"','"
-                            +receiverAccountNumber+"','"+phoneNumber+"','"+transferAmount+"','"+transferCurrency+"','"+totalTransferCost+"','"
-                            +transferTitle+"','"+startDate+"','"+endDate+"','"+transferCycle+"','"+transferCycleUnits+"','"+receiverFirstName+"','"
-                            +receiverLastName+"','"+receiverTown+"','"+receiverPostCode+"','"+receiverStreet+"','"+receiverStreetNumber+"');");
-                } catch (Exception e) {
-                    System.out.println(e);
-                }
-                break;
-            case "IncomingHistorySavings":
-                try {
-                    st.executeUpdate("insert into IncomingHistorySavings values('"+operationDate+"','"+transferType+"','"+senderAccountNumber+"','"
-                            +receiverAccountNumber+"','"+phoneNumber+"','"+transferAmount+"','"+transferCurrency+"','"+totalTransferCost+"','"
-                            +transferTitle+"','"+startDate+"','"+endDate+"','"+transferCycle+"','"+transferCycleUnits+"','"+receiverFirstName+"','"
-                            +receiverLastName+"','"+receiverTown+"','"+receiverPostCode+"','"+receiverStreet+"','"+receiverStreetNumber+"');");
+                    st.executeUpdate("insert into HistorySavings values('"+operationDate+"','"+transferType+"','"+senderAccountNumber+"','"
+                            +receiverAccountNumber+"','"+transferAmount+"','"+transferCurrency+"','"+totalTransferCost+"','"
+                            +transferTitle+"','"+startDate+"','"+endDate+"','"+transferCycle+"','"+transferCycleUnits+"');");
                 } catch (Exception e) {
                     System.out.println(e);
                 }
