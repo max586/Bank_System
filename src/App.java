@@ -1,5 +1,6 @@
-import database.Database;
-import database.DataBaseConnect;
+package src;
+
+import src.Database;
 import src.mainFrame.MainFrame;
 import src.transfers.*;
 import  src.mainPanel.*;
@@ -29,6 +30,6 @@ public class App {
         Transfer t1 = new TransferFactory(new MainFrame(),nadawcaDane).getTransfer(TransferFactory.TransferType.TELEFONBLIK);
         //MainPanel m = new MainPanel(new MainFrame());
 //        Statement st = DataBaseConnect.st;
-//        Database.addUser(st,"Adr","passwd","ad@gmail.com","1234");
+//        Database.addUser("Adr","passwd","ad@gmail.com","1234");
     }
 }

@@ -62,7 +62,7 @@ public class ChangePasswordScreen2 extends Screen{
 
                 if(password_is_valid){
                     user.password=new_password;
-                    Database.setPassword(st, user.username, new_password);
+                    Database.setPassword( user.username, new_password);
                     JOptionPane.showMessageDialog(frame, "password successfully changed!");
                     frame.dispose();
                     prev_screen.prev_screen.prev_screen.user = user;

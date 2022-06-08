@@ -36,23 +36,23 @@ public class AuthenticationScreen extends Screen {
                 user.password=new String(passwordField.getPassword());
                 Statement st = Database.connectToDatabase("bank_system", "root", "password");
 
-                if(Database.verifyUser(st,user.username,user.password)){
+                if(Database.verifyUser(user.username,user.password)){
                     jpane.setMessage("user successfully verified");
                     jpane.setMessageType(JOptionPane.INFORMATION_MESSAGE);
                     jdialog.setTitle("Info");
                     jdialog.setVisible(true);
                     frame.dispose();
-                    user.email = Database.getEmail(st, user.username);
-                    String[] user_data = Database.getUserData(st,user.username);
+                    user.email = Database.getEmail( user.username);
+                    String[] user_data = Database.getUserData(user.username);
                     user.firstName=user_data[0];
                     user.lastName=user_data[1];
                     user.sex=user_data[2];
                     user.city=user_data[3];
                     user.address=user_data[4];
                     user.pesel=user_data[5];
-                    user.ordinary_account_number = Database.getOrdinaryAccountNumber(st, user.username);
-                    user.savings_account_number = Database.getSavingsAccountNumber(st, user.username);
-                    String[] card = Database.getCard(st,user.username);
+                    user.ordinary_account_number = Database.getOrdinaryAccountNumber( user.username);
+                    user.savings_account_number = Database.getSavingsAccountNumber( user.username);
+                    String[] card = Database.getCard(user.username);
                     user.card_number=card[0];
                     user.pin_code=card[1];
                     if(next_screen!=null){

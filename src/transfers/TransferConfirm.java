@@ -1,7 +1,6 @@
 package src.transfers;
-import database.Database;
+import src.Database;
 import src.User;
-import database.DataBaseConnect;
 import src.mainFrame.MainFrame;
 import src.timer.AppTimer;
 import src.timer.MouseAction;
@@ -52,7 +51,6 @@ public class TransferConfirm {
     private Statement st;
 
     public TransferConfirm(MainFrame mainFrame, JPanel transferNextStepPanel, Map<String,String> senderData1, Map<String,String>receiverData1, Map<String,String> transferData1){
-        st = DataBaseConnect.st;
         frame = mainFrame;
         AppTimer appTimer = new AppTimer(timeLabel,frame);
         transferConfirmPanel.addMouseMotionListener(new MouseAction(appTimer));
@@ -161,12 +159,12 @@ public class TransferConfirm {
                         streetNumber = receiverData.getOrDefault("nr domu","");
                         appCodeWarning.setVisible(false);
                         if(transferPanelTitle.equals("Zlecenie stałe")){
-                            Database.addOutgoingHistoryOrdinary(st,"OutgoingHistoryOrdinary",generationDate,senderData.get("typ"),
+                            /*Database.addOutgoingHistoryOrdinary("OutgoingHistoryOrdinary",generationDate,senderData.get("typ"),
                                     senderData.get("nr konta"),receiverData.get("nr konta"),"",Double.parseDouble(transferData.get("kwota")),
                                     transferData.get("waluta"),Double.parseDouble(transferData.get("kwotaPLN")),transferData.get("tytul"),
                                     transferData.get("startdata"),transferData.get("enddata"),Integer.parseInt(transferData.get("cykle")),
                                     transferData.get("jednostkaczasu"),receiverData.get("nazwa odbiorcy"),receiverData.get("nazwa odbiorcy cd"),
-                                    town,postCode,street,streetNumber);
+                                    town,postCode,street,streetNumber);*/
                         }
                         else if(transferPanelTitle.equals("Przelew BLIK na telefon")){
 

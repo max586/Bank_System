@@ -47,7 +47,7 @@ public class RegistrationScreen1 extends Screen {
                 Boolean password_is_valid = true, username_is_taken;
                 user = new User();
                 user.username = usernameField.getText();
-                if (Database.isUsernameTaken(st, user.username)) {
+                if (Database.isUsernameTaken( user.username)) {
                     username_is_taken = true;
                     usernameField.setText("username is already taken");
                 } else {

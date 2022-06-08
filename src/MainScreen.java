@@ -39,12 +39,12 @@ public class MainScreen extends Screen {
         Statement st = Database.connectToDatabase("bank_system", "root", "password");
         if(chosenAcc == "ordinary")
         {
-            AccNumber.setText(Database.getOrdinaryAccountNumber(st, user.username));
+            AccNumber.setText(Database.getOrdinaryAccountNumber( user.username));
             AccType.setText("Wybrane konto: ordinary");
         }
         else if(chosenAcc == "saving")
         {
-            AccNumber.setText(Database.getSavingsAccountNumber(st, user.username));
+            AccNumber.setText(Database.getSavingsAccountNumber( user.username));
             AccType.setText("Wybrane konto: saving");
         }
         list1.setListData(options);

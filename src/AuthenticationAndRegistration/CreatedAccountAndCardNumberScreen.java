@@ -43,9 +43,9 @@ public class CreatedAccountAndCardNumberScreen extends Screen {
         String card_number = generateCardNumber();
         String pin_code = generatePIN();
 
-        Database.addOrdinaryAccountNumber(st, user.username, ordinary_account_number);
-        Database.addSavingsAccountNumber(st, user.username, savings_account_number);
-        Database.addCard(st, user.username, card_number, pin_code);
+        Database.addOrdinaryAccountNumber( user.username, ordinary_account_number);
+        Database.addSavingsAccountNumber( user.username, savings_account_number);
+        Database.addCard( user.username, card_number, pin_code);
 
         user.ordinary_account_number = ordinary_account_number;
         user.savings_account_number = savings_account_number;

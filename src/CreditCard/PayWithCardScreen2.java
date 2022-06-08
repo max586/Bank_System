@@ -33,7 +33,7 @@ public class PayWithCardScreen2 extends Screen{
         
         frame.setContentPane(panel);
 
-        user.ordinary_account_balance = Database.getOrdinaryAccountBalance(st, user.username);
+        user.ordinary_account_balance = Database.getOrdinaryAccountBalance( user.username);
         balanceLabel.setText("Current balance is: "+Float.toString(user.ordinary_account_balance));
 
         submitButton.addActionListener(new ActionListener() {
@@ -53,7 +53,7 @@ public class PayWithCardScreen2 extends Screen{
                     jdialog.setVisible(true);
                 }
                 else{
-                    Database.setOrdinaryAccountBalance(st,user.username,user.ordinary_account_balance-payment);
+                    Database.setOrdinaryAccountBalance(user.username,user.ordinary_account_balance-payment);
                     jpane.setMessage("Payment successfully processed");
                     jpane.setMessageType(JOptionPane.INFORMATION_MESSAGE);
                     jdialog.setTitle("Info");

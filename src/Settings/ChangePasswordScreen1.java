@@ -60,7 +60,7 @@ public class ChangePasswordScreen1 extends Screen{
                 else{specialCharLabel.setText("at least one special character");password_is_valid=false;}
 
                 if(password_is_valid){
-                    Database.setPassword(st, user.username,new_password);
+                    Database.setPassword( user.username,new_password);
                     JOptionPane.showMessageDialog(frame, "password successfully changed!");
                     frame.dispose();
                     prev_screen.user = user;

@@ -38,10 +38,10 @@ public class PayWithCardScreen1 extends Screen {
             public void actionPerformed(ActionEvent actionEvent) {
                 String nr = nrField.getText();
                 String pin = pinField.getText();
-                if(Database.verifyCard(st,nr,pin)){
+                if(Database.verifyCard(nr,pin)){
                     user.card_number = nr;
                     user.pin_code = pin;
-                    user.username = Database.getUsernameByCard(st,user.card_number);
+                    user.username = Database.getUsernameByCard(user.card_number);
                     jpane.setMessage("card successfully verified");
                     jpane.setMessageType(JOptionPane.INFORMATION_MESSAGE);
                     jdialog.setTitle("Info");

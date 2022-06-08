@@ -34,11 +34,11 @@ public class ChangeUsernameScreen extends Screen{
                 // TODO Auto-generated method stub
                 Statement st = Database.connectToDatabase("bank_system", "root", "password");
                 String new_username = usernameField.getText();
-                if(Database.isUsernameTaken(st, new_username)){
+                if(Database.isUsernameTaken( new_username)){
                     usernameField.setText("username is already taken");
                 }
                 else{
-                    Database.setUsername(st, user.username, new_username);
+                    Database.setUsername( user.username, new_username);
                     JOptionPane.showMessageDialog(frame, "username successfully changed!");
                     user.username = new_username;
                     frame.dispose();

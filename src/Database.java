@@ -3,6 +3,7 @@ package src;
 import java.sql.*;
 
 public class Database {
+    public static Statement st = connectToDatabase("bank_system","root","password");
     public static Statement connectToDatabase(String database_name,String username, String password){
         Connection con=null;
         Statement st=null;
@@ -16,7 +17,7 @@ public class Database {
             System.out.println(e);}  
         return st;
     }
-    public static void addUser(Statement st, String username, String password, String email){
+    public static void addUser(String username, String password, String email){
         try {
             st.executeUpdate("insert into Users values('"+username+"','"+password+"','"+email+"');");
         } catch (SQLException e) {
@@ -25,7 +26,7 @@ public class Database {
             System.out.println(e);
         }
     }
-    public static void addUserData(Statement st, String username, String firstName, String lastName, String sex, String city, String address, String pesel){
+    public static void addUserData(String username, String firstName, String lastName, String sex, String city, String address, String pesel){
         try {
             st.executeUpdate("insert into UsersData values('"+username+"','"+firstName+"','"+lastName+"','"+sex+"','"+city+"','"+address+"','"+pesel+"');");
         } catch (Exception e) {
@@ -35,7 +36,7 @@ public class Database {
         }
     }
 
-    public static void addOrdinaryAccountNumber(Statement st, String username, String ordinary_account_number){
+    public static void addOrdinaryAccountNumber(String username, String ordinary_account_number){
         try {
             st.executeUpdate("insert into OrdinaryAccounts values('"+username+"','"+ordinary_account_number+"',0);");
         } catch (Exception e) {
@@ -44,7 +45,7 @@ public class Database {
             System.out.println(e);
         }
     }
-    public static void addSavingsAccountNumber(Statement st, String username, String savings_account_number){
+    public static void addSavingsAccountNumber(String username, String savings_account_number){
         try {
             st.executeUpdate("insert into SavingsAccounts values('"+username+"','"+savings_account_number+"',0,1);");
         } catch (Exception e) {
@@ -53,7 +54,7 @@ public class Database {
             System.out.println(e);
         }
     }
-    public static void addCard(Statement st, String username, String card_number, String pin_code){
+    public static void addCard(String username, String card_number, String pin_code){
         try{
             st.executeUpdate("insert into Cards values ('"+username+"','"+card_number+"','"+pin_code+"');");
         }catch(SQLException e) {
@@ -61,7 +62,7 @@ public class Database {
             System.out.println(e);
         }
     }
-    public static void addCredit(Statement st, String username, float amount, String start_date, int duration, float rate){
+    public static void addCredit(String username, float amount, String start_date, int duration, float rate){
         try{
             st.executeUpdate("insert into Credits values('"+username+"','"+amount+"','"+start_date+"','"+duration+"','"+rate+"');");
         }catch(SQLException e) {
@@ -69,7 +70,7 @@ public class Database {
         System.out.println(e);
     }
     }
-    public static String getEmail(Statement st, String username){
+    public static String getEmail(String username){
         try {
             ResultSet rs = st.executeQuery("select email from Users where username='"+username+"';");
             rs.next();
@@ -81,7 +82,7 @@ public class Database {
         }
         return null;
     }
-    public static String getOrdinaryAccountNumber(Statement st, String username){
+    public static String getOrdinaryAccountNumber(String username){
         try{
             ResultSet rs = st.executeQuery("select nr from OrdinaryAccounts where username='"+username+"';");
             rs.next();
@@ -93,7 +94,7 @@ public class Database {
         }
         return null;
     }
-    public static String getSavingsAccountNumber(Statement st, String username){
+    public static String getSavingsAccountNumber(String username){
         try{
             ResultSet rs = st.executeQuery("select nr from SavingsAccounts where username='"+username+"';");
             rs.next();
@@ -105,7 +106,7 @@ public class Database {
         }
         return null;
     }
-    public static float getOrdinaryAccountBalance(Statement st, String username){
+    public static float getOrdinaryAccountBalance(String username){
         try{
             ResultSet rs = st.executeQuery("select balance from OrdinaryAccounts where username='"+username+"';");
             rs.next();
@@ -116,7 +117,7 @@ public class Database {
         }
         return -1;
     }
-    public static float getSavingsAccountBalance(Statement st, String username){
+    public static float getSavingsAccountBalance(String username){
         try{
             ResultSet rs = st.executeQuery("select balance from SavingsAccounts where username='"+username+"';");
             rs.next();
@@ -127,7 +128,7 @@ public class Database {
         }
         return -1;
     }
-    public static String getUsernameByCard(Statement st, String nr){
+    public static String getUsernameByCard(String nr){
         try {
             ResultSet rs = st.executeQuery("select username from Cards where nr='" + nr + "';");
             rs.next();
@@ -138,7 +139,7 @@ public class Database {
         }
         return null;
     }
-    public static String[] getCard(Statement st, String username){
+    public static String[] getCard(String username){
         String[] card = new String[2];
         try {
             ResultSet rs = st.executeQuery("select nr,pin from Cards where username='"+username+"';");
@@ -151,7 +152,7 @@ public class Database {
         }
         return card;
     }
-    public static String[] getUserData(Statement st, String username){
+    public static String[] getUserData(String username){
         String[] user_data = new String[6];
         try{
             ResultSet rs = st.executeQuery("select * from UsersData where username='"+username+"';");
@@ -168,7 +169,7 @@ public class Database {
         }
         return user_data;
     }
-    public static void setUsername(Statement st,String username, String new_username){
+    public static void setUsername(String username, String new_username){
         try {
             st.executeUpdate("update Users set username='"+new_username+"'where username='"+username+"';");
             username=new_username;
@@ -178,7 +179,7 @@ public class Database {
             System.out.println(e);
         }
     }
-    public static void setPassword(Statement st, String username, String new_password){
+    public static void setPassword(String username, String new_password){
         try {
             st.executeUpdate("update Users set password='"+new_password+"'where password='"+username+"';");
         } catch (SQLException e) {
@@ -187,7 +188,7 @@ public class Database {
             System.out.println(e);
         }
     }
-    public static void setEmail(Statement st,String username, String new_email) {
+    public static void setEmail(String username, String new_email) {
         try {
             st.executeQuery("update Users set username='" + new_email + "'where username='" + username + "';");
         } catch (SQLException e) {
@@ -196,7 +197,7 @@ public class Database {
             System.out.println(e);
         }
     }
-    public static void setOrdinaryAccountBalance(Statement st, String username, float new_balance){
+    public static void setOrdinaryAccountBalance(String username, float new_balance){
         try{
             st.executeUpdate("update OrdinaryAccounts set balance='"+new_balance+"' where username='"+username+"';");
         }catch(SQLException e) {
@@ -204,7 +205,7 @@ public class Database {
             System.out.println(e);
         }
     }
-    public static void setSavingsAccountBalance(Statement st, String username, float new_balance){
+    public static void setSavingsAccountBalance(String username, float new_balance){
         try{
             st.executeUpdate("update SavingsAccounts set balance='"+new_balance+"' where username='"+username+"';");
         }catch(SQLException e) {
@@ -212,7 +213,7 @@ public class Database {
             System.out.println(e);
         }
     }
-    public static boolean isUsernameTaken(Statement st, String username){
+    public static boolean isUsernameTaken(String username){
         try{
             ResultSet rs = st.executeQuery("select count(*) from Users where username='"+username+"';");
             rs.next();
@@ -224,7 +225,7 @@ public class Database {
         }
         return false;
     }
-    public static boolean verifyUser(Statement st, String username, String password){
+    public static boolean verifyUser(String username, String password){
         try{
             ResultSet rs = st.executeQuery("select count(*) from Users where username='"+username+"'and password='"+password+"';");
             rs.next();
@@ -238,7 +239,7 @@ public class Database {
         return false;
     }
 
-    public static boolean hasCard(Statement st, String username){
+    public static boolean hasCard(String username){
         try {
             ResultSet rs = st.executeQuery("select count(*) from Cards where username='" + username + "';");
             rs.next();
@@ -249,7 +250,7 @@ public class Database {
         }
         return false;
     }
-    public static boolean verifyCard(Statement st, String nr, String pin){
+    public static boolean verifyCard(String nr, String pin){
         try {
             ResultSet rs = st.executeQuery("select count(*) from Cards where nr='" + nr + "' and pin='"+pin+"';");
             rs.next();
@@ -260,7 +261,7 @@ public class Database {
         }
         return false;
     }
-    public static void deleteUser(Statement st,String username){
+    public static void deleteUser(String username){
        try{
            st.executeUpdate("delete from Users where username='"+username+"';");
        }catch(SQLException e) {
@@ -270,7 +271,7 @@ public class Database {
     }
     public static void main(String[] args) {
     Statement st = connectToDatabase("bank_system", "root","password");
-    String[] card = getCard(st,"test_user");
+    String[] card = getCard("test_user");
     for(int i=0;i<2;i++){System.out.println(card[i]);}
     }
 }

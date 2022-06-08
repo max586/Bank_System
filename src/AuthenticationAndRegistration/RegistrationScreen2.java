@@ -67,8 +67,8 @@ public class RegistrationScreen2 extends Screen{
                 else{peselField.setText("ok");}
                 if(fname_is_valid&&lname_is_valid&&address_is_valid&&city_is_valid&&pesel_is_valid){
 
-                    Database.addUser(st, user.username, user.password, user.email);
-                    Database.addUserData(st, user.username, user.firstName, user.lastName, user.sex, user.city, user.address, user.pesel);
+                    Database.addUser( user.username, user.password, user.email);
+                    Database.addUserData( user.username, user.firstName, user.lastName, user.sex, user.city, user.address, user.pesel);
 
                     user.firstName=firstName;
                     user.lastName=lastName;
