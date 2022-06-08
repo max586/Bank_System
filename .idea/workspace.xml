@@ -5,8 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bea002ff-8e44-4e85-a29b-66b1294d710d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database_scripts/FillTables.sql" beforeDir="false" afterPath="$PROJECT_DIR$/database_scripts/FillTables.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/AuthenticationScreen.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/AuthenticationScreen.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/EmailVerificationScreen.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/EmailVerificationScreen.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/RegistrationScreen1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/RegistrationScreen1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/RegistrationScreen2Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Screen.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/Screen.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Credits/Credit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Credits/Credit.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Database.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/transfers/TransferConfirm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfers/TransferConfirm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MainScreen.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainScreen.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MainScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainScreen.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,9 +113,35 @@
       <recent name="src.AuthenticationAndRegistration" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Database">
+  <component name="RunManager" selected="Application.MainScreen">
+    <configuration name="Credit" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="src.Credits.Credit" />
+      <module name="bank_system_project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="src.Credits.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Database" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="src.Database" />
+      <module name="bank_system_project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="src.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainScreen" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="src.MainScreen" />
       <module name="bank_system_project" />
       <extension name="coverage">
         <pattern>
@@ -145,52 +181,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PayWithCardScreen2Test.correctAmount" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="bank_system_project" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="src.CreditCard.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="src.CreditCard" />
-      <option name="MAIN_CLASS_NAME" value="src.CreditCard.PayWithCardScreen2Test" />
-      <option name="METHOD_NAME" value="correctAmount" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PayWithCardScreen2Test.incorecctAmount" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="bank_system_project" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="src.CreditCard.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="src.CreditCard" />
-      <option name="MAIN_CLASS_NAME" value="src.CreditCard.PayWithCardScreen2Test" />
-      <option name="METHOD_NAME" value="incorecctAmount" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
+      <item itemvalue="Application.Credit" />
+      <item itemvalue="Application.MainScreen" />
       <item itemvalue="Application.Database" />
       <item itemvalue="Application.RegistrationScreen2" />
       <item itemvalue="JUnit.PayWithCardScreen2Test" />
-      <item itemvalue="JUnit.PayWithCardScreen2Test.correctAmount" />
-      <item itemvalue="JUnit.PayWithCardScreen2Test.incorecctAmount" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MainScreen" />
+        <item itemvalue="Application.Credit" />
         <item itemvalue="Application.Database" />
         <item itemvalue="Application.RegistrationScreen2" />
         <item itemvalue="JUnit.PayWithCardScreen2Test" />
-        <item itemvalue="JUnit.PayWithCardScreen2Test.correctAmount" />
-        <item itemvalue="JUnit.PayWithCardScreen2Test.incorecctAmount" />
       </list>
     </recent_temporary>
   </component>
@@ -431,19 +435,9 @@
           <option name="timeStamp" value="11" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Database.java</url>
-          <line>469</line>
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Database.java</url>
-          <line>114</line>
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Database.java</url>
-          <line>109</line>
-          <option name="timeStamp" value="15" />
+          <url>file://$PROJECT_DIR$/src/MainScreen.java</url>
+          <line>42</line>
+          <option name="timeStamp" value="18" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

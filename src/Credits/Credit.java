@@ -46,7 +46,8 @@ public class Credit extends Screen
                         if(yesCheckBox.isSelected())
                         {
                             jpane.setMessage("Now you must pay us some money, hehe");
-                            Database.addCredit(user.username,Float.parseFloat(Amount.getText()),0,new Date().toString(),Integer.parseInt(Years.getText()));
+                            Date Today = new Date();
+                            Database.addCredit(user.username,Float.parseFloat(Amount.getText()),0,Today.getYear()+"-"+Today.getMonth()+"-"+Today.getDate(),Integer.parseInt(Years.getText()));
                             String[] CreditInfo = Database.getCredit(user.username);//Amount , AmountPayed , StartDate , Duration
                             MyCreditAmount.setText(CreditInfo[0]);
                             MyPayedCredit.setText(CreditInfo[1]);
@@ -91,6 +92,9 @@ public class Credit extends Screen
                         if (currentYear == Integer.parseInt(CreditInfo[3]) && checkDebt() == 0) ;
                         {
                             Database.deleteCredit(user.username);
+                            MyCreditAmount.setText("0");
+                            MyPayedCredit.setText("0");
+                            MyDebt.setText("0");
                         }
                     }
                 }else
@@ -148,7 +152,7 @@ public class Credit extends Screen
         float currentCreditPayment = Float.parseFloat(CreditInfo[1]);
         float yearsAll = Float.parseFloat(CreditInfo[3]);
         //Date StartDate = new Date(Integer.parseInt(CreditInfo[2].substring(0,3))-1900,Integer.parseInt(CreditInfo[2].substring(5,6)),Integer.parseInt(CreditInfo[2].substring(8,9)));
-        Date StartDate = new Date(2000-1900,4,8);
+        Date StartDate = new Date(2000-1900,4,8);//ile Lat juz się ma kredyt
         Date Today = new Date();
         Date DiffOfYears = new Date(Today.getTime() - StartDate.getTime());
         int currentYear = DiffOfYears.getYear()-70;
@@ -162,7 +166,7 @@ public class Credit extends Screen
         {
             needToPay+=creditAmount/yearsAll + (creditAmount - i*creditAmount/yearsAll)*percent;
         }
-            System.out.println(needToPay);
+            //System.out.println(needToPay);
             return (needToPay - currentCreditPayment);
 
 

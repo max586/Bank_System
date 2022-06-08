@@ -22,6 +22,7 @@ public class MainScreen extends Screen {
     public JButton foreignTransferButton;
     public JButton ownTransferButton;
     public JButton standingOrderTransferButton;
+    private JButton historyButton;
     public int counter = 0;
     String chosenAcc;
     String []options = {"one","two"};
@@ -41,7 +42,8 @@ public class MainScreen extends Screen {
         Statement st = Database.connectToDatabase("bank_system", "root", "17391425");
         if(chosenAcc == "ordinary")
         {
-            AccNumber.setText(Database.getOrdinaryAccountNumber( user.username));
+            String temp = Database.getOrdinaryAccountNumber(user.username);
+            AccNumber.setText(temp);
             AccType.setText("Wybrane konto: ordinary");
         }
         else if(chosenAcc == "saving")

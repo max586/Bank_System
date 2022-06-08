@@ -5,7 +5,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 public class Database {
-    public static Statement st = connectToDatabase("bank_system","root","password");
+    public static Statement st = connectToDatabase("bank_system","root","17391425");
     public static Statement connectToDatabase(String database_name,String username, String password){
         Connection con=null;
         Statement st=null;
@@ -191,7 +191,7 @@ public class Database {
     }
     public static String getOrdinaryAccountNumber(String username){
         try{
-            ResultSet rs = st.executeQuery("select nr from OrdinaryAccounts where username='"+username+"';");
+            ResultSet rs = st.executeQuery("select `Account number` from OrdinaryAccounts where username='"+username+"';");
             rs.next();
             return rs.getString(1);
         }
