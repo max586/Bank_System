@@ -176,6 +176,7 @@
     <list>
       <item itemvalue="Application.Database" />
       <item itemvalue="Application.RegistrationScreen2" />
+      <item itemvalue="Application.App" />
       <item itemvalue="JUnit.PayWithCardScreen2Test" />
       <item itemvalue="JUnit.PayWithCardScreen2Test.correctAmount" />
       <item itemvalue="JUnit.PayWithCardScreen2Test.incorecctAmount" />
