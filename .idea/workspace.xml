@@ -5,38 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bea002ff-8e44-4e85-a29b-66b1294d710d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/CreatedAccountAndCardNumberScreen.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/CreatedAccountAndCardNumberScreen.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/RegistrationScreen2$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/RegistrationScreen2$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/RegistrationScreen2$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/RegistrationScreen2$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/RegistrationScreen2$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/RegistrationScreen2$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/RegistrationScreen2$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/RegistrationScreen2$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/RegistrationScreen2$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/RegistrationScreen2$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/RegistrationScreen2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/RegistrationScreen2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/RegistrationScreen2Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/RegistrationScreen2Test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/CreditCard/PayWithCardScreen2Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/CreditCard/PayWithCardScreen2Test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Credits/Credit$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/Credits/Credit$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Credits/Credit.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/Credits/Credit.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Database.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/Database.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/MainScreen$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/MainScreen$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/MainScreen$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/MainScreen$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/MainScreen.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/MainScreen.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/StandardTransfer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/StandardTransfer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/TransferFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/TransferFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database_scripts/Script-1.sql" beforeDir="false" afterPath="$PROJECT_DIR$/database_scripts/Script-1.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AuthenticationAndRegistration/AuthenticationScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AuthenticationAndRegistration/AuthenticationScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationAndRegistration/RegistrationScreen1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AuthenticationAndRegistration/RegistrationScreen1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationAndRegistration/RegistrationScreen2.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/AuthenticationAndRegistration/RegistrationScreen2.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationAndRegistration/RegistrationScreen2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AuthenticationAndRegistration/RegistrationScreen2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Database.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Settings/ChangePasswordScreen1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Settings/ChangePasswordScreen1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Settings/ChangePasswordScreen2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Settings/ChangePasswordScreen2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Settings/ChangeUsernameScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Settings/ChangeUsernameScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Settings/SettingsMainScreen.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/Settings/SettingsMainScreen.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Settings/SettingsMainScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Settings/SettingsMainScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Settings/ShowUserDataScreen.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/Settings/ShowUserDataScreen.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Settings/ShowUserDataScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Settings/ShowUserDataScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -348,7 +319,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654698716709</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="database changed">
+      <created>1654721677422</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1654721677423</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -388,7 +366,8 @@
     <MESSAGE value="123" />
     <MESSAGE value="refactored" />
     <MESSAGE value="sth added" />
-    <option name="LAST_COMMIT_MESSAGE" value="sth added" />
+    <MESSAGE value="database changed" />
+    <option name="LAST_COMMIT_MESSAGE" value="database changed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

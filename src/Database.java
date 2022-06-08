@@ -145,6 +145,18 @@ public class Database {
         }
         return null;
     }
+    public static String getAppCode(String username){
+        try {
+            ResultSet rs = st.executeQuery("select appCode from Users where username='"+username+"';");
+            rs.next();
+            return rs.getString(1);
+        } catch (SQLException e) {
+            //TODO: handle exception
+            System.out.println("Couldn't execute the query");
+            System.out.println(e);
+        }
+        return null;
+    }
     public static String getOrdinaryAccountNumber(String username){
         try{
             ResultSet rs = st.executeQuery("select nr from OrdinaryAccounts where username='"+username+"';");
