@@ -65,11 +65,10 @@ public class Database {
         }
     }
     public static void addToHistory(Statement st, String database, String operationDate, String transferType,
-                                     String senderAccountNumber, String receiverAccountNumber, String phoneNumber,
+                                     String senderAccountNumber, String receiverAccountNumber,
                                      double transferAmount, String transferCurrency, double totalTransferCost,
                                      String transferTitle, String startDate, String endDate, int transferCycle,
-                                     String transferCycleUnits, String receiverFirstName, String receiverLastName,
-                                     String receiverTown, String receiverPostCode, String receiverStreet, String receiverStreetNumber){
+                                     String transferCycleUnits){
         switch(database){
             case "HistoryOrdinary":
                 try {
