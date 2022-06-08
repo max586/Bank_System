@@ -126,7 +126,7 @@ public class Database {
         try{
             ResultSet rs = st.executeQuery("select * from Credits where username='"+username+"';");
             rs.next();
-            for(int i=0;i<4;i++){Credit[i]=rs.getString(i);}
+            for(int i=3;i<=6;i++){Credit[i]=rs.getString(i);}
         }catch(SQLException e) {
             System.out.println("Couldn't execute the query");
             System.out.println(e);

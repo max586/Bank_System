@@ -1,4 +1,5 @@
 package src.Credits;
+import java.util.Date;
 
 import src.Database;
 import src.Screen;
@@ -39,13 +40,12 @@ public class Credit extends Screen
             @Override
             public void actionPerformed(ActionEvent e)
             {
-                if(1==0)//jezeli uzitkownik nie ma kredytu
+                if(!Database.hasCredit(user.username))//jezeli uzitkownik nie ma kredytu
                 {
                         if(yesCheckBox.isSelected())
                         {
                             jpane.setMessage("Now you must pay us some money, hehe");
-
-                            //dodac do bazy danych kwote kredytu, date i na jaki czas
+                            Database.addCredit(user.username,Float.parseFloat(Amount.getText()),0,new Date().toString(),Integer.parseInt(Years.getText()));
                         }else
                         {
                             jpane.setMessage("you must accept the terms to take the credit ");
@@ -61,6 +61,26 @@ public class Credit extends Screen
                 jdialog.setVisible(true);
             }
         });
+        payDebtButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String[] CreditInfo = Database.getCredit(user.username);//Amount , AmountPayed , StartDate , Duration
+                float UserBalance = Database.getOrdinaryAccountBalance(user.username);
+                float CreditDebt = checkDebt();
+                float CreditPayed = Float.parseFloat(CreditInfo[1]);
+
+                if(UserBalance - CreditDebt >= 0)
+                {
+                    Database.setOrdinaryAccountBalance(user.username,UserBalance - CreditDebt);
+                    Database.setCreditAmountPayed(user.username,CreditPayed+CreditDebt);
+                    CreditInfo = Database.getCredit(user.username);
+                    Balance.setText(String.valueOf(Database.getSavingsAccountBalance(user.username)));
+                    MyCreditAmount.setText(CreditInfo[0]);
+                    MyPayedCredit.setText(CreditInfo[1]);
+                    MyDebt.setText(String.valueOf(checkDebt()));
+                }
+            }
+        });
     }
     public void CreateScreen() {
 
@@ -72,9 +92,11 @@ public class Credit extends Screen
 
         AccNum.setText(Database.getOrdinaryAccountNumber(user.username));
         Balance.setText(String.valueOf(Database.getSavingsAccountBalance(user.username)));
-        //MyCreditAmount.setText();
-        //MyPayedCredit.setText();
-        //MyDebt.setText();
+        String[] CreditInfo = Database.getCredit(user.username);//Amount , AmountPayed , StartDate , Duration
+
+        MyCreditAmount.setText(CreditInfo[0]);
+        MyPayedCredit.setText(CreditInfo[1]);
+        MyDebt.setText(String.valueOf(checkDebt()));
         prevButton.addActionListener(e->
         {
             frame.dispose();
@@ -86,14 +108,16 @@ public class Credit extends Screen
         frame.setSize(1080, 720);
         frame.setVisible(true);
     }
-    public double checkDebt(User user)
+    public float checkDebt()
     {
-        double creditAmount = 0;
-        double currentCreditPayment = 0;
-        double yearsAll = 0;
-        int currentYear = 0;
-        double needToPay = 0;
-        double percent = 0.05;
+        String[] CreditInfo = Database.getCredit(user.username);//Amount , AmountPayed , StartDate , Duration
+        float creditAmount = Float.parseFloat(CreditInfo[0]);
+        float currentCreditPayment = Float.parseFloat(CreditInfo[1]);
+        float yearsAll = Float.parseFloat(CreditInfo[3]);
+        Date StartDate = new Date(Integer.parseInt(CreditInfo[2].substring(0,3)),Integer.parseInt(CreditInfo[2].substring(5,6)),Integer.parseInt(CreditInfo[2].substring(8,9)));
+        int currentYear = (int)((new Date().getTime() - StartDate.getTime())/(1000*60*60*24*365));
+        float needToPay = 0;
+        float percent = (float)0.05;
         for (int i = 0; i < currentYear; i++)
         {
             needToPay=creditAmount/yearsAll + (creditAmount - i*creditAmount/yearsAll)*percent;
