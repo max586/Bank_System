@@ -21,9 +21,9 @@ public class RegistrationScreen1Test {
         username="new_user";
         password="6X-q(A(s?g!k";
         email="@email";
-        Database.addUser(st,username,password,email);
-        Database.addOrdinaryAccountNumber(st,username,ordinary_account_number);
-        Database.addSavingsAccountNumber(st,username,savings_account_number);
+        Database.addUser(username,password,email);
+        Database.addOrdinaryAccountNumber(username,ordinary_account_number);
+        Database.addSavingsAccountNumber(username,savings_account_number);
         reg_screen.CreateScreen();
         reg_screen.frame.dispose();
     }
@@ -72,7 +72,7 @@ public class RegistrationScreen1Test {
     }
     @Test
     public void validData(){
-        Database.deleteUser(st,username);
+        Database.deleteUser(username);
         reg_screen.usernameField.setText(username);
         reg_screen.passwordField.setText(password);
         reg_screen.repeatPasswordField.setText(password);
@@ -87,5 +87,5 @@ public class RegistrationScreen1Test {
         assertEquals(reg_screen.specialCharLabel.getText(),"ok");
     }
     @After
-    public void deleteUser(){Database.deleteUser(st,username);}
+    public void deleteUser(){Database.deleteUser(username);}
 }
