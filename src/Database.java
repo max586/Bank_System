@@ -191,7 +191,7 @@ public class Database {
     }
     public static String getOrdinaryAccountNumber(String username){
         try{
-            ResultSet rs = st.executeQuery("select nr from OrdinaryAccounts where username='"+username+"';");
+            ResultSet rs = st.executeQuery("select `Account number` from OrdinaryAccounts where username='"+username+"';");
             rs.next();
             return rs.getString(1);
         }
@@ -203,7 +203,7 @@ public class Database {
     }
     public static String getSavingsAccountNumber(String username){
         try{
-            ResultSet rs = st.executeQuery("select nr from SavingsAccounts where username='"+username+"';");
+            ResultSet rs = st.executeQuery("select `Account number` from SavingsAccounts where username='"+username+"';");
             rs.next();
             return rs.getString(1);
         }

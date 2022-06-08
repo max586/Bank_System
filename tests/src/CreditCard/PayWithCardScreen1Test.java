@@ -16,7 +16,6 @@ public class PayWithCardScreen1Test {
     String username,password,email,card,pin;
     @Before
     public void initiate(){
-        st = Database.connectToDatabase("bank_system","root","password");
         username="new_user";
         password="6X-q(A(s?g!k";
         email="@email";
