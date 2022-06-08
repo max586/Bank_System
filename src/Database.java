@@ -126,7 +126,7 @@ public class Database {
         try{
             ResultSet rs = st.executeQuery("select * from Credits where username='"+username+"';");
             rs.next();
-            for(int i=3;i<=6;i++){Credit[i]=rs.getString(i);}
+            for(int i=0;i<4;i++){Credit[i]=rs.getString(i);}
         }catch(SQLException e) {
             System.out.println("Couldn't execute the query");
             System.out.println(e);
@@ -136,6 +136,18 @@ public class Database {
     public static String getEmail(String username){
         try {
             ResultSet rs = st.executeQuery("select email from Users where username='"+username+"';");
+            rs.next();
+            return rs.getString(1);
+        } catch (SQLException e) {
+            //TODO: handle exception
+            System.out.println("Couldn't execute the query");
+            System.out.println(e);
+        }
+        return null;
+    }
+    public static String getAppCode(String username){
+        try {
+            ResultSet rs = st.executeQuery("select appCode from Users where username='"+username+"';");
             rs.next();
             return rs.getString(1);
         } catch (SQLException e) {

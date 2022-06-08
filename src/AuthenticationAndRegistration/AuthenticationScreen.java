@@ -42,6 +42,7 @@ public class AuthenticationScreen extends Screen {
                     jdialog.setVisible(true);
                     frame.dispose();
                     user.email = Database.getEmail( user.username);
+                    user.appCode=Database.get
                     String[] user_data = Database.getUserData(user.username);
                     user.firstName=user_data[0];
                     user.lastName=user_data[1];

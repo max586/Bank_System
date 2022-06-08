@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bea002ff-8e44-4e85-a29b-66b1294d710d" name="Changes" comment="refactored">
+    <list default="true" id="bea002ff-8e44-4e85-a29b-66b1294d710d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database_scripts/CreateDatabase.sql" beforeDir="false" afterPath="$PROJECT_DIR$/database_scripts/CreateDatabase.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Credits/Credit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Credits/Credit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Database.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -317,14 +321,7 @@
       <option name="project" value="LOCAL" />
       <updated>1654698716709</updated>
     </task>
-    <task id="LOCAL-00017" summary="refactored">
-      <created>1654720198849</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1654720198849</updated>
-    </task>
-    <option name="localTasksCounter" value="18" />
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -398,9 +395,9 @@
     <MESSAGE value="duplicated windows bug solved" />
     <MESSAGE value="junit test classes added(tests folder)" />
     <MESSAGE value="123" />
-    <MESSAGE value="sth added" />
     <MESSAGE value="refactored" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactored" />
+    <MESSAGE value="sth added" />
+    <option name="LAST_COMMIT_MESSAGE" value="sth added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
