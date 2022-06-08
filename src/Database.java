@@ -3,7 +3,7 @@ package src;
 import java.sql.*;
 
 public class Database {
-    public static Statement st = connectToDatabase("bank_system","root","password");
+    public static Statement st = connectToDatabase("bank_system","root","17391425");
     public static Statement connectToDatabase(String database_name,String username, String password){
         Connection con=null;
         Statement st=null;
@@ -104,7 +104,9 @@ public class Database {
         try{
             ResultSet rs = st.executeQuery("select * from Credits where username='"+username+"';");
             rs.next();
-            for(int i=0;i<4;i++){Credit[i]=rs.getString(i);}
+            for(int i=3;i<=6;i++){Credit[i-3]=rs.getString(i);
+            //System.out.println(Credit[i-3]+" ");
+            }
         }catch(SQLException e) {
             System.out.println("Couldn't execute the query");
             System.out.println(e);

@@ -1,1 +1,1 @@
-SELECT  * from Users;
+SELECT  * from OutgoingHistoryOrdinary o1 join OrdinaryAccounts o2 on o1.`Account nr from` =o2.`Account number`;
