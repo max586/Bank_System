@@ -3,10 +3,7 @@ package src.AuthenticationAndRegistration;
 import src.*;
 
 import javax.swing.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
+import java.awt.event.*;
 import java.sql.Statement;
 
 public class AuthenticationScreen extends Screen {
@@ -78,6 +75,7 @@ public class AuthenticationScreen extends Screen {
                 new RegistrationScreen1(user, AuthenticationScreen.this, new Screen()).CreateScreen();
             }
         });
+
         exitButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
@@ -92,9 +90,20 @@ public class AuthenticationScreen extends Screen {
             @Override
             public void mouseReleased(MouseEvent e) {counter=0;}
             @Override
-            public void mouseEntered(MouseEvent e) {counter=0;}
+            public void mouseEntered(MouseEvent e) {}
             @Override
             public void mouseExited(MouseEvent e) {}
+        });
+        panel.addMouseMotionListener(new MouseMotionListener() {
+            @Override
+            public void mouseDragged(MouseEvent e) {
+                counter=0;
+            }
+
+            @Override
+            public void mouseMoved(MouseEvent e) {
+                counter=0;
+            }
         });
         frame.setSize(800,600);
         frame.setVisible(true);

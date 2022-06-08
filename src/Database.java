@@ -268,7 +268,6 @@ public class Database {
            System.out.println(e);
        }
     }
-
     public static void main(String[] args) {
     Statement st = connectToDatabase("bank_system", "root","password");
     String[] card = getCard(st,"test_user");

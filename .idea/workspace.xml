@@ -5,43 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bea002ff-8e44-4e85-a29b-66b1294d710d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Settings/ShowUserDataScreen.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Settings/ShowUserDataScreen.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/src/JavaMailTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentation/SequenceDiagrams.mdj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentation/class_diagram1.mdj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database_scripts/FillTables.sql" beforeDir="false" afterPath="$PROJECT_DIR$/database_scripts/FillTables.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationAndRegistration/AuthenticationScreen.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/AuthenticationAndRegistration/AuthenticationScreen.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AuthenticationAndRegistration/AuthenticationScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AuthenticationAndRegistration/AuthenticationScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationAndRegistration/ChooseAccountNumberScreen.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/AuthenticationAndRegistration/ChooseAccountNumberScreen.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationAndRegistration/ChooseAccountNumberScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AuthenticationAndRegistration/ChooseAccountNumberScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationAndRegistration/CreatedAccountAndCardNumberScreen.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/AuthenticationAndRegistration/CreatedAccountAndCardNumberScreen.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationAndRegistration/CreatedAccountAndCardNumberScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AuthenticationAndRegistration/CreatedAccountAndCardNumberScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationAndRegistration/EmailVerificationScreen.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/AuthenticationAndRegistration/EmailVerificationScreen.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AuthenticationAndRegistration/EmailVerificationScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AuthenticationAndRegistration/EmailVerificationScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationAndRegistration/RegistrationScreen1.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/AuthenticationAndRegistration/RegistrationScreen1.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationAndRegistration/RegistrationScreen1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AuthenticationAndRegistration/RegistrationScreen1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationAndRegistration/RegistrationScreen2.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/AuthenticationAndRegistration/RegistrationScreen2.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationAndRegistration/RegistrationScreen2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AuthenticationAndRegistration/RegistrationScreen2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationAndRegistration/test1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreditCard/PayWithCardScreen.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditCard/PayWithCardScreen.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreditCard/PayWithCardScreen1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditCard/PayWithCardScreen1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreditCard/PayWithCardScreen2.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditCard/PayWithCardScreen2.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreditCard/PayWithCardScreen2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditCard/PayWithCardScreen2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Database.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/JavaMail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/JavaMail.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Settings/ChangeEmailScreen.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/Settings/ChangeEmailScreen.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Settings/ChangeEmailScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Settings/ChangeEmailScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Settings/ChangePasswordScreen1.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/Settings/ChangePasswordScreen1.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Settings/ChangePasswordScreen1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Settings/ChangePasswordScreen1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Settings/ChangePasswordScreen2.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/Settings/ChangePasswordScreen2.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Settings/ChangePasswordScreen2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Settings/ChangePasswordScreen2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Settings/ChangeUsernameScreen.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/Settings/ChangeUsernameScreen.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Settings/ChangeUsernameScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Settings/ChangeUsernameScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Settings/SettingsMainScreen.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/Settings/SettingsMainScreen.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Settings/SettingsMainScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Settings/SettingsMainScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/src/JavaMailTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/src/JavaMailTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,9 +104,35 @@
       <recent name="src.AuthenticationAndRegistration" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.LaunchApp">
+  <component name="RunManager" selected="Application.JavaMail">
+    <configuration name="AuthenticationScreen" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="src.AuthenticationAndRegistration.AuthenticationScreen" />
+      <module name="bank_system_project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="src.AuthenticationAndRegistration.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Database" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="src.Database" />
+      <module name="bank_system_project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="src.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JavaMail" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="src.JavaMail" />
       <module name="bank_system_project" />
       <extension name="coverage">
         <pattern>
@@ -169,51 +164,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="JavaMailTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="bank_system_project" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="src.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="src" />
-      <option name="MAIN_CLASS_NAME" value="src.JavaMailTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="JavaMailTest.correctMailTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="bank_system_project" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="src.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="src" />
-      <option name="MAIN_CLASS_NAME" value="src.JavaMailTest" />
-      <option name="METHOD_NAME" value="correctMailTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
+      <item itemvalue="Application.AuthenticationScreen" />
+      <item itemvalue="Application.JavaMail" />
       <item itemvalue="Application.Database" />
       <item itemvalue="Application.src.Settings.SettingsMainScreen" />
       <item itemvalue="Application.LaunchApp" />
-      <item itemvalue="JUnit.JavaMailTest" />
-      <item itemvalue="JUnit.JavaMailTest.correctMailTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.JavaMail" />
+        <item itemvalue="Application.AuthenticationScreen" />
         <item itemvalue="Application.LaunchApp" />
         <item itemvalue="Application.src.Settings.SettingsMainScreen" />
         <item itemvalue="Application.Database" />
-        <item itemvalue="JUnit.JavaMailTest" />
-        <item itemvalue="JUnit.JavaMailTest.correctMailTest" />
       </list>
     </recent_temporary>
   </component>
@@ -329,7 +293,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654586833113</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="-added test for JavaMail&#10;-added ShowScreen in Settings&#10;-fixed timer">
+      <created>1654645145195</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1654645145195</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -370,7 +341,8 @@
     <MESSAGE value="123" />
     <MESSAGE value="refactored" />
     <MESSAGE value="new test added" />
-    <option name="LAST_COMMIT_MESSAGE" value="new test added" />
+    <MESSAGE value="-added test for JavaMail&#10;-added ShowScreen in Settings&#10;-fixed timer" />
+    <option name="LAST_COMMIT_MESSAGE" value="-added test for JavaMail&#10;-added ShowScreen in Settings&#10;-fixed timer" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -394,6 +366,11 @@
           <url>file://$PROJECT_DIR$/src/Settings/SettingsMainScreen.java</url>
           <line>70</line>
           <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/JavaMail.java</url>
+          <line>55</line>
+          <option name="timeStamp" value="15" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/Settings/SettingsMainScreen.java</url>
