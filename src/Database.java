@@ -64,7 +64,7 @@ public class Database {
             System.out.println(e);
         }
     }
-    public static void addToHistory(Statement st, String database, String operationDate, String transferType,
+    public static void addToHistory(String database, String operationDate, String transferType,
                                      String senderAccountNumber, String receiverAccountNumber,
                                      double transferAmount, String transferCurrency, double totalTransferCost,
                                      String transferTitle, String startDate, String endDate, int transferCycle,
