@@ -1,9 +1,11 @@
 package src;
 
 import java.sql.*;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 public class Database {
-    public static Statement st = connectToDatabase("bank_system","root","17391425");
+    public static Statement st = connectToDatabase("Bank","root","Adix_23/09/1999");
     public static Statement connectToDatabase(String database_name,String username, String password){
         Connection con=null;
         Statement st=null;
@@ -26,7 +28,7 @@ public class Database {
             System.out.println(e);
         }
     }
-    public static void addUserData(String username, String firstName, String lastName, String sex,String phoneNumber, String city, String postcode, String street,int street_numb, String pesel){
+    public static void addUserData(String username, String firstName, String lastName, String sex,String phoneNumber, String city, String postcode, String street,String street_numb, String pesel){
         try {
             st.executeUpdate("insert into UsersData values('"+username+"','"+firstName+"','"+lastName+"','"+sex+"','"+phoneNumber+"','"+city+"','"+postcode+"','"+street+"','"+street_numb+"','"+pesel+"');");
         } catch (Exception e) {
@@ -62,7 +64,7 @@ public class Database {
             System.out.println(e);
         }
     }
-    public static void addToHistory(Statement st, String database, String operationDate, String transferType,
+    public static void addToHistory(String database, String operationDate, String transferType,
                                      String senderAccountNumber, String receiverAccountNumber, String phoneNumber,
                                      double transferAmount, String transferCurrency, double totalTransferCost,
                                      String transferTitle, String startDate, String endDate, int transferCycle,
@@ -74,7 +76,7 @@ public class Database {
                     st.executeUpdate("insert into HistoryOrdinary values('"+operationDate+"','"+transferType+"','"+senderAccountNumber+"','"
                             +receiverAccountNumber+"','"+transferAmount+"','"+transferCurrency+"','"+totalTransferCost+"','"
                             +transferTitle+"','"+startDate+"','"+endDate+"','"+transferCycle+"','"+transferCycleUnits+"');");
-                } catch (Exception e) {
+                } catch (SQLException e) {
                     System.out.println(e);
                 }
                 break;
@@ -83,13 +85,66 @@ public class Database {
                     st.executeUpdate("insert into HistorySavings values('"+operationDate+"','"+transferType+"','"+senderAccountNumber+"','"
                             +receiverAccountNumber+"','"+transferAmount+"','"+transferCurrency+"','"+totalTransferCost+"','"
                             +transferTitle+"','"+startDate+"','"+endDate+"','"+transferCycle+"','"+transferCycleUnits+"');");
-                } catch (Exception e) {
+                } catch (SQLException e) {
                     System.out.println(e);
                 }
                 break;
             default:
                 System.out.println("Incorrect database!");
         }
+    }
+    public static String[][] getHistoryOrdinary(String username) throws SQLException {
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        LocalDateTime day = LocalDateTime.now();
+        day=day.minusMonths(1);
+        String sday=day.toString().substring(0,10);
+        try{
+            int number_of_rows;
+            ResultSet rs = st.executeQuery("select count(*) from HistoryOrdinary h join OrdinaryAccounts o on h.`Account nr from` = o.`Account number`  join UsersData u on o.username =u.username \n" +
+                    "where h.`Operation Date` >= '"+sday+"'and o.username='"+username+"';");
+            rs.next();
+            number_of_rows=rs.getInt(1);
+            rs = st.executeQuery("select h.*,u.* from HistoryOrdinary h join OrdinaryAccounts o on h.`Account nr from` = o.`Account number`  join UsersData u on o.username =u.username \n" +
+                "where h.`Operation Date` >= '"+sday+"'and o.username='"+username+"';");
+            String[][] transactions_history = new String[number_of_rows][22];
+            rs.next();
+            for(int i=0;i<number_of_rows;i++){
+                for(int j=0;j<22;j++){
+                    transactions_history[i][j]=rs.getString(j+1);
+                }
+            }
+            return transactions_history;
+        } catch (SQLException e) {
+            System.out.println(e);
+        }
+        return null;
+    }
+
+    public static String[][] getHistorySavings(String username) throws SQLException {
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        LocalDateTime day = LocalDateTime.now();
+        day=day.minusMonths(1);
+        String sday=day.toString().substring(0,10);
+        try{
+            int number_of_rows;
+            ResultSet rs = st.executeQuery("select count(*) from HistorySavings h join SavingsAccounts o on h.`Account nr from` = o.`Account number`  join UsersData u on o.username =u.username \n" +
+                    "where h.`Operation Date` >= '"+sday+"'and o.username='"+username+"';");
+            rs.next();
+            number_of_rows=rs.getInt(1);
+            rs = st.executeQuery("select h.*,u.* from HistorySavings h join SavingsAccounts o on h.`Account nr from` = o.`Account number`  join UsersData u on o.username =u.username \n" +
+                    "where h.`Operation Date` >= '"+sday+"'and o.username='"+username+"';");
+            String[][] transactions_history = new String[number_of_rows][22];
+            rs.next();
+            for(int i=0;i<number_of_rows;i++){
+                for(int j=0;j<22;j++){
+                    transactions_history[i][j]=rs.getString(j+1);
+                }
+            }
+            return transactions_history;
+        } catch (SQLException e) {
+            System.out.println(e);
+        }
+        return null;
     }
     public static void addCredit(String username, float amount, float amount_payed, String start_date, int duration){
         try{
@@ -104,9 +159,7 @@ public class Database {
         try{
             ResultSet rs = st.executeQuery("select * from Credits where username='"+username+"';");
             rs.next();
-            for(int i=3;i<=6;i++){Credit[i-3]=rs.getString(i);
-            //System.out.println(Credit[i-3]+" ");
-            }
+            for(int i=0;i<4;i++){Credit[i]=rs.getString(i);}
         }catch(SQLException e) {
             System.out.println("Couldn't execute the query");
             System.out.println(e);
@@ -139,7 +192,7 @@ public class Database {
     }
     public static String getOrdinaryAccountNumber(String username){
         try{
-            ResultSet rs = st.executeQuery("select nr from OrdinaryAccounts where username='"+username+"';");
+            ResultSet rs = st.executeQuery("select `Account number` from OrdinaryAccounts where username='"+username+"';");
             rs.next();
             return rs.getString(1);
         }
@@ -151,7 +204,7 @@ public class Database {
     }
     public static String getSavingsAccountNumber(String username){
         try{
-            ResultSet rs = st.executeQuery("select nr from SavingsAccounts where username='"+username+"';");
+            ResultSet rs = st.executeQuery("select `Account number` from SavingsAccounts where username='"+username+"';");
             rs.next();
             return rs.getString(1);
         }
@@ -355,9 +408,74 @@ public class Database {
             System.out.println(e);
         }
     }
+
+    public static boolean verifyOrdinaryAccountNumber(String ordinaryAccountNumber){
+        try{
+            ResultSet rs = st.executeQuery("select count(*) from OrdinaryAccounts where `Account number`='"+ordinaryAccountNumber+"';");
+            rs.next();
+            int res=rs.getInt(1);
+            return(res == 1);
+        }
+        catch(SQLException e){
+            System.out.println("Couldn't execute the query");
+            System.out.println(e);
+        }
+        return false;
+    }
+
+    public static boolean verifySavingsAccountNumber(String savingsAccountNumber){
+        try{
+            ResultSet rs = st.executeQuery("select count(*) from SavingsAccounts where `Account number`='"+savingsAccountNumber+"';");
+            rs.next();
+            int res=rs.getInt(1);
+            return(res == 1);
+        }
+        catch(SQLException e){
+            System.out.println("Couldn't execute the query");
+            System.out.println(e);
+        }
+        return false;
+    }
+
+    public static boolean verifyPhoneNumber(String phoneNumber){
+        try{
+            ResultSet rs = st.executeQuery("select count(*) from UsersData where `Phone number`='"+phoneNumber+"';");
+            rs.next();
+            int res=rs.getInt(1);
+            return(res == 1);
+        }
+        catch(SQLException e){
+            System.out.println("Couldn't execute the query");
+            System.out.println(e);
+        }
+        return false;
+    }
+
+    public static String getUserByPhone(String phoneNumber){
+        String userName = "";
+        try{
+            ResultSet rs = st.executeQuery("select * from UsersData where `Phone number`='"+phoneNumber+"';");
+            rs.next();
+            userName=rs.getString(1);
+        }catch(SQLException e) {
+            System.out.println("Couldn't execute the query");
+            System.out.println(e);
+        }
+        return userName;
+    }
+
     public static void main(String[] args) {
-    Statement st = connectToDatabase("bank_system", "root","password");
-    String[] card = getCard("test_user");
-    for(int i=0;i<2;i++){System.out.println(card[i]);}
+    //Statement st = connectToDatabase("bank_system", "root","password");
+    //String[] card = getCard("test_user");
+    //for(int i=0;i<2;i++){System.out.println(card[i]);}
+        try {
+            String[][] rez = getHistoryOrdinary("test_user");
+            for(int i=0;i<3;i++){
+                for(int j=0;j<22;j++){
+                    System.out.print(rez[i][j]+"\t");
+                }
+                System.out.println();
+            }
+        }catch(Exception e){}
     }
 }

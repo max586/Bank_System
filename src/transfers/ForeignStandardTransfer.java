@@ -18,8 +18,8 @@ public class ForeignStandardTransfer extends StandardTransfer implements src.tra
     public String currency;
     public double converter;
     public java.util.List<String> countriesISO;
-    ForeignStandardTransfer(User user1,MainFrame mainFrame, Map<String, String> senderData1) throws IOException, FontFormatException {
-        super(user1,mainFrame,senderData1);
+    ForeignStandardTransfer(AccountChoosed accountChoosed1, User user1,MainFrame mainFrame) throws IOException, FontFormatException {
+        super(accountChoosed1,user1,mainFrame);
         isCountry = true;
         panelTitleLabel.setText("Przelew zagraniczny");
         accountNumberCountryLabel.setVisible(false);
@@ -47,6 +47,7 @@ public class ForeignStandardTransfer extends StandardTransfer implements src.tra
         accountNumberCountryComboBox.addActionListener(event -> {
             JComboBox c = (JComboBox) event.getSource();
             countryISO = (String) c.getSelectedItem()+" ";
+            transferData.put("IBAN",countryISO);
         });
     }
     void setcurrencyCombo(){

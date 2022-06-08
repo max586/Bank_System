@@ -11,22 +11,23 @@ public class TransferFactory {
     public enum TransferType {
         KRAJOWY, ZAGRANICZNY, ZLECENIESTALE, TELEFONBLIK, WLASNY;
     }
+    public AccountChoosed accountChoosed;
     public User user;
     public MainFrame frame;
-    public Map<String,String> senderData;
 
-    public TransferFactory(User user1,MainFrame mainFrame, Map<String,String> senderData1){
+    public TransferFactory(AccountChoosed accountChoosed1, User user1,MainFrame mainFrame){
+        accountChoosed = accountChoosed1;
         user = user1;
         frame = mainFrame;
-        senderData = senderData1;
     }
+
     public Transfer getTransfer(TransferType transferType) throws IOException, FontFormatException {
         return switch (transferType) {
-            case KRAJOWY -> new StandardTransfer(user,frame, senderData);
-            case ZAGRANICZNY -> new ForeignStandardTransfer(user,frame, senderData);
-            case ZLECENIESTALE -> new StandingOrder(user,frame, senderData);
-            case TELEFONBLIK -> new BlikPhoneTransfer(user,frame, senderData);
-            case WLASNY -> new OwnTransfer(user,frame,senderData);
+            case KRAJOWY -> new StandardTransfer(accountChoosed,user,frame);
+            case ZAGRANICZNY -> new ForeignStandardTransfer(accountChoosed, user,frame);
+            case ZLECENIESTALE -> new StandingOrder(accountChoosed,user,frame);
+            case TELEFONBLIK -> new BlikPhoneTransfer(accountChoosed,user,frame);
+            case WLASNY -> new OwnTransfer(user,frame);
         };
     }
 }

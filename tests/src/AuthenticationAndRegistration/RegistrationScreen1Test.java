@@ -21,7 +21,7 @@ public class RegistrationScreen1Test {
         username="new_user";
         password="6X-q(A(s?g!k";
         email="@email";
-        Database.addUser(username,password,email);
+        Database.addUser(username,password,email,"1234");
         Database.addOrdinaryAccountNumber(username,ordinary_account_number);
         Database.addSavingsAccountNumber(username,savings_account_number);
         reg_screen.CreateScreen();

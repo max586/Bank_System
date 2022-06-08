@@ -24,8 +24,6 @@ public class TransferNextStep {
     public JLabel transferType;
     public JButton cancelButton;
     public JButton nextButton;
-    public Map<String,String> senderData;
-    public Map<String,String> receiverData;
     public Map<String,String> transferData;
     public JPanel transferNextStepPanel;
     public JLabel currencyLabel;
@@ -44,15 +42,34 @@ public class TransferNextStep {
     public JPanel cancelPanel;
     public MainFrame frame;
     public User user;
-    public TransferNextStep(User user1, MainFrame mainFrame, JPanel transferPanel, Map<String,String> senderData1, Map<String,String> receiverData1, Map<String,String> transferData1){
+    public User receiver;
+    public AccountChoosed accountChoosedUser;
+    public AccountChoosed accountChoosedReceiver;
+    public String userAccountNumber;
+    public String receiverAccountNr;
+    public double userAccountBalance;
+    public TransferNextStep(AccountChoosed accountChoosed1, User user1, AccountChoosed accountChoosed2, User receiver1, Map<String,String> transferData1,MainFrame mainFrame, JPanel transferPanel){
+        accountChoosedUser = accountChoosed1;
+        accountChoosedReceiver = accountChoosed2;
         user = user1;
+        receiver = receiver1;
+        if(accountChoosedUser==AccountChoosed.ORDINARYACCOUNT) {
+            userAccountNumber = user.ordinary_account_number;
+            userAccountBalance = Math.round(user.ordinary_account_balance*100.0)/100.0;
+        }else{
+            userAccountNumber = user.savings_account_number;
+            userAccountBalance = Math.round(user.savings_account_balance*100.0)/100.0;
+        }
+        if(accountChoosedReceiver==AccountChoosed.ORDINARYACCOUNT) {
+            receiverAccountNr = receiver.ordinary_account_number;
+        }else{
+            receiverAccountNr = receiver.savings_account_number;
+        }
         frame = mainFrame;
         AppTimer appTimer = new AppTimer(timeLabel,mainFrame);
         transferNextStepPanel.addMouseMotionListener(new MouseAction(appTimer));
         appTimer.start();
         cancelPanel = transferPanel;
-        senderData = senderData1;
-        this.receiverData = receiverData1;
         transferData = transferData1;
         setLabels();
         setNextButton(nextButton);
@@ -97,17 +114,17 @@ public class TransferNextStep {
             transferPayment.setVisible(false);
             transferPaymentCurrencyLabel.setVisible(false);
         }
-        senderName.setText(senderData.get("nazwa odbiorcy"));
-        senderSurname.setText(senderData.get("nazwa odbiorcy cd"));
-        receiverName.setText(receiverData.get("nazwa odbiorcy"));
-        receiverSurname.setText(receiverData.get("nazwa odbiorcy cd"));
+        senderName.setText(user.firstName);
+        senderSurname.setText(user.lastName);
+        receiverName.setText(receiver.firstName);
+        receiverSurname.setText(receiver.lastName);
         if(transferPanelTitle.equals("Przelew BLIK na telefon")){
-            senderAccountNumber.setText("Nr. konta: "+senderData.get("nr konta"));
-            receiverAccountNumber.setText("Nr. telefonu: "+receiverData.get("nr telefonu"));
+            senderAccountNumber.setText("Nr. konta: "+userAccountNumber);
+            receiverAccountNumber.setText("Nr. telefonu: "+receiver.phone_number);
         }
         else {
-            senderAccountNumber.setText(senderData.get("nr konta"));
-            receiverAccountNumber.setText(receiverData.get("nr konta"));
+            senderAccountNumber.setText(userAccountNumber);
+            receiverAccountNumber.setText(receiverAccountNr);
         }
         transferTitle.setText(transferData.get("tytul"));
         transferAmount.setText(transferData.get("kwota"));
@@ -119,7 +136,7 @@ public class TransferNextStep {
         nextButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                TransferConfirm pO = new TransferConfirm(user,frame, transferNextStepPanel,senderData,receiverData,transferData);
+                TransferConfirm pO = new TransferConfirm(accountChoosedUser, user, accountChoosedReceiver, receiver, transferData, frame, transferNextStepPanel);
                 frame.getjFrame().setContentPane(pO.getTransferConfirmPanel());
                 frame.getjFrame().setVisible(true);
             }

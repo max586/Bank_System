@@ -54,21 +54,31 @@ public class StandingOrderNextStep {
     public boolean timeUnitsValid;
     public String timeUnit;
     public boolean dateToValid;
-    public Map<String,String> senderData;
-    public Map<String,String> receiverData;
     public Map<String,String> transferData;
-    public double senderAmount;
     public User user;
-    public StandingOrderNextStep(User user1, MainFrame mainFrame, JPanel standingOrderPanel, Map<String,String> senderData1, Map<String,String> receiverData1, Map<String,String> transferData1) throws IOException, FontFormatException {
+    public User receiver;
+    public AccountChoosed accountChoosedUser;
+    public AccountChoosed accountChoosedReceiver;
+    public String userAccountNumber;
+    public double userAccountBalance;
+
+    public StandingOrderNextStep(AccountChoosed accountChoosed1, User user1, AccountChoosed accountChoosed2, User receiver1,Map<String,String> transferData1, MainFrame mainFrame, JPanel standingOrderPanel) throws IOException, FontFormatException {
         user = user1;
+        receiver = receiver1;
+        accountChoosedUser = accountChoosed1;
+        accountChoosedReceiver = accountChoosed2;
+        if(accountChoosedUser ==AccountChoosed.ORDINARYACCOUNT) {
+            userAccountNumber = user.ordinary_account_number;
+            userAccountBalance = Math.round(user.ordinary_account_balance*100.0)/100.0;
+        }else{
+            userAccountNumber = user.savings_account_number;
+            userAccountBalance = Math.round(user.savings_account_balance*100.0)/100.0;
+        }
         frame = mainFrame;
         AppTimer appTimer = new AppTimer(timeLabel,frame);
         StandingOrderNextPanel.addMouseMotionListener(new MouseAction(appTimer));
         appTimer.start();
-        senderData = senderData1;
-        receiverData = receiverData1;
         transferData = transferData1;
-        senderAmount = Double.parseDouble(senderData.get("kontosrodki"));
         cancelPanel = standingOrderPanel;
         timeUnitsValid = false;
         setLabels();
@@ -145,7 +155,7 @@ public class StandingOrderNextStep {
                         SimpleDateFormat formatter = new SimpleDateFormat("dd.MM.yyyy");
                         transferData.put("startdata",formatter.format(dateChooserFrom.getDate()));
                         if(isEndDateSelected) transferData.put("enddata",formatter.format(dateChooserTo.getDate()));
-                        TransferNextStep transferNextStep = new TransferNextStep(user, frame, StandingOrderNextPanel,senderData,receiverData,transferData);
+                        TransferNextStep transferNextStep = new TransferNextStep(accountChoosedUser, user,accountChoosedReceiver,receiver, transferData, frame, StandingOrderNextPanel);
                         frame.getjFrame().setContentPane(transferNextStep.getTransferNextStepPanel());
                         frame.getjFrame().setVisible(true);
                     }
