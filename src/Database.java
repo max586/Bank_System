@@ -28,7 +28,7 @@ public class Database {
             System.out.println(e);
         }
     }
-    public static void addUserData(String username, String firstName, String lastName, String sex,String phoneNumber, String city, String postcode, String street,int street_numb, String pesel){
+    public static void addUserData(String username, String firstName, String lastName, String sex,String phoneNumber, String city, String postcode, String street,String street_numb, String pesel){
         try {
             st.executeUpdate("insert into UsersData values('"+username+"','"+firstName+"','"+lastName+"','"+sex+"','"+phoneNumber+"','"+city+"','"+postcode+"','"+street+"','"+street_numb+"','"+pesel+"');");
         } catch (Exception e) {

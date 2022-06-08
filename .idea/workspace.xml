@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bea002ff-8e44-4e85-a29b-66b1294d710d" name="Changes" comment="refactored">
-      <change beforePath="$PROJECT_DIR$/database_scripts/FillTables.sql" beforeDir="false" afterPath="$PROJECT_DIR$/database_scripts/FillTables.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Database.java" afterDir="false" />
+    <list default="true" id="bea002ff-8e44-4e85-a29b-66b1294d710d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/src/AuthenticationAndRegistration/EmailVerificationScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AuthenticationAndRegistration/EmailVerificationScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/JavaMail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/JavaMail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/src/JavaMailTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/src/JavaMailTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -176,7 +177,6 @@
     <list>
       <item itemvalue="Application.Database" />
       <item itemvalue="Application.RegistrationScreen2" />
-      <item itemvalue="Application.App" />
       <item itemvalue="JUnit.PayWithCardScreen2Test" />
       <item itemvalue="JUnit.PayWithCardScreen2Test.correctAmount" />
       <item itemvalue="JUnit.PayWithCardScreen2Test.incorecctAmount" />
@@ -345,7 +345,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654727260179</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="refactored">
+      <created>1654727592404</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1654727592404</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

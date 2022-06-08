@@ -34,7 +34,7 @@ public class EmailVerificationScreen extends Screen{
     public void CreateScreen() {
         code = generateCode(6);
         try {
-            JavaMail.SendMail("","",user.email, code);
+            JavaMail.SendMail(user.email, code);
         } catch (Exception e) {
             //TODO: handle exception
             System.out.println("failed to send an email");

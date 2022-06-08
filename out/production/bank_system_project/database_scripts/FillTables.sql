@@ -11,7 +11,7 @@ insert into SavingsAccounts values("test_user","PL999",10000,4),("user1","PL1212
 
 INSERT INTO Cards values("test_user","1298109280119","1234"),("user1","1919919191","1234");
 
-INSERT INTO Credits values(1,"test_user",10000,1000,"2022-05-26",2),(2,"user1",9000,900,"2022-06-08",1);
+INSERT INTO Credits values("test_user",10000,1000,"2022-05-26",2),("user1",9000,900,"2022-06-08",1);
 
 INSERT INTO HistoryOrdinary VALUES("2022-06-08","country transfer","PL666","PL9987",1000,"PLN",1000,"abc",null,null,null,null),
 ("2022-06-07","country transfer","PL1819","PL666",999,"PLN",1004,"hello",null,null,null,null),

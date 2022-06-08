@@ -10,9 +10,11 @@ import javax.mail.internet.*;
 
 
 public class JavaMail{
-   public static void SendMail(String myAccountEmail, String password, String recepient,String code) throws Exception {
+   public static void SendMail(String recepient,String code) throws Exception {
       System.out.println("Preparing to send an email");
       Properties properties = new Properties();
+      String myAccountEmail="";
+      String password="";
 
       properties.put("mail.smtp.auth", "true");
       properties.put("mail.smtp.starttls.enable", "true");
@@ -34,9 +36,7 @@ public class JavaMail{
                  InternetAddress.parse(recepient));
          message.setSubject("Bank App verification code");
          message.setText("Hi,\nIt's your auto-generated code:\n" + code);
-
          Transport.send(message);
-
          System.out.println("Message successfully sent");
 
       } catch (MessagingException e) {

@@ -44,7 +44,6 @@ foreign key(username) references Users(username) on update cascade on delete cas
 );
 
 create table Credits(
-id int not null auto_increment primary key,
 username varchar(30) not null,
 amount float check(amount>=0 and amount<=50000),
 `amount payed` float check(`amount payed`>=0 and `amount payed`<=50000),
