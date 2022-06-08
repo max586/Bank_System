@@ -48,7 +48,7 @@ public class RegistrationScreen2 extends Screen{
                 String firstName=firstNameField.getText();
                 String lastName=lastNameField.getText();
                 String sex=(String)sexComboBox.getSelectedItem();
-                String phone_nr=()
+                //String phone_nr=();
                 String pesel=peselField.getText();
                 String city = cityField.getText();
                 String address = addressField.getText();
@@ -68,8 +68,8 @@ public class RegistrationScreen2 extends Screen{
                 else{peselField.setText("ok");}
                 if(fname_is_valid&&lname_is_valid&&address_is_valid&&city_is_valid&&pesel_is_valid){
 
-                    Database.addUser( user.username, user.password, user.email);
-                    Database.addUserData( user.username, user.firstName, user.lastName, user.sex, user.city, user.address, user.pesel);
+                    //Database.addUser( user.username, user.password, user.email);
+                    //Database.addUserData( user.username, user.firstName, user.lastName, user.sex, user.city, user.address, user.pesel);
 
                     user.firstName=firstName;
                     user.lastName=lastName;
