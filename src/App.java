@@ -27,7 +27,8 @@ public class App {
         nadawcaDane.put("kod pocztowy","30-348");
         nadawcaDane.put("ulica","Grota-Roweckiego");
         nadawcaDane.put("nr domu","37/17");
-        //Transfer t1 = new TransferFactory(new MainFrame(),nadawcaDane).getTransfer(TransferFactory.TransferType.TELEFONBLIK);
+        User user = new User();
+        Transfer t1 = new TransferFactory(user,new MainFrame(),nadawcaDane).getTransfer(TransferFactory.TransferType.TELEFONBLIK);
         //MainPanel m = new MainPanel(new MainFrame());
 //        Statement st = DataBaseConnect.st;
 //        Database.addUser("Adr","passwd","ad@gmail.com","1234");

@@ -1,4 +1,6 @@
 package src.timer;
+import src.AuthenticationAndRegistration.AuthenticationScreen;
+import src.Screen;
 import src.mainFrame.MainFrame;
 import javax.swing.*;
 import java.awt.*;
@@ -24,7 +26,9 @@ public class AppTimer {
                     elapsedTime=elapsedTime-1000;
                     if(elapsedTime==0) {
                         stop();
-                        MainPanel p = new MainPanel(frame);
+                        frame.getjFrame().dispose();
+                        new AuthenticationScreen(null,null,new Screen()).CreateScreen();
+
                         //nawrotka do panelu logowania
                     }
                     minutes = (elapsedTime/60000) % 60;
