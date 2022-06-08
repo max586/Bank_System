@@ -205,7 +205,7 @@ public class TransferConfirm {
                                         "", "", 0,"");
                             }
                             else{
-                                Database.addToHistory( "OutgoingHistorySavings", generationDate, transferData.get("typ"),
+                                Database.addToHistory( "HistorySavings", generationDate, transferData.get("typ"),
                                         userAccountNumber, "", Double.parseDouble(transferData.get("kwota")),
                                         "PLN", Double.parseDouble(transferData.get("kwota")), transferData.get("tytul"),
                                         "", "", 0, "");
