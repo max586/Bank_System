@@ -2,7 +2,6 @@ package src.AuthenticationAndRegistration;
 
 import src.DataValidation;
 import src.Database;
-import src.Database.*;
 import src.Screen;
 import src.User;
 
@@ -17,7 +16,7 @@ public class RegistrationScreen2 extends Screen{
     public JTextField lastNameField;
     public JTextField firstNameField;
     public JTextField cityField;
-    public JTextField addressField;
+    public JTextField streetField;
     public JComboBox sexComboBox;
     public JTextField peselField;
     public JButton submitButton;
@@ -26,11 +25,13 @@ public class RegistrationScreen2 extends Screen{
     public JLabel firstNameLabel;
     public JLabel lastNameLabel;
     public JLabel cityLabel;
-    public JLabel addressLabel;
+    public JLabel streetLabel;
     public JLabel peselLabel;
     public JLabel sexLabel;
     public JPanel panel;
     public JLabel timerLabel;
+    private JLabel phoneNrLabel;
+    private JTextField phoneNrField;
     public int counter=0;
 
     public RegistrationScreen2(){}
@@ -51,7 +52,7 @@ public class RegistrationScreen2 extends Screen{
                 //String phone_nr=();
                 String pesel=peselField.getText();
                 String city = cityField.getText();
-                String address = addressField.getText();
+                String address = streetField.getText();
                 boolean lname_is_valid= DataValidation.nameIsValid(lastName), fname_is_valid=DataValidation.nameIsValid(firstName),
                         pesel_is_valid=DataValidation.peselIsValid(pesel, (sex=="M")),
                         address_is_valid=DataValidation.addressIsValid(address),
@@ -60,8 +61,10 @@ public class RegistrationScreen2 extends Screen{
                 else{firstNameField.setText("ok");}
                 if(!lname_is_valid){lastNameField.setText("Last name is invalid");}
                 else{lastNameField.setText("ok");}
-                if(!address_is_valid){addressField.setText("Address is invalid");}
-                else{addressField.setText("ok");}
+                if(!address_is_valid){
+                    streetField.setText("Address is invalid");}
+                else{
+                    streetField.setText("ok");}
                 if(!city_is_valid){cityField.setText("City is invalid");}
                 else{cityField.setText("ok");}
                 if(!pesel_is_valid){peselField.setText("PESEL is invalid");}

@@ -62,6 +62,57 @@ public class Database {
             System.out.println(e);
         }
     }
+    public static void addToHistory(Statement st, String database, String operationDate, String transferType,
+                                     String senderAccountNumber, String receiverAccountNumber, String phoneNumber,
+                                     double transferAmount, String transferCurrency, double totalTransferCost,
+                                     String transferTitle, String startDate, String endDate, int transferCycle,
+                                     String transferCycleUnits, String receiverFirstName, String receiverLastName,
+                                     String receiverTown, String receiverPostCode, String receiverStreet, String receiverStreetNumber){
+        switch(database){
+            case "OutgoingHistoryOrdinary":
+                try {
+                    st.executeUpdate("insert into OutgoingHistoryOrdinary values('"+operationDate+"','"+transferType+"','"+senderAccountNumber+"','"
+                            +receiverAccountNumber+"','"+phoneNumber+"','"+transferAmount+"','"+transferCurrency+"','"+totalTransferCost+"','"
+                            +transferTitle+"','"+startDate+"','"+endDate+"','"+transferCycle+"','"+transferCycleUnits+"','"+receiverFirstName+"','"
+                            +receiverLastName+"','"+receiverTown+"','"+receiverPostCode+"','"+receiverStreet+"','"+receiverStreetNumber+"');");
+                } catch (Exception e) {
+                    System.out.println(e);
+                }
+                break;
+            case "OutgoingHistorySavings":
+                try {
+                    st.executeUpdate("insert into OutgoingHistorySavings values('"+operationDate+"','"+transferType+"','"+senderAccountNumber+"','"
+                            +receiverAccountNumber+"','"+phoneNumber+"','"+transferAmount+"','"+transferCurrency+"','"+totalTransferCost+"','"
+                            +transferTitle+"','"+startDate+"','"+endDate+"','"+transferCycle+"','"+transferCycleUnits+"','"+receiverFirstName+"','"
+                            +receiverLastName+"','"+receiverTown+"','"+receiverPostCode+"','"+receiverStreet+"','"+receiverStreetNumber+"');");
+                } catch (Exception e) {
+                    System.out.println(e);
+                }
+                break;
+            case "IncomingHistoryOrdinary":
+                try {
+                    st.executeUpdate("insert into IncomingHistoryOrdinary values('"+operationDate+"','"+transferType+"','"+senderAccountNumber+"','"
+                            +receiverAccountNumber+"','"+phoneNumber+"','"+transferAmount+"','"+transferCurrency+"','"+totalTransferCost+"','"
+                            +transferTitle+"','"+startDate+"','"+endDate+"','"+transferCycle+"','"+transferCycleUnits+"','"+receiverFirstName+"','"
+                            +receiverLastName+"','"+receiverTown+"','"+receiverPostCode+"','"+receiverStreet+"','"+receiverStreetNumber+"');");
+                } catch (Exception e) {
+                    System.out.println(e);
+                }
+                break;
+            case "IncomingHistorySavings":
+                try {
+                    st.executeUpdate("insert into IncomingHistorySavings values('"+operationDate+"','"+transferType+"','"+senderAccountNumber+"','"
+                            +receiverAccountNumber+"','"+phoneNumber+"','"+transferAmount+"','"+transferCurrency+"','"+totalTransferCost+"','"
+                            +transferTitle+"','"+startDate+"','"+endDate+"','"+transferCycle+"','"+transferCycleUnits+"','"+receiverFirstName+"','"
+                            +receiverLastName+"','"+receiverTown+"','"+receiverPostCode+"','"+receiverStreet+"','"+receiverStreetNumber+"');");
+                } catch (Exception e) {
+                    System.out.println(e);
+                }
+                break;
+            default:
+                System.out.println("Incorrect database!");
+        }
+    }
     public static void addCredit(String username, float amount, float amount_payed, String start_date, int duration){
         try{
             st.executeUpdate("insert into Credits values('"+username+"','"+amount+"','"+amount_payed+"','"+start_date+"','"+duration+"');");
@@ -69,6 +120,18 @@ public class Database {
         System.out.println("Couldn't execute the query");
         System.out.println(e);
     }
+    }
+    public static String[] getCredit(String username){
+        String[] Credit = new String[4];
+        try{
+            ResultSet rs = st.executeQuery("select * from Credits where username='"+username+"';");
+            rs.next();
+            for(int i=0;i<4;i++){Credit[i]=rs.getString(i);}
+        }catch(SQLException e) {
+            System.out.println("Couldn't execute the query");
+            System.out.println(e);
+        }
+        return Credit;
     }
     public static String getEmail(String username){
         try {
@@ -213,6 +276,14 @@ public class Database {
             System.out.println(e);
         }
     }
+    public static void setCreditAmountPayed(String username,float amount_payed){
+        try{
+            st.executeUpdate("update Credits set `amount payed`='"+amount_payed+"'where username='"+username+"';");
+        }catch(SQLException e) {
+            System.out.println("Couldn't execute the query");
+            System.out.println(e);
+        }
+    }
     public static boolean isUsernameTaken(String username){
         try{
             ResultSet rs = st.executeQuery("select count(*) from Users where username='"+username+"';");
@@ -239,6 +310,18 @@ public class Database {
         return false;
     }
 
+    public static boolean hasCredit(String username){
+        try{
+            ResultSet rs = st.executeQuery("select count(*) from Credits where username='"+username+"';");
+            rs.next();
+            return rs.getInt(1)==1;
+        }
+        catch(SQLException e){
+            System.out.println("Couldn't execute the query");
+            System.out.println(e);
+        }
+        return false;
+    }
     public static boolean hasCard(String username){
         try {
             ResultSet rs = st.executeQuery("select count(*) from Cards where username='" + username + "';");
@@ -268,58 +351,6 @@ public class Database {
            System.out.println("Couldn't execute the query");
            System.out.println(e);
        }
-    }
-
-    public static void addToHistory(Statement st, String database, String operationDate, String transferType,
-                                    String senderAccountNumber, String receiverAccountNumber, String phoneNumber,
-                                    double transferAmount, String transferCurrency, double totalTransferCost,
-                                    String transferTitle, String startDate, String endDate, int transferCycle,
-                                    String transferCycleUnits, String receiverFirstName, String receiverLastName,
-                                    String receiverTown, String receiverPostCode, String receiverStreet, String receiverStreetNumber){
-        switch(database){
-            case "OutgoingHistoryOrdinary":
-                try {
-                    st.executeUpdate("insert into OutgoingHistoryOrdinary values('"+operationDate+"','"+transferType+"','"+senderAccountNumber+"','"
-                            +receiverAccountNumber+"','"+phoneNumber+"','"+transferAmount+"','"+transferCurrency+"','"+totalTransferCost+"','"
-                            +transferTitle+"','"+startDate+"','"+endDate+"','"+transferCycle+"','"+transferCycleUnits+"','"+receiverFirstName+"','"
-                            +receiverLastName+"','"+receiverTown+"','"+receiverPostCode+"','"+receiverStreet+"','"+receiverStreetNumber+"');");
-                } catch (Exception e) {
-                    System.out.println(e);
-                }
-                break;
-            case "OutgoingHistorySavings":
-                try {
-                    st.executeUpdate("insert into OutgoingHistorySavings values('"+operationDate+"','"+transferType+"','"+senderAccountNumber+"','"
-                            +receiverAccountNumber+"','"+phoneNumber+"','"+transferAmount+"','"+transferCurrency+"','"+totalTransferCost+"','"
-                            +transferTitle+"','"+startDate+"','"+endDate+"','"+transferCycle+"','"+transferCycleUnits+"','"+receiverFirstName+"','"
-                            +receiverLastName+"','"+receiverTown+"','"+receiverPostCode+"','"+receiverStreet+"','"+receiverStreetNumber+"');");
-                } catch (Exception e) {
-                    System.out.println(e);
-                }
-                break;
-            case "IncomingHistoryOrdinary":
-                try {
-                    st.executeUpdate("insert into IncomingHistoryOrdinary values('"+operationDate+"','"+transferType+"','"+senderAccountNumber+"','"
-                            +receiverAccountNumber+"','"+phoneNumber+"','"+transferAmount+"','"+transferCurrency+"','"+totalTransferCost+"','"
-                            +transferTitle+"','"+startDate+"','"+endDate+"','"+transferCycle+"','"+transferCycleUnits+"','"+receiverFirstName+"','"
-                            +receiverLastName+"','"+receiverTown+"','"+receiverPostCode+"','"+receiverStreet+"','"+receiverStreetNumber+"');");
-                } catch (Exception e) {
-                    System.out.println(e);
-                }
-                break;
-            case "IncomingHistorySavings":
-                try {
-                    st.executeUpdate("insert into IncomingHistorySavings values('"+operationDate+"','"+transferType+"','"+senderAccountNumber+"','"
-                            +receiverAccountNumber+"','"+phoneNumber+"','"+transferAmount+"','"+transferCurrency+"','"+totalTransferCost+"','"
-                            +transferTitle+"','"+startDate+"','"+endDate+"','"+transferCycle+"','"+transferCycleUnits+"','"+receiverFirstName+"','"
-                            +receiverLastName+"','"+receiverTown+"','"+receiverPostCode+"','"+receiverStreet+"','"+receiverStreetNumber+"');");
-                } catch (Exception e) {
-                    System.out.println(e);
-                }
-                break;
-            default:
-                System.out.println("Incorrect database!");
-        }
     }
     public static void main(String[] args) {
     Statement st = connectToDatabase("bank_system", "root","password");
