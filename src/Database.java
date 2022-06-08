@@ -352,6 +352,14 @@ public class Database {
            System.out.println(e);
        }
     }
+    public static void deleteCredit(String username){
+        try{
+            st.executeUpdate("delete from Credits where username='"+username+"';");
+        }catch(SQLException e) {
+            System.out.println("Couldn't execute the query");
+            System.out.println(e);
+        }
+    }
     public static void main(String[] args) {
     Statement st = connectToDatabase("bank_system", "root","password");
     String[] card = getCard("test_user");

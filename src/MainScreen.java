@@ -19,9 +19,9 @@ public class MainScreen extends Screen {
     public JLabel timeCounter;
     public JLabel AccNumber;
     public JLabel AccType;
-    private JButton foreignTransferButton;
-    private JButton ownTransferButton;
-    private JButton standingOrderTransferButton;
+    public JButton foreignTransferButton;
+    public JButton ownTransferButton;
+    public JButton standingOrderTransferButton;
     public int counter = 0;
     String chosenAcc;
     String []options = {"one","two"};

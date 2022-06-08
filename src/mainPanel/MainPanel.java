@@ -12,9 +12,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class MainPanel {
-    private JPanel mainPanel;
-    private JLabel panelTitleLabel;
-    private MainFrame frame;
+    public JPanel mainPanel;
+    public JLabel panelTitleLabel;
+    public MainFrame frame;
     public MainPanel(MainFrame mainFrame){
         frame = mainFrame;
         frame.getjFrame().setContentPane(mainPanel);

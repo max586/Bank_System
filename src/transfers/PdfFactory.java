@@ -11,10 +11,10 @@ public class PdfFactory {
         STANDARD, BLIK, ZLECENIESTALE, WLASNY;
     }
 
-    private String generationDate;
-    private Map<String, String> senderData;
-    private Map<String, String> receiverData;
-    private Map<String, String> transferData;
+    public String generationDate;
+    public Map<String, String> senderData;
+    public Map<String, String> receiverData;
+    public Map<String, String> transferData;
 
     public PdfFactory(String generationDate1, Map<String, String> senderData1, Map<String, String> receiverData1, Map<String, String> transferData1) {
         generationDate = generationDate1;

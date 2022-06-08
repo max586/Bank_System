@@ -39,7 +39,7 @@ public class ShowUserDataScreen extends Screen{
     public JLabel lastNameLabel;
     public JPanel panel;
     public JLabel timerLabel;
-    private JLabel peselLabel;
+    public JLabel peselLabel;
     public int counter=0;
     public ShowUserDataScreen(User user, Screen prev_screen, Screen next_screen){
         super(user,prev_screen,next_screen);

@@ -13,8 +13,8 @@ import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
 
 public class CurrenciesExchangeRate {
-    private final Map<String,String> currencies;
-    private final Map<Map.Entry<String,String>,Double> currenciesWithAmounts;
+    public final Map<String,String> currencies;
+    public final Map<Map.Entry<String,String>,Double> currenciesWithAmounts;
     String baseCurrencyCode = "PLN";
     CurrenciesExchangeRate() {
         currencies = new LinkedHashMap<>();

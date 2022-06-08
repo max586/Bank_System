@@ -10,14 +10,14 @@ import java.awt.event.WindowEvent;
 import src.mainPanel.MainPanel;
 public class AppTimer {
         JLabel timeLabel;
-        private int initMinutes = 2;
-        private int initSeconds = 0;
-        private int initElapsedTime = 60000*initMinutes;
-        private int minutes = initMinutes;
-        private int seconds = initSeconds;
-        private int elapsedTime = initElapsedTime;
-        private Timer timer;
-        private MainFrame frame;
+        public int initMinutes = 2;
+        public int initSeconds = 0;
+        public int initElapsedTime = 60000*initMinutes;
+        public int minutes = initMinutes;
+        public int seconds = initSeconds;
+        public int elapsedTime = initElapsedTime;
+        public Timer timer;
+        public MainFrame frame;
 
         public AppTimer(JLabel timeLabel1,MainFrame mainFrame){
             frame = mainFrame;

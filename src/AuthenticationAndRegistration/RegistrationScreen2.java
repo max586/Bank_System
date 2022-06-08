@@ -30,8 +30,10 @@ public class RegistrationScreen2 extends Screen{
     public JLabel sexLabel;
     public JPanel panel;
     public JLabel timerLabel;
-    private JLabel phoneNrLabel;
-    private JTextField phoneNrField;
+    public JLabel phoneNrLabel;
+    public JTextField phoneNrField;
+    public JTextField streetNrField;
+    public JLabel streetNrLabel;
     public int counter=0;
 
     public RegistrationScreen2(){}
@@ -49,10 +51,10 @@ public class RegistrationScreen2 extends Screen{
                 String firstName=firstNameField.getText();
                 String lastName=lastNameField.getText();
                 String sex=(String)sexComboBox.getSelectedItem();
-                //String phone_nr=();
+                String phone_nr=phoneNrField.getText();
                 String pesel=peselField.getText();
                 String city = cityField.getText();
-                String address = streetField.getText();
+                String ad = streetField.getText();
                 boolean lname_is_valid= DataValidation.nameIsValid(lastName), fname_is_valid=DataValidation.nameIsValid(firstName),
                         pesel_is_valid=DataValidation.peselIsValid(pesel, (sex=="M")),
                         address_is_valid=DataValidation.addressIsValid(address),

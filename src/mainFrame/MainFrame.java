@@ -2,7 +2,7 @@ package src.mainFrame;
 
 import javax.swing.*;
 public class MainFrame {
-    private JFrame jFrame;
+    public JFrame jFrame;
     public MainFrame(){
         jFrame = new JFrame();
         jFrame.setSize(1080,720);

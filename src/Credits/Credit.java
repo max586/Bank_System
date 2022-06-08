@@ -13,19 +13,19 @@ import java.sql.Statement;
 
 public class Credit extends Screen
 {
-    private JPanel CreditPanel;
-    private JLabel CreditLogo;
-    private JLabel AccNum;
-    private JTextField Amount;
-    private JTextField Years;
-    private JCheckBox yesCheckBox;
-    private JLabel Balance;
-    private JButton takeNewCreditButton;
-    private JLabel MyCreditAmount;
-    private JLabel MyPayedCredit;
-    private JLabel MyDebt;
-    private JButton payDebtButton;
-    private JButton prevButton;
+    public JPanel CreditPanel;
+    public JLabel CreditLogo;
+    public JLabel AccNum;
+    public JTextField Amount;
+    public JTextField Years;
+    public JCheckBox yesCheckBox;
+    public JLabel Balance;
+    public JButton takeNewCreditButton;
+    public JLabel MyCreditAmount;
+    public JLabel MyPayedCredit;
+    public JLabel MyDebt;
+    public JButton payDebtButton;
+    public JButton prevButton;
     public JOptionPane jpane;
     public JDialog jdialog;
 
@@ -86,7 +86,7 @@ public class Credit extends Screen
         frame.setSize(1080, 720);
         frame.setVisible(true);
     }
-    private double checkDebt(User user)
+    public double checkDebt(User user)
     {
         double creditAmount = 0;
         double currentCreditPayment = 0;

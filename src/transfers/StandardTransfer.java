@@ -63,8 +63,8 @@ public class StandardTransfer implements src.transfers.Transfer {
     protected JLabel accountNumberLabel;
     protected JLabel currencyInfoLabel;
     protected JComboBox accountNumberCountryComboBox;
-    private JPanel timerPanel;
-    private JLabel timeLabel;
+    public JPanel timerPanel;
+    public JLabel timeLabel;
     protected JLabel[] warnings = {accountNumberWarning, transferAmountWarning, expressTransferWarning, postcodeWarning, transferTitleWarning, receiverName1Warning, receiverName2Warning, townNameWarning, streetNameWarning, streetNumberWarning};
     protected boolean isCompany;
     protected boolean isPerson;
@@ -498,7 +498,7 @@ class OnlyNumbers{
 }
 
 class LimitJTextField extends PlainDocument {
-    private final int max;
+    public final int max;
     LimitJTextField(int max) {
         super();
         this.max = max;
