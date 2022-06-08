@@ -10,8 +10,8 @@ public class TransferFactory {
     public enum TransferType {
         KRAJOWY, ZAGRANICZNY, ZLECENIESTALE, TELEFONBLIK, WLASNY;
     }
-    public MainFrame frame;
-    public Map<String,String> senderData;
+    private MainFrame frame;
+    private Map<String,String> senderData;
 
     public TransferFactory(MainFrame mainFrame, Map<String,String> senderData1){
         frame = mainFrame;

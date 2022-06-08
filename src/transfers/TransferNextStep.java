@@ -1,10 +1,13 @@
 package src.transfers;
 
 import src.mainFrame.MainFrame;
+import src.timer.AppTimer;
+import src.timer.MouseAction;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.Statement;
 import java.util.Map;
 
 
@@ -17,38 +20,43 @@ data: nr. konra, imie, nazwisko, {adres: Miejscowosc, Kod pocztowy, ulica, Nr. d
  */
 
 public class TransferNextStep {
-    public JLabel senderName;
-    public JLabel senderSurname;
-    public JLabel receiverName;
-    public JLabel receiverSurname;
-    public JLabel senderAccountNumber;
-    public JLabel receiverAccountNumber;
-    public JLabel transferTitle;
-    public JLabel transferAmount;
-    public JLabel transferPayment;
-    public JLabel transferType;
-    public JButton cancelButton;
-    public JButton nextButton;
-    public Map<String,String> senderData;
-    public Map<String,String> receiverData;
-    public Map<String,String> transferData;
-    public JPanel transferNextStepPanel;
-    public JLabel currencyLabel;
-    public JLabel transferPanelTitleLabel;
-    public JLabel equalsLabel;
-    public JLabel polishCurrencyAmountLabel;
-    public JLabel polishCurrencyLabel;
-    public JLabel transferPaymentCurrencyLabel;
-    public JLabel feeLabel;
-    public JLabel dateFrom;
-    public JLabel dateToLabel;
-    public JLabel dateTo;
-    public String transferPanelTitle;
-    public JPanel cancelPanel;
-    public MainFrame frame;
+    private JLabel senderName;
+    private JLabel senderSurname;
+    private JLabel receiverName;
+    private JLabel receiverSurname;
+    private JLabel senderAccountNumber;
+    private JLabel receiverAccountNumber;
+    private JLabel transferTitle;
+    private JLabel transferAmount;
+    private JLabel transferPayment;
+    private JLabel transferType;
+    private JButton cancelButton;
+    private JButton nextButton;
+    private Map<String,String> senderData;
+    private Map<String,String> receiverData;
+    private Map<String,String> transferData;
+    private JPanel transferNextStepPanel;
+    private JLabel currencyLabel;
+    private JLabel transferPanelTitleLabel;
+    private JLabel equalsLabel;
+    private JLabel polishCurrencyAmountLabel;
+    private JLabel polishCurrencyLabel;
+    private JLabel transferPaymentCurrencyLabel;
+    private JLabel feeLabel;
+    private JLabel dateFrom;
+    private JLabel dateToLabel;
+    private JLabel dateTo;
+    private JPanel timerPanel;
+    private JLabel timeLabel;
+    private String transferPanelTitle;
+    private JPanel cancelPanel;
+    private MainFrame frame;
 
     public TransferNextStep(MainFrame mainFrame, JPanel transferPanel, Map<String,String> senderData1, Map<String,String> receiverData1, Map<String,String> transferData1){
         frame = mainFrame;
+        AppTimer appTimer = new AppTimer(timeLabel,mainFrame);
+        transferNextStepPanel.addMouseMotionListener(new MouseAction(appTimer));
+        appTimer.start();
         cancelPanel = transferPanel;
         senderData = senderData1;
         this.receiverData = receiverData1;

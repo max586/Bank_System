@@ -1,10 +1,11 @@
-package src;
-
+import database.Database;
+import database.DataBaseConnect;
 import src.mainFrame.MainFrame;
 import src.transfers.*;
-
+import  src.mainPanel.*;
 import java.awt.*;
 import java.io.IOException;
+import java.sql.Statement;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -25,6 +26,9 @@ public class App {
         nadawcaDane.put("kod pocztowy","30-348");
         nadawcaDane.put("ulica","Grota-Roweckiego");
         nadawcaDane.put("nr domu","37/17");
-        Transfer t1 = new TransferFactory(new MainFrame(),nadawcaDane).getTransfer(TransferFactory.TransferType.ZLECENIESTALE);
+        Transfer t1 = new TransferFactory(new MainFrame(),nadawcaDane).getTransfer(TransferFactory.TransferType.TELEFONBLIK);
+        //MainPanel m = new MainPanel(new MainFrame());
+//        Statement st = DataBaseConnect.st;
+//        Database.addUser(st,"Adr","passwd","ad@gmail.com","1234");
     }
 }

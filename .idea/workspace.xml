@@ -6,11 +6,24 @@
   <component name="ChangeListManager">
     <list default="true" id="bea002ff-8e44-4e85-a29b-66b1294d710d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationAndRegistration/AuthenticationScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AuthenticationAndRegistration/AuthenticationScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationAndRegistration/EmailVerificationScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AuthenticationAndRegistration/EmailVerificationScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Database.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/JavaMail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/JavaMail.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/src/JavaMailTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/src/JavaMailTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainFrame/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainFrame/MainFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/transfers/BlikPhoneTransfer.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfers/BlikPhoneTransfer.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/transfers/BlikPhoneTransfer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfers/BlikPhoneTransfer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/transfers/CurrenciesExchangeRate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfers/CurrenciesExchangeRate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/transfers/FileSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfers/FileSystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/transfers/ForeignStandardTransfer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfers/ForeignStandardTransfer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/transfers/OwnTransfer.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfers/OwnTransfer.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/transfers/OwnTransfer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfers/OwnTransfer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/transfers/StandardTransfer.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfers/StandardTransfer.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/transfers/StandardTransfer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfers/StandardTransfer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/transfers/StandingOrderNextStep.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfers/StandingOrderNextStep.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/transfers/StandingOrderNextStep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfers/StandingOrderNextStep.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/transfers/TransferConfirm.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfers/TransferConfirm.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/transfers/TransferConfirm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfers/TransferConfirm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/transfers/TransferFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfers/TransferFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/transfers/TransferNextStep.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfers/TransferNextStep.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/transfers/TransferNextStep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfers/TransferNextStep.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -300,7 +313,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654645145195</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="sth added">
+      <created>1654684438688</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1654684438688</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -335,14 +355,14 @@
     <MESSAGE value="sth" />
     <MESSAGE value="AuthenticationScreen.form added" />
     <MESSAGE value="added screen with generated accounts and credit card numbers after registration(CreatedAccountAndCardNumberScreen)" />
-    <MESSAGE value="sth added" />
     <MESSAGE value="duplicated windows bug solved" />
     <MESSAGE value="junit test classes added(tests folder)" />
     <MESSAGE value="123" />
     <MESSAGE value="refactored" />
     <MESSAGE value="new test added" />
     <MESSAGE value="-added test for JavaMail&#10;-added ShowScreen in Settings&#10;-fixed timer" />
-    <option name="LAST_COMMIT_MESSAGE" value="-added test for JavaMail&#10;-added ShowScreen in Settings&#10;-fixed timer" />
+    <MESSAGE value="sth added" />
+    <option name="LAST_COMMIT_MESSAGE" value="sth added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

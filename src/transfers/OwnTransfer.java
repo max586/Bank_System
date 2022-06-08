@@ -1,6 +1,8 @@
 package src.transfers;
 
 import src.mainFrame.MainFrame;
+import src.timer.AppTimer;
+import src.timer.MouseAction;
 
 import javax.swing.*;
 import javax.swing.event.MenuEvent;
@@ -14,37 +16,43 @@ import java.util.Map;
 import java.util.Vector;
 
 public class OwnTransfer implements Transfer{
-    public MainFrame frame;
-    public JPanel OwnTransferPanel;
-    public JLabel panelTitleLabel;
-    public JMenuBar chooseAccountMenuBar;
-    public JTextField transferAmount1Txt;
-    public JTextField transferAmount2Txt;
-    public JLabel transferAmountWarning;
-    public JTextArea transferTitleTextArea;
-    public JLabel transferTitleWarning;
-    public JButton cancelButton;
-    public JButton nextButton;
-    public JLabel receiverInfoLabel;
-    public JLabel receiverLabel;
-    public JLabel senderAccountWarning;
-    public Font customFont;
-    public JMenu jMenu;
-    public boolean isMainAccountSelected;
-    public boolean isSavingAccountSelected;
-    public boolean isAmountValid;
-    public double transferAmount1 = 0.0;
-    public double transferAmount2 = 0.0;
-    public double finalTransferAmount = 0.0;
-    public double senderAmount = 0.0;
-    public KeyAdapter numbersOnly;
-    public Map<String,String> senderData;
-    public Map<String,String> receiverData;
-    public Map<String,String> transferData;
-    public Vector<Boolean> validation;
-    public String choosedAcount="";
+    private MainFrame frame;
+    private JPanel OwnTransferPanel;
+    private JLabel panelTitleLabel;
+    private JMenuBar chooseAccountMenuBar;
+    private JTextField transferAmount1Txt;
+    private JTextField transferAmount2Txt;
+    private JLabel transferAmountWarning;
+    private JTextArea transferTitleTextArea;
+    private JLabel transferTitleWarning;
+    private JButton cancelButton;
+    private JButton nextButton;
+    private JLabel receiverInfoLabel;
+    private JLabel receiverLabel;
+    private JLabel senderAccountWarning;
+    private JPanel timerPanel;
+    private JLabel timeLabel;
+    private Font customFont;
+    private JMenu jMenu;
+    private boolean isMainAccountSelected;
+    private boolean isSavingAccountSelected;
+    private boolean isAmountValid;
+    private double transferAmount1 = 0.0;
+    private double transferAmount2 = 0.0;
+    private double finalTransferAmount = 0.0;
+    private double senderAmount = 0.0;
+    private KeyAdapter numbersOnly;
+    private Map<String,String> senderData;
+    private Map<String,String> receiverData;
+    private Map<String,String> transferData;
+    private Vector<Boolean> validation;
+    private String choosedAcount="";
 
     public OwnTransfer(MainFrame mainFrame, Map<String,String> senderData1) {
+        frame = mainFrame;
+        AppTimer appTimer = new AppTimer(timeLabel,frame);
+        OwnTransferPanel.addMouseMotionListener(new MouseAction(appTimer));
+        appTimer.start();
         try {
             setFonts();
         } catch (IOException e) {
@@ -57,7 +65,6 @@ public class OwnTransfer implements Transfer{
         receiverData = new HashMap<>();
         transferData = new HashMap<>();
         transferData.put("waluta","PLN");
-        frame = mainFrame;
         setLabels();
         setjMenu();
         setTransferAmountTxt(transferAmount1Txt);

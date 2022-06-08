@@ -1,7 +1,7 @@
 package src.transfers;
 
 import src.mainFrame.MainFrame;
-
+import src.timer.*;
 import javax.swing.*;
 import javax.swing.text.AttributeSet;
 import javax.swing.text.BadLocationException;
@@ -61,6 +61,8 @@ public class StandardTransfer implements Transfer{
     protected JLabel accountNumberLabel;
     protected JLabel currencyInfoLabel;
     protected JComboBox accountNumberCountryComboBox;
+    private JPanel timerPanel;
+    private JLabel timeLabel;
     protected JLabel[] warnings = {accountNumberWarning, transferAmountWarning, expressTransferWarning, postcodeWarning, transferTitleWarning, receiverName1Warning, receiverName2Warning, townNameWarning, streetNameWarning, streetNumberWarning};
     protected boolean isCompany;
     protected boolean isPerson;
@@ -84,9 +86,12 @@ public class StandardTransfer implements Transfer{
     protected MainFrame frame;
     public StandardTransfer(){}
     public StandardTransfer(MainFrame mainFrame, Map<String, String> senderData1) throws IOException, FontFormatException {
+        frame = mainFrame;
+        AppTimer appTimer = new AppTimer(timeLabel,frame);
+        transferPanel1.addMouseMotionListener(new MouseAction(appTimer));
+        appTimer.start();
         isCountry = false;
         countryISO = "PL ";
-        frame = mainFrame;
         senderData = senderData1;
         senderAmount = Double.parseDouble(senderData.get("kontosrodki"));
         receiverData = new HashMap<>();
@@ -499,7 +504,7 @@ class OnlyNumbers{
 }
 
 class LimitJTextField extends PlainDocument {
-    public final int max;
+    private final int max;
     LimitJTextField(int max) {
         super();
         this.max = max;

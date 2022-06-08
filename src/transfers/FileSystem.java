@@ -10,8 +10,8 @@ import java.util.Objects;
 import java.util.Vector;
 
 public class FileSystem implements TreeModel {
-    public final Vector<TreeModelListener> treeModelListeners = new Vector<>();
-    public final File fileRoot;
+    private final Vector<TreeModelListener> treeModelListeners = new Vector<>();
+    private final File fileRoot;
 
     public FileSystem(){
         fileRoot = new File(System.getProperty("user.home"));

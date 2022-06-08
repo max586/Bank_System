@@ -13,11 +13,11 @@ import java.util.Locale;
 import java.util.Map;
 
 public class ForeignStandardTransfer extends StandardTransfer implements Transfer{
-    public final Map<String,String> currencies;
-    public final CurrenciesExchangeRate currenciesExchangeRate;
-    public String currency;
-    public double converter;
-    public java.util.List<String> countriesISO;
+    private final Map<String,String> currencies;
+    private final CurrenciesExchangeRate currenciesExchangeRate;
+    private String currency;
+    private double converter;
+    private java.util.List<String> countriesISO;
     ForeignStandardTransfer(MainFrame mainFrame, Map<String, String> senderData1) throws IOException, FontFormatException {
         super(mainFrame,senderData1);
         isCountry = true;
