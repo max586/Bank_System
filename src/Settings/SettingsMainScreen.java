@@ -127,7 +127,7 @@ public class SettingsMainScreen extends Screen {
         test_user.lastName="ln";
         test_user.sex="M";
         test_user.city="somewhere";
-        test_user.address="ul x, y";
+        //test_user.address="ul x, y";
         test_user.pesel="666";
         test_user.ordinary_account_number="PL666";
         test_user.savings_account_number="PL999";

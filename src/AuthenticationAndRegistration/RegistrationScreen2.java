@@ -34,6 +34,8 @@ public class RegistrationScreen2 extends Screen{
     public JTextField phoneNrField;
     public JTextField streetNrField;
     public JLabel streetNrLabel;
+    public JLabel postCodeLabel;
+    public JTextField postCodeField;
     public int counter=0;
 
     public RegistrationScreen2(){}
@@ -44,7 +46,7 @@ public class RegistrationScreen2 extends Screen{
         
         frame.setContentPane(panel);
 
-        Statement st = Database.connectToDatabase("bank_system", "root", "password");
+        
         submitButton.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
 
@@ -54,33 +56,42 @@ public class RegistrationScreen2 extends Screen{
                 String phone_nr=phoneNrField.getText();
                 String pesel=peselField.getText();
                 String city = cityField.getText();
-                String ad = streetField.getText();
+                String post_code = postCodeField.getText();
+                String street = streetField.getText();
+                int street_nr = Integer.parseInt(streetNrField.getText());
                 boolean lname_is_valid= DataValidation.nameIsValid(lastName), fname_is_valid=DataValidation.nameIsValid(firstName),
-                        pesel_is_valid=DataValidation.peselIsValid(pesel, (sex=="M")),
-                        address_is_valid=DataValidation.addressIsValid(address),
-                        city_is_valid=DataValidation.cityIsValid(city);
+                        pesel_is_valid=DataValidation.peselIsValid(pesel, (sex=="M")),post_code_is_valid=true,
+                        city_is_valid=DataValidation.cityIsValid(city),street_is_valid=true,street_nr_is_valid=true,
+                        phone_nr_is_valid=true;
                 if(!fname_is_valid){firstNameField.setText("First name is invalid");}
                 else{firstNameField.setText("ok");}
                 if(!lname_is_valid){lastNameField.setText("Last name is invalid");}
                 else{lastNameField.setText("ok");}
-                if(!address_is_valid){
-                    streetField.setText("Address is invalid");}
-                else{
-                    streetField.setText("ok");}
+                if(!phone_nr_is_valid){phoneNrField.setText("Phone nr is invalid");}
+                else{phoneNrField.setText("ok");}
                 if(!city_is_valid){cityField.setText("City is invalid");}
                 else{cityField.setText("ok");}
+                if(!post_code_is_valid){postCodeField.setText("Post code is invalid");}
+                else{postCodeField.setText("ok");}
+                if(!street_is_valid){streetField.setText("Street is invalid");}
+                else{streetField.setText("ok");}
+                if(!street_nr_is_valid){streetNrField.setText("Street number is invalid");}
+                else{streetNrField.setText("ok");}
                 if(!pesel_is_valid){peselField.setText("PESEL is invalid");}
                 else{peselField.setText("ok");}
-                if(fname_is_valid&&lname_is_valid&&address_is_valid&&city_is_valid&&pesel_is_valid){
+                if(fname_is_valid&&lname_is_valid&&phone_nr_is_valid&&city_is_valid&&post_code_is_valid&&street_is_valid&&street_nr_is_valid&&pesel_is_valid){
 
-                    //Database.addUser( user.username, user.password, user.email);
-                    //Database.addUserData( user.username, user.firstName, user.lastName, user.sex, user.city, user.address, user.pesel);
+                    Database.addUser( user.username, user.password, user.email,user.appCode);
+                    Database.addUserData( user.username, user.firstName, user.lastName, user.sex, user.phone_number,user.city,user.post_code,user.street, user.street_nr, user.pesel);
 
                     user.firstName=firstName;
                     user.lastName=lastName;
                     user.sex=sex;
+                    user.phone_number=phone_nr;
                     user.city=city;
-                    user.address=address;
+                    user.post_code=post_code;
+                    user.street=street;
+                    user.street_nr=street_nr;
                     user.pesel=pesel;
 
                     frame.dispose();

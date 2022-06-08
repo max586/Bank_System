@@ -43,7 +43,7 @@
       <component id="65087" class="javax.swing.JButton" binding="changeUsernameButton" default-binding="true">
         <constraints>
           <grid row="0" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
-          <gridbag weightx="0.0" weighty="0.2"/>
+          <gridbag weightx="1.0" weighty="0.2"/>
         </constraints>
         <properties>
           <font size="18"/>
@@ -84,12 +84,6 @@
           <text value="Exit"/>
         </properties>
       </component>
-      <hspacer id="be3ad">
-        <constraints>
-          <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-          <gridbag weightx="0.0" weighty="0.0"/>
-        </constraints>
-      </hspacer>
       <component id="e79a6" class="javax.swing.JLabel" binding="timerLabel">
         <constraints>
           <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>

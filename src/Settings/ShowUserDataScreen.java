@@ -20,7 +20,7 @@ public class ShowUserDataScreen extends Screen{
     public JTextField lastNameField;
     public JTextField sexField;
     public JTextField cityField;
-    public JTextField addressField;
+    public JTextField streetField;
     public JTextField peselField;
     public JTextField ordinaryField;
     public JTextField savingsField;
@@ -31,7 +31,7 @@ public class ShowUserDataScreen extends Screen{
     public JLabel firstNameLabel;
     public JLabel cityLabel;
     public JLabel sexLabel;
-    public JLabel addressLabel;
+    public JLabel streetLabel;
     public JLabel ordinaryLabel;
     public JLabel savingsLabel;
     public JLabel cardLabel;
@@ -40,6 +40,14 @@ public class ShowUserDataScreen extends Screen{
     public JPanel panel;
     public JLabel timerLabel;
     public JLabel peselLabel;
+    public JLabel phoneNrLabel;
+    public JTextField phoneNrField;
+    public JLabel streetNrLabel;
+    public JTextField streetNrField;
+    public JLabel postCodeLabel;
+    public JTextField postCodeField;
+    public JLabel appCodeLabel;
+    public JTextField appCodeField;
     public int counter=0;
     public ShowUserDataScreen(User user, Screen prev_screen, Screen next_screen){
         super(user,prev_screen,next_screen);
@@ -50,11 +58,15 @@ public class ShowUserDataScreen extends Screen{
         usernameField.setText(user.username);
         passwordField.setText(user.password);
         emailField.setText(user.email);
+        appCodeField.setText(user.appCode);
         firstNameField.setText(user.firstName);
         lastNameField.setText(user.lastName);
         sexField.setText(user.sex);
         cityField.setText(user.city);
-        addressField.setText(user.address);
+        phoneNrField.setText(user.phone_number);
+        postCodeField.setText(user.post_code);
+        streetField.setText(user.street);
+        streetNrField.setText(Integer.toString(user.street_nr));
         peselField.setText(user.pesel);
         ordinaryField.setText(user.ordinary_account_number);
         savingsField.setText(user.savings_account_number);

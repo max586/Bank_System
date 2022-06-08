@@ -9,13 +9,16 @@ public class User {
     //attributes may not be initialized
     public String username;
     public String password;
-    public String email;   
+    public String email;
+    public String appCode;
     public String firstName;
     public String lastName;
     public String sex;
     public String phone_number;
     public String city;
-    public String address;
+    public String post_code;
+    public String street;
+    public int street_nr;
     public String pesel; 
     public String ordinary_account_number;
     public float ordinary_account_balance;

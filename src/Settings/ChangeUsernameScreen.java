@@ -32,7 +32,7 @@ public class ChangeUsernameScreen extends Screen{
             @Override
             public void actionPerformed(ActionEvent e) {
                 // TODO Auto-generated method stub
-                Statement st = Database.connectToDatabase("bank_system", "root", "password");
+                
                 String new_username = usernameField.getText();
                 if(Database.isUsernameTaken( new_username)){
                     usernameField.setText("username is already taken");

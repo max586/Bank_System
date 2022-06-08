@@ -216,7 +216,7 @@ public class Database {
         return card;
     }
     public static String[] getUserData(String username){
-        String[] user_data = new String[6];
+        String[] user_data = new String[9];
         try{
             ResultSet rs = st.executeQuery("select * from UsersData where username='"+username+"';");
             rs.next();
@@ -226,6 +226,9 @@ public class Database {
             user_data[3]=rs.getString(5);
             user_data[4]=rs.getString(6);
             user_data[5]=rs.getString(7);
+            user_data[6]=rs.getString(8);
+            user_data[7]=rs.getString(9);
+            user_data[8]=rs.getString(10);
         }catch(SQLException e) {
             System.out.println("Couldn't execute the query");
             System.out.println(e);

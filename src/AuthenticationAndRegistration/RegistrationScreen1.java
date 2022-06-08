@@ -41,7 +41,7 @@ public class RegistrationScreen1 extends Screen {
         
         frame.setContentPane(panel);
 
-        Statement st = Database.connectToDatabase("bank_system", "root", "password");
+        
         submitButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 Boolean password_is_valid = true, username_is_taken;

@@ -43,7 +43,7 @@ public class ChangePasswordScreen1 extends Screen{
             @Override
             public void actionPerformed(ActionEvent e) {
                 // TODO Auto-generated method stub
-                Statement st = Database.connectToDatabase("bank_system", "root", "password");
+                
 
                 String prev_password = new String(prevPasswordField.getPassword());
                 String new_password = new String(newPasswordField.getPassword());
