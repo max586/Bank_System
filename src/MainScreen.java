@@ -2,17 +2,24 @@ package src;
 import src.AuthenticationAndRegistration.AuthenticationScreen;
 import src.Credits.Credit;
 import src.Settings.SettingsMainScreen;
+import src.mainFrame.MainFrame;
+import src.transfers.AccountChoosed;
+import src.transfers.OrdinaryHistory;
+import src.transfers.SavingsHistory;
+import src.transfers.TransferFactory;
 
 import javax.swing.*;
+import java.awt.*;
 import java.io.IOException;
 import javax.swing.JPanel;
 import java.awt.event.*;
+import java.sql.SQLException;
 import java.sql.Statement;
 
 public class MainScreen extends Screen {
     public JPanel AuthPanel;
     public JButton PROFILButton;
-    public JButton BLIKButton;
+    public JButton incountryButton;
     public JButton KREDYTYButton;
     public JButton wylogujButton;
     public JButton prevButton;
@@ -22,7 +29,9 @@ public class MainScreen extends Screen {
     public JButton foreignTransferButton;
     public JButton ownTransferButton;
     public JButton standingOrderTransferButton;
-    private JButton historyButton;
+    private JButton savingsButton;
+    private JButton BLIKTransferButton;
+    private JButton ordinaryButton;
     public int counter = 0;
     String chosenAcc;
     String []options = {"one","two"};
@@ -69,10 +78,75 @@ public class MainScreen extends Screen {
             });
         */
 //Incountry Transfer, Foreign Transfer, Own Transfer, Standing Order Transfer, BLIK Phone Transfer
-        BLIKButton.addActionListener(e->
-                                     {
-
-                                     });
+        incountryButton.addActionListener(e->
+        {
+            frame.dispose();
+            try {
+                new TransferFactory(AccountChoosed.ORDINARYACCOUNT,user,new MainFrame()).getTransfer(TransferFactory.TransferType.KRAJOWY);
+            } catch (IOException ioException) {
+                ioException.printStackTrace();
+            } catch (FontFormatException fontFormatException) {
+                fontFormatException.printStackTrace();
+            }
+        });
+        foreignTransferButton.addActionListener(e->
+        {
+            frame.dispose();
+            try {
+                new TransferFactory(AccountChoosed.ORDINARYACCOUNT,user,new MainFrame()).getTransfer(TransferFactory.TransferType.ZAGRANICZNY);
+            } catch (IOException ioException) {
+                ioException.printStackTrace();
+            } catch (FontFormatException fontFormatException) {
+                fontFormatException.printStackTrace();
+            }
+        });
+        ownTransferButton.addActionListener(e->
+        {
+            frame.dispose();
+            try {
+                new TransferFactory(AccountChoosed.ORDINARYACCOUNT,user,new MainFrame()).getTransfer(TransferFactory.TransferType.WLASNY);
+            } catch (IOException ioException) {
+                ioException.printStackTrace();
+            } catch (FontFormatException fontFormatException) {
+                fontFormatException.printStackTrace();
+            }
+        });
+        standingOrderTransferButton.addActionListener(e->{
+            frame.dispose();
+            try {
+                new TransferFactory(AccountChoosed.ORDINARYACCOUNT,user,new MainFrame()).getTransfer(TransferFactory.TransferType.ZLECENIESTALE);
+            } catch (IOException ioException) {
+                ioException.printStackTrace();
+            } catch (FontFormatException fontFormatException) {
+                fontFormatException.printStackTrace();
+            }
+        });
+        BLIKTransferButton.addActionListener(e->{
+            frame.dispose();
+            try {
+                new TransferFactory(AccountChoosed.ORDINARYACCOUNT,user,new MainFrame()).getTransfer(TransferFactory.TransferType.TELEFONBLIK);
+            } catch (IOException ioException) {
+                ioException.printStackTrace();
+            } catch (FontFormatException fontFormatException) {
+                fontFormatException.printStackTrace();
+            }
+        });
+        ordinaryButton.addActionListener(e->{
+            frame.dispose();
+            try {
+                new OrdinaryHistory(new MainFrame(),user);
+            } catch (SQLException throwables) {
+                throwables.printStackTrace();
+            }
+        });
+        savingsButton.addActionListener(e->{
+            frame.dispose();
+            try {
+                new SavingsHistory(new MainFrame(),user);
+            } catch (SQLException throwables) {
+                throwables.printStackTrace();
+            }
+        });
         KREDYTYButton.addActionListener(e->
         {
             frame.dispose();

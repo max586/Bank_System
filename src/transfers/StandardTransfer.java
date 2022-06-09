@@ -1,5 +1,8 @@
 package src.transfers;
 
+import src.AuthenticationAndRegistration.AuthenticationScreen;
+import src.MainScreen;
+import src.Screen;
 import src.mainFrame.MainFrame;
 import src.timer.*;
 import src.User;
@@ -122,6 +125,10 @@ public class StandardTransfer implements src.transfers.Transfer {
         setExpressTransferRadioButton(expressTransferRadioButton);
         setReceiverAddressRadioButton(receiverAddressRadioButton);
         setNextButton(nextButton);
+        cancelButton.addActionListener(e->{
+            frame.getjFrame().dispose();
+            new MainScreen(user,null,new Screen(),"1");
+        });
         transferPanel1.revalidate();
         frame.getjFrame().revalidate();
         frame.getjFrame().setContentPane(transferPanel1);
@@ -502,6 +509,7 @@ public class StandardTransfer implements src.transfers.Transfer {
             }
         });
     }
+
 }
 
 

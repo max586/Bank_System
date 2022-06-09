@@ -1,5 +1,7 @@
 package src.transfers;
 
+import src.MainScreen;
+import src.Screen;
 import src.mainFrame.MainFrame;
 import src.timer.AppTimer;
 import src.timer.MouseAction;
@@ -72,6 +74,10 @@ public class OwnTransfer implements src.transfers.Transfer {
         setTransferAmountTxt(transferAmount1Txt);
         setTransferAmountTxt(transferAmount2Txt);
         setNextButton();
+        cancelButton.addActionListener(e->{
+            frame.getjFrame().dispose();
+            new MainScreen(user,null,new Screen(),"1");
+        });
         frame.getjFrame().setContentPane(OwnTransferPanel);
         frame.getjFrame().setVisible(true);
 

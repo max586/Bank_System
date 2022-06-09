@@ -1,6 +1,8 @@
 package src.transfers;
 
 import src.Database;
+import src.MainScreen;
+import src.Screen;
 import src.mainFrame.MainFrame;
 import src.timer.AppTimer;
 import src.timer.MouseAction;
@@ -80,6 +82,10 @@ public class BlikPhoneTransfer implements Transfer{
         setTransferAmountTxt(transferAmount2Txt);
         setPhoneNumberTxt();
         setNextButton();
+        cancelButton.addActionListener(e->{
+            frame.getjFrame().dispose();
+            new MainScreen(user,null,new Screen(),"1");
+        });
         frame.getjFrame().setContentPane(blikPhonePanel);
         frame.getjFrame().setVisible(true);
     }

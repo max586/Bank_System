@@ -5,32 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bea002ff-8e44-4e85-a29b-66b1294d710d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/transfers/OrdinaryHistory.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/transfers/OrdinaryHistory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/transfers/SavingsHistory.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/transfers/SavingsHistory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Credits/Credit$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/Credits/Credit$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Credits/Credit$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/Credits/Credit$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Credits/Credit.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/Credits/Credit.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/MainScreen$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/MainScreen$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/MainScreen$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/MainScreen$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/MainScreen.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/MainScreen.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/TransferConfirm$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/TransferConfirm$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/TransferConfirm$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/TransferConfirm$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/TransferConfirm$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/TransferConfirm$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/TransferConfirm$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/TransferConfirm$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/TransferConfirm.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/TransferConfirm.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/TransferNextStep$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/TransferNextStep$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/TransferNextStep$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/TransferNextStep$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/TransferNextStep.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/TransferNextStep.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Database.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Settings/SettingsMainScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Settings/SettingsMainScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/transfers/TransferConfirm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfers/TransferConfirm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/src/AuthenticationAndRegistration/AuthenticationScreenTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/src/AuthenticationAndRegistration/AuthenticationScreenTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/src/AuthenticationAndRegistration/EmailVerificationScreenTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/src/AuthenticationAndRegistration/EmailVerificationScreenTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/src/AuthenticationAndRegistration/RegistrationScreen1Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/src/AuthenticationAndRegistration/RegistrationScreen1Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/src/AuthenticationAndRegistration/RegistrationScreen2Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/src/AuthenticationAndRegistration/RegistrationScreen2Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/src/CreditCard/PayWithCardScreen1Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/src/CreditCard/PayWithCardScreen1Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/src/CreditCard/PayWithCardScreen2Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/src/CreditCard/PayWithCardScreen2Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MainScreen.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainScreen.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MainScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/transfers/BlikPhoneTransfer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfers/BlikPhoneTransfer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/transfers/ForeignStandardTransfer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfers/ForeignStandardTransfer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/transfers/OwnTransfer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfers/OwnTransfer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/transfers/StandardTransfer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfers/StandardTransfer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,8 +25,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="JUnit4 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -73,11 +58,11 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/src/AuthenticationAndRegistration/AuthenticationScreen.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/CreditCard/PayWithCardScreen2.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/DataValidation.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Screen.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/AuthenticationAndRegistration/AuthenticationScreen.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/User.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/DataValidation.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/CreditCard/PayWithCardScreen2.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -90,30 +75,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;true&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW&quot;: &quot;true&quot;,
-    &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW&quot;: &quot;true&quot;,
-    &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH&quot;: &quot;213&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit4&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4&quot;: &quot;&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;11 (2)&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/max/my_files/io/bank_system_project/libs&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
-  }
-}</component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/Settings" />
@@ -187,6 +156,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.AuthenticationScreen" />
       <item itemvalue="Application.LaunchApp" />
@@ -217,6 +197,7 @@
       <workItem from="1654158570270" duration="613000" />
       <workItem from="1654159203927" duration="267000" />
       <workItem from="1654445366373" duration="7379000" />
+      <workItem from="1654744699328" duration="1194000" />
     </task>
     <task id="LOCAL-00001" summary="- changed database&#10;- separated user from operations with database. Now all of them are static methods in class Database&#10;- refactored all screens(classes) in AuthenticationAndRegistration package">
       <created>1654117320616</created>
@@ -407,6 +388,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="- changed database&#10;- separated user from operations with database. Now all of them are static methods in class Database&#10;- refactored all screens(classes) in AuthenticationAndRegistration package" />
@@ -442,7 +424,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/MainScreen.java</url>
-          <line>42</line>
+          <line>51</line>
           <option name="timeStamp" value="18" />
         </line-breakpoint>
       </breakpoints>
