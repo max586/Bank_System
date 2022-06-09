@@ -46,7 +46,6 @@ public class TransferConfirm {
     public JPanel otherPanel;
     public Map<String,String> transferData;
     public PdfGenerator pdfGenerator;
-    public Statement st;
     public User user;
     public User receiver;
     public String userAccountNumber;

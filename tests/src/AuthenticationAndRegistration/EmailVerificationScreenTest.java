@@ -10,7 +10,6 @@ import static org.junit.Assert.*;
 
 public class EmailVerificationScreenTest {
     EmailVerificationScreen screen;
-    Statement st;
     @Before
     public void initiate(){
         User user = new User();

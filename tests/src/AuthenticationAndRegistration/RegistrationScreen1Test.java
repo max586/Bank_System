@@ -11,7 +11,6 @@ import static org.junit.Assert.*;
 
 public class RegistrationScreen1Test {
     RegistrationScreen1 reg_screen;
-    Statement st;
     String username,password,email,ordinary_account_number,savings_account_number;
 
     @Before

@@ -12,7 +12,6 @@ import static org.junit.Assert.*;
 
 public class PayWithCardScreen2Test {
     PayWithCardScreen2 screen;
-    Statement st;
     String username,password,email,card,pin,ord_nr,app_code;
     float balance;
     @Before

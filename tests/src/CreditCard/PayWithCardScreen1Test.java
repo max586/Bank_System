@@ -12,7 +12,6 @@ import static org.junit.Assert.*;
 
 public class PayWithCardScreen1Test {
     PayWithCardScreen1 screen;
-    Statement st;
     String username,password,email,card,pin;
     @Before
     public void initiate(){

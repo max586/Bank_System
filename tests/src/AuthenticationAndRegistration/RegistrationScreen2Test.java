@@ -12,7 +12,6 @@ import static org.junit.Assert.*;
 
 public class RegistrationScreen2Test {
     RegistrationScreen2 screen;
-    Statement st;
     User user;
 
     @Before

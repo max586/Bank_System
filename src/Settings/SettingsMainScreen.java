@@ -104,7 +104,7 @@ public class SettingsMainScreen extends Screen {
                 while (counter <= 120) {
                     if(!frame.isDisplayable()){counter=0;}
                     else {
-                        timerLabel.setText("Time before log out: " + (10 - counter++));
+                        timerLabel.setText("Time before log out: " + (120 - counter++));
                         try {
                             Thread.sleep(1000);
                         } catch (Exception e) {

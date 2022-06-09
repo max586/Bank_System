@@ -11,12 +11,10 @@ import static org.junit.Assert.*;
 
 public class AuthenticationScreenTest {
     AuthenticationScreen auth_screen;
-    Statement st;
     String username,password,email,ordinary_account_number,savings_account_number;
     @Before
     public void initiate(){
         auth_screen = new AuthenticationScreen(null,null,null);
-        st=Database.connectToDatabase("bank_system","root","password");
         username="new_user";
         password="password";
         email="email";
