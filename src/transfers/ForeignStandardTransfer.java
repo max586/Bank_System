@@ -1,4 +1,6 @@
 package src.transfers;
+import src.MainScreen;
+import src.Screen;
 import src.mainFrame.MainFrame;
 import src.User;
 
@@ -33,6 +35,10 @@ public class ForeignStandardTransfer extends StandardTransfer implements src.tra
         setcurrencyCombo();
         setTransferAmountTxt(transferAmount1Txt);
         setTransferAmountTxt(transferAmount2Txt);
+        cancelButton.addActionListener(e->{
+            frame.getjFrame().dispose();
+            new MainScreen(user,null,new Screen(),"1");
+        });
     }
     void setTransferData(){
         transferData.put("waluta",currency);
