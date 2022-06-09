@@ -165,7 +165,5 @@ public class MainScreen extends Screen {
         test_user.username="test_user";
         new MainScreen(test_user,null,null, "ordinary").CreateScreen();
     }
-
-
 }
 
