@@ -30,7 +30,7 @@ public class PayWithCardScreen2 extends Screen{
         jdialog.setSize(300,150);
     }
     public void CreateScreen(){
-        
+        frame.setTitle("Pay with credit card second Screen");
         frame.setContentPane(panel);
 
         user.ordinary_account_balance = Database.getOrdinaryAccountBalance( user.username);

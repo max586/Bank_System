@@ -2,17 +2,19 @@ package src;
 import src.AuthenticationAndRegistration.AuthenticationScreen;
 import src.Credits.Credit;
 import src.Settings.SettingsMainScreen;
+import src.mainFrame.MainFrame;
+import src.transfers.AccountChoosed;
+import src.transfers.TransferFactory;
 
 import javax.swing.*;
 import java.io.IOException;
 import javax.swing.JPanel;
 import java.awt.event.*;
-import java.sql.Statement;
 
 public class MainScreen extends Screen {
     public JPanel AuthPanel;
     public JButton PROFILButton;
-    public JButton BLIKButton;
+    public JButton incountryButton;
     public JButton KREDYTYButton;
     public JButton wylogujButton;
     public JButton prevButton;
@@ -50,29 +52,56 @@ public class MainScreen extends Screen {
             AccNumber.setText(Database.getSavingsAccountNumber( user.username));
             AccType.setText("Wybrane konto: saving");
         }
-        /*
-            list1.setListData(options);
-            list1.getSelectionModel().addListSelectionListener(e ->
-            {
-                int index = list1.getSelectedIndex();
-                if(index!=-1) {
-                    if (options[index] == "one") {
 
-                        JFrame okienko = new JFrame();
-                        okienko.setVisible(true);
-
-                    }else if(options[index] == "two")
-                    {
-
+//Incountry Transfer, Foreign Transfer, Own Transfer, Standing Order Transfer, BLIK Phone Transfer
+        foreignTransferButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (chosenAcc == "ordinary") {
+                    frame.dispose();
+                    try {
+                        new TransferFactory(AccountChoosed.ORDINARYACCOUNT, user, new MainFrame()).getTransfer(TransferFactory.TransferType.ZAGRANICZNY);
+                    } catch (Exception e2) {
                     }
                 }
-            });
-        */
-//Incountry Transfer, Foreign Transfer, Own Transfer, Standing Order Transfer, BLIK Phone Transfer
-        BLIKButton.addActionListener(e->
-                                     {
+            }
+        });
 
-                                     });
+        incountryButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (chosenAcc == "ordinary") {
+                    frame.dispose();
+                    try {
+                        new TransferFactory(AccountChoosed.ORDINARYACCOUNT, user, new MainFrame()).getTransfer(TransferFactory.TransferType.KRAJOWY);
+                    } catch (Exception e2) {
+                    }
+                }
+            }
+        });
+
+        ownTransferButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                frame.dispose();
+;                try {
+                    new TransferFactory(AccountChoosed.ORDINARYACCOUNT, user, new MainFrame()).getTransfer(TransferFactory.TransferType.WLASNY);
+                }catch(Exception e2){}
+            }
+        });
+
+        standingOrderTransferButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (chosenAcc == "ordinary") {
+                    frame.dispose();
+                    try {
+                        new TransferFactory(AccountChoosed.ORDINARYACCOUNT, user, new MainFrame()).getTransfer(TransferFactory.TransferType.ZLECENIESTALE);
+                    } catch (Exception e2) {
+                    }
+                }
+            }
+        });
         KREDYTYButton.addActionListener(e->
         {
             frame.dispose();

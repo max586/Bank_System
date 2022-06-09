@@ -31,7 +31,7 @@ public class PayWithCardScreen1 extends Screen {
     }
     @Override
     public void CreateScreen(){
-        
+        frame.setTitle("Pay with credit card first Screen");
         frame.setContentPane(panel);
         submitButton.addActionListener(new ActionListener() {
             @Override

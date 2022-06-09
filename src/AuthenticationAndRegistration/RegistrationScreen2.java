@@ -43,10 +43,9 @@ public class RegistrationScreen2 extends Screen{
         super(user,prev_screen,next_screen);
     }
     public void CreateScreen() {
-        
+        frame.setTitle("Second registration Screen");
         frame.setContentPane(panel);
 
-        
         submitButton.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
 

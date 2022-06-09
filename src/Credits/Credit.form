@@ -79,7 +79,7 @@
           <maximumSize width="49" height="16"/>
           <minimumSize width="49" height="16"/>
           <opaque value="true"/>
-          <preferredSize width="60" height="16"/>
+          <preferredSize width="120" height="16"/>
           <requestFocusEnabled value="true"/>
           <text value="Balance:"/>
           <visible value="true"/>
@@ -235,9 +235,10 @@
         </constraints>
         <properties>
           <font name="Rockwell" size="24"/>
+          <horizontalAlignment value="0"/>
           <maximumSize width="200" height="30"/>
           <minimumSize width="200" height="30"/>
-          <preferredSize width="220" height="30"/>
+          <preferredSize width="300" height="30"/>
           <requestFocusEnabled value="true"/>
           <text value="My current credit"/>
           <verticalAlignment value="1"/>

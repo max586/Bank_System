@@ -38,9 +38,8 @@ public class RegistrationScreen1 extends Screen {
     }
 
     public void CreateScreen() {
-        
+        frame.setTitle("First registration screen");
         frame.setContentPane(panel);
-
         
         submitButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {

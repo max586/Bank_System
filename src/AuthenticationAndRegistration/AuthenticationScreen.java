@@ -27,7 +27,7 @@ public class AuthenticationScreen extends Screen {
     }
     @Override
     public void CreateScreen(){
-        
+        frame.setTitle("Authentication Screen");
         frame.setContentPane(panel);
         signInButton.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){

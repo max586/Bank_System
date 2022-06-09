@@ -27,7 +27,6 @@ public class JavaMail{
                     return new PasswordAuthentication(myAccountEmail, password);
                  }
               });
-
       try {
 
          Message message = new MimeMessage(session);

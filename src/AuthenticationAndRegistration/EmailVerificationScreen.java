@@ -40,6 +40,7 @@ public class EmailVerificationScreen extends Screen{
             System.out.println("failed to send an email");
             System.out.println(e);
         }
+        frame.setTitle("Email verification Screen");
         frame.setContentPane(panel);
 
         submitButton.addActionListener(new ActionListener(){
