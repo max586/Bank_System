@@ -13,10 +13,6 @@ import java.util.Map;
 
 public class App {
     public static void main(String[] args) throws IOException, FontFormatException {
-
-        //MainPanel m = new MainPanel(new MainFrame());
-//        Statement st = DataBaseConnect.st;
-//        Database.addUser("Adr","passwd","ad@gmail.com","1234");
-
+        new TransferFactory(AccountChoosed.ORDINARYACCOUNT, new User(), new MainFrame()).getTransfer(TransferFactory.TransferType.ZAGRANICZNY);
     }
 }

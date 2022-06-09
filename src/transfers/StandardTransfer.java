@@ -511,9 +511,6 @@ public class StandardTransfer implements src.transfers.Transfer {
     }
 
 }
-
-
-
 class OnlyNumbers{
     KeyAdapter keyAdapter;
     public OnlyNumbers(){
