@@ -1,6 +1,6 @@
 package src.Credits;
 import java.util.Date;
-
+import src.DataValidation;
 import src.Database;
 import src.Screen;
 import src.User;
@@ -45,13 +45,25 @@ public class Credit extends Screen
                 {
                         if(yesCheckBox.isSelected())
                         {
-                            jpane.setMessage("Now you must pay us some money, hehe");
-                            Date Today = new Date();
-                            Database.addCredit(user.username,Float.parseFloat(Amount.getText()),0,Today.getYear()+"-"+Today.getMonth()+"-"+Today.getDate(),Integer.parseInt(Years.getText()));
-                            String[] CreditInfo = Database.getCredit(user.username);//Amount , AmountPayed , StartDate , Duration
-                            MyCreditAmount.setText(CreditInfo[0]);
-                            MyPayedCredit.setText(CreditInfo[1]);
-                            MyDebt.setText(String.valueOf(checkDebt()));
+                            if(!DataValidation.isNumber(Amount.getText()))
+                            {
+                                Amount.setText("You must type number here");
+                            }
+                            if(!DataValidation.isNumber(Amount.getText()))
+                            {
+                                Years.setText("You must type number here");
+                            }
+                                if(DataValidation.isNumber(Amount.getText())&&DataValidation.isNumber(Amount.getText()))
+                                {
+                                    jpane.setMessage("Now you must pay us some money, hehe");
+                                    Date Today = new Date();
+                                    Database.addCredit(user.username, Float.parseFloat(Amount.getText()), 0, Today.getYear() + "-" + Today.getMonth() + "-" + Today.getDate(), Integer.parseInt(Years.getText()));
+                                    String[] CreditInfo = Database.getCredit(user.username);//Amount , AmountPayed , StartDate , Duration
+                                    MyCreditAmount.setText(CreditInfo[0]);
+                                    MyPayedCredit.setText(CreditInfo[1]);
+                                    MyDebt.setText(String.valueOf(checkDebt()));
+                                }
+
                         }else
                         {
                             jpane.setMessage("you must accept the terms to take the credit ");
