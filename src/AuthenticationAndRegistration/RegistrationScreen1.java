@@ -4,6 +4,8 @@ import src.DataValidation;
 import src.Database;
 import src.Screen;
 import src.User;
+import src.timer.AppTimer;
+import src.timer.MouseAction;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -30,7 +32,7 @@ public class RegistrationScreen1 extends Screen {
     public JLabel letterLabel;
     public JLabel digitLabel;
     public JLabel specialCharLabel;
-    public JLabel timerLabel;
+    public JLabel timeLabel;
     public int counter=0;
 
     public RegistrationScreen1(User user, Screen prev_screen, Screen next_screen){
@@ -40,6 +42,9 @@ public class RegistrationScreen1 extends Screen {
     public void CreateScreen() {
         frame.setTitle("First registration screen");
         frame.setContentPane(panel);
+        AppTimer appTimer = new AppTimer(timeLabel,this);
+        panel.addMouseMotionListener(new MouseAction(appTimer));
+        appTimer.start();
         
         submitButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -112,33 +117,6 @@ public class RegistrationScreen1 extends Screen {
                 frame.dispose();
             }
         });
-        panel.addMouseListener(new MouseListener() {
-            @Override
-            public void mouseClicked(MouseEvent e) {counter=0;}
-            @Override
-            public void mousePressed(MouseEvent e) {}
-            @Override
-            public void mouseReleased(MouseEvent e) {counter=0;}
-            @Override
-            public void mouseEntered(MouseEvent e) {counter=0;}
-            @Override
-            public void mouseExited(MouseEvent e) {}
-        });
-        new Thread() {
-            public void run() {
-                while (counter <= 120) {
-                    if(!frame.isDisplayable()){counter=0;}
-                    else {
-                        timerLabel.setText("Time before log out: " + (120 - counter++));
-                        try {
-                            Thread.sleep(1000);
-                        } catch (Exception e) {
-                        }
-                    }
-                }
-                frame.dispose();
-            }
-        }.start();
         frame.setSize(800,600);
         frame.setVisible(true);
     }

@@ -73,12 +73,12 @@ create table HistoryOrdinary(
 `End Date` varchar(30),
 `Transfer Cycle` int,
 `Transfer Cycle Units` varchar(10),
-`Sender first name` varchar(20),
-`Sender last name` varchar(20),
-`Sender Town` varchar(30),
-`Sender Postcode` varchar(6),
-`Sender Street` varchar(30),
-`Sender Street number` varchar(10),
+`First name` varchar(20),
+`Last name` varchar(20),
+`Town` varchar(30),
+`Postcode` varchar(6),
+`Street` varchar(30),
+`Street number` varchar(10),
 foreign key(`Account nr from`) references OrdinaryAccounts(`Account number`)
 );
 
@@ -96,11 +96,11 @@ create table HistorySavings(
 `End Date` varchar(30),
 `Transfer Cycle` int,
 `Transfer Cycle Units` varchar(10),
-`Sender first name` varchar(20),
-`Sender last name` varchar(20),
-`Sender Town` varchar(30),
-`Sender Postcode` varchar(6),
-`Sender Street` varchar(30),
-`Sender Street number` varchar(10),
+`First name` varchar(20),
+`Last name` varchar(20),
+`Town` varchar(30),
+`Postcode` varchar(6),
+`Street` varchar(30),
+`Street number` varchar(10),
 foreign key(`Account nr from`) references SavingsAccounts(`Account number`)
 );

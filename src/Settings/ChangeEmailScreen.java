@@ -3,6 +3,8 @@ package src.Settings;
 import src.AuthenticationAndRegistration.EmailVerificationScreen;
 import src.Screen;
 import src.User;
+import src.timer.AppTimer;
+import src.timer.MouseAction;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -17,15 +19,18 @@ public class ChangeEmailScreen extends Screen{
     public JButton returnButton;
     public JButton exitButton;
     public JLabel emailLabel;
-    public JLabel timerLabel;
+    public JLabel timeLabel;
     public int counter=0;
 
     public ChangeEmailScreen(User user, Screen prev_screen, Screen next_screen){
         super(user,prev_screen,next_screen);
     }
     public void CreateScreen(){
-        
+        frame.setTitle("Change email Screen");
         frame.setContentPane(panel);
+        AppTimer appTimer = new AppTimer(timeLabel,this);
+        panel.addMouseMotionListener(new MouseAction(appTimer));
+        appTimer.start();
 
         submitButton.addActionListener(new ActionListener(){
             @Override
@@ -51,34 +56,6 @@ public class ChangeEmailScreen extends Screen{
                 frame.dispose();
             }
         });
-
-        panel.addMouseListener(new MouseListener() {
-            @Override
-            public void mouseClicked(MouseEvent e) {counter=0;}
-            @Override
-            public void mousePressed(MouseEvent e) {}
-            @Override
-            public void mouseReleased(MouseEvent e) {counter=0;}
-            @Override
-            public void mouseEntered(MouseEvent e) {counter=0;}
-            @Override
-            public void mouseExited(MouseEvent e) {}
-        });
-        new Thread() {
-            public void run() {
-                while (counter <= 120) {
-                    if(!frame.isDisplayable()){counter=0;}
-                    else {
-                        timerLabel.setText("Time before log out: " + (120 - counter++));
-                        try {
-                            Thread.sleep(1000);
-                        } catch (Exception e) {
-                        }
-                    }
-                }
-                frame.dispose();
-            }
-        }.start();
         frame.setSize(800,600);
         frame.setVisible(true);
     }

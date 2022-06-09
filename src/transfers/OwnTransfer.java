@@ -18,7 +18,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Vector;
 
-public class OwnTransfer implements src.transfers.Transfer {
+public class OwnTransfer implements Transfer {
     public MainFrame frame;
     public JPanel OwnTransferPanel;
     public JLabel panelTitleLabel;

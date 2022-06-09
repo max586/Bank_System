@@ -1,14 +1,15 @@
 package src.mainFrame;
 
+import src.PreScreen;
+
 import javax.swing.*;
-public class MainFrame {
-    public JFrame jFrame;
+public class MainFrame extends PreScreen {
     public MainFrame(){
-        jFrame = new JFrame();
-        jFrame.setSize(1080,720);
-        jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame = new JFrame();
+        frame.setSize(1080,720);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
     public JFrame getjFrame(){
-        return jFrame;
+        return frame;
     }
 }

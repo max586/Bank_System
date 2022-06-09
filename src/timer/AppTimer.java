@@ -1,5 +1,6 @@
 package src.timer;
 import src.AuthenticationAndRegistration.AuthenticationScreen;
+import src.PreScreen;
 import src.Screen;
 import src.mainFrame.MainFrame;
 import javax.swing.*;
@@ -17,9 +18,9 @@ public class AppTimer {
         public int seconds = initSeconds;
         public int elapsedTime = initElapsedTime;
         public Timer timer;
-        public MainFrame frame;
+        public PreScreen frame;
 
-        public AppTimer(JLabel timeLabel1,MainFrame mainFrame){
+        public AppTimer(JLabel timeLabel1, PreScreen mainFrame){
             frame = mainFrame;
             timer = new Timer(1000, new ActionListener() {
                 public void actionPerformed(ActionEvent e) {

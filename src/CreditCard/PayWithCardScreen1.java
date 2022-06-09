@@ -2,13 +2,12 @@ package src.CreditCard;
 import src.Database;
 import src.Screen;
 import src.User;
+import src.timer.AppTimer;
+import src.timer.MouseAction;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
-import java.sql.Statement;
 
 public class PayWithCardScreen1 extends Screen {
     public JTextField nrField;
@@ -19,7 +18,7 @@ public class PayWithCardScreen1 extends Screen {
     public JButton submitButton;
     public JButton exitButton;
     public JLabel descrLabel;
-    public JLabel timerLabel;
+    public JLabel timeLabel;
     public JOptionPane jpane;
     public JDialog jdialog;
     public int counter=0;
@@ -33,6 +32,9 @@ public class PayWithCardScreen1 extends Screen {
     public void CreateScreen(){
         frame.setTitle("Pay with credit card first Screen");
         frame.setContentPane(panel);
+        AppTimer appTimer = new AppTimer(timeLabel,this);
+        panel.addMouseMotionListener(new MouseAction(appTimer));
+        appTimer.start();
         submitButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
@@ -67,33 +69,6 @@ public class PayWithCardScreen1 extends Screen {
             }
         });
 
-        panel.addMouseListener(new MouseListener() {
-            @Override
-            public void mouseClicked(MouseEvent e) {counter=0;}
-            @Override
-            public void mousePressed(MouseEvent e) {}
-            @Override
-            public void mouseReleased(MouseEvent e) {counter=0;}
-            @Override
-            public void mouseEntered(MouseEvent e) {counter=0;}
-            @Override
-            public void mouseExited(MouseEvent e) {}
-        });
-        new Thread() {
-            public void run() {
-                while (counter <= 120) {
-                    if(!frame.isDisplayable()){counter=0;}
-                    else {
-                        timerLabel.setText("Time before log out: " + (120 - counter++));
-                        try {
-                            Thread.sleep(1000);
-                        } catch (Exception e) {
-                        }
-                    }
-                }
-                frame.dispose();
-            }
-        }.start();
         frame.setSize(400,300);
         frame.setVisible(true);
     }

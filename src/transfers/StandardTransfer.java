@@ -509,7 +509,6 @@ public class StandardTransfer implements Transfer {
             }
         });
     }
-
 }
 class OnlyNumbers{
     KeyAdapter keyAdapter;

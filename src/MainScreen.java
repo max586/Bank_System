@@ -3,6 +3,8 @@ import src.AuthenticationAndRegistration.AuthenticationScreen;
 import src.Credits.Credit;
 import src.Settings.SettingsMainScreen;
 import src.mainFrame.MainFrame;
+import src.timer.AppTimer;
+import src.timer.MouseAction;
 import src.transfers.AccountChoosed;
 import src.transfers.TransferFactory;
 
@@ -18,7 +20,7 @@ public class MainScreen extends Screen {
     public JButton KREDYTYButton;
     public JButton wylogujButton;
     public JButton prevButton;
-    public JLabel timeCounter;
+    public JLabel timeLabel;
     public JLabel AccNumber;
     public JLabel AccType;
     public JButton foreignTransferButton;
@@ -40,6 +42,9 @@ public class MainScreen extends Screen {
         frame = new JFrame();
         frame.setSize(1080,720);
         frame.setTitle("MainScreen");
+        AppTimer appTimer = new AppTimer(timeLabel,this);
+        AuthPanel.addMouseMotionListener(new MouseAction(appTimer));
+        appTimer.start();
 
         if(chosenAcc == "ordinary")
         {
@@ -127,35 +132,6 @@ public class MainScreen extends Screen {
         }
 
         });
-
-
-
-        //Auto close the window
-        frame.addMouseListener(new MouseAdapter() {
-            public void mousePressed(MouseEvent me) {
-                counter = 0;
-            }
-        });
-        new Thread() {
-            public void run()
-            {
-                while(counter <= 120)
-                {
-                    if(frame.isActive())
-                        timeCounter.setText("Time before log out: " + (120 - counter++));
-                        else
-                        counter = 0;
-
-                    try {
-                        Thread.sleep(1000);
-                    } catch (Exception e) {}
-                }
-
-                frame.dispose();
-            }
-        }.start();
-        //Auto close the window
-
         frame.setContentPane(AuthPanel);
         frame.setVisible(true);
     }

@@ -14,7 +14,7 @@ import java.util.Arrays;
 import java.util.Locale;
 import java.util.Map;
 
-public class ForeignStandardTransfer extends StandardTransfer implements src.transfers.Transfer {
+public class ForeignStandardTransfer extends StandardTransfer implements Transfer {
     public final Map<String,String> currencies;
     public final CurrenciesExchangeRate currenciesExchangeRate;
     public String currency;

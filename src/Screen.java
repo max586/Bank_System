@@ -5,12 +5,12 @@ import java.awt.GridBagLayout;
 import java.awt.GridBagConstraints;
 import java.awt.event.*;
 import java.sql.Statement;
+import java.util.prefs.PreferenceChangeEvent;
 
-public class Screen {
+public class Screen extends PreScreen {
     public User user;
     public Screen prev_screen;
     public Screen next_screen;
-    public JFrame frame;
     public Screen(User user, Screen prev_screen, Screen next_screen){
         this.user = user;
         this.prev_screen = prev_screen;

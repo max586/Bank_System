@@ -12,7 +12,7 @@ import java.io.IOException;
 import java.util.Map;
 import java.util.Vector;
 
-public class StandingOrder extends StandardTransfer implements src.transfers.Transfer {
+public class StandingOrder extends StandardTransfer implements Transfer {
     private AccountChoosed accountchoosedUser;
     public StandingOrder(AccountChoosed accountChoosed1,User user1,MainFrame mainFrame) throws IOException, FontFormatException {
         super(accountChoosed1,user1,mainFrame);

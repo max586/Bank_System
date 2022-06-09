@@ -1,1 +1,2 @@
-SELECT  * from OutgoingHistoryOrdinary o1 join OrdinaryAccounts o2 on o1.`Account nr from` =o2.`Account number`;
+#delete from Credits where username="test_user";
+select h.* from HistoryOrdinary h join OrdinaryAccounts o on h.`Account nr from` = o.`Account number`where h.`Operation Date` >= '2022-06-05'and o.username='test_user';

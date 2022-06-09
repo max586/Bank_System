@@ -26,7 +26,7 @@ public class SavingsHistory {
             appTimer.start();
             DefaultListModel<String> dlm = new DefaultListModel<String>();
             JList<String> list = new JList<>(dlm);
-            String[][]data = Database.getHistoryOrdinary(user.username);
+            String[][]data = Database.getHistoryOrdinary("HistorySavings",user.username);
             for(int i=0;i<data.length;++i){
                 StringBuilder sb = new StringBuilder();
                 for(int j=0;j<data[0].length;++j){

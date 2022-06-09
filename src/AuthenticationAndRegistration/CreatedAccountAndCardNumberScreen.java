@@ -3,6 +3,8 @@ package src.AuthenticationAndRegistration;
 import src.Database;
 import src.Screen;
 import src.User;
+import src.timer.AppTimer;
+import src.timer.MouseAction;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -29,7 +31,7 @@ public class CreatedAccountAndCardNumberScreen extends Screen {
     public JLabel cardLabel;
     public JLabel ordinaryAccountdescrLabel;
     public JLabel savingsAccountdescrLabel;
-    public JLabel timerLabel;
+    public JLabel timeLabel;
     public int counter=0;
 
     public CreatedAccountAndCardNumberScreen(User user, Screen prev_screen, Screen next_screen){super(user,prev_screen,next_screen);}
@@ -37,6 +39,9 @@ public class CreatedAccountAndCardNumberScreen extends Screen {
     public void CreateScreen(){
         frame.setTitle("Account and card number Screen");
         frame.setContentPane(panel);
+        AppTimer appTimer = new AppTimer(timeLabel,this);
+        panel.addMouseMotionListener(new MouseAction(appTimer));
+        appTimer.start();
 
         String ordinary_account_number = generateAccountNumber();
         String savings_account_number = generateAccountNumber();
@@ -82,33 +87,6 @@ public class CreatedAccountAndCardNumberScreen extends Screen {
                 frame.dispose();
             }
         });
-        panel.addMouseListener(new MouseListener() {
-            @Override
-            public void mouseClicked(MouseEvent e) {counter=0;}
-            @Override
-            public void mousePressed(MouseEvent e) {}
-            @Override
-            public void mouseReleased(MouseEvent e) {counter=0;}
-            @Override
-            public void mouseEntered(MouseEvent e) {counter=0;}
-            @Override
-            public void mouseExited(MouseEvent e) {}
-        });
-        new Thread() {
-            public void run() {
-                while (counter <= 120) {
-                    if(!frame.isDisplayable()){counter=0;}
-                    else {
-                        timerLabel.setText("Time before log out: " + (120 - counter++));
-                        try {
-                            Thread.sleep(1000);
-                        } catch (Exception e) {
-                        }
-                    }
-                }
-                frame.dispose();
-            }
-        }.start();
         frame.setSize(1000,800);
         frame.setVisible(true);
     }
@@ -161,5 +139,9 @@ public class CreatedAccountAndCardNumberScreen extends Screen {
         User test_user = new User();
         test_user.username="test_user";
         new CreatedAccountAndCardNumberScreen(test_user,null,new Screen()).CreateScreen();
+    }
+
+    private void createUIComponents() {
+        // TODO: place custom component creation code here
     }
 }

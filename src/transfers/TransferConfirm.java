@@ -183,59 +183,40 @@ public class TransferConfirm {
                         if(transferPanelTitle.equals("Zlecenie stałe")){
                             if(accountChoosedUser==AccountChoosed.ORDINARYACCOUNT) {
                                 Database.addToHistory("HistoryOrdinary", generationDate, transferData.get("typ"),
-                                        userAccountNumber, receiverAccountNr,  Double.parseDouble(transferData.get("kwota")),
+                                        userAccountNumber, receiverAccountNr, "" ,Double.parseDouble(transferData.get("kwota")),
                                         transferData.get("waluta"), Double.parseDouble(transferData.get("kwotaPLN")), transferData.get("tytul"),
                                         transferData.get("startdata"), transferData.get("enddata"), Integer.parseInt(transferData.get("cykle")),
-                                        transferData.get("jednostkaczasu"));
-                            }
-                            else{
-                                Database.addToHistory( "HistorySavings", generationDate, transferData.get("typ"),
-                                        userAccountNumber, receiverAccountNr,  Double.parseDouble(transferData.get("kwota")),
-                                        transferData.get("waluta"), Double.parseDouble(transferData.get("kwotaPLN")), transferData.get("tytul"),
-                                        transferData.get("startdata"), transferData.get("enddata"), Integer.parseInt(transferData.get("cykle")),
-                                        transferData.get("jednostkaczasu"));
+                                        transferData.get("jednostkaczasu"),receiver.firstName,receiver.lastName,receiver.city,receiver.post_code,receiver.street,receiver.street_nr);
                             }
                         }
                         else if(transferPanelTitle.equals("Przelew BLIK na telefon")){
                             if(accountChoosedUser==AccountChoosed.ORDINARYACCOUNT) {
                                 Database.addToHistory("HistoryOrdinary", generationDate, transferData.get("typ"),
-                                        userAccountNumber, "", Double.parseDouble(transferData.get("kwota")),
+                                        userAccountNumber, "",user.phone_number, Double.parseDouble(transferData.get("kwota")),
                                         "PLN", Double.parseDouble(transferData.get("kwota")), transferData.get("tytul"),
-                                        "", "", 0,"");
-                            }
-                            else{
-                                Database.addToHistory( "HistorySavings", generationDate, transferData.get("typ"),
-                                        userAccountNumber, "", Double.parseDouble(transferData.get("kwota")),
-                                        "PLN", Double.parseDouble(transferData.get("kwota")), transferData.get("tytul"),
-                                        "", "", 0, "");
+                                        "", "", 0,"","","","","","","");
                             }
                         }
                         else if(transferPanelTitle.equals("Przelew własny")){
                             if(accountChoosedUser==AccountChoosed.ORDINARYACCOUNT) {
                                 Database.addToHistory( "HistoryOrdinary", generationDate, transferData.get("typ"),
-                                        userAccountNumber, receiverAccountNr,  Double.parseDouble(transferData.get("kwota")),
+                                        userAccountNumber, receiverAccountNr,"",  Double.parseDouble(transferData.get("kwota")),
                                         "PLN", Double.parseDouble(transferData.get("kwota")), transferData.get("tytul"),
-                                        "", "", 0, "");
+                                        "", "", 0, "","","","","","","");
                             }
                             else{
                                 Database.addToHistory( "HistorySavings", generationDate, transferData.get("typ"),
-                                        userAccountNumber, receiverAccountNr, Double.parseDouble(transferData.get("kwota")),
+                                        userAccountNumber, receiverAccountNr,"",  Double.parseDouble(transferData.get("kwota")),
                                         "PLN", Double.parseDouble(transferData.get("kwota")), transferData.get("tytul"),
-                                        "", "", 0, "");
+                                        "", "", 0, "","","","","","","");
                             }
                         }
                         else {
                             if(accountChoosedUser==AccountChoosed.ORDINARYACCOUNT) {
                                 Database.addToHistory("HistoryOrdinary", generationDate, transferData.get("typ"),
-                                        userAccountNumber, receiverAccountNr,  Double.parseDouble(transferData.get("kwota")),
+                                        userAccountNumber, receiverAccountNr, "", Double.parseDouble(transferData.get("kwota")),
                                         transferData.get("waluta"), Double.parseDouble(transferData.get("kwotaPLN")), transferData.get("tytul"),
-                                        "", "", 0, "");
-                            }
-                            else{
-                                Database.addToHistory( "HistoryOrdinary", generationDate, transferData.get("typ"),
-                                        userAccountNumber, receiverAccountNr, Double.parseDouble(transferData.get("kwota")),
-                                        transferData.get("waluta"), Double.parseDouble(transferData.get("kwotaPLN")), transferData.get("tytul"),
-                                        "", "", 0, "");
+                                        "", "", 0, "",receiver.firstName,receiver.lastName,receiver.city,receiver.post_code,receiver.street,receiver.street_nr);
                             }
                         }
                         if(isTransferConfirmation){

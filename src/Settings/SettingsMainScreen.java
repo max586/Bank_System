@@ -3,6 +3,8 @@ package src.Settings;
 import src.AuthenticationAndRegistration.AuthenticationScreen;
 import src.Screen;
 import src.User;
+import src.timer.AppTimer;
+import src.timer.MouseAction;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -19,14 +21,18 @@ public class SettingsMainScreen extends Screen {
     public JButton changeEmailButton;
     public JButton returnButton;
     public JButton exitButton;
-    public JLabel timerLabel;
+    public JLabel timeLabel;
     public int counter=0;
 
     public SettingsMainScreen(User user, Screen prev_screen, Screen next_screen){
         super(user,prev_screen,next_screen);
     }
     public void CreateScreen(){
+        frame.setTitle("Settings main Screen");
         frame.setContentPane(panel);
+        AppTimer appTimer = new AppTimer(timeLabel,this);
+        panel.addMouseMotionListener(new MouseAction(appTimer));
+        appTimer.start();
 
         changeUsernameButton.addActionListener(new ActionListener(){
             @Override
@@ -81,39 +87,6 @@ public class SettingsMainScreen extends Screen {
                 }
             }
         });
-        exitButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent actionEvent) {
-                frame.dispose();
-            }
-        });
-        panel.addMouseListener(new MouseListener() {
-            @Override
-            public void mouseClicked(MouseEvent e) {counter=0;}
-            @Override
-            public void mousePressed(MouseEvent e) {}
-            @Override
-            public void mouseReleased(MouseEvent e) {counter=0;}
-            @Override
-            public void mouseEntered(MouseEvent e) {counter=0;}
-            @Override
-            public void mouseExited(MouseEvent e) {}
-        });
-        new Thread() {
-            public void run() {
-                while (counter <= 120) {
-                    if(!frame.isDisplayable()){counter=0;}
-                    else {
-                        timerLabel.setText("Time before log out: " + (120 - counter++));
-                        try {
-                            Thread.sleep(1000);
-                        } catch (Exception e) {
-                        }
-                    }
-               }
-                frame.dispose();
-            }
-        }.start();
         frame.setSize(800,600);
         frame.setVisible(true);
     }
