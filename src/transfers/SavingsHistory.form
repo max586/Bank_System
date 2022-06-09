@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="src.transfers.SavingsHistory">
-  <grid id="27dc6" binding="savingsPanel" layout-manager="GridBagLayout">
+  <grid id="27dc6" binding="ordinaryPanel" layout-manager="GridBagLayout">
     <constraints>
       <xy x="20" y="20" width="685" height="400"/>
     </constraints>

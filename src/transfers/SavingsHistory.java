@@ -12,7 +12,7 @@ import javax.swing.*;
 import java.sql.SQLException;
 
 public class SavingsHistory {
-        private JPanel ordinaryPanel;
+        private JPanel ordinaryPanel ;
         private JLabel panelTitleLabel;
         private JPanel timerPanel;
         private JLabel timeLabel;

@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bea002ff-8e44-4e85-a29b-66b1294d710d" name="Changes" comment="" />
+    <list default="true" id="bea002ff-8e44-4e85-a29b-66b1294d710d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Database.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/Database.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/MainScreen$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/MainScreen$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/MainScreen$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/MainScreen$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/MainScreen.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/MainScreen.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/TransferConfirm$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/TransferConfirm$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/transfers/SavingsHistory.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfers/SavingsHistory.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/transfers/SavingsHistory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfers/SavingsHistory.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -63,30 +71,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;true&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW&quot;: &quot;true&quot;,
-    &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW&quot;: &quot;true&quot;,
-    &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH&quot;: &quot;213&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit4&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4&quot;: &quot;&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;11 (2)&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/max/my_files/io/bank_system_project/libs&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "true",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW": "true",
+    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW": "true",
+    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "420",
+    "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit4",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4": "",
+    "jdk.selected.JAVA_MODULE": "11 (2)",
+    "last_opened_file_path": "/home/max/my_files/io/bank_system_project/libs",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/Settings" />
@@ -100,7 +108,7 @@
       <recent name="src.AuthenticationAndRegistration" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.App">
+  <component name="RunManager" selected="Application.Credit">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="src.App" />
       <module name="bank_system_project" />
@@ -114,12 +122,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AuthenticationScreen" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="src.AuthenticationAndRegistration.AuthenticationScreen" />
+    <configuration name="Credit" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="src.Credits.Credit" />
       <module name="bank_system_project" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="src.AuthenticationAndRegistration.*" />
+          <option name="PATTERN" value="src.Credits.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -161,19 +169,19 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.Credit" />
       <item itemvalue="Application.App" />
-      <item itemvalue="Application.AuthenticationScreen" />
       <item itemvalue="Application.EmailVerificationScreen" />
       <item itemvalue="Application.LaunchApp" />
       <item itemvalue="Application.MainScreen" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Credit" />
         <item itemvalue="Application.App" />
         <item itemvalue="Application.LaunchApp" />
         <item itemvalue="Application.EmailVerificationScreen" />
         <item itemvalue="Application.MainScreen" />
-        <item itemvalue="Application.AuthenticationScreen" />
       </list>
     </recent_temporary>
   </component>
@@ -190,6 +198,7 @@
       <workItem from="1654158570270" duration="613000" />
       <workItem from="1654159203927" duration="267000" />
       <workItem from="1654445366373" duration="7379000" />
+      <workItem from="1654762890248" duration="196000" />
     </task>
     <task id="LOCAL-00001" summary="- changed database&#10;- separated user from operations with database. Now all of them are static methods in class Database&#10;- refactored all screens(classes) in AuthenticationAndRegistration package">
       <created>1654117320616</created>
