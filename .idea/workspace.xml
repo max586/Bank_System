@@ -5,59 +5,320 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bea002ff-8e44-4e85-a29b-66b1294d710d" name="Changes" comment="sth added">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/database_scripts/CreateDatabase.sql" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/database_scripts/CreateDatabase.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/LaunchApp 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/App 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/App 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/AuthenticationScreen 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/AuthenticationScreen 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/AuthenticationScreen$1 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/AuthenticationScreen$1 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/AuthenticationScreen$2 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/AuthenticationScreen$2 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/AuthenticationScreen$3 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/AuthenticationScreen$3 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/AuthenticationScreen$4 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/AuthenticationScreen$4 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/AuthenticationScreen$5 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/AuthenticationScreen$5 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/AuthenticationScreen$6 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/AuthenticationScreen$6 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/ChooseAccountNumberScreen 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/ChooseAccountNumberScreen 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/ChooseAccountNumberScreen$1 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/ChooseAccountNumberScreen$1 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/ChooseAccountNumberScreen$2 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/ChooseAccountNumberScreen$2 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/ChooseAccountNumberScreen$3 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/ChooseAccountNumberScreen$3 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/ChooseAccountNumberScreen$4 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/ChooseAccountNumberScreen$4 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/ChooseAccountNumberScreen$5 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/ChooseAccountNumberScreen$5 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/CreatedAccountAndCardNumberScreen 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/CreatedAccountAndCardNumberScreen 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/CreatedAccountAndCardNumberScreen$1 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/CreatedAccountAndCardNumberScreen$1 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/CreatedAccountAndCardNumberScreen$2 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/CreatedAccountAndCardNumberScreen$2 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/CreatedAccountAndCardNumberScreen$3 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/CreatedAccountAndCardNumberScreen$3 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/CreatedAccountAndCardNumberScreen$4 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/CreatedAccountAndCardNumberScreen$4 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/CreatedAccountAndCardNumberScreen$5 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/CreatedAccountAndCardNumberScreen$5 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/EmailVerificationScreen 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/EmailVerificationScreen 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/EmailVerificationScreen$1 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/EmailVerificationScreen$2 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/EmailVerificationScreen$2 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/EmailVerificationScreen$3 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/EmailVerificationScreen$3 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/EmailVerificationScreen$4 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/EmailVerificationScreen$4 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/EmailVerificationScreen$5 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/RegistrationScreen1 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/RegistrationScreen1$2 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/RegistrationScreen1$3 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/RegistrationScreen1$5 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/RegistrationScreen2 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/RegistrationScreen2 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/RegistrationScreen2$1 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/RegistrationScreen2$1 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/RegistrationScreen2$2 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/RegistrationScreen2$2 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/RegistrationScreen2$3 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/RegistrationScreen2$3 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/RegistrationScreen2$4 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/RegistrationScreen2$4 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/RegistrationScreen2$5 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/RegistrationScreen2$5 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/CreditCard/PayWithCardScreen1$1 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/CreditCard/PayWithCardScreen1$2 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/CreditCard/PayWithCardScreen1$4 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/CreditCard/PayWithCardScreen2$3 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Credits/Credit 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Credits/Credit 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Credits/Credit$1 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Credits/Credit$1 3.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Credits/Credit$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/Credits/Credit$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Credits/Credit$2 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Credits/Credit$2 3.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Credits/Credit$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/Credits/Credit$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Credits/Credit.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/Credits/Credit.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/DataValidation 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/DataValidation 3.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/DataValidation.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/DataValidation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Database.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/Database.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/JavaMailTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/JavaMailTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/MainScreen$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/MainScreen$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/MainScreen$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/MainScreen$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/MainScreen$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/MainScreen$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/MainScreen$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/MainScreen$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/MainScreen$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/MainScreen$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/MainScreen$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/MainScreen$6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/MainScreen.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/MainScreen.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Screen.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/Screen.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/mainFrame/MainFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/mainFrame/MainFrame.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/mainPanel/MainPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/mainPanel/MainPanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/timer/AppTimer$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/timer/AppTimer$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/timer/AppTimer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/timer/AppTimer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/timer/MouseAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/timer/MouseAction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/AccountChoosed.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/AccountChoosed.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/CurrenciesExchangeRate.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/CurrenciesExchangeRate.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/CurrencyEntry.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/CurrencyEntry.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/FileElement.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/FileElement.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/FileSystem.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/FileSystem.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/PdfFactory$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/PdfFactory$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/PdfFactory$PdfType.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/PdfFactory$PdfType.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/PdfFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/PdfFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/PdfGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/PdfGenerator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/PdfGeneratorBLIK.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/PdfGeneratorBLIK.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/PdfGeneratorOwn.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/PdfGeneratorOwn.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/PdfGeneratorStandard.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/PdfGeneratorStandard.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/PdfGeneratorStandingOrder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/PdfGeneratorStandingOrder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/SavingsHistory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/SavingsHistory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/StandingOrder$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/StandingOrder$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/StandingOrder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/StandingOrder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/StandingOrderNextStep$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/StandingOrderNextStep$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/StandingOrderNextStep$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/StandingOrderNextStep$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/StandingOrderNextStep$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/StandingOrderNextStep$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/StandingOrderNextStep$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/StandingOrderNextStep$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/StandingOrderNextStep$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/StandingOrderNextStep$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/StandingOrderNextStep.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/StandingOrderNextStep.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/Transfer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/Transfer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/TransferConfirm$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/TransferConfirm$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/TransferFactory$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/TransferFactory$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/TransferFactory$TransferType.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/TransferFactory$TransferType.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/TransferFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/TransferFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Credits/Credit.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/Credits/Credit.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Database 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Database 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/JavaMail 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/JavaMail 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/JavaMail$1 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/JavaMail$1 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/MainScreen 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/MainScreen 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/MainScreen$1 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/MainScreen$1 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/MainScreen$2 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/MainScreen$2 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/MainScreen$3 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/MainScreen$3 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/MainScreen$4 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/MainScreen$4 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/MainScreen$5 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/MainScreen$5 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/MainScreen$6 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/MainScreen$6 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ChangeEmailScreen 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ChangeEmailScreen 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ChangeEmailScreen$1 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ChangeEmailScreen$1 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ChangeEmailScreen$2 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ChangeEmailScreen$2 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ChangeEmailScreen$3 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ChangeEmailScreen$3 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ChangeEmailScreen$4 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ChangeEmailScreen$4 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ChangeEmailScreen$5 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ChangeEmailScreen$5 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ChangePasswordScreen1 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ChangePasswordScreen1 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ChangePasswordScreen1$1 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ChangePasswordScreen1$1 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ChangePasswordScreen1$2 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ChangePasswordScreen1$2 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ChangePasswordScreen1$3 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ChangePasswordScreen1$3 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ChangePasswordScreen1$4 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ChangePasswordScreen1$4 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ChangePasswordScreen1$5 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ChangePasswordScreen1$5 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ChangePasswordScreen1$6 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ChangePasswordScreen1$6 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ChangePasswordScreen2 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ChangePasswordScreen2 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ChangePasswordScreen2$1 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ChangePasswordScreen2$1 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ChangePasswordScreen2$2 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ChangePasswordScreen2$2 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ChangePasswordScreen2$3 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ChangePasswordScreen2$3 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ChangePasswordScreen2$4 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ChangePasswordScreen2$4 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ChangePasswordScreen2$5 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ChangePasswordScreen2$5 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ChangeUsernameScreen 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ChangeUsernameScreen 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ChangeUsernameScreen$1 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ChangeUsernameScreen$1 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ChangeUsernameScreen$2 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ChangeUsernameScreen$2 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ChangeUsernameScreen$3 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ChangeUsernameScreen$3 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ChangeUsernameScreen$4 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ChangeUsernameScreen$4 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ChangeUsernameScreen$5 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ChangeUsernameScreen$5 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/SettingsMainScreen 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/SettingsMainScreen 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/SettingsMainScreen$1 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/SettingsMainScreen$1 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/SettingsMainScreen$2 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/SettingsMainScreen$2 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/SettingsMainScreen$3 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/SettingsMainScreen$4 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/SettingsMainScreen$5 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/SettingsMainScreen$5 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/SettingsMainScreen$6 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/SettingsMainScreen$6 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/SettingsMainScreen$7 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/SettingsMainScreen$8 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/SettingsMainScreen$8 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/SettingsMainScreen$9 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/SettingsMainScreen$9 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ShowUserDataScreen 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ShowUserDataScreen 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ShowUserDataScreen$1 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ShowUserDataScreen$1 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ShowUserDataScreen$2 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ShowUserDataScreen$2 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ShowUserDataScreen$3 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ShowUserDataScreen$3 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ShowUserDataScreen$4 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ShowUserDataScreen$4 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/User 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/mainFrame/MainFrame 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/mainFrame/MainFrame 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/mainPanel/MainPanel 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/mainPanel/MainPanel 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/timer/AppTimer 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/timer/AppTimer 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/timer/AppTimer$1 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/timer/AppTimer$1 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/timer/MouseAction 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/timer/MouseAction 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/AccountChoosed 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/AccountChoosed 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/BlikPhoneTransfer 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/BlikPhoneTransfer 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/BlikPhoneTransfer$1 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/BlikPhoneTransfer$1 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/BlikPhoneTransfer$2 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/BlikPhoneTransfer$2 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/BlikPhoneTransfer$3 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/BlikPhoneTransfer$3 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/CurrenciesExchangeRate 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/CurrenciesExchangeRate 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/CurrencyEntry 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/CurrencyEntry 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/FileElement 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/FileElement 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/FileSystem 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/FileSystem 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/ForeignStandardTransfer 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/ForeignStandardTransfer 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/ForeignStandardTransfer$1 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/ForeignStandardTransfer$1 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/LimitJTextField 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/LimitJTextField 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/MenuInfo 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/MenuInfo 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/OnlyNumbers 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/OnlyNumbers 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/OnlyNumbers$1 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/OnlyNumbers$1 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/OrdinaryHistory 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/OrdinaryHistory 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/OwnTransfer 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/OwnTransfer 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/OwnTransfer$1 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/OwnTransfer$1 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/OwnTransfer$2 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/OwnTransfer$2 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/OwnTransfer$3 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/OwnTransfer$3 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/OwnTransfer$4 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/OwnTransfer$4 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/OwnTransfer$5 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/OwnTransfer$5 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/PdfFactory 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/PdfFactory 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/PdfFactory$1 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/PdfFactory$1 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/PdfFactory$PdfType 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/PdfFactory$PdfType 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/PdfGenerator 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/PdfGenerator 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/PdfGeneratorBLIK 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/PdfGeneratorBLIK 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/PdfGeneratorOwn 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/PdfGeneratorOwn 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/PdfGeneratorStandard 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/PdfGeneratorStandard 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/PdfGeneratorStandingOrder 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/PdfGeneratorStandingOrder 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/SampleMenuListenerAccount1 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/SampleMenuListenerAccount1 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/SampleMenuListenerAccount2 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/SampleMenuListenerAccount2 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/SavingsHistory 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/SavingsHistory 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/StandardTransfer 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/StandardTransfer 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/StandardTransfer$1 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/StandardTransfer$1 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/StandardTransfer$2 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/StandardTransfer$2 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/StandardTransfer$3 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/StandardTransfer$3 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/StandardTransfer$4 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/StandardTransfer$4 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/StandardTransfer$5 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/StandardTransfer$5 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/StandardTransfer$6 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/StandardTransfer$6 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/StandingOrder 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/StandingOrder 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/StandingOrder$1 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/StandingOrder$1 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/StandingOrderNextStep 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/StandingOrderNextStep 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/StandingOrderNextStep$1 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/StandingOrderNextStep$1 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/StandingOrderNextStep$2 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/StandingOrderNextStep$2 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/StandingOrderNextStep$3 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/StandingOrderNextStep$3 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/StandingOrderNextStep$4 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/StandingOrderNextStep$4 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/StandingOrderNextStep$5 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/StandingOrderNextStep$5 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/Transfer 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/Transfer 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/TransferConfirm 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/TransferConfirm 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/TransferConfirm$1 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/TransferConfirm$1 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/TransferConfirm$2 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/TransferConfirm$2 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/TransferConfirm$3 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/TransferConfirm$3 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/TransferConfirm$4 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/TransferConfirm$4 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/TransferFactory 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/TransferFactory 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/TransferFactory$1 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/TransferFactory$1 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/TransferFactory$TransferType 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/TransferFactory$TransferType 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/TransferNextStep 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/TransferNextStep 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/TransferNextStep$1 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/TransferNextStep$1 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/TransferNextStep$2 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/TransferNextStep$2 3.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Credits/Credit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Credits/Credit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Database.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataValidation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataValidation.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -433,7 +694,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654764488597</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="sth added">
+      <created>1654764976083</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1654764976083</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

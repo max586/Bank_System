@@ -47,25 +47,26 @@ public class Credit extends Screen
                         {
                             if(!DataValidation.isNumber(Amount.getText()))
                             {
-                                Amount.setText("Not a number");
+                                Amount.setText("Error");
                             }
-                            if(!DataValidation.isNumber(Amount.getText()))
+                            if(!DataValidation.isNumber(Years.getText()))
                             {
-                                Years.setText("Not a number");
+                                    Years.setText("Error");
                             }
 
-                                if(DataValidation.isNumber(Amount.getText()) && DataValidation.isNumber(Amount.getText()))
+                                if(DataValidation.isNumber(Amount.getText()) && DataValidation.isNumber(Years.getText()) &&  (int)Float.parseFloat(Years.getText())>0)
                                 {
                                     jpane.setMessage("Now you must pay us some money, hehe");
                                     Date Today = new Date();
-                                    Database.addCredit(user.username, Float.parseFloat(Amount.getText()), 0, Today.getYear() + "-" + Today.getMonth() + "-" + Today.getDate(), Integer.parseInt(Years.getText()));
+                                    Years.setText(Integer.toString((int)Float.parseFloat(Years.getText())));
+                                    Database.addCredit(user.username, Float.parseFloat(Amount.getText()), 0, Today.getYear() + "-" + Today.getMonth() + "-" + Today.getDate(), (int)Float.parseFloat(Years.getText()));
                                     String[] CreditInfo = Database.getCredit(user.username);//Amount , AmountPayed , StartDate , Duration
                                     MyCreditAmount.setText(CreditInfo[0]);
                                     MyPayedCredit.setText(CreditInfo[1]);
                                     MyDebt.setText(String.valueOf(checkDebt()));
                                 }else
                                 {
-                                    jpane.setMessage("You are allowed to type only numbers");
+                                    jpane.setMessage("You are allowed to type only numbers nad year must be > 0");
                                 }
 
                         }else
@@ -79,7 +80,7 @@ public class Credit extends Screen
                 }
                 jpane.setMessageType(JOptionPane.INFORMATION_MESSAGE);
                 jdialog.setTitle("Info");
-                jdialog.setSize(450,170);
+                jdialog.setSize(550,170);
                 jdialog.setVisible(true);
             }
         });
@@ -99,6 +100,8 @@ public class Credit extends Screen
                         Database.setCreditAmountPayed(user.username, CreditPayed + CreditDebt);
                         CreditInfo = Database.getCredit(user.username);
                         Balance.setText(String.valueOf(Database.getOrdinaryAccountBalance(user.username)));
+                        Amount.setText("");
+                        Years.setText("");
                         MyCreditAmount.setText(CreditInfo[0]);
                         MyPayedCredit.setText(CreditInfo[1]);
                         MyDebt.setText(String.valueOf(checkDebt()));
