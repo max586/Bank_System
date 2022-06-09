@@ -45,8 +45,8 @@ foreign key(username) references Users(username) on update cascade on delete cas
 
 create table Credits(
 username varchar(30) not null,
-amount float check(amount>=0 and amount<=50000),
-`amount payed` float check(`amount payed`>=0 and `amount payed`<=50000),
+amount float check(amount>=0),
+`amount payed` float check(`amount payed`>=0),
 `start date` date,
 `duration` int,#in years
 foreign key(username) references Users(username) on update cascade on delete cascade
