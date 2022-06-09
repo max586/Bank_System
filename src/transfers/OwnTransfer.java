@@ -76,7 +76,7 @@ public class OwnTransfer implements Transfer {
         setNextButton();
         cancelButton.addActionListener(e->{
             frame.getjFrame().dispose();
-            new MainScreen(user,null,new Screen(),"1");
+            new MainScreen(user,null,new Screen(),AccountChoosed.ORDINARYACCOUNT);
         });
         frame.getjFrame().setContentPane(OwnTransferPanel);
         frame.getjFrame().setVisible(true);

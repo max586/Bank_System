@@ -75,8 +75,8 @@ public class Database {
                 try {
                     st.executeUpdate("insert into HistoryOrdinary values('"+operationDate+"','"+transferType+"','"+senderAccountNumber+"','"
                             +receiverAccountNumber+"','"+phone_nr+"','"+transferAmount+"','"+transferCurrency+"','"+totalTransferCost+"','"
-                            +transferTitle+"','"+startDate+"','"+endDate+"','"+transferCycle+"','"+transferCycleUnits+
-                            first_name+"','"+last_name+"','"+town+"','"+postcode+"','"+street+"','"+street_nr+"';");
+                            +transferTitle+"','"+startDate+"','"+endDate+"','"+transferCycle+"','"+transferCycleUnits+"','"+
+                            first_name+"','"+last_name+"','"+town+"','"+postcode+"','"+street+"','"+street_nr+"');");
                 } catch (SQLException e) {
                     System.out.println(e);
                 }
@@ -85,8 +85,8 @@ public class Database {
                 try {
                     st.executeUpdate("insert into HistorySavings values('"+operationDate+"','"+transferType+"','"+senderAccountNumber+"','"
                             +receiverAccountNumber+"','"+phone_nr+"','"+transferAmount+"','"+transferCurrency+"','"+totalTransferCost+"','"
-                            +transferTitle+"','"+startDate+"','"+endDate+"','"+transferCycle+"','"+transferCycleUnits+
-                            first_name+"','"+last_name+"','"+town+"','"+postcode+"','"+street+"','"+street_nr+"';");
+                            +transferTitle+"','"+startDate+"','"+endDate+"','"+transferCycle+"','"+transferCycleUnits+"','"+
+                            first_name+"','"+last_name+"','"+town+"','"+postcode+"','"+street+"','"+street_nr+"');");
                 } catch (SQLException e) {
                     System.out.println(e);
                 }

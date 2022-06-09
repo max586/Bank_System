@@ -28,11 +28,11 @@ public class MainScreen extends Screen {
     public JButton standingOrderTransferButton;
     private JButton historyButton;
     public int counter = 0;
-    String chosenAcc;
+    AccountChoosed chosenAcc;
     String []options = {"one","two"};
 
 
-    public MainScreen(User user, Screen prev_screen, Screen next_screen, String option){
+    public MainScreen(User user, Screen prev_screen, Screen next_screen, AccountChoosed option){
         super(user,prev_screen,next_screen);
         chosenAcc = option;
     }
@@ -46,13 +46,13 @@ public class MainScreen extends Screen {
         AuthPanel.addMouseMotionListener(new MouseAction(appTimer));
         appTimer.start();
 
-        if(chosenAcc == "ordinary")
+        if(chosenAcc == AccountChoosed.ORDINARYACCOUNT)
         {
             String temp = Database.getOrdinaryAccountNumber(user.username);
             AccNumber.setText(temp);
             AccType.setText("Wybrane konto: ordinary");
         }
-        else if(chosenAcc == "saving")
+        else if(chosenAcc == AccountChoosed.SAVINGSACCOUNT)
         {
             AccNumber.setText(Database.getSavingsAccountNumber( user.username));
             AccType.setText("Wybrane konto: saving");
@@ -62,7 +62,7 @@ public class MainScreen extends Screen {
         foreignTransferButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (chosenAcc == "ordinary") {
+                if (chosenAcc == AccountChoosed.ORDINARYACCOUNT) {
                     frame.dispose();
                     try {
                         new TransferFactory(AccountChoosed.ORDINARYACCOUNT, user, new MainFrame()).getTransfer(TransferFactory.TransferType.ZAGRANICZNY);
@@ -75,7 +75,7 @@ public class MainScreen extends Screen {
         incountryButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (chosenAcc == "ordinary") {
+                if (chosenAcc == AccountChoosed.ORDINARYACCOUNT) {
                     frame.dispose();
                     try {
                         new TransferFactory(AccountChoosed.ORDINARYACCOUNT, user, new MainFrame()).getTransfer(TransferFactory.TransferType.KRAJOWY);
@@ -90,7 +90,7 @@ public class MainScreen extends Screen {
             public void actionPerformed(ActionEvent e) {
                 frame.dispose();
 ;                try {
-                    new TransferFactory(AccountChoosed.ORDINARYACCOUNT, user, new MainFrame()).getTransfer(TransferFactory.TransferType.WLASNY);
+                    new TransferFactory(chosenAcc, user, new MainFrame()).getTransfer(TransferFactory.TransferType.WLASNY);
                 }catch(Exception e2){}
             }
         });
@@ -98,7 +98,7 @@ public class MainScreen extends Screen {
         standingOrderTransferButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (chosenAcc == "ordinary") {
+                if (chosenAcc == AccountChoosed.ORDINARYACCOUNT) {
                     frame.dispose();
                     try {
                         new TransferFactory(AccountChoosed.ORDINARYACCOUNT, user, new MainFrame()).getTransfer(TransferFactory.TransferType.ZLECENIESTALE);
@@ -110,8 +110,9 @@ public class MainScreen extends Screen {
         KREDYTYButton.addActionListener(e->
         {
             frame.dispose();
-            new Credit(user, MainScreen.this, new Screen()).CreateScreen();
-        });
+            if(chosenAcc == AccountChoosed.ORDINARYACCOUNT) {
+                new Credit(user, MainScreen.this, new Screen()).CreateScreen();
+            }});
         PROFILButton.addActionListener(e->
         {
             frame.dispose();
@@ -139,7 +140,12 @@ public class MainScreen extends Screen {
     public static void main(String[] args) throws IOException {
         User test_user = new User();
         test_user.username="test_user";
-        new MainScreen(test_user,null,null, "ordinary").CreateScreen();
+        test_user.appCode="1234";
+        test_user.savings_account_number="PL999";
+        test_user.ordinary_account_balance= (float) 86751.33;
+        test_user.savings_account_balance=10000;
+        test_user.ordinary_account_number="PL666";
+        new MainScreen(test_user,null,null, AccountChoosed.ORDINARYACCOUNT).CreateScreen();
     }
 }
 

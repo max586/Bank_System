@@ -37,7 +37,7 @@ public class ForeignStandardTransfer extends StandardTransfer implements Transfe
         setTransferAmountTxt(transferAmount2Txt);
         cancelButton.addActionListener(e->{
             frame.getjFrame().dispose();
-            new MainScreen(user,null,new Screen(),"1");
+            new MainScreen(user,null,new Screen(),AccountChoosed.ORDINARYACCOUNT);
         });
     }
     void setTransferData(){

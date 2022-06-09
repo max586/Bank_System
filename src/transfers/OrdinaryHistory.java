@@ -39,7 +39,7 @@ public class OrdinaryHistory {
         frame.getjFrame().setVisible(true);
         cancelButton.addActionListener(e->{
             frame.getjFrame().dispose();
-            new MainScreen(user,null,new Screen(),"1");
+            new MainScreen(user,null,new Screen(),AccountChoosed.ORDINARYACCOUNT);
         });
     }
 }

@@ -127,7 +127,7 @@ public class StandardTransfer implements Transfer {
         setNextButton(nextButton);
         cancelButton.addActionListener(e->{
             frame.getjFrame().dispose();
-            new MainScreen(user,null,new Screen(),"ordinary");
+            new MainScreen(user,null,new Screen(),AccountChoosed.ORDINARYACCOUNT);
         });
         transferPanel1.revalidate();
         frame.getjFrame().revalidate();

@@ -5,6 +5,7 @@ import src.Screen;
 import src.User;
 import src.timer.AppTimer;
 import src.timer.MouseAction;
+import src.transfers.AccountChoosed;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -35,18 +36,16 @@ public class ChooseAccountNumberScreen extends Screen{
         submitButton.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e) {
-                // TODO Auto-generated method stub
-                //warning! duplicated code!!!
                 if(ordinaryAccountRadioButton.isSelected()){
                     frame.dispose();
                     if(next_screen!=null){
-                        new MainScreen(user, ChooseAccountNumberScreen.this, new Screen(), "ordinary").CreateScreen();
+                        new MainScreen(user, ChooseAccountNumberScreen.this, new Screen(), AccountChoosed.ORDINARYACCOUNT).CreateScreen();
                     }
                 }
                 else if(savingsAccountRadioButton.isSelected()){
                     frame.dispose();
                     if(next_screen!=null){
-                        new MainScreen(user, ChooseAccountNumberScreen.this, new Screen(),"saving").CreateScreen();
+                        new MainScreen(user, ChooseAccountNumberScreen.this, new Screen(),AccountChoosed.SAVINGSACCOUNT).CreateScreen();
                     }
                 }
                 else{

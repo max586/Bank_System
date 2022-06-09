@@ -79,7 +79,7 @@ create table HistoryOrdinary(
 `Postcode` varchar(6),
 `Street` varchar(30),
 `Street number` varchar(10),
-foreign key(`Account nr from`) references OrdinaryAccounts(`Account number`)
+foreign key(`Account nr from`) references OrdinaryAccounts(`Account number`) on update cascade
 );
 
 create table HistorySavings(
@@ -102,5 +102,5 @@ create table HistorySavings(
 `Postcode` varchar(6),
 `Street` varchar(30),
 `Street number` varchar(10),
-foreign key(`Account nr from`) references SavingsAccounts(`Account number`)
+foreign key(`Account nr from`) references SavingsAccounts(`Account number`) on update cascade
 );
