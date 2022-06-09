@@ -47,13 +47,14 @@ public class Credit extends Screen
                         {
                             if(!DataValidation.isNumber(Amount.getText()))
                             {
-                                Amount.setText("You must type number here");
+                                Amount.setText("Not a number");
                             }
                             if(!DataValidation.isNumber(Amount.getText()))
                             {
-                                Years.setText("You must type number here");
+                                Years.setText("Not a number");
                             }
-                                if(DataValidation.isNumber(Amount.getText())&&DataValidation.isNumber(Amount.getText()))
+
+                                if(DataValidation.isNumber(Amount.getText()) && DataValidation.isNumber(Amount.getText()))
                                 {
                                     jpane.setMessage("Now you must pay us some money, hehe");
                                     Date Today = new Date();
@@ -62,6 +63,9 @@ public class Credit extends Screen
                                     MyCreditAmount.setText(CreditInfo[0]);
                                     MyPayedCredit.setText(CreditInfo[1]);
                                     MyDebt.setText(String.valueOf(checkDebt()));
+                                }else
+                                {
+                                    jpane.setMessage("You are allowed to type only numbers");
                                 }
 
                         }else

@@ -146,7 +146,9 @@
           </grid>
           <gridbag weightx="0.0" weighty="0.0"/>
         </constraints>
-        <properties/>
+        <properties>
+          <preferredSize width="100" height="30"/>
+        </properties>
       </component>
       <vspacer id="d934d">
         <constraints>
@@ -170,7 +172,9 @@
           </grid>
           <gridbag weightx="0.0" weighty="0.0"/>
         </constraints>
-        <properties/>
+        <properties>
+          <preferredSize width="100" height="30"/>
+        </properties>
       </component>
       <vspacer id="843df">
         <constraints>
