@@ -1,1 +1,1 @@
-SELECT  * from OutgoingHistoryOrdinary o1 join OrdinaryAccounts o2 on o1.`Account nr from` =o2.`Account number`;
+delete from Credits where username="test_user";

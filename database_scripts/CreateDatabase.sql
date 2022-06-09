@@ -45,8 +45,8 @@ foreign key(username) references Users(username) on update cascade on delete cas
 
 create table Credits(
 username varchar(30) not null,
-amount float check(amount>=0 and amount<=50000),
-`amount payed` float check(`amount payed`>=0 and `amount payed`<=50000),
+amount float check(amount>=0),
+`amount payed` float check(`amount payed`>=0),
 `start date` date,
 `duration` int,#in years
 foreign key(username) references Users(username) on update cascade on delete cascade
@@ -64,6 +64,7 @@ create table HistoryOrdinary(
 `Transfer Type` varchar(50) not null,
 `Account nr from` varchar(28) not null,
 `Account nr to` varchar(28),
+`Phone nr to` varchar(9),
 `Transfer Amount` double check(`Transfer Amount`>0),
 `Transfer Currency` varchar(3) not null,
 `Total Transfer Cost` double check (`Total Transfer Cost`>0),
@@ -72,6 +73,12 @@ create table HistoryOrdinary(
 `End Date` varchar(30),
 `Transfer Cycle` int,
 `Transfer Cycle Units` varchar(10),
+`Sender first name` varchar(20),
+`Sender last name` varchar(20),
+`Sender Town` varchar(30),
+`Sender Postcode` varchar(6),
+`Sender Street` varchar(30),
+`Sender Street number` varchar(10),
 foreign key(`Account nr from`) references OrdinaryAccounts(`Account number`)
 );
 
@@ -80,6 +87,7 @@ create table HistorySavings(
 `Transfer Type` varchar(50) not null,
 `Account nr from` varchar(28) not null,
 `Account nr to` varchar(28),
+`Phone nr to` varchar(9),
 `Transfer Amount` double check(`Transfer Amount`>0),
 `Transfer Currency` varchar(3) not null,
 `Total Transfer Cost` double check (`Total Transfer Cost`>0),
@@ -88,6 +96,11 @@ create table HistorySavings(
 `End Date` varchar(30),
 `Transfer Cycle` int,
 `Transfer Cycle Units` varchar(10),
+`Sender first name` varchar(20),
+`Sender last name` varchar(20),
+`Sender Town` varchar(30),
+`Sender Postcode` varchar(6),
+`Sender Street` varchar(30),
 `Sender Street number` varchar(10),
 foreign key(`Account nr from`) references SavingsAccounts(`Account number`)
 );

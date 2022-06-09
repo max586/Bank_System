@@ -19,7 +19,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Vector;
 
-public class StandardTransfer implements src.transfers.Transfer {
+public class StandardTransfer implements Transfer {
     protected JTextField accountNumberTxt;
     protected JTextField transferAmount1Txt;
     protected JComboBox receiverNameCombo;
@@ -127,7 +127,7 @@ public class StandardTransfer implements src.transfers.Transfer {
         setNextButton(nextButton);
         cancelButton.addActionListener(e->{
             frame.getjFrame().dispose();
-            new MainScreen(user,null,new Screen(),"1");
+            new MainScreen(user,null,new Screen(),"ordinary");
         });
         transferPanel1.revalidate();
         frame.getjFrame().revalidate();
