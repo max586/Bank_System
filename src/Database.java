@@ -193,7 +193,7 @@ public class Database {
         try{
             ResultSet rs = st.executeQuery("select `Account number` from OrdinaryAccounts where username='"+username+"';");
             rs.next();
-            return rs.getString(1);
+            return rs.getString(1).substring(2);
         }
         catch(SQLException e){
             System.out.println("Couldn't execute the query");
@@ -205,7 +205,7 @@ public class Database {
         try{
             ResultSet rs = st.executeQuery("select `Account number` from SavingsAccounts where username='"+username+"';");
             rs.next();
-            return rs.getString(1);
+            return rs.getString(1).substring(2);
         }
         catch(SQLException e){
             System.out.println("Couldn't execute the query");

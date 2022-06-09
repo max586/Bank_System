@@ -65,6 +65,9 @@ public class DataValidation {
         }
         return false;
     }
+    public static boolean isNumber(String word){
+        return word.length()<=10 && Pattern.matches("[0-9]+",word);
+    }
     public static void main(String[] args) {
         System.out.println(nameIsValid("Max"));
         System.out.println(addressIsValid("ul. Ankm, 10"));
