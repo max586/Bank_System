@@ -70,13 +70,15 @@ public class Credit extends Screen
         payDebtButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if(Database.hasCredit(user.username)) {
+                if(Database.hasCredit(user.username))
+                {
                     String[] CreditInfo = Database.getCredit(user.username);//Amount , AmountPayed , StartDate , Duration
                     float UserBalance = Database.getOrdinaryAccountBalance(user.username);
                     float CreditDebt = checkDebt();
                     float CreditPayed = Float.parseFloat(CreditInfo[1]);
 
-                    if (UserBalance - CreditDebt >= 0 && Database.hasCredit(user.username)) {
+                    if (UserBalance - CreditDebt >= 0)
+                    {
                         Database.setOrdinaryAccountBalance(user.username, UserBalance - CreditDebt);
                         Database.setCreditAmountPayed(user.username, CreditPayed + CreditDebt);
                         CreditInfo = Database.getCredit(user.username);
@@ -85,26 +87,32 @@ public class Credit extends Screen
                         MyPayedCredit.setText(CreditInfo[1]);
                         MyDebt.setText(String.valueOf(checkDebt()));
 
-                        Date StartDate = new Date(Integer.parseInt(CreditInfo[2].substring(0, 3)) - 1900, Integer.parseInt(CreditInfo[2].substring(5, 6)), Integer.parseInt(CreditInfo[2].substring(8, 9)));
+
+                       // Date StartDate = new Date(Integer.parseInt(CreditInfo[2].substring(0, 3)) - 1900, Integer.parseInt(CreditInfo[2].substring(5, 6)), Integer.parseInt(CreditInfo[2].substring(8, 9)));
+                        Date StartDate = new Date(2000-1900,4,8);//ile Lat juz się ma kredyt
+
                         Date Today = new Date();
                         Date DiffOfYears = new Date(Today.getTime() - StartDate.getTime());
                         int currentYear = DiffOfYears.getYear() - 70;
-                        if (currentYear == Integer.parseInt(CreditInfo[3]) && checkDebt() == 0) ;
+                        if (currentYear >= Integer.parseInt(CreditInfo[3]) && checkDebt() == 0) ;
                         {
                             Database.deleteCredit(user.username);
                             MyCreditAmount.setText("0");
                             MyPayedCredit.setText("0");
                             MyDebt.setText("0");
                         }
+                    }else
+                    {
+                        jpane.setMessage("You don't have enough money");
                     }
                 }else
                 {
                     jpane.setMessage("You don't have credit");
-                    jpane.setMessageType(JOptionPane.INFORMATION_MESSAGE);
-                    jdialog.setTitle("Info");
-                    jdialog.setSize(450,170);
-                    jdialog.setVisible(true);
                 }
+                jpane.setMessageType(JOptionPane.INFORMATION_MESSAGE);
+                jdialog.setTitle("Info");
+                jdialog.setSize(450,170);
+                jdialog.setVisible(true);
             }
         });
     }
