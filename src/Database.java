@@ -5,7 +5,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 public class Database {
-    public static Statement st = connectToDatabase("bank_system","root","17391425");
+    public static Statement st = connectToDatabase("bank_system","root","password");
     public static Statement connectToDatabase(String database_name,String username, String password){
         Connection con=null;
         Statement st=null;
@@ -114,6 +114,7 @@ public class Database {
                         for(int j=0;j<19;j++){
                             transactions_history[i][j]=rs.getString(j+1);
                         }
+                        rs.next();
                     }
                     return transactions_history;
                 } catch (SQLException e) {
@@ -135,6 +136,7 @@ public class Database {
                         for(int j=0;j<22;j++){
                             transactions_history[i][j]=rs.getString(j+1);
                         }
+                        rs.next();
                     }
                     return transactions_history;
                 } catch (SQLException e) {

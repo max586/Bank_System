@@ -205,8 +205,6 @@ public class Credit extends Screen
             needToPay+=creditAmount/yearsAll + (creditAmount - i*creditAmount/yearsAll)*percent;
         }
             return (needToPay - currentCreditPayment);
-
-
     }
 
     public static void main(String[] args) throws IOException {

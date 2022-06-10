@@ -70,7 +70,7 @@ public class AuthenticationScreen extends Screen {
 
                     frame.dispose();
                     if(next_screen!=null){
-                        new ChooseAccountNumberScreen(user, AuthenticationScreen.this,new Screen()).CreateScreen();
+                        new MainScreen(user, AuthenticationScreen.this,new Screen()).CreateScreen();
                     }
                 }
                 else{
