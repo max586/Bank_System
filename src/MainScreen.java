@@ -22,6 +22,9 @@ public class MainScreen extends Screen {
     public JButton prevButton;
     public JLabel timeLabel;
     public JLabel AccNumber;
+    public JLabel OrdAccNum;
+    public JLabel SavAccNum;
+
     public JLabel AccType;
     public JButton foreignTransferButton;
     public JButton ownTransferButton;
@@ -32,9 +35,8 @@ public class MainScreen extends Screen {
     String []options = {"one","two"};
 
 
-    public MainScreen(User user, Screen prev_screen, Screen next_screen, AccountChoosed option){
+    public MainScreen(User user, Screen prev_screen, Screen next_screen){
         super(user,prev_screen,next_screen);
-        chosenAcc = option;
     }
 
     public void CreateScreen(){
@@ -44,41 +46,32 @@ public class MainScreen extends Screen {
         AuthPanel.addMouseMotionListener(new MouseAction(appTimer));
         appTimer.start();
 
-        if(chosenAcc == AccountChoosed.ORDINARYACCOUNT)
-        {
-            String temp = Database.getOrdinaryAccountNumber(user.username);
-            AccNumber.setText(temp);
-            AccType.setText("Wybrane konto: ordinary");
-        }
-        else if(chosenAcc == AccountChoosed.SAVINGSACCOUNT)
-        {
-            AccNumber.setText(Database.getSavingsAccountNumber( user.username));
-            AccType.setText("Wybrane konto: saving");
-        }
+
+            OrdAccNum.setText(Database.getOrdinaryAccountNumber(user.username));
+
+            SavAccNum.setText(Database.getSavingsAccountNumber( user.username));
+
 
 //Incountry Transfer, Foreign Transfer, Own Transfer, Standing Order Transfer, BLIK Phone Transfer
         foreignTransferButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (chosenAcc == AccountChoosed.ORDINARYACCOUNT) {
                     frame.dispose();
                     try {
                         new TransferFactory(AccountChoosed.ORDINARYACCOUNT, user, new MainFrame()).getTransfer(TransferFactory.TransferType.ZAGRANICZNY);
                     } catch (Exception e2) {
                     }
-                }
+
             }
         });
 
         incountryButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (chosenAcc == AccountChoosed.ORDINARYACCOUNT) {
                     frame.dispose();
                     try {
                         new TransferFactory(AccountChoosed.ORDINARYACCOUNT, user, new MainFrame()).getTransfer(TransferFactory.TransferType.KRAJOWY);
                     } catch (Exception e2) {
-                    }
                 }
             }
         });
@@ -96,21 +89,19 @@ public class MainScreen extends Screen {
         standingOrderTransferButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (chosenAcc == AccountChoosed.ORDINARYACCOUNT) {
                     frame.dispose();
                     try {
                         new TransferFactory(AccountChoosed.ORDINARYACCOUNT, user, new MainFrame()).getTransfer(TransferFactory.TransferType.ZLECENIESTALE);
                     } catch (Exception e2) {
                     }
-                }
+
             }
         });
         KREDYTYButton.addActionListener(e->
         {
             frame.dispose();
-            if(chosenAcc == AccountChoosed.ORDINARYACCOUNT) {
                 new Credit(user, MainScreen.this, new Screen()).CreateScreen();
-            }});
+            });
         PROFILButton.addActionListener(e->
         {
             frame.dispose();
@@ -143,7 +134,7 @@ public class MainScreen extends Screen {
         test_user.ordinary_account_balance= (float) 86751.33;
         test_user.savings_account_balance=10000;
         test_user.ordinary_account_number="PL666";
-        new MainScreen(test_user,null,null, AccountChoosed.ORDINARYACCOUNT).CreateScreen();
+        new MainScreen(test_user,null,null).CreateScreen();
     }
 }
 
