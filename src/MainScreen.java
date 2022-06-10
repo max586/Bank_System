@@ -22,8 +22,6 @@ public class MainScreen extends Screen {
     public JButton incountryButton;
     public JButton KREDYTYButton;
     public JButton wylogujButton;
-    public JButton prevButton;
-    public JLabel timeLabel;
     public JLabel AccNumber;
     public JLabel OrdAccNum;
     public JLabel SavAccNum;
@@ -34,6 +32,10 @@ public class MainScreen extends Screen {
     public JButton standingOrderTransferButton;
     private JButton ordinaryHistoryButton;
     private JButton savingsHistoryButton;
+    private JLabel panelTitleLabel;
+    private JButton FAQButton;
+    private JPanel timerPanel;
+    private JLabel timeLabel;
     public int counter = 0;
     AccountChoosed chosenAcc;
     String []options = {"one","two"};
@@ -135,19 +137,9 @@ public class MainScreen extends Screen {
         wylogujButton.addActionListener(e->
         {
             frame.dispose();
-            appTimer.stop();
             new AuthenticationScreen(null,null,new Screen()).CreateScreen();
         });
 
-        prevButton.addActionListener(e->
-        {
-            frame.dispose();
-            appTimer.stop();
-            if(prev_screen!=null){
-                prev_screen.frame.setVisible(true);
-        }
-
-        });
         frame.setContentPane(AuthPanel);
         frame.setVisible(true);
     }
