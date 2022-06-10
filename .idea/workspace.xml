@@ -4,25 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bea002ff-8e44-4e85-a29b-66b1294d710d" name="Changes" comment="MainScreen added accNum labels">
+    <list default="true" id="bea002ff-8e44-4e85-a29b-66b1294d710d" name="Changes" comment="Repaired Credits">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database_scripts/FillTables.sql" beforeDir="false" afterPath="$PROJECT_DIR$/database_scripts/FillTables.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/database_scripts/FillTables.sql" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/database_scripts/FillTables.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/database_scripts/Script-1.sql" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/database_scripts/Script-1.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/AuthenticationScreen$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/AuthenticationScreen$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/AuthenticationScreen$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/AuthenticationScreen$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/AuthenticationScreen$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/AuthenticationScreen$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/AuthenticationScreen.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/AuthenticationScreen.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/CreatedAccountAndCardNumberScreen.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/CreatedAccountAndCardNumberScreen.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Credits/Credit$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/Credits/Credit$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Credits/Credit$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/Credits/Credit$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Credits/Credit.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/Credits/Credit.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/MainScreen$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/MainScreen$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/MainScreen$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/MainScreen$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/MainScreen$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/MainScreen$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/MainScreen$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/MainScreen$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/MainScreen.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/MainScreen.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Credits/Credit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Credits/Credit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MainScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainScreen.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -209,7 +196,7 @@
       <workItem from="1654158570270" duration="613000" />
       <workItem from="1654159203927" duration="267000" />
       <workItem from="1654445366373" duration="7379000" />
-      <workItem from="1654867836866" duration="7090000" />
+      <workItem from="1654867836866" duration="8091000" />
     </task>
     <task id="LOCAL-00001" summary="- changed database&#10;- separated user from operations with database. Now all of them are static methods in class Database&#10;- refactored all screens(classes) in AuthenticationAndRegistration package">
       <created>1654117320616</created>
@@ -421,7 +408,28 @@
       <option name="project" value="LOCAL" />
       <updated>1654872311383</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="MainScreen added accNum labels">
+      <created>1654874966306</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1654874966306</updated>
+    </task>
+    <task id="LOCAL-00032" summary="MainScreen added accNum labels">
+      <created>1654874975459</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1654874975459</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Repaired Credits">
+      <created>1654875098743</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1654875098743</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -464,7 +472,8 @@
     <MESSAGE value="database changed" />
     <MESSAGE value="-database changed&#10;-added timer for all classes(Screen and MainFrame now inherit from PreScreen)" />
     <MESSAGE value="MainScreen added accNum labels" />
-    <option name="LAST_COMMIT_MESSAGE" value="MainScreen added accNum labels" />
+    <MESSAGE value="Repaired Credits" />
+    <option name="LAST_COMMIT_MESSAGE" value="Repaired Credits" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

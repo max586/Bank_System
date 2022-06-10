@@ -49,16 +49,21 @@ public class Credit extends Screen
                             {
                                 Amount.setText("Error");
                             }
-                            if(!DataValidation.isNumber(Years.getText()))
+                            if(!DataValidation.isNumber(Years.getText()) )
                             {
+
                                     Years.setText("Error");
+                            }
+                            if(DataValidation.isNumber(Years.getText()) )
+                            {
+                                Years.setText(Integer.toString((int)Float.parseFloat(Years.getText())));
                             }
 
                                 if(DataValidation.isNumber(Amount.getText()) && DataValidation.isNumber(Years.getText()) &&  (int)Float.parseFloat(Years.getText())>0)
                                 {
                                     jpane.setMessage("Now you must pay us some money, hehe");
                                     Date Today = new Date();
-                                    Years.setText(Integer.toString((int)Float.parseFloat(Years.getText())));
+                                    //Years.setText(Integer.toString((int)Float.parseFloat(Years.getText())));
                                     String mounth = "";
                                     if (Today.getMonth()<10)
                                     {
