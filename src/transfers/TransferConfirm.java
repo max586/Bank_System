@@ -1,5 +1,7 @@
 package src.transfers;
 import src.Database;
+import src.MainScreen;
+import src.Screen;
 import src.User;
 import src.mainFrame.MainFrame;
 import src.timer.AppTimer;
@@ -273,6 +275,8 @@ public class TransferConfirm {
                                 ioException.printStackTrace();
                             }
                         }
+                        frame.getjFrame().dispose();
+                        new MainScreen(user,null,new Screen()).CreateScreen();
                     }
                 }
             }

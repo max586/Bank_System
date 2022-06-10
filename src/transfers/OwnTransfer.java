@@ -247,15 +247,18 @@ new MainScreen(user,null,new Screen()).CreateScreen();        });
                         accountChoosedUser = AccountChoosed.ORDINARYACCOUNT;
                         accountChoosedReceiver = AccountChoosed.SAVINGSACCOUNT;
                         receiver.savings_account_number = choosedAcount;
+                        receiver.ordinary_account_number = "";
                     }
                     else {
                         accountChoosedUser = AccountChoosed.SAVINGSACCOUNT;
                         accountChoosedReceiver = AccountChoosed.ORDINARYACCOUNT;
                         receiver.ordinary_account_number = choosedAcount;
+                        receiver.savings_account_number = "";
                     }
                     receiver.firstName = user.lastName;
                     transferData.put("tytul", transferTitleTextArea.getText());
                     transferData.put("kwota", transferAmount1Txt.getText()+"."+ transferAmount2Txt.getText());
+                    transferData.put("kwotaPLN", transferAmount1Txt.getText()+"."+ transferAmount2Txt.getText());
                     transferData.put("oplata","0.00");
                     transferData.put("typ",panelTitleLabel.getText());
                     TransferNextStep pCd = new TransferNextStep(accountChoosedUser,user,accountChoosedReceiver,receiver,transferData,frame, OwnTransferPanel);
