@@ -11,10 +11,14 @@ import javax.mail.internet.*;
 
 public class JavaMail{
    public static void SendMail(String recepient,String code) throws Exception {
+      Scanner sc = new Scanner(System.in);
+      File file = new File("/home/max/my_files/io/new_file");
+      Scanner myReader = new Scanner(file);
+      String myAccountEmail=myReader.nextLine();
+      String password=myReader.nextLine();
+
       System.out.println("Preparing to send an email");
       Properties properties = new Properties();
-      String myAccountEmail="";
-      String password="";
 
       properties.put("mail.smtp.auth", "true");
       properties.put("mail.smtp.starttls.enable", "true");
@@ -45,14 +49,7 @@ public class JavaMail{
    }
 
    public static void main(String[] args) throws Exception {
-      Scanner sc = new Scanner(System.in);
-      File file = new File("");
-      Scanner myReader = new Scanner(file);
-      while (myReader.hasNextLine()) {
-         String data = myReader.nextLine();
-         System.out.println(data);
-      }
-      //SendMail(myAccountEmail,password,"maks.ovsienko2@gmail.com","123456");
+      SendMail("maks.ovsienko2@gmail.com","123456");
       //System.out.println(System.console().readLine());
    }
 }

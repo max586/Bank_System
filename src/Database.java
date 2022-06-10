@@ -5,7 +5,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 public class Database {
-    public static Statement st = connectToDatabase("banksystem123","root","Adix_23/09/1999");
+    public static Statement st = connectToDatabase("bank_system","root","password");
     public static Statement connectToDatabase(String database_name,String username, String password){
         Connection con=null;
         Statement st=null;
@@ -100,51 +100,26 @@ public class Database {
         LocalDateTime day = LocalDateTime.now();
         day=day.minusMonths(1);
         String sday=day.toString().substring(0,10);
-        switch(database){
-            case "HistoryOrdinary":
-                try{
-                    int number_of_rows;
-                    ResultSet rs = st.executeQuery("select count(*) from HistoryOrdinary h join OrdinaryAccounts o on h.`Account nr from` = o.`Account number` where h.`Operation Date` >= '"+sday+"'and o.username='"+username+"';");
-                    rs.next();
-                    number_of_rows=rs.getInt(1);
-                    rs = st.executeQuery("select h.* from HistoryOrdinary h join OrdinaryAccounts o on h.`Account nr from` = o.`Account number` where h.`Operation Date` >= '"+sday+"'and o.username='"+username+"';");
-                    String[][] transactions_history = new String[number_of_rows][19];
-                    rs.next();
-                    for(int i=0;i<number_of_rows;i++){
-                        for(int j=0;j<19;j++){
-                            transactions_history[i][j]=rs.getString(j+1);
-                        }
-                        rs.next();
-                    }
-                    return transactions_history;
-                } catch (SQLException e) {
-                    System.out.println(e);
+        String accounts="";
+        if(database.equals("HistoryOrdinary")){accounts="OrdinaryAccounts";}
+        else{accounts="SavingsAccounts";}
+        try{
+            int number_of_rows;
+            ResultSet rs = st.executeQuery("select count(*) from '"+ database +"' h join '"+ accounts+"' o on h.`Account nr from` = o.`Account number` where h.`Operation Date` >= '"+sday+"'and o.username='"+username+"';");
+            rs.next();
+            number_of_rows=rs.getInt(1);
+            rs = st.executeQuery("select `Operation Date`,`Transfer Type` ,`Account nr to` ,`Phone nr to` ,`Transfer Amount` ,`Transfer Currency` ,`Total Transfer Cost` ,`Transfer Title` ,`Start Date` ,`End Date` ,`Transfer Cycle` ,`Transfer Cycle Units` ,`First name` ,`Last name` ,Town ,Postcode ,Street ,`Street number` from '"+ database +"' h join '"+ accounts+"' o on h.`Account nr from` = o.`Account number` where h.`Operation Date` >= '"+sday+"'and o.username='"+username+"';");
+            String[][] transactions_history = new String[number_of_rows][18];
+            rs.next();
+            for(int i=0;i<number_of_rows;i++){
+                for(int j=0;j<18;j++){
+                    transactions_history[i][j]=rs.getString(j+1);
                 }
-                break;
-            case "HistorySavings":
-                try{
-                    int number_of_rows;
-                    ResultSet rs = st.executeQuery("select count(*) from HistorySavings h join SavingsAccounts o on h.`Account nr from` = o.`Account number`  join UsersData u on o.username =u.username \n" +
-                            "where h.`Operation Date` >= '"+sday+"'and o.username='"+username+"';");
-                    rs.next();
-                    number_of_rows=rs.getInt(1);
-                    rs = st.executeQuery("select h.*,u.* from HistorySavings h join SavingsAccounts o on h.`Account nr from` = o.`Account number`  join UsersData u on o.username =u.username \n" +
-                            "where h.`Operation Date` >= '"+sday+"'and o.username='"+username+"';");
-                    String[][] transactions_history = new String[number_of_rows][22];
-                    rs.next();
-                    for(int i=0;i<number_of_rows;i++){
-                        for(int j=0;j<22;j++){
-                            transactions_history[i][j]=rs.getString(j+1);
-                        }
-                        rs.next();
-                    }
-                    return transactions_history;
-                } catch (SQLException e) {
-                    System.out.println(e);
-                }
-                break;
-            default:
-                System.out.println("Incorrect database!");
+                rs.next();
+            }
+            return transactions_history;
+        } catch (SQLException e) {
+            System.out.println(e);
         }
         return null;
     }
@@ -154,51 +129,26 @@ public class Database {
         LocalDateTime day = LocalDateTime.now();
         day=day.minusMonths(1);
         String sday=day.toString().substring(0,10);
-        switch(database){
-            case "HistoryOrdinary":
-                try{
-                    int number_of_rows;
-                    ResultSet rs = st.executeQuery("select count(*) from HistoryOrdinary h join OrdinaryAccounts o on h.`Account nr to` = o.`Account number` where h.`Operation Date` >= '"+sday+"'and o.username='"+username+"';");
-                    rs.next();
-                    number_of_rows=rs.getInt(1);
-                    rs = st.executeQuery("select h.* from HistoryOrdinary h join OrdinaryAccounts o on h.`Account nr to` = o.`Account number` where h.`Operation Date` >= '"+sday+"'and o.username='"+username+"';");
-                    String[][] transactions_history = new String[number_of_rows][19];
-                    rs.next();
-                    for(int i=0;i<number_of_rows;i++){
-                        for(int j=0;j<19;j++){
-                            transactions_history[i][j]=rs.getString(j+1);
-                        }
-                        rs.next();
-                    }
-                    return transactions_history;
-                } catch (SQLException e) {
-                    System.out.println(e);
+        String accounts="";
+        if(database.equals("HistoryOrdinary")){accounts="OrdinaryAccounts";}
+        else{accounts="SavingsAccounts";}
+        try{
+            int number_of_rows;
+            ResultSet rs = st.executeQuery("select count(*) from '"+ database +"' h join '"+ accounts+"' o on h.`Account nr to` = o.`Account number` where h.`Operation Date` >= '"+sday+"'and o.username='"+username+"';");
+            rs.next();
+            number_of_rows=rs.getInt(1);
+            rs = st.executeQuery("select `Operation Date`,`Transfer Type` ,`Account nr from` ,`Phone nr to` ,`Transfer Amount` ,`Transfer Currency` ,`Total Transfer Cost` ,`Transfer Title` ,`Start Date` ,`End Date` ,`Transfer Cycle` ,`Transfer Cycle Units` ,`First name` ,`Last name` ,Town ,Postcode ,Street ,`Street number` from '"+ database +"' h join '"+ accounts+"' o on h.`Account nr to` = o.`Account number` where h.`Operation Date` >= '"+sday+"'and o.username='"+username+"';");
+            rs.next();
+            String[][] transactions_history = new String[number_of_rows][18];
+            for(int i=0;i<number_of_rows;i++){
+                for(int j=0;j<18;j++){
+                    transactions_history[i][j]=rs.getString(j+1);
                 }
-                break;
-            case "HistorySavings":
-                try{
-                    int number_of_rows;
-                    ResultSet rs = st.executeQuery("select count(*) from HistorySavings h join SavingsAccounts o on h.`Account nr to` = o.`Account number`  join UsersData u on o.username =u.username \n" +
-                            "where h.`Operation Date` >= '"+sday+"'and o.username='"+username+"';");
-                    rs.next();
-                    number_of_rows=rs.getInt(1);
-                    rs = st.executeQuery("select h.*,u.* from HistorySavings h join SavingsAccounts o on h.`Account nr to` = o.`Account number`  join UsersData u on o.username =u.username \n" +
-                            "where h.`Operation Date` >= '"+sday+"'and o.username='"+username+"';");
-                    String[][] transactions_history = new String[number_of_rows][22];
-                    rs.next();
-                    for(int i=0;i<number_of_rows;i++){
-                        for(int j=0;j<22;j++){
-                            transactions_history[i][j]=rs.getString(j+1);
-                        }
-                        rs.next();
-                    }
-                    return transactions_history;
-                } catch (SQLException e) {
-                    System.out.println(e);
-                }
-                break;
-            default:
-                System.out.println("Incorrect database!");
+                rs.next();
+            }
+            return transactions_history;
+        } catch (SQLException e) {
+            System.out.println(e);
         }
         return null;
     }
