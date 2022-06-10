@@ -10,9 +10,6 @@ import src.timer.MouseAction;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
-import javax.swing.table.TableModel;
-import javax.swing.tree.DefaultTreeModel;
-import javax.swing.tree.TreeModel;
 import java.sql.SQLException;
 
 public class OrdinaryHistory {
@@ -23,26 +20,27 @@ public class OrdinaryHistory {
     private JButton cancelButton;
     private JTable historyTable;
     private JPanel historyPanel;
-    private JTable transferHistoryTable;
-    private JScrollPane transferHistoryScroll;
+    private JTable OutcomingHistoryTable;
+    private JScrollPane OutcomingHistoryPane;
+    private JTable IncomingHistoryTable;
+    private JScrollPane IncomingHistoryPane;
     private MainFrame frame;
     public OrdinaryHistory(MainFrame mainFrame, User user) throws SQLException {
         frame = mainFrame;
         AppTimer appTimer = new AppTimer(timeLabel,frame);
         ordinaryPanel.addMouseMotionListener(new MouseAction(appTimer));
         appTimer.start();
-        //String[][]data = Database.getHistoryOrdinary("HistoryOrdinary",user.username);
-        String[][]data = Database.getHistoryOrdinary("HistoryOrdinary","test_user");
+        String[][]data = Database.getHistoryOrdinary("HistoryOrdinary",user.username);
         String[] cols = {"Operation Date","Transfer Type", "Account nr from", "Account nr to", "Phone nr to",
         "Transfer amount","Transfer currency","Total Cost","Transfer title","Start date","End date",
                 "Transfer cycle","Cycle units","Receiver name","Receiver surname","Receiver Town","Receiver Street","Receiver Street nr"};
 
-        transferHistoryTable.setModel(new DefaultTableModel(data,cols));
-        transferHistoryTable.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
-        transferHistoryScroll.createHorizontalScrollBar();
-        transferHistoryScroll.createVerticalScrollBar();
-        transferHistoryScroll.setVisible(true);
-        transferHistoryTable.setVisible(true);
+        OutcomingHistoryTable.setModel(new DefaultTableModel(data,cols));
+        OutcomingHistoryTable.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
+        OutcomingHistoryPane.createHorizontalScrollBar();
+        OutcomingHistoryPane.createVerticalScrollBar();
+        OutcomingHistoryPane.setVisible(true);
+        OutcomingHistoryTable.setVisible(true);
         frame.getjFrame().setContentPane(ordinaryPanel);
         frame.getjFrame().setVisible(true);
         cancelButton.addActionListener(e->{

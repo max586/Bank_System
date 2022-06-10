@@ -37,7 +37,7 @@
       </hspacer>
       <vspacer id="c79ba">
         <constraints>
-          <grid row="6" column="10" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+          <grid row="9" column="10" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
           <gridbag weightx="0.0" weighty="0.0"/>
         </constraints>
       </vspacer>
@@ -101,7 +101,7 @@
       </vspacer>
       <component id="2b884" class="javax.swing.JButton" binding="cancelButton">
         <constraints>
-          <grid row="6" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="9" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
           <gridbag weightx="0.0" weighty="0.0"/>
         </constraints>
         <properties>
@@ -112,15 +112,49 @@
           <text value="Anuluj"/>
         </properties>
       </component>
-      <scrollpane id="795aa" binding="transferHistoryScroll">
+      <scrollpane id="795aa" binding="OutcomingHistoryPane">
         <constraints>
-          <grid row="5" column="1" row-span="1" col-span="10" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <grid row="6" column="1" row-span="1" col-span="10" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
           <gridbag weightx="0.0" weighty="1.0"/>
         </constraints>
         <properties/>
         <border type="none"/>
         <children>
-          <component id="e7eeb" class="javax.swing.JTable" binding="transferHistoryTable">
+          <component id="e7eeb" class="javax.swing.JTable" binding="OutcomingHistoryTable">
+            <constraints/>
+            <properties/>
+          </component>
+        </children>
+      </scrollpane>
+      <component id="75b72" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="5" column="1" row-span="1" col-span="10" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font name="Futura" size="14" style="0"/>
+          <text value="Wychodzące"/>
+        </properties>
+      </component>
+      <component id="7f001" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="7" column="1" row-span="1" col-span="10" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font name="Futura" size="14" style="0"/>
+          <text value="Przychodzące"/>
+        </properties>
+      </component>
+      <scrollpane id="a22ab" binding="IncomingHistoryPane">
+        <constraints>
+          <grid row="8" column="1" row-span="1" col-span="10" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="1.0"/>
+        </constraints>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <component id="9b6cc" class="javax.swing.JTable" binding="IncomingHistoryTable">
             <constraints/>
             <properties/>
           </component>

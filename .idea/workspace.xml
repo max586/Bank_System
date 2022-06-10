@@ -4,17 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bea002ff-8e44-4e85-a29b-66b1294d710d" name="Changes" comment="MainScreen added accNum labels">
+    <list default="true" id="bea002ff-8e44-4e85-a29b-66b1294d710d" name="Changes" comment="lol">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/MainScreen$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/MainScreen$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/MainScreen$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/MainScreen$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/MainScreen$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/MainScreen$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/MainScreen$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/MainScreen$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/MainScreen.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/MainScreen.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Database.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MainScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MainScreen.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainScreen.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/transfers/OrdinaryHistory.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfers/OrdinaryHistory.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/transfers/OrdinaryHistory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfers/OrdinaryHistory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/transfers/SavingsHistory.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfers/SavingsHistory.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/transfers/SavingsHistory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfers/SavingsHistory.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +42,6 @@
       </list>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
@@ -75,6 +70,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="230" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -197,7 +193,7 @@
       <workItem from="1654159203927" duration="267000" />
       <workItem from="1654445366373" duration="7379000" />
       <workItem from="1654867836866" duration="7090000" />
-      <workItem from="1654875625417" duration="3295000" />
+      <workItem from="1654875625417" duration="5020000" />
     </task>
     <task id="LOCAL-00001" summary="- changed database&#10;- separated user from operations with database. Now all of them are static methods in class Database&#10;- refactored all screens(classes) in AuthenticationAndRegistration package">
       <created>1654117320616</created>
@@ -409,7 +405,28 @@
       <option name="project" value="LOCAL" />
       <updated>1654872311383</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="MainScreen added accNum labels">
+      <created>1654879320933</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1654879320933</updated>
+    </task>
+    <task id="LOCAL-00032" summary="MainScreen added accNum labels">
+      <created>1654879396574</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1654879396574</updated>
+    </task>
+    <task id="LOCAL-00033" summary="lol">
+      <created>1654879412068</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1654879412068</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -453,7 +470,8 @@
     <MESSAGE value="database changed" />
     <MESSAGE value="-database changed&#10;-added timer for all classes(Screen and MainFrame now inherit from PreScreen)" />
     <MESSAGE value="MainScreen added accNum labels" />
-    <option name="LAST_COMMIT_MESSAGE" value="MainScreen added accNum labels" />
+    <MESSAGE value="lol" />
+    <option name="LAST_COMMIT_MESSAGE" value="lol" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

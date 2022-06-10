@@ -219,7 +219,7 @@
         </constraints>
         <properties>
           <font name="Apple Braille" size="14" style="1"/>
-          <text value="History"/>
+          <text value="Ordinary History"/>
         </properties>
       </component>
       <component id="fb595" class="javax.swing.JLabel">
@@ -244,6 +244,16 @@
           <gridbag weightx="1.0" weighty="0.0"/>
         </constraints>
       </hspacer>
+      <component id="f69fd" class="javax.swing.JButton" default-binding="true">
+        <constraints>
+          <grid row="11" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font name="Apple Braille" size="14" style="1"/>
+          <text value="Savings History"/>
+        </properties>
+      </component>
     </children>
   </grid>
 </form>
