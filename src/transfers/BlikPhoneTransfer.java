@@ -98,7 +98,7 @@ public class BlikPhoneTransfer implements Transfer{
         receiverName2Txt.setVisible(false);
     }
     void setCurrency(){
-        transferData.put("waluta","PLN");
+        transferData.put("currency","PLN");
     }
 
     void setReceiverNameCombo(){
@@ -106,23 +106,23 @@ public class BlikPhoneTransfer implements Transfer{
             JComboBox c = (JComboBox) event.getSource();
             receiverName1Warning.setVisible(false);
             receiverName2Warning.setVisible(false);
-            if (c.getSelectedItem() == "Firma") {
+            if (c.getSelectedItem() == "Company") {
                 isCompany = true;
                 if (isPerson) {
                     receiverName2Label.setVisible(false);
                     receiverName2Txt.setVisible(false);
                 }
-                receiverName1Label.setText("Nazwa firmy");
+                receiverName1Label.setText("Company name");
                 receiverName1Label.setVisible(true);
                 receiverName1Txt.setVisible(true);
                 receiverName2Warning.setVisible(false);
-            } else if (c.getSelectedItem() == "Osoba") {
+            } else if (c.getSelectedItem() == "Person") {
                 isPerson = true;
                 if (isCompany) {
                     receiverName1Label.setVisible(false);
                     receiverName1Txt.setVisible(false);
                 }
-                receiverName1Label.setText("Imię");
+                receiverName1Label.setText("Name");
                 receiverName1Label.setVisible(true);
                 receiverName1Txt.setVisible(true);
                 receiverName2Label.setVisible(true);
@@ -165,7 +165,7 @@ public class BlikPhoneTransfer implements Transfer{
                         finalTransferAmount = transferAmount1+transferAmount2;
                         isAmountValid = !(finalTransferAmount>senderAmount);
                     }
-                    transferAmountWarning.setText("Nie masz wystarczających środków");
+                    transferAmountWarning.setText("You don't have enough money");
                     transferAmountWarning.setVisible(!isAmountValid);
                 }
             }
@@ -182,7 +182,7 @@ public class BlikPhoneTransfer implements Transfer{
                 else {
                     isPhoneNumberValid = e.getKeyChar() != KeyEvent.VK_BACK_SPACE;
                 }
-                phoneNumberWarning.setText("Niepoprawny numer telefonu");
+                phoneNumberWarning.setText("Invalid phone number");
                 phoneNumberWarning.setVisible(!isPhoneNumberValid);
             }
         });
@@ -193,7 +193,7 @@ public class BlikPhoneTransfer implements Transfer{
             public void actionPerformed(ActionEvent e) {
                 validation = new Vector<>();
                 if(phoneNumberTxt.getText().length()==0){
-                    phoneNumberWarning.setText("To pole jest wymagane");
+                    phoneNumberWarning.setText("This field is required");
                     phoneNumberWarning.setVisible(true);
                     validation.add(false);
                 }
@@ -203,7 +203,7 @@ public class BlikPhoneTransfer implements Transfer{
                 }
                 if(!Database.verifyPhoneNumber(phoneNumberTxt.getText())){
                     validation.add(false);
-                    phoneNumberWarning.setText("Nie ma takiego numeru telefonu");
+                    phoneNumberWarning.setText("Given phone number doesn't exist");
                     phoneNumberWarning.setVisible(true);
                 }
                 else{
@@ -213,7 +213,7 @@ public class BlikPhoneTransfer implements Transfer{
                     receiver.phone_number = phoneNumberTxt.getText();
                     receiver.ordinary_account_number = Database.getOrdinaryAccountNumber(userName);
                 }
-                if(receiverNameCombo.getSelectedItem() == "Wybierz"){
+                if(receiverNameCombo.getSelectedItem() == "Choose"){
                     receiverName1Warning.setVisible(true);
                     validation.add(false);
                 }
@@ -221,7 +221,7 @@ public class BlikPhoneTransfer implements Transfer{
                     receiverName1Warning.setVisible(false);
                     validation.add(true);
                 }
-                if(receiverNameCombo.getSelectedItem() == "Osoba"){
+                if(receiverNameCombo.getSelectedItem() == "Person"){
                     if(receiverName1Txt.getText().length()==0){
                         receiverName1Warning.setVisible(true);
                         validation.add(false);
@@ -239,7 +239,7 @@ public class BlikPhoneTransfer implements Transfer{
                         validation.add(true);
                     }
                 }
-                if(receiverNameCombo.getSelectedItem() == "Firma"){
+                if(receiverNameCombo.getSelectedItem() == "Company"){
                     if(receiverName1Txt.getText().length()==0){
                         receiverName1Warning.setVisible(true);
                         validation.add(false);
@@ -250,7 +250,7 @@ public class BlikPhoneTransfer implements Transfer{
                     }
                 }
                 if(transferAmount1Txt.getText().length()==0){
-                    transferAmountWarning.setText("To pole jest wymagane");
+                    transferAmountWarning.setText("This field is required");
                     transferAmountWarning.setVisible(true);
                     validation.add(false);
                 }
@@ -267,7 +267,7 @@ public class BlikPhoneTransfer implements Transfer{
                     validation.add(true);
                 }
                 if(finalTransferAmount>senderAmount){
-                    transferAmountWarning.setText("Nie masz wystarczających środków");
+                    transferAmountWarning.setText("You don't have enough money");
                     transferAmountWarning.setVisible(true);
                     validation.add(false);
                 }
@@ -280,13 +280,13 @@ public class BlikPhoneTransfer implements Transfer{
                         if((i+1)%3==0) result.append(" ");
                     }
                     receiver.firstName =  receiverName1Txt.getText();
-                    if(receiverNameCombo.getSelectedItem() == "Osoba") receiver.lastName = receiverName2Txt.getText();
+                    if(receiverNameCombo.getSelectedItem() == "Person") receiver.lastName = receiverName2Txt.getText();
                     else receiver.lastName = "";
-                    transferData.put("tytul", transferTitleTextArea.getText());
-                    transferData.put("kwota", transferAmount1Txt.getText()+"."+ transferAmount2Txt.getText());
-                    transferData.put("kwotaPLN", transferAmount1Txt.getText()+"."+ transferAmount2Txt.getText());
-                    transferData.put("oplata","0.00");
-                    transferData.put("typ",panelTitleLabel.getText());
+                    transferData.put("title", transferTitleTextArea.getText());
+                    transferData.put("transferamount", transferAmount1Txt.getText()+"."+ transferAmount2Txt.getText());
+                    transferData.put("totaltransferamount", transferAmount1Txt.getText()+"."+ transferAmount2Txt.getText());
+                    transferData.put("payment","0.00");
+                    transferData.put("type",panelTitleLabel.getText());
                     TransferNextStep pCd = new TransferNextStep(accountChoosed,user,AccountChoosed.ORDINARYACCOUNT,receiver,transferData,frame, blikPhonePanel);
                     frame.getjFrame().setContentPane(pCd.getTransferNextStepPanel());
                     frame.getjFrame().setVisible(true);
