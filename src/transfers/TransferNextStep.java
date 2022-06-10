@@ -83,17 +83,17 @@ public class TransferNextStep {
         equalsLabel.setVisible(false);
         polishCurrencyAmountLabel.setVisible(false);
         polishCurrencyLabel.setVisible(false);
-        if(transferData.get("typ").equals("BLIK Phone Transfer")){
-            transferPanelTitle = transferData.get("typ");
+        if(transferData.get("type").equals("BLIK Phone Transfer")){
+            transferPanelTitle = transferData.get("type");
             transferPanelTitleLabel.setText(transferPanelTitle);
         }
         else {
-            String[] arr = transferData.get("typ").split("\\s+");
+            String[] arr = transferData.get("type").split("\\s+");
             transferPanelTitle = arr[0] + " " + arr[1];
             transferPanelTitleLabel.setText(transferPanelTitle);
             if (transferPanelTitle.equals("Foreign Transfer")) {
                 equalsLabel.setVisible(true);
-                if (arr[2].equals("natychmiastowy"))
+                if (arr[2].equals("express"))
                     polishCurrencyAmountLabel.setText(String.format("%.2f", Double.parseDouble(transferData.get("kwotaPLN")) - 5.00));
                 else
                     polishCurrencyAmountLabel.setText(String.format("%.2f", Double.parseDouble(transferData.get("kwotaPLN"))));
@@ -104,10 +104,10 @@ public class TransferNextStep {
         if(transferPanelTitle.equals("Standing Order")){
             feeLabel.setText("Start date");
             dateToLabel.setText("End date");
-            dateFrom.setText(transferData.get("startdata"));
+            dateFrom.setText(transferData.get("startdate"));
             dateFrom.setVisible(true);
-            if(transferData.containsKey("enddata")) {
-                dateTo.setText(transferData.get("enddata"));
+            if(transferData.containsKey("enddate")) {
+                dateTo.setText(transferData.get("enddate"));
                 dateToLabel.setVisible(true);
                 dateTo.setVisible(true);
             }
@@ -126,11 +126,11 @@ public class TransferNextStep {
             senderAccountNumber.setText(userAccountNumber);
             receiverAccountNumber.setText(receiverAccountNr);
         }
-        transferTitle.setText(transferData.get("tytul"));
-        transferAmount.setText(transferData.get("kwota"));
-        transferPayment.setText(transferData.get("oplata"));
-        transferType.setText(transferData.get("typ"));
-        currencyLabel.setText(transferData.get("waluta"));
+        transferTitle.setText(transferData.get("title"));
+        transferAmount.setText(transferData.get("transferamount"));
+        transferPayment.setText(transferData.get("payment"));
+        transferType.setText(transferData.get("type"));
+        currencyLabel.setText(transferData.get("currency"));
     }
     void setNextButton(JButton nextButton){
         nextButton.addActionListener(new ActionListener() {

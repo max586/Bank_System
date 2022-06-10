@@ -98,7 +98,7 @@ public class BlikPhoneTransfer implements Transfer{
         receiverName2Txt.setVisible(false);
     }
     void setCurrency(){
-        transferData.put("waluta","PLN");
+        transferData.put("currency","PLN");
     }
 
     void setReceiverNameCombo(){
@@ -282,11 +282,11 @@ public class BlikPhoneTransfer implements Transfer{
                     receiver.firstName =  receiverName1Txt.getText();
                     if(receiverNameCombo.getSelectedItem() == "Person") receiver.lastName = receiverName2Txt.getText();
                     else receiver.lastName = "";
-                    transferData.put("tytul", transferTitleTextArea.getText());
-                    transferData.put("kwota", transferAmount1Txt.getText()+"."+ transferAmount2Txt.getText());
-                    transferData.put("kwotaPLN", transferAmount1Txt.getText()+"."+ transferAmount2Txt.getText());
-                    transferData.put("oplata","0.00");
-                    transferData.put("typ",panelTitleLabel.getText());
+                    transferData.put("title", transferTitleTextArea.getText());
+                    transferData.put("transferamount", transferAmount1Txt.getText()+"."+ transferAmount2Txt.getText());
+                    transferData.put("totaltransferamount", transferAmount1Txt.getText()+"."+ transferAmount2Txt.getText());
+                    transferData.put("payment","0.00");
+                    transferData.put("type",panelTitleLabel.getText());
                     TransferNextStep pCd = new TransferNextStep(accountChoosed,user,AccountChoosed.ORDINARYACCOUNT,receiver,transferData,frame, blikPhonePanel);
                     frame.getjFrame().setContentPane(pCd.getTransferNextStepPanel());
                     frame.getjFrame().setVisible(true);

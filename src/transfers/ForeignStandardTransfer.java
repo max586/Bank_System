@@ -40,7 +40,7 @@ public class ForeignStandardTransfer extends StandardTransfer implements Transfe
 new MainScreen(user,null,new Screen()).CreateScreen();        });
     }
     void setTransferData(){
-        transferData.put("waluta",currency);
+        transferData.put("currency",currency);
     }
 
     void setAccountNumberCountryComboBox(){

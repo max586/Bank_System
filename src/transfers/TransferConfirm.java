@@ -80,9 +80,9 @@ public class TransferConfirm {
         appTimer.start();
         otherPanel = transferNextStepPanel;
         transferData = transferData1;
-        if(transferData.get("typ").equals("BLIK Phone Transfer")) transferPanelTitle = transferData.get("typ");
+        if(transferData.get("type").equals("BLIK Phone Transfer")) transferPanelTitle = transferData.get("type");
         else {
-            String[] arr = transferData.get("typ").split("\\s+");
+            String[] arr = transferData.get("type").split("\\s+");
             transferPanelTitle = arr[0] + " " + arr[1];
         }
         transferPanelTitleLabel.setText(transferPanelTitle);
@@ -184,20 +184,20 @@ public class TransferConfirm {
                         appCodeWarning.setVisible(false);
                         if(transferPanelTitle.equals("Standing Order")){
                             if(accountChoosedUser==AccountChoosed.ORDINARYACCOUNT) {
-                                Database.addToHistory("HistoryOrdinary", generationDate, transferData.get("typ"),
-                                        userAccountNumber, receiverAccountNr, "" ,Double.parseDouble(transferData.get("kwota")),
-                                        transferData.get("waluta"), Double.parseDouble(transferData.get("kwotaPLN")), transferData.get("tytul"),
-                                        transferData.get("startdata"), transferData.get("enddata"), Integer.parseInt(transferData.get("cykle")),
-                                        transferData.get("jednostkaczasu"),receiver.firstName,receiver.lastName,receiver.city,receiver.post_code,receiver.street,receiver.street_nr);
+                                Database.addToHistory("HistoryOrdinary", generationDate, transferData.get("type"),
+                                        userAccountNumber, receiverAccountNr, "" ,Double.parseDouble(transferData.get("transferamount")),
+                                        transferData.get("currency"), Double.parseDouble(transferData.get("kwotaPLN")), transferData.get("title"),
+                                        transferData.get("startdate"), transferData.get("enddate"), Integer.parseInt(transferData.get("cicles")),
+                                        transferData.get("timeunit"),receiver.firstName,receiver.lastName,receiver.city,receiver.post_code,receiver.street,receiver.street_nr);
                                 setBalanceSender(user,AccountChoosed.ORDINARYACCOUNT);
                                 setBalanceReceiver();
                             }
                         }
                         else if(transferPanelTitle.equals("BLIK Phone Transfer")){
                             if(accountChoosedUser==AccountChoosed.ORDINARYACCOUNT) {
-                                Database.addToHistory("HistoryOrdinary", generationDate, transferData.get("typ"),
-                                        userAccountNumber, "",user.phone_number, Double.parseDouble(transferData.get("kwota")),
-                                        "PLN", Double.parseDouble(transferData.get("kwota")), transferData.get("tytul"),
+                                Database.addToHistory("HistoryOrdinary", generationDate, transferData.get("type"),
+                                        userAccountNumber, "",user.phone_number, Double.parseDouble(transferData.get("transferamount")),
+                                        "PLN", Double.parseDouble(transferData.get("transferamount")), transferData.get("title"),
                                         "", "", 0,"","","","","","","");
                                 setBalanceSender(user,AccountChoosed.ORDINARYACCOUNT);
                                 setBalanceReceiver();
@@ -205,17 +205,17 @@ public class TransferConfirm {
                         }
                         else if(transferPanelTitle.equals("Own Transfer")){
                             if(accountChoosedUser==AccountChoosed.ORDINARYACCOUNT) {
-                                Database.addToHistory( "HistoryOrdinary", generationDate, transferData.get("typ"),
-                                        userAccountNumber, receiverAccountNr,"",  Double.parseDouble(transferData.get("kwota")),
-                                        "PLN", Double.parseDouble(transferData.get("kwota")), transferData.get("tytul"),
+                                Database.addToHistory( "HistoryOrdinary", generationDate, transferData.get("type"),
+                                        userAccountNumber, receiverAccountNr,"",  Double.parseDouble(transferData.get("transferamount")),
+                                        "PLN", Double.parseDouble(transferData.get("transferamount")), transferData.get("title"),
                                         "", "", 0, "","","","","","","");
                                 setBalanceSender(user,AccountChoosed.ORDINARYACCOUNT);
                                 setBalanceReceiver();
                             }
                             else{
-                                Database.addToHistory( "HistorySavings", generationDate, transferData.get("typ"),
-                                        userAccountNumber, receiverAccountNr,"",  Double.parseDouble(transferData.get("kwota")),
-                                        "PLN", Double.parseDouble(transferData.get("kwota")), transferData.get("tytul"),
+                                Database.addToHistory( "HistorySavings", generationDate, transferData.get("type"),
+                                        userAccountNumber, receiverAccountNr,"",  Double.parseDouble(transferData.get("transferamount")),
+                                        "PLN", Double.parseDouble(transferData.get("transferamount")), transferData.get("title"),
                                         "", "", 0, "","","","","","","");
                                 setBalanceSender(user,AccountChoosed.SAVINGSACCOUNT);
                                 setBalanceReceiver();
@@ -223,9 +223,9 @@ public class TransferConfirm {
                         }
                         else {
                             if(accountChoosedUser==AccountChoosed.ORDINARYACCOUNT) {
-                                Database.addToHistory("HistoryOrdinary", generationDate, transferData.get("typ"),
-                                        userAccountNumber, receiverAccountNr, "", Double.parseDouble(transferData.get("kwota")),
-                                        transferData.get("waluta"), Double.parseDouble(transferData.get("kwotaPLN")), transferData.get("tytul"),
+                                Database.addToHistory("HistoryOrdinary", generationDate, transferData.get("type"),
+                                        userAccountNumber, receiverAccountNr, "", Double.parseDouble(transferData.get("transferamount")),
+                                        transferData.get("currency"), Double.parseDouble(transferData.get("totaltransferamount")), transferData.get("title"),
                                         "", "", 0, "",receiver.firstName,receiver.lastName,receiver.city,receiver.post_code,receiver.street,receiver.street_nr);
                                 setBalanceSender(user,AccountChoosed.ORDINARYACCOUNT);
                                 setBalanceReceiver();
@@ -285,13 +285,13 @@ public class TransferConfirm {
     void setBalanceSender(User user1, AccountChoosed accountChoosed){
         if(accountChoosed==AccountChoosed.ORDINARYACCOUNT) {
             float senderAmount = user1.ordinary_account_balance;
-            float transferAmount = (float) Double.parseDouble(transferData.get("kwotaPLN"));
+            float transferAmount = (float) Double.parseDouble(transferData.get("totaltransferamount"));
             senderAmount = senderAmount - transferAmount;
             Database.setOrdinaryAccountBalance(user1.username, senderAmount);
         }
         else{
             float senderAmount = user1.savings_account_balance;
-            float transferAmount = (float) Double.parseDouble(transferData.get("kwotaPLN"));
+            float transferAmount = (float) Double.parseDouble(transferData.get("totaltransferamount"));
             senderAmount = senderAmount - transferAmount;
             Database.setSavingsAccountBalance(user1.username, senderAmount);
         }
@@ -301,14 +301,14 @@ public class TransferConfirm {
         if(Database.isAccountNumberOrdinary(receiverAccountNr)){
             String receiverUserName = Database.getUserNameByAccount(receiverAccountNr,"Ordinary");
             float receiverAmount = Database.getOrdinaryAccountBalance(receiverUserName);
-            float transferAmount = (float) Double.parseDouble(transferData.get("kwotaPLN"));
+            float transferAmount = (float) Double.parseDouble(transferData.get("totaltransferamount"));
             receiverAmount = receiverAmount + transferAmount;
             Database.setOrdinaryAccountBalance(receiverUserName, receiverAmount);
         }
         else{
             String receiverUserName = Database.getUserNameByAccount(receiverAccountNr,"Savings");
             float receiverAmount = Database.getSavingsAccountBalance(receiverUserName);
-            float transferAmount = (float) Double.parseDouble(transferData.get("kwotaPLN"));
+            float transferAmount = (float) Double.parseDouble(transferData.get("totaltransferamount"));
             receiverAmount = receiverAmount + transferAmount;
             Database.setSavingsAccountBalance(receiverUserName, receiverAmount);
         }

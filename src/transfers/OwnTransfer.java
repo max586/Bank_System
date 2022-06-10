@@ -68,7 +68,7 @@ public class OwnTransfer implements Transfer {
         }
         numbersOnly = new OnlyNumbers().getKeyAdapter();
         transferData = new HashMap<>();
-        transferData.put("waluta","PLN");
+        transferData.put("currency","PLN");
         setLabels();
         setjMenu();
         setTransferAmountTxt(transferAmount1Txt);
@@ -256,11 +256,11 @@ new MainScreen(user,null,new Screen()).CreateScreen();        });
                         receiver.savings_account_number = "";
                     }
                     receiver.firstName = user.lastName;
-                    transferData.put("tytul", transferTitleTextArea.getText());
-                    transferData.put("kwota", transferAmount1Txt.getText()+"."+ transferAmount2Txt.getText());
-                    transferData.put("kwotaPLN", transferAmount1Txt.getText()+"."+ transferAmount2Txt.getText());
-                    transferData.put("oplata","0.00");
-                    transferData.put("typ",panelTitleLabel.getText());
+                    transferData.put("title", transferTitleTextArea.getText());
+                    transferData.put("transferamount", transferAmount1Txt.getText()+"."+ transferAmount2Txt.getText());
+                    transferData.put("totaltransferamount", transferAmount1Txt.getText()+"."+ transferAmount2Txt.getText());
+                    transferData.put("payment","0.00");
+                    transferData.put("type",panelTitleLabel.getText());
                     TransferNextStep pCd = new TransferNextStep(accountChoosedUser,user,accountChoosedReceiver,receiver,transferData,frame, OwnTransferPanel);
                     frame.getjFrame().setContentPane(pCd.getTransferNextStepPanel());
                     frame.getjFrame().setVisible(true);

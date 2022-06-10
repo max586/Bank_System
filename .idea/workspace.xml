@@ -4,28 +4,68 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bea002ff-8e44-4e85-a29b-66b1294d710d" name="Changes" comment="21.30">
+    <list default="true" id="bea002ff-8e44-4e85-a29b-66b1294d710d" name="Changes" comment="22.45">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/.resourceCache/ECBCurrentRateProvider.dat" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/.resourceCache/ECBCurrentRateProvider.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/.resourceCache/ECBHistoric90RateProvider.dat" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/.resourceCache/ECBHistoric90RateProvider.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/.resourceCache/ECBHistoricRateProvider.dat" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/.resourceCache/ECBHistoricRateProvider.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MainScreen.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainScreen.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/transfers/BlikPhoneTransfer.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfers/BlikPhoneTransfer.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/com/intellij/uiDesigner/core/Util.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/com/intellij/uiDesigner/core/Util.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Database.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/Database.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/MainScreen$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/MainScreen$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/MainScreen$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/MainScreen$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/MainScreen$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/MainScreen$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/MainScreen$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/MainScreen$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/MainScreen$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/MainScreen$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/MainScreen$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/MainScreen$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/MainScreen.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/MainScreen.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/BlikPhoneTransfer$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/BlikPhoneTransfer$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/BlikPhoneTransfer$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/BlikPhoneTransfer$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/BlikPhoneTransfer$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/BlikPhoneTransfer$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/BlikPhoneTransfer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/BlikPhoneTransfer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/ForeignStandardTransfer$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/ForeignStandardTransfer$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/ForeignStandardTransfer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/ForeignStandardTransfer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/LimitJTextField.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/LimitJTextField.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/MenuInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/MenuInfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/OnlyNumbers$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/OnlyNumbers$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/OnlyNumbers.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/OnlyNumbers.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/OrdinaryHistory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/OrdinaryHistory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/OwnTransfer$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/OwnTransfer$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/OwnTransfer$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/OwnTransfer$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/OwnTransfer$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/OwnTransfer$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/OwnTransfer$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/OwnTransfer$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/OwnTransfer$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/OwnTransfer$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/OwnTransfer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/OwnTransfer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/PdfGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/PdfGenerator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/PdfGeneratorBLIK.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/PdfGeneratorBLIK.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/PdfGeneratorOwn.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/PdfGeneratorOwn.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/PdfGeneratorStandard.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/PdfGeneratorStandard.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/PdfGeneratorStandingOrder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/PdfGeneratorStandingOrder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/SampleMenuListenerAccount1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/SampleMenuListenerAccount1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/SampleMenuListenerAccount2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/SampleMenuListenerAccount2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/SavingsHistory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/SavingsHistory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/StandardTransfer$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/StandardTransfer$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/StandardTransfer$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/StandardTransfer$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/StandardTransfer$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/StandardTransfer$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/StandardTransfer$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/StandardTransfer$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/StandardTransfer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/StandardTransfer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/StandingOrder$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/StandingOrder$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/StandingOrder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/StandingOrder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/StandingOrderNextStep$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/StandingOrderNextStep$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/StandingOrderNextStep$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/StandingOrderNextStep$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/StandingOrderNextStep$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/StandingOrderNextStep$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/StandingOrderNextStep.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/StandingOrderNextStep.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/TransferConfirm$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/TransferConfirm$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/TransferConfirm$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/TransferConfirm$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/TransferConfirm$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/TransferConfirm$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/TransferConfirm$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/TransferConfirm$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/TransferConfirm.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/TransferConfirm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/TransferNextStep.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/TransferNextStep.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Database.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/transfers/BlikPhoneTransfer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfers/BlikPhoneTransfer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/transfers/ForeignStandardTransfer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfers/ForeignStandardTransfer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/transfers/OrdinaryHistory.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfers/OrdinaryHistory.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/transfers/OwnTransfer.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfers/OwnTransfer.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/transfers/OwnTransfer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfers/OwnTransfer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/transfers/PdfGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfers/PdfGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/transfers/SavingsHistory.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfers/SavingsHistory.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/transfers/StandardTransfer.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfers/StandardTransfer.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/transfers/StandardTransfer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfers/StandardTransfer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/transfers/StandingOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfers/StandingOrder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/transfers/StandingOrderNextStep.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfers/StandingOrderNextStep.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/transfers/StandingOrderNextStep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfers/StandingOrderNextStep.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/transfers/TransferConfirm.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfers/TransferConfirm.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/transfers/TransferConfirm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfers/TransferConfirm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/transfers/TransferNextStep.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfers/TransferNextStep.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/transfers/TransferNextStep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfers/TransferNextStep.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -209,7 +249,7 @@
       <workItem from="1654159203927" duration="267000" />
       <workItem from="1654445366373" duration="7379000" />
       <workItem from="1654867836866" duration="7090000" />
-      <workItem from="1654875625417" duration="16370000" />
+      <workItem from="1654875625417" duration="18491000" />
     </task>
     <task id="LOCAL-00001" summary="- changed database&#10;- separated user from operations with database. Now all of them are static methods in class Database&#10;- refactored all screens(classes) in AuthenticationAndRegistration package">
       <created>1654117320616</created>
@@ -484,7 +524,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654889427527</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="22.45">
+      <created>1654893930771</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1654893930771</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -534,7 +581,8 @@
     <MESSAGE value="34" />
     <MESSAGE value="20.44" />
     <MESSAGE value="21.30" />
-    <option name="LAST_COMMIT_MESSAGE" value="21.30" />
+    <MESSAGE value="22.45" />
+    <option name="LAST_COMMIT_MESSAGE" value="22.45" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

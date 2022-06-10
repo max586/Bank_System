@@ -149,12 +149,12 @@ public class StandingOrderNextStep {
                         }
                     }
                     if(!validation.contains(false)){
-                        transferData.replace("typ","Standing order "+"every "+timeUnitsTxt.getText()+" "+timeUnit);
-                        transferData.put("cykle",timeUnitsTxt.getText());
-                        transferData.put("jednostkaczasu",timeUnit);
+                        transferData.replace("type","Standing order "+"every "+timeUnitsTxt.getText()+" "+timeUnit);
+                        transferData.put("cicles",timeUnitsTxt.getText());
+                        transferData.put("timeunit",timeUnit);
                         SimpleDateFormat formatter = new SimpleDateFormat("dd.MM.yyyy");
-                        transferData.put("startdata",formatter.format(dateChooserFrom.getDate()));
-                        if(isEndDateSelected) transferData.put("enddata",formatter.format(dateChooserTo.getDate()));
+                        transferData.put("startdate",formatter.format(dateChooserFrom.getDate()));
+                        if(isEndDateSelected) transferData.put("enddate",formatter.format(dateChooserTo.getDate()));
                         TransferNextStep transferNextStep = new TransferNextStep(accountChoosedUser, user,accountChoosedReceiver,receiver, transferData, frame, StandingOrderNextPanel);
                         frame.getjFrame().setContentPane(transferNextStep.getTransferNextStepPanel());
                         frame.getjFrame().setVisible(true);

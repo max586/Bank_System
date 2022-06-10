@@ -167,16 +167,16 @@ public class StandingOrder extends StandardTransfer implements Transfer {
                             receiver.street_nr = streetNumber1Txt.getText() + "/" + streetNumber2Txt.getText();
                         else receiver.street_nr = streetNumber1Txt.getText();
                     }
-                    transferData.put("tytul", transferTitleTextArea.getText());
-                    transferData.put("kwota", transferAmount1Txt.getText()+"."+ transferAmount2Txt.getText());
-                    transferData.put("kwotaPLN", String.valueOf(finalTransferAmount));
+                    transferData.put("title", transferTitleTextArea.getText());
+                    transferData.put("transferamount", transferAmount1Txt.getText()+"."+ transferAmount2Txt.getText());
+                    transferData.put("totaltransferamount", String.valueOf(finalTransferAmount));
                     if(isPayment){
-                        transferData.put("oplata","5.00");
-                        transferData.put("typ",panelTitleLabel.getText()+" express");
+                        transferData.put("payment","5.00");
+                        transferData.put("type",panelTitleLabel.getText()+" express");
                     }
                     else{
-                        transferData.put("oplata","0.00");
-                        transferData.put("typ",panelTitleLabel.getText()+" standard");
+                        transferData.put("payment","0.00");
+                        transferData.put("type",panelTitleLabel.getText()+" standard");
                     }
                     try {
                         StandingOrderNextStep nextStep = new StandingOrderNextStep(accountchoosedUser,user,accountChoosedReceiver, receiver, transferData, frame, transferPanel1);
