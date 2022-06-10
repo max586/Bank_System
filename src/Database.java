@@ -95,7 +95,7 @@ public class Database {
                 System.out.println("Incorrect database!");
         }
     }
-    public static String[][] getHistoryOrdinary(String database, String username){
+    public static String[][] getHistoryFrom(String database, String username){
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd");
         LocalDateTime day = LocalDateTime.now();
         day=day.minusMonths(1);
@@ -129,6 +129,60 @@ public class Database {
                     rs.next();
                     number_of_rows=rs.getInt(1);
                     rs = st.executeQuery("select h.*,u.* from HistorySavings h join SavingsAccounts o on h.`Account nr from` = o.`Account number`  join UsersData u on o.username =u.username \n" +
+                            "where h.`Operation Date` >= '"+sday+"'and o.username='"+username+"';");
+                    String[][] transactions_history = new String[number_of_rows][22];
+                    rs.next();
+                    for(int i=0;i<number_of_rows;i++){
+                        for(int j=0;j<22;j++){
+                            transactions_history[i][j]=rs.getString(j+1);
+                        }
+                        rs.next();
+                    }
+                    return transactions_history;
+                } catch (SQLException e) {
+                    System.out.println(e);
+                }
+                break;
+            default:
+                System.out.println("Incorrect database!");
+        }
+        return null;
+    }
+
+    public static String[][] getHistoryTo(String database, String username){
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        LocalDateTime day = LocalDateTime.now();
+        day=day.minusMonths(1);
+        String sday=day.toString().substring(0,10);
+        switch(database){
+            case "HistoryOrdinary":
+                try{
+                    int number_of_rows;
+                    ResultSet rs = st.executeQuery("select count(*) from HistoryOrdinary h join OrdinaryAccounts o on h.`Account nr to` = o.`Account number` where h.`Operation Date` >= '"+sday+"'and o.username='"+username+"';");
+                    rs.next();
+                    number_of_rows=rs.getInt(1);
+                    rs = st.executeQuery("select h.* from HistoryOrdinary h join OrdinaryAccounts o on h.`Account nr to` = o.`Account number` where h.`Operation Date` >= '"+sday+"'and o.username='"+username+"';");
+                    String[][] transactions_history = new String[number_of_rows][19];
+                    rs.next();
+                    for(int i=0;i<number_of_rows;i++){
+                        for(int j=0;j<19;j++){
+                            transactions_history[i][j]=rs.getString(j+1);
+                        }
+                        rs.next();
+                    }
+                    return transactions_history;
+                } catch (SQLException e) {
+                    System.out.println(e);
+                }
+                break;
+            case "HistorySavings":
+                try{
+                    int number_of_rows;
+                    ResultSet rs = st.executeQuery("select count(*) from HistorySavings h join SavingsAccounts o on h.`Account nr to` = o.`Account number`  join UsersData u on o.username =u.username \n" +
+                            "where h.`Operation Date` >= '"+sday+"'and o.username='"+username+"';");
+                    rs.next();
+                    number_of_rows=rs.getInt(1);
+                    rs = st.executeQuery("select h.*,u.* from HistorySavings h join SavingsAccounts o on h.`Account nr to` = o.`Account number`  join UsersData u on o.username =u.username \n" +
                             "where h.`Operation Date` >= '"+sday+"'and o.username='"+username+"';");
                     String[][] transactions_history = new String[number_of_rows][22];
                     rs.next();
@@ -467,7 +521,7 @@ public class Database {
     }
     public static void main(String[] args) {
         try {
-            String[][] rez = getHistoryOrdinary("HistoryOrdinary","test_user");
+            String[][] rez = getHistoryFrom("HistoryOrdinary","test_user");
             for(int i=0;i<rez.length;i++){
                 for(int j=0;j<19;j++){
                     System.out.print(rez[i][j]+"\t");
