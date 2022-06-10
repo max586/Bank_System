@@ -84,7 +84,7 @@ public class BlikPhoneTransfer implements Transfer{
         setNextButton();
         cancelButton.addActionListener(e->{
             frame.getjFrame().dispose();
-            new MainScreen(user,null,new Screen(),AccountChoosed.ORDINARYACCOUNT);
+            new MainScreen(user,null,new Screen()).CreateScreen();
         });
         frame.getjFrame().setContentPane(blikPhonePanel);
         frame.getjFrame().setVisible(true);

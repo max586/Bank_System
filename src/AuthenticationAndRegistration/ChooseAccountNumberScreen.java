@@ -39,13 +39,13 @@ public class ChooseAccountNumberScreen extends Screen{
                 if(ordinaryAccountRadioButton.isSelected()){
                     frame.dispose();
                     if(next_screen!=null){
-                        new MainScreen(user, ChooseAccountNumberScreen.this, new Screen(), AccountChoosed.ORDINARYACCOUNT).CreateScreen();
+                        new MainScreen(user, ChooseAccountNumberScreen.this, new Screen()).CreateScreen();
                     }
                 }
                 else if(savingsAccountRadioButton.isSelected()){
                     frame.dispose();
                     if(next_screen!=null){
-                        new MainScreen(user, ChooseAccountNumberScreen.this, new Screen(),AccountChoosed.SAVINGSACCOUNT).CreateScreen();
+                        new MainScreen(user, ChooseAccountNumberScreen.this, new Screen()).CreateScreen();
                     }
                 }
                 else{

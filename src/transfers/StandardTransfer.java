@@ -125,10 +125,10 @@ public class StandardTransfer implements Transfer {
         setExpressTransferRadioButton(expressTransferRadioButton);
         setReceiverAddressRadioButton(receiverAddressRadioButton);
         setNextButton(nextButton);
-        cancelButton.addActionListener(e->{
+        cancelButton.addActionListener(e->
+        {
             frame.getjFrame().dispose();
-            new MainScreen(user,null,new Screen(),AccountChoosed.ORDINARYACCOUNT);
-        });
+            new MainScreen(user,null,new Screen()).CreateScreen();        });
         transferPanel1.revalidate();
         frame.getjFrame().revalidate();
         frame.getjFrame().setContentPane(transferPanel1);

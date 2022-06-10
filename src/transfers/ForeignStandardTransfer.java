@@ -37,8 +37,7 @@ public class ForeignStandardTransfer extends StandardTransfer implements Transfe
         setTransferAmountTxt(transferAmount2Txt);
         cancelButton.addActionListener(e->{
             frame.getjFrame().dispose();
-            new MainScreen(user,null,new Screen(),AccountChoosed.ORDINARYACCOUNT);
-        });
+new MainScreen(user,null,new Screen()).CreateScreen();        });
     }
     void setTransferData(){
         transferData.put("waluta",currency);
