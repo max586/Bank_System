@@ -155,11 +155,11 @@ public class Credit extends Screen
 
         AccNum.setText(Database.getOrdinaryAccountNumber(user.username));
         Balance.setText(String.valueOf(Database.getOrdinaryAccountBalance(user.username)));
-        String[] CreditInfo = Database.getCredit(user.username);//Amount , AmountPayed , StartDate , Duration
 
         if(Database.hasCredit(user.username))
         {
-        MyCreditAmount.setText(CreditInfo[0]);
+            String[] CreditInfo = Database.getCredit(user.username);//Amount , AmountPayed , StartDate , Duration
+            MyCreditAmount.setText(CreditInfo[0]);
         MyPayedCredit.setText(CreditInfo[1]);
         MyDebt.setText(String.valueOf(checkDebt()));
         }
