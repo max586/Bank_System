@@ -121,14 +121,14 @@ public class Credit extends Screen
                         MyDebt.setText(String.valueOf(checkDebt()));
 
                         //Date StartDate = new Date(2000-1900,4,8);//ile Lat juz się ma kredyt
-                       Date StartDate = new Date(Integer.parseInt(CreditInfo[2].substring(0, 3))-1900 , Integer.parseInt(CreditInfo[2].substring(5, 6)), Integer.parseInt(CreditInfo[2].substring(8, 9)));
+                        Date StartDate = new Date(Integer.parseInt(CreditInfo[2].substring(0,4))-1900,Integer.parseInt(CreditInfo[2].substring(5,7)),Integer.parseInt(CreditInfo[2].substring(8,10)));
                        System.out.println(StartDate);
                         jpane.setMessage("You payed your debt");
                         Date Today = new Date();
                         Date DiffOfYears = new Date(Today.getTime() - StartDate.getTime());
                         int currentYear = DiffOfYears.getYear() - 70;
-
-                        if (currentYear >= Integer.parseInt(CreditInfo[3]) && checkDebt() == 0) ;
+                            //System.out.println(currentYear+" "+Integer.parseInt(CreditInfo[3]));
+                        if (currentYear >= Integer.parseInt(CreditInfo[3]) && checkDebt() == 0)
                         {
                             Database.deleteCredit(user.username);
                             MyCreditAmount.setText("0");

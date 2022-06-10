@@ -6,9 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="bea002ff-8e44-4e85-a29b-66b1294d710d" name="Changes" comment="Repaired Credits">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Credits/Credit$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/Credits/Credit$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database_scripts/FillTables.sql" beforeDir="false" afterPath="$PROJECT_DIR$/database_scripts/FillTables.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/database_scripts/FillTables.sql" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/database_scripts/FillTables.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Credits/Credit$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/Credits/Credit$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Credits/Credit.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/Credits/Credit.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Credits/Credit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Credits/Credit.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -196,7 +196,7 @@
       <workItem from="1654158570270" duration="613000" />
       <workItem from="1654159203927" duration="267000" />
       <workItem from="1654445366373" duration="7379000" />
-      <workItem from="1654867836866" duration="8091000" />
+      <workItem from="1654867836866" duration="8902000" />
     </task>
     <task id="LOCAL-00001" summary="- changed database&#10;- separated user from operations with database. Now all of them are static methods in class Database&#10;- refactored all screens(classes) in AuthenticationAndRegistration package">
       <created>1654117320616</created>
@@ -429,7 +429,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654875098743</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="Repaired Credits">
+      <created>1654875969076</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1654875969076</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -492,6 +499,11 @@
           <url>file://$PROJECT_DIR$/tests/src/CreditCard/PayWithCardScreen2Test.java</url>
           <line>50</line>
           <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Credits/Credit.java</url>
+          <line>123</line>
+          <option name="timeStamp" value="26" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
