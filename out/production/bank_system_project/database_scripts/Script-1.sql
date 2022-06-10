@@ -1,4 +1,4 @@
-delete from Credits where username="test_user";
+#delete from Credits where username="test_user";
 #update OrdinaryAccounts set `Account number` = 'PL12122666666666666666666666' where username='user2';
 select * from Users;
 select * from UsersData;

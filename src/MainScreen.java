@@ -7,6 +7,7 @@ import src.timer.AppTimer;
 import src.timer.MouseAction;
 import src.transfers.AccountChoosed;
 import src.transfers.OrdinaryHistory;
+import src.transfers.SavingsHistory;
 import src.transfers.TransferFactory;
 
 import javax.swing.*;
@@ -31,7 +32,8 @@ public class MainScreen extends Screen {
     public JButton foreignTransferButton;
     public JButton ownTransferButton;
     public JButton standingOrderTransferButton;
-    private JButton historyButton;
+    private JButton ordinaryHistoryButton;
+    private JButton savingsHistoryButton;
     public int counter = 0;
     AccountChoosed chosenAcc;
     String []options = {"one","two"};
@@ -76,12 +78,23 @@ public class MainScreen extends Screen {
                 }
             }
         });
-        historyButton.addActionListener(new ActionListener() {
+        ordinaryHistoryButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 frame.dispose();
                 try {
                     new OrdinaryHistory(new MainFrame(),user);
+                } catch (SQLException throwables) {
+                    throwables.printStackTrace();
+                }
+            }
+        });
+        savingsHistoryButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                frame.dispose();
+                try {
+                    new SavingsHistory(new MainFrame(),user);
                 } catch (SQLException throwables) {
                     throwables.printStackTrace();
                 }

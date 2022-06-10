@@ -212,7 +212,7 @@
           <text value="2991931832819418214"/>
         </properties>
       </component>
-      <component id="190f3" class="javax.swing.JButton" binding="historyButton" default-binding="true">
+      <component id="190f3" class="javax.swing.JButton" binding="ordinaryHistoryButton">
         <constraints>
           <grid row="9" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
           <gridbag weightx="0.0" weighty="0.0"/>
@@ -244,7 +244,7 @@
           <gridbag weightx="1.0" weighty="0.0"/>
         </constraints>
       </hspacer>
-      <component id="f69fd" class="javax.swing.JButton" default-binding="true">
+      <component id="f69fd" class="javax.swing.JButton" binding="savingsHistoryButton">
         <constraints>
           <grid row="11" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
           <gridbag weightx="0.0" weighty="0.0"/>
