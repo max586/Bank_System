@@ -31,7 +31,7 @@ public class OrdinaryHistory {
         ordinaryPanel.addMouseMotionListener(new MouseAction(appTimer));
         appTimer.start();
         String[][]data = Database.getHistoryFrom("HistoryOrdinary",user.username);
-        String[] cols = {"Operation Date","Transfer Type", "Account nr from", "Account nr to", "Phone nr to",
+        String[] cols = {"Operation Date","Transfer Type","Account nr to", "Phone nr to",
         "Transfer amount","Transfer currency","Total Cost","Transfer title","Start date","End date",
                 "Transfer cycle","Cycle units","Receiver name","Receiver surname","Receiver Town","Receiver Street","Receiver Street nr"};
         OutcomingHistoryTable.setModel(new DefaultTableModel(data,cols));
@@ -41,7 +41,7 @@ public class OrdinaryHistory {
         OutcomingHistoryPane.setVisible(true);
         OutcomingHistoryTable.setVisible(true);
         String[][]dataincoming = Database.getHistoryTo("HistoryOrdinary",user.username);
-        String[] colsincoming = {"Operation Date","Transfer Type", "Account nr from", "Account nr to", "Phone nr to",
+        String[] colsincoming = {"Operation Date","Transfer Type", "Account nr from", "Phone nr to",
                 "Transfer amount","Transfer currency","Total Cost","Transfer title","Start date","End date",
                 "Transfer cycle","Cycle units","Receiver name","Receiver surname","Receiver Town","Receiver Street","Receiver Street nr"};
         IncomingHistoryTable.setModel(new DefaultTableModel(dataincoming,colsincoming));

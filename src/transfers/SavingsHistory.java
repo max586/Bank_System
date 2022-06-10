@@ -30,7 +30,7 @@ public class SavingsHistory {
             ordinaryPanel.addMouseMotionListener(new MouseAction(appTimer));
             appTimer.start();
             String[][]dataoutcoming = Database.getHistoryFrom("HistorySavings",user.username);
-            String[] colsoutcoming = {"Operation Date","Transfer Type", "Account nr from", "Account nr to", "Phone nr to",
+            String[] colsoutcoming = {"Operation Date","Transfer Type", "Account nr to", "Phone nr to",
                     "Transfer amount","Transfer currency","Total Cost","Transfer title","Start date","End date",
                     "Transfer cycle","Cycle units","Receiver name","Receiver surname","Receiver Town","Receiver Street","Receiver Street nr"};
             outgoingHistoryTable.setModel(new DefaultTableModel(dataoutcoming,colsoutcoming));
@@ -40,7 +40,7 @@ public class SavingsHistory {
             outgoingHistoryPane.setVisible(true);
             outgoingHistoryTable.setVisible(true);
             String[][]dataincoming2 = Database.getHistoryTo("HistorySavings",user.username);
-            String[] colsincoming2 = {"Operation Date","Transfer Type", "Account nr from", "Account nr to", "Phone nr to",
+            String[] colsincoming2 = {"Operation Date","Transfer Type", "Account nr from", "Phone nr to",
                     "Transfer amount","Transfer currency","Total Cost","Transfer title","Start date","End date",
                     "Transfer cycle","Cycle units","Receiver name","Receiver surname","Receiver Town","Receiver Street","Receiver Street nr"};
             IncomingHistoryTable.setModel(new DefaultTableModel(dataincoming2,colsincoming2));

@@ -453,6 +453,64 @@ public class Database {
         }
         return userName;
     }
+
+    public static boolean isAccountNumberOrdinary(String accountNumber){
+        try{
+            ResultSet rs = st.executeQuery("select count(*) from OrdinaryAccounts where `Account number`='"+accountNumber+"';");
+            rs.next();
+            int res=rs.getInt(1);
+            return(res == 1);
+        }
+        catch(SQLException e){
+            System.out.println("Couldn't execute the query");
+            System.out.println(e);
+        }
+        return false;
+    }
+
+    public static boolean isAccountNumberSavings(String accountNumber){
+        try{
+            ResultSet rs = st.executeQuery("select count(*) from SavingsAccounts where `Account number`='"+accountNumber+"';");
+            rs.next();
+            int res=rs.getInt(1);
+            return(res == 1);
+        }
+        catch(SQLException e){
+            System.out.println("Couldn't execute the query");
+            System.out.println(e);
+        }
+        return false;
+    }
+
+    public static String getUserNameByAccount(String accountNumber, String table){
+        String userName = "";
+        switch (table){
+            case "Ordinary":
+                try{
+                    ResultSet rs = st.executeQuery("select * from OrdinaryAccounts where `Account number`='"+accountNumber+"';");
+                    rs.next();
+                    userName=rs.getString(1);
+                }catch(SQLException e) {
+                    System.out.println("Couldn't execute the query");
+                    System.out.println(e);
+                }
+                break;
+            case "Savings":
+                try{
+                    ResultSet rs = st.executeQuery("select * from SavingsAccounts where `Account number`='"+accountNumber+"';");
+                    rs.next();
+                    userName=rs.getString(1);
+                }catch(SQLException e) {
+                    System.out.println("Couldn't execute the query");
+                    System.out.println(e);
+                }
+                break;
+            default:
+                userName = "";
+                break;
+        }
+        return userName;
+    }
     public static void deleteUser(String username){
        try{
            st.executeUpdate("delete from Users where username='"+username+"';");
