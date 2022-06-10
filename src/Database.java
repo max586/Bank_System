@@ -118,10 +118,15 @@ public class Database {
         else{accounts="SavingsAccounts";}
         try{
             int number_of_rows;
-            ResultSet rs = st.executeQuery("select count(*) from "+ database +" h join "+ accounts+" o on h.`Account nr to` = o.`Account number` where h.`Operation Date` >= '"+sday+"'and o.username='"+username+"';");
+            ResultSet rs = st.executeQuery("select count(*) from HistoryOrdinary h join "+ accounts+" o on h.`Account nr to` = o.`Account number` where h.`Operation Date` >= '"+sday+"' and o.username='"+username+"';");
             rs.next();
             number_of_rows=rs.getInt(1);
-            rs = st.executeQuery("select `Operation Date`,`Transfer Type` ,`Account nr from` ,`Phone nr to` ,`Transfer Amount` ,`Transfer Currency` ,`Total Transfer Cost` ,`Transfer Title` ,`Start Date` ,`End Date` ,`Transfer Cycle` ,`Transfer Cycle Units` ,`First name` ,`Last name` ,Town ,Postcode ,Street ,`Street number` from "+ database +" h join "+ accounts+" o on h.`Account nr to` = o.`Account number` where h.`Operation Date` >= '"+sday+"'and o.username='"+username+"';");
+            rs = st.executeQuery("select count(*) from HistorySavings h join " +accounts+" o on h.`Account nr to` = o.`Account number` where h.`Operation Date` >= '"+sday+"'and o.username='"+username+"';");
+            rs.next();
+            number_of_rows+=rs.getInt(1);
+            rs = st.executeQuery("select `Operation Date`,`Transfer Type` ,`Account nr from` ,`Phone nr to` ,`Transfer Amount` ,`Transfer Currency` ,`Total Transfer Cost` ,`Transfer Title` ,`Start Date` ,`End Date` ,`Transfer Cycle` ,`Transfer Cycle Units` ,`First name` ,`Last name` ,Town ,Postcode ,Street ,`Street number` from HistoryOrdinary h join "+ accounts+" o on h.`Account nr to` = o.`Account number` where h.`Operation Date` >= '"+sday+"'and o.username='"+username+"' "+
+                    "union all " +
+                    "select `Operation Date`,`Transfer Type` ,`Account nr from` ,`Phone nr to` ,`Transfer Amount` ,`Transfer Currency` ,`Total Transfer Cost` ,`Transfer Title` ,`Start Date` ,`End Date` ,`Transfer Cycle` ,`Transfer Cycle Units` ,`First name` ,`Last name` ,Town ,Postcode ,Street ,`Street number` from HistorySavings h join "+ accounts+" o on h.`Account nr to` = o.`Account number` where h.`Operation Date` >= '"+sday+"'and o.username='"+username+"';");
             rs.next();
             String[][] transactions_history = new String[number_of_rows][18];
             for(int i=0;i<number_of_rows;i++){

@@ -25,6 +25,9 @@ public class SavingsHistory {
     private JTable IncomingHistoryTable;
     private MainFrame frame;
         public SavingsHistory(MainFrame mainFrame, User user) throws SQLException {
+            outgoingHistoryTable.setEnabled(false);
+            IncomingHistoryTable.setEnabled(false);
+
             frame = mainFrame;
             AppTimer appTimer = new AppTimer(timeLabel,frame);
             ordinaryPanel.addMouseMotionListener(new MouseAction(appTimer));
