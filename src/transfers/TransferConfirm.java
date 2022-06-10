@@ -170,7 +170,7 @@ public class TransferConfirm {
                         appCodeWarning.setVisible(true);
                     }
                     else {
-                        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm:ss");
+                        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
                         LocalDateTime now = LocalDateTime.now();
                         String generationDate = dtf.format(now);
                         String town, postCode,street,streetNumber;
