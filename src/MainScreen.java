@@ -6,12 +6,14 @@ import src.mainFrame.MainFrame;
 import src.timer.AppTimer;
 import src.timer.MouseAction;
 import src.transfers.AccountChoosed;
+import src.transfers.OrdinaryHistory;
 import src.transfers.TransferFactory;
 
 import javax.swing.*;
 import java.io.IOException;
 import javax.swing.JPanel;
 import java.awt.event.*;
+import java.sql.SQLException;
 
 public class MainScreen extends Screen {
     public JPanel AuthPanel;
@@ -75,7 +77,17 @@ public class MainScreen extends Screen {
                 }
             }
         });
-
+        historyButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                frame.dispose();
+                try {
+                    new OrdinaryHistory(new MainFrame(),user);
+                } catch (SQLException throwables) {
+                    throwables.printStackTrace();
+                }
+            }
+        });
         ownTransferButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

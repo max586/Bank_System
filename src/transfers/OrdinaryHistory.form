@@ -37,7 +37,7 @@
       </hspacer>
       <vspacer id="c79ba">
         <constraints>
-          <grid row="5" column="10" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+          <grid row="6" column="10" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
           <gridbag weightx="0.0" weighty="0.0"/>
         </constraints>
       </vspacer>
@@ -48,7 +48,7 @@
         </constraints>
         <properties>
           <font name="Futura" size="16" style="0"/>
-          <text value="Konto oszczędnościowe"/>
+          <text value="Konto główne"/>
         </properties>
       </component>
       <grid id="e062b" binding="timerPanel" layout-manager="GridBagLayout">
@@ -87,15 +87,6 @@
           </hspacer>
         </children>
       </grid>
-      <scrollpane id="d23c7" binding="scrollPane">
-        <constraints>
-          <grid row="4" column="1" row-span="1" col-span="10" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
-          <gridbag weightx="0.0" weighty="1.0"/>
-        </constraints>
-        <properties/>
-        <border type="none"/>
-        <children/>
-      </scrollpane>
       <hspacer id="7ac85">
         <constraints>
           <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
@@ -110,7 +101,7 @@
       </vspacer>
       <component id="2b884" class="javax.swing.JButton" binding="cancelButton">
         <constraints>
-          <grid row="5" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="6" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
           <gridbag weightx="0.0" weighty="0.0"/>
         </constraints>
         <properties>
@@ -121,6 +112,20 @@
           <text value="Anuluj"/>
         </properties>
       </component>
+      <scrollpane id="795aa" binding="transferHistoryScroll">
+        <constraints>
+          <grid row="5" column="1" row-span="1" col-span="10" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="1.0"/>
+        </constraints>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <component id="e7eeb" class="javax.swing.JTable" binding="transferHistoryTable">
+            <constraints/>
+            <properties/>
+          </component>
+        </children>
+      </scrollpane>
     </children>
   </grid>
 </form>
