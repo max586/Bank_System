@@ -5,7 +5,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 public class Database {
-    public static Statement st = connectToDatabase("bank1006","root","Adix_23/09/1999");
+    public static Statement st = connectToDatabase("bank_system","root","password");
     public static Statement connectToDatabase(String database_name,String username, String password){
         Connection con=null;
         Statement st=null;
