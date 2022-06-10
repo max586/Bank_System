@@ -73,7 +73,16 @@ public class Credit extends Screen
                                     {
                                         mounth = String.valueOf(Today.getMonth());
                                     }
-                                    Database.addCredit(user.username, Float.parseFloat(Amount.getText()), 0, Today.getYear()+1900+"-"+mounth+"-"+Today.getDate() ,(int)Float.parseFloat(Years.getText()));
+                                    String day = "";
+                                    if (Today.getDate()<10)
+                                    {
+                                        day = "0"+String.valueOf(Today.getDate());
+                                    }
+                                    else
+                                    {
+                                        day = String.valueOf(Today.getDate());
+                                    }
+                                    Database.addCredit(user.username, Float.parseFloat(Amount.getText()), 0, Today.getYear()+1900+"-"+mounth+"-"+day ,(int)Float.parseFloat(Years.getText()));
                                     String[] CreditInfo = Database.getCredit(user.username);//Amount , AmountPayed , StartDate , Duration
                                     MyCreditAmount.setText(CreditInfo[0]);
                                     MyPayedCredit.setText(CreditInfo[1]);
