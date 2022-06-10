@@ -23,7 +23,7 @@ public class ForeignStandardTransfer extends StandardTransfer implements Transfe
     ForeignStandardTransfer(AccountChoosed accountChoosed1, User user1,MainFrame mainFrame) throws IOException, FontFormatException {
         super(accountChoosed1,user1,mainFrame);
         isCountry = true;
-        panelTitleLabel.setText("Przelew zagraniczny");
+        panelTitleLabel.setText("Foreign transfer");
         accountNumberCountryLabel.setVisible(false);
         converter = 1.0;
         transferAmountCurrencyLabel.setVisible(false);
@@ -103,7 +103,7 @@ new MainScreen(user,null,new Screen()).CreateScreen();        });
                         finalTransferAmount = converter*finalTransferAmount;
                         isAmountValid = !(finalTransferAmount>senderAmount);
                     }
-                    transferAmountWarning.setText("Nie masz wystarczających środków");
+                    transferAmountWarning.setText("You don't have enough money");
                     transferAmountWarning.setVisible(!isAmountValid);
                 }
             }

@@ -18,7 +18,7 @@ public interface PdfGenerator{
 }
 
 class PdfGeneratorStandard implements PdfGenerator {
-    protected final String title = "Potwierdzenie wykonania operacji";
+    protected final String title = "Transfer Confirmation";
     protected final DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm:ss");
     protected final LocalDateTime now = LocalDateTime.now();
     protected final String generationDate = dtf.format(now);
@@ -38,16 +38,16 @@ class PdfGeneratorStandard implements PdfGenerator {
 
     public PdfGeneratorStandard(){}
     public PdfGeneratorStandard(String operationDate, User user1, AccountChoosed accountChoosed1, User receiver1, AccountChoosed accountChoosed2, Map<String,String> transferData){
-        fileName = "Potwierdzenie_"+transferData.get("typ")+"_"+user1.firstName+user1.lastName+"_"+generationDate+".pdf";
+        fileName = "Confirmation_"+transferData.get("typ")+"_"+user1.firstName+user1.lastName+"_"+generationDate+".pdf";
         data = new LinkedHashMap<>();
-        data.put("Typ operacji: ",transferData.get("typ"));
-        data.put("Data księgowania: ", operationDate);
-        data.put("Data transakcji: ", operationDate);
+        data.put("Transfer type: ",transferData.get("typ"));
+        data.put("Posting date: ", operationDate);
+        data.put("Transfer date: ", operationDate);
         if(accountChoosed1==AccountChoosed.ORDINARYACCOUNT) userAccountNumber = user1.ordinary_account_number;
         else userAccountNumber = user1.savings_account_number;
         if(accountChoosed2==AccountChoosed.ORDINARYACCOUNT) receiverAccountNumber = receiver1.ordinary_account_number;
         else receiverAccountNumber = receiver1.savings_account_number;
-        data.put("Z rachunku: ",userAccountNumber);
+        data.put("From account number: ",userAccountNumber);
         String sender = "";
         sender+=user1.firstName;
         sender = sender+" "+user1.lastName;
@@ -57,8 +57,8 @@ class PdfGeneratorStandard implements PdfGenerator {
             sender = sender+" "+"ul."+user1.street;
             sender = sender+" "+user1.street_nr;
         }
-        data.put("Zleceniodawca: ",sender);
-        data.put("Na rachunek: ",receiverAccountNumber);
+        data.put("Paymaster: ",sender);
+        data.put("To account number: ",receiverAccountNumber);
         String receiver = "";
         receiver+=receiver1.firstName;
         receiver = receiver+" "+receiver1.lastName;
@@ -68,10 +68,10 @@ class PdfGeneratorStandard implements PdfGenerator {
             receiver = receiver+" "+"ul."+receiver1.street;
             receiver = receiver+" "+receiver1.street_nr;
         }
-        data.put("Odbiorca: ",receiver);
-        data.put("Kwota transakcji: ",transferData.get("kwota")+" "+transferData.get("waluta"));
-        data.put("Kwota zaksięgowana: ", "-" + String.format("%.2f",Double.parseDouble(transferData.get("kwotaPLN")))+" "+"PLN");
-        data.put("Tytuł: ",transferData.get("tytul"));
+        data.put("Receiver: ",receiver);
+        data.put("Transfer amount: ",transferData.get("kwota")+" "+transferData.get("waluta"));
+        data.put("Amount booked: ", "-" + String.format("%.2f",Double.parseDouble(transferData.get("kwotaPLN")))+" "+"PLN");
+        data.put("Title: ",transferData.get("tytul"));
     }
 
     public void generatePDF(String directory) throws IOException {
@@ -96,7 +96,7 @@ class PdfGeneratorStandard implements PdfGenerator {
         contentStream.newLineAtOffset(0, -leading);
         contentStream.setFont(titlesFont,dateFontSize);
         yCoordinate -= leading;
-        contentStream.showText("Data wygenerowania: ");
+        contentStream.showText("Generation date: ");
         contentStream.setFont(dataFont,dateFontSize);
         contentStream.showText(generationDate);
         contentStream.endText(); // End of text mode
@@ -132,17 +132,17 @@ class PdfGeneratorStandard implements PdfGenerator {
 
 class PdfGeneratorStandingOrder extends PdfGeneratorStandard implements PdfGenerator{
     public PdfGeneratorStandingOrder(String operationDate, User user1, AccountChoosed accountChoosed1, User receiver1, AccountChoosed accountChoosed2, Map<String,String> transferData) {
-        fileName = "Potwierdzenie_"+transferData.get("typ")+"_"+user1.firstName+user1.lastName+"_"+generationDate+".pdf";
+        fileName = "Confirmation_"+transferData.get("typ")+"_"+user1.firstName+user1.lastName+"_"+generationDate+".pdf";
         data = new LinkedHashMap<>();
-        data.put("Typ operacji: ",transferData.get("typ"));
-        data.put("Data zlecenia: ", operationDate);
-        data.put("Rozpoczęcie obowiązywania zlecenia: ", transferData.get("startdata"));
-        if(transferData.containsKey("enddata"))  data.put("Zakończenie obowiązywania zlecenia: ", transferData.get("enddata"));
+        data.put("Transfer type: ",transferData.get("typ"));
+        data.put("Order date: ", operationDate);
+        data.put("Order start date: ", transferData.get("startdata"));
+        if(transferData.containsKey("enddata"))  data.put("Order end date: ", transferData.get("enddata"));
         if(accountChoosed1==AccountChoosed.ORDINARYACCOUNT) userAccountNumber = user1.ordinary_account_number;
         else userAccountNumber = user1.savings_account_number;
         if(accountChoosed2==AccountChoosed.ORDINARYACCOUNT) receiverAccountNumber = receiver1.ordinary_account_number;
         else receiverAccountNumber = receiver1.savings_account_number;
-        data.put("Z rachunku: ",userAccountNumber);
+        data.put("From account number: ",userAccountNumber);
         String sender = "";
         sender+=user1.firstName;
         sender = sender+" "+user1.lastName;
@@ -152,8 +152,8 @@ class PdfGeneratorStandingOrder extends PdfGeneratorStandard implements PdfGener
             sender = sender+" "+"ul."+user1.street;
             sender = sender+" "+user1.street_nr;
         }
-        data.put("Zleceniodawca: ",sender);
-        data.put("Na rachunek: ",receiverAccountNumber);
+        data.put("Paymaster: ",sender);
+        data.put("To account number: ",receiverAccountNumber);
         String receiver = "";
         receiver+=receiver1.firstName;
         receiver = receiver+" "+receiver1.lastName;
@@ -163,49 +163,49 @@ class PdfGeneratorStandingOrder extends PdfGeneratorStandard implements PdfGener
             receiver = receiver+" "+"ul."+receiver1.street;
             receiver = receiver+" "+receiver1.street_nr;
         }
-        data.put("Odbiorca: ",receiver);
-        data.put("Kwota transakcji: ",transferData.get("kwota")+" "+transferData.get("waluta"));
-        data.put("Kwota zaksięgowana: ", "-" + String.format("%.2f",Double.parseDouble(transferData.get("kwotaPLN")))+" "+"PLN");
-        data.put("Tytuł: ",transferData.get("tytul"));
+        data.put("Receiver: ",receiver);
+        data.put("Transfer amount: ",transferData.get("kwota")+" "+transferData.get("waluta"));
+        data.put("Amount booked: ", "-" + String.format("%.2f",Double.parseDouble(transferData.get("kwotaPLN")))+" "+"PLN");
+        data.put("Title: ",transferData.get("tytul"));
     }
 }
 
 class PdfGeneratorBLIK extends PdfGeneratorStandard implements PdfGenerator{
     public PdfGeneratorBLIK(String operationDate, User user1, User receiver1, Map<String,String> transferData){
-        fileName = "Potwierdzenie_"+"BLIK"+"_"+user1.firstName+user1.lastName+"_"+generationDate+".pdf";
+        fileName = "Confirmation_"+"BLIK"+"_"+user1.firstName+user1.lastName+"_"+generationDate+".pdf";
         data = new LinkedHashMap<>();
-        data.put("Typ operacji: ",transferData.get("typ"));
-        data.put("Data księgowania: ", operationDate);
-        data.put("Data transakcji: ", operationDate);
-        data.put("Z rachunku: ",user1.ordinary_account_number);
-        data.put("Płacący: ",user1.firstName+" "+user1.lastName);
-        data.put("Na nr. telefonu: ",receiver1.phone_number);
-        data.put("Odbiorca: ",receiver1.firstName+" "+receiver1.lastName);
-        data.put("Kwota transakcji: ",transferData.get("kwota")+" "+"PLN");
-        data.put("Kwota zaksięgowana: ","-"+transferData.get("kwota")+" "+"PLN");
-        data.put("Tytuł: ",transferData.get("tytul"));
+        data.put("Transfer type: ",transferData.get("typ"));
+        data.put("Posting date: ", operationDate);
+        data.put("Transfer date: ", operationDate);
+        data.put("From account number: ",user1.ordinary_account_number);
+        data.put("Paymaster: ",user1.firstName+" "+user1.lastName);
+        data.put("To phone number: ",receiver1.phone_number);
+        data.put("Receiver: ",receiver1.firstName+" "+receiver1.lastName);
+        data.put("Transfer amount: ",transferData.get("kwota")+" "+"PLN");
+        data.put("Amount booked: ","-"+transferData.get("kwota")+" "+"PLN");
+        data.put("Title: ",transferData.get("tytul"));
     }
 }
 
 class PdfGeneratorOwn extends PdfGeneratorStandard implements PdfGenerator{
     public PdfGeneratorOwn(String operationDate, User user1, AccountChoosed accountChoosed1, User receiver1, AccountChoosed accountChoosed2, Map<String,String> transferData){
-        fileName = "Potwierdzenie_"+transferData.get("typ")+"_"+user1.firstName+user1.lastName+"_"+generationDate+".pdf";
+        fileName = "Confirmation_"+transferData.get("typ")+"_"+user1.firstName+user1.lastName+"_"+generationDate+".pdf";
         data = new LinkedHashMap<>();
-        data.put("Typ operacji: ",transferData.get("typ"));
-        data.put("Data księgowania: ", operationDate);
-        data.put("Data transakcji: ", operationDate);
+        data.put("Transfer type: ",transferData.get("typ"));
+        data.put("Posting date: ", operationDate);
+        data.put("Transfer date: ", operationDate);
         if(accountChoosed1==AccountChoosed.ORDINARYACCOUNT){
             userAccountNumber = user1.ordinary_account_number;
         }
         else userAccountNumber = user1.savings_account_number;
         if(accountChoosed2==AccountChoosed.ORDINARYACCOUNT) receiverAccountNumber = receiver1.ordinary_account_number;
         else receiverAccountNumber = receiver1.savings_account_number;
-        data.put("Z rachunku: ",userAccountNumber);
-        data.put("Płacący: ",user1.firstName+" "+user1.lastName);
-        data.put("Na rachunek: ",receiverAccountNumber);
-        data.put("Odbiorca: ",receiver1.firstName+" "+receiver1.lastName);
-        data.put("Kwota transakcji: ",transferData.get("kwota")+" "+"PLN");
-        data.put("Kwota zaksięgowana: ","-"+transferData.get("kwota")+" "+"PLN");
-        data.put("Tytuł: ",transferData.get("tytul"));
+        data.put("From account number: ",userAccountNumber);
+        data.put("Paymaster: ",user1.firstName+" "+user1.lastName);
+        data.put("To account number: ",receiverAccountNumber);
+        data.put("Receiver: ",receiver1.firstName+" "+receiver1.lastName);
+        data.put("Transfer amount: ",transferData.get("kwota")+" "+"PLN");
+        data.put("Amount booked: ","-"+transferData.get("kwota")+" "+"PLN");
+        data.put("Title: ",transferData.get("tytul"));
     }
 }

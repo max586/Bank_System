@@ -24,7 +24,7 @@
           <maximumSize width="400" height="25"/>
           <minimumSize width="400" height="41"/>
           <preferredSize width="400" height="40"/>
-          <text value="Przelew krajowy"/>
+          <text value="Domestic Transfer"/>
           <verticalAlignment value="1"/>
           <verticalTextPosition value="1"/>
         </properties>
@@ -36,7 +36,7 @@
         </constraints>
         <properties>
           <font name="Futura" size="24" style="0"/>
-          <text value="Na"/>
+          <text value="For"/>
         </properties>
       </component>
       <component id="8f385" class="javax.swing.JLabel">
@@ -46,7 +46,7 @@
         </constraints>
         <properties>
           <font name="Futura" size="24" style="0"/>
-          <text value="Szczegóły"/>
+          <text value="Details"/>
         </properties>
       </component>
       <component id="b8eaf" class="javax.swing.JLabel" binding="accountNumberLabel">
@@ -56,7 +56,7 @@
         </constraints>
         <properties>
           <font name="Futura" size="18" style="0"/>
-          <text value="Numer rachunku"/>
+          <text value="Account number"/>
         </properties>
       </component>
       <component id="39a2f" class="javax.swing.JTextField" binding="accountNumberTxt">
@@ -78,7 +78,7 @@
         </constraints>
         <properties>
           <font name="Futura" size="18" style="0"/>
-          <text value="Kwota"/>
+          <text value="Amount"/>
         </properties>
       </component>
       <component id="96b2c" class="javax.swing.JLabel">
@@ -88,7 +88,7 @@
         </constraints>
         <properties>
           <font name="Futura" size="16" style="0"/>
-          <text value="Nazwa odbiorcy"/>
+          <text value="Receiver name"/>
         </properties>
       </component>
       <component id="e9984" class="javax.swing.JComboBox" binding="receiverNameCombo">
@@ -99,9 +99,9 @@
         <properties>
           <font name="Futura" size="14" style="0"/>
           <model>
-            <item value="Wybierz"/>
-            <item value="Firma"/>
-            <item value="Osoba"/>
+            <item value="Choose"/>
+            <item value="Company"/>
+            <item value="Person"/>
           </model>
         </properties>
       </component>
@@ -136,7 +136,7 @@
         </constraints>
         <properties>
           <font name="Futura" size="16" style="0"/>
-          <text value="Miejscowość"/>
+          <text value="Town"/>
         </properties>
       </component>
       <component id="6e89c" class="javax.swing.JTextField" binding="townNameTxt">
@@ -150,6 +150,7 @@
           <font name="Futura" size="14" style="0"/>
           <minimumSize width="49" height="30"/>
           <preferredSize width="90" height="30"/>
+          <text value=""/>
         </properties>
       </component>
       <component id="127a2" class="javax.swing.JLabel" binding="streetNameLabel">
@@ -159,7 +160,7 @@
         </constraints>
         <properties>
           <font name="Futura" size="16" style="0"/>
-          <text value="Ulica"/>
+          <text value="Street"/>
         </properties>
       </component>
       <component id="d0188" class="javax.swing.JTextField" binding="streetNameTxt">
@@ -199,7 +200,7 @@
         </constraints>
         <properties>
           <font name="Futura" size="16" style="0"/>
-          <text value="Kod pocztowy"/>
+          <text value="Post Code"/>
         </properties>
       </component>
       <component id="c80aa" class="javax.swing.JTextField" binding="postcode1Txt">
@@ -243,7 +244,7 @@
         </constraints>
         <properties>
           <font name="Futura" size="16" style="0"/>
-          <text value="Nr. domu/ lokalu"/>
+          <text value="Street nr./ unit nr."/>
         </properties>
       </component>
       <component id="afa65" class="javax.swing.JTextField" binding="streetNumber1Txt">
@@ -291,7 +292,7 @@
         </constraints>
         <properties>
           <font name="Futura" size="16" style="0"/>
-          <text value="Imię"/>
+          <text value="Name"/>
         </properties>
       </component>
       <component id="2a353" class="javax.swing.JLabel" binding="receiverName2Label">
@@ -301,7 +302,7 @@
         </constraints>
         <properties>
           <font name="Futura" size="16" style="0"/>
-          <text value="Nazwisko"/>
+          <text value="Surname"/>
         </properties>
       </component>
       <hspacer id="f7676">
@@ -323,7 +324,7 @@
         </constraints>
         <properties>
           <font name="Futura" size="16" style="0"/>
-          <text value="Tytuł"/>
+          <text value="Title"/>
         </properties>
       </component>
       <component id="b0672" class="javax.swing.JLabel" binding="transferAmountCurrencyLabel">
@@ -393,7 +394,7 @@
         </constraints>
         <properties>
           <font name="Futura" size="14" style="0"/>
-          <text value="Przelew natychmiastowy (+5.00 PLN)"/>
+          <text value="Express transfer (+5.00 PLN)"/>
         </properties>
       </component>
       <vspacer id="416e8">
@@ -429,7 +430,7 @@
           <font name="Futura" size="18" style="0"/>
           <foreground color="-14566656"/>
           <preferredSize width="265" height="50"/>
-          <text value="Dalej"/>
+          <text value="Next"/>
         </properties>
       </component>
       <vspacer id="e4931">
@@ -460,7 +461,7 @@
           <foreground color="-4520960"/>
           <hideActionText value="false"/>
           <preferredSize width="265" height="50"/>
-          <text value="Anuluj"/>
+          <text value="Cancel"/>
         </properties>
       </component>
       <hspacer id="97896">
@@ -506,7 +507,7 @@
         </constraints>
         <properties>
           <font name="Futura" size="24" style="0"/>
-          <text value="Dostępne środki"/>
+          <text value="Available funds"/>
         </properties>
       </component>
       <vspacer id="3bea8">
@@ -546,7 +547,7 @@
         <properties>
           <font name="Futura" size="10" style="0"/>
           <foreground color="-4521984"/>
-          <text value="Nie masz wystarczających środków "/>
+          <text value="You don't have enough money"/>
         </properties>
       </component>
       <component id="2b2d5" class="javax.swing.JLabel" binding="postcodeWarning">
@@ -557,7 +558,7 @@
         <properties>
           <font name="Futura" size="10" style="0"/>
           <foreground color="-4521984"/>
-          <text value="Niepoprawny kod pocztowy"/>
+          <text value="Invalid post code"/>
         </properties>
       </component>
       <component id="2ef83" class="javax.swing.JLabel" binding="transferTitleWarning">
@@ -568,7 +569,7 @@
         <properties>
           <font name="Futura" size="10" style="0"/>
           <foreground color="-4521984"/>
-          <text value="To pole jest wymagane"/>
+          <text value="This field is required"/>
         </properties>
       </component>
       <component id="bb7ed" class="javax.swing.JLabel" binding="receiverName1Warning">
@@ -579,7 +580,7 @@
         <properties>
           <font name="Futura" size="10" style="0"/>
           <foreground color="-4521984"/>
-          <text value="To pole jest wymagane"/>
+          <text value="This field is required"/>
         </properties>
       </component>
       <component id="208d6" class="javax.swing.JLabel" binding="receiverName2Warning">
@@ -590,7 +591,7 @@
         <properties>
           <font name="Futura" size="10" style="0"/>
           <foreground color="-4521984"/>
-          <text value="To pole jest wymagane"/>
+          <text value="This field is required"/>
         </properties>
       </component>
       <component id="d8359" class="javax.swing.JLabel" binding="townNameWarning">
@@ -601,7 +602,7 @@
         <properties>
           <font name="Futura" size="10" style="0"/>
           <foreground color="-4521984"/>
-          <text value="To pole jest wymagane"/>
+          <text value="This field is required"/>
         </properties>
       </component>
       <component id="f0876" class="javax.swing.JLabel" binding="streetNameWarning">
@@ -612,7 +613,7 @@
         <properties>
           <font name="Futura" size="10" style="0"/>
           <foreground color="-4521984"/>
-          <text value="To pole jest wymagane"/>
+          <text value="This field is required"/>
         </properties>
       </component>
       <component id="d5d3b" class="javax.swing.JLabel" binding="streetNumberWarning">
@@ -623,7 +624,7 @@
         <properties>
           <font name="Futura" size="10" style="0"/>
           <foreground color="-4521984"/>
-          <text value="To pole jest wymagane"/>
+          <text value="This field is required"/>
         </properties>
       </component>
       <component id="ce894" class="javax.swing.JLabel">
@@ -666,7 +667,7 @@
         </constraints>
         <properties>
           <font name="Futura" size="16" style="0"/>
-          <text value="Kraj"/>
+          <text value="Country"/>
         </properties>
       </component>
       <vspacer id="b97ef">
@@ -694,7 +695,7 @@
         <properties>
           <font name="Futura" size="10" style="0"/>
           <foreground color="-4521984"/>
-          <text value="To pole jest wymagane"/>
+          <text value="This field is required"/>
         </properties>
       </component>
       <component id="73e91" class="javax.swing.JRadioButton" binding="receiverAddressRadioButton">
@@ -704,7 +705,7 @@
         </constraints>
         <properties>
           <font name="Futura" size="16" style="0"/>
-          <text value="Adres odbiorcy"/>
+          <text value="Receiver address"/>
         </properties>
       </component>
       <component id="8444" class="javax.swing.JComboBox" binding="currencyComboBox">
@@ -743,7 +744,7 @@
         <properties>
           <font name="Futura" size="10" style="0"/>
           <foreground color="-4521984"/>
-          <text value="Nie masz wystarczających środków"/>
+          <text value="You don't have enough money"/>
         </properties>
       </component>
       <component id="a13b7" class="javax.swing.JLabel" binding="accountNumberWarning">
@@ -754,7 +755,7 @@
         <properties>
           <font name="Futura" size="10" style="0"/>
           <foreground color="-4521984"/>
-          <text value="Niepoprawny numer rachunku"/>
+          <text value="Invalid account number"/>
         </properties>
       </component>
       <component id="b5734" class="javax.swing.JComboBox" binding="accountNumberCountryComboBox">
@@ -794,7 +795,7 @@
             </constraints>
             <properties>
               <font name="Futura" size="14" style="1"/>
-              <text value="Automatyczne wylogowanie:"/>
+              <text value="Automatic logout"/>
             </properties>
           </component>
           <component id="dbacc" class="javax.swing.JLabel" binding="timeLabel">

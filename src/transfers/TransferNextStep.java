@@ -83,7 +83,7 @@ public class TransferNextStep {
         equalsLabel.setVisible(false);
         polishCurrencyAmountLabel.setVisible(false);
         polishCurrencyLabel.setVisible(false);
-        if(transferData.get("typ").equals("Przelew BLIK na telefon")){
+        if(transferData.get("typ").equals("BLIK Phone Transfer")){
             transferPanelTitle = transferData.get("typ");
             transferPanelTitleLabel.setText(transferPanelTitle);
         }
@@ -91,7 +91,7 @@ public class TransferNextStep {
             String[] arr = transferData.get("typ").split("\\s+");
             transferPanelTitle = arr[0] + " " + arr[1];
             transferPanelTitleLabel.setText(transferPanelTitle);
-            if (transferPanelTitle.equals("Przelew zagraniczny")) {
+            if (transferPanelTitle.equals("Foreign Transfer")) {
                 equalsLabel.setVisible(true);
                 if (arr[2].equals("natychmiastowy"))
                     polishCurrencyAmountLabel.setText(String.format("%.2f", Double.parseDouble(transferData.get("kwotaPLN")) - 5.00));
@@ -101,9 +101,9 @@ public class TransferNextStep {
                 polishCurrencyLabel.setVisible(true);
             }
         }
-        if(transferPanelTitle.equals("Zlecenie stałe")){
-            feeLabel.setText("Obowiązuje od");
-            dateToLabel.setText("Obowiązuje do");
+        if(transferPanelTitle.equals("Standing Order")){
+            feeLabel.setText("Start date");
+            dateToLabel.setText("End date");
             dateFrom.setText(transferData.get("startdata"));
             dateFrom.setVisible(true);
             if(transferData.containsKey("enddata")) {
@@ -118,9 +118,9 @@ public class TransferNextStep {
         senderSurname.setText(user.lastName);
         receiverName.setText(receiver.firstName);
         receiverSurname.setText(receiver.lastName);
-        if(transferPanelTitle.equals("Przelew BLIK na telefon")){
-            senderAccountNumber.setText("Nr. konta: "+userAccountNumber);
-            receiverAccountNumber.setText("Nr. telefonu: "+receiver.phone_number);
+        if(transferPanelTitle.equals("BLIK Phone Transfer")){
+            senderAccountNumber.setText("Account nr.: "+userAccountNumber);
+            receiverAccountNumber.setText("Phone nr.: "+receiver.phone_number);
         }
         else {
             senderAccountNumber.setText(userAccountNumber);

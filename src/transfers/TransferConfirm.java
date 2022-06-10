@@ -80,7 +80,7 @@ public class TransferConfirm {
         appTimer.start();
         otherPanel = transferNextStepPanel;
         transferData = transferData1;
-        if(transferData.get("typ").equals("Przelew BLIK na telefon")) transferPanelTitle = transferData.get("typ");
+        if(transferData.get("typ").equals("BLIK Phone Transfer")) transferPanelTitle = transferData.get("typ");
         else {
             String[] arr = transferData.get("typ").split("\\s+");
             transferPanelTitle = arr[0] + " " + arr[1];
@@ -158,12 +158,12 @@ public class TransferConfirm {
                 }
                 confirmButtonValid = !confirmButtonValidation.contains(false);
                 if(!confirmButtonValid){
-                    appCodeWarning.setText("Podaj czterocyfrowy kod");
+                    appCodeWarning.setText("This field is required");
                     appCodeWarning.setVisible(true);
                 }
                 else{
                     appCodeWarning.setVisible(false);
-                    appCodeWarning.setText("Podany kod jest nieprawidłowy");
+                    appCodeWarning.setText("Invalid App Code");
                     StringBuilder podanyKod = new StringBuilder();
                     for(JTextField t: applicationCode) podanyKod.append(t.getText());
                     if(!appCodeStr.equals(String.valueOf(podanyKod))){
@@ -182,7 +182,7 @@ public class TransferConfirm {
                         }
                         else {town="";postCode="";street="";streetNumber="";}
                         appCodeWarning.setVisible(false);
-                        if(transferPanelTitle.equals("Zlecenie stałe")){
+                        if(transferPanelTitle.equals("Standing Order")){
                             if(accountChoosedUser==AccountChoosed.ORDINARYACCOUNT) {
                                 Database.addToHistory("HistoryOrdinary", generationDate, transferData.get("typ"),
                                         userAccountNumber, receiverAccountNr, "" ,Double.parseDouble(transferData.get("kwota")),
@@ -193,7 +193,7 @@ public class TransferConfirm {
                                 setBalanceReceiver();
                             }
                         }
-                        else if(transferPanelTitle.equals("Przelew BLIK na telefon")){
+                        else if(transferPanelTitle.equals("BLIK Phone Transfer")){
                             if(accountChoosedUser==AccountChoosed.ORDINARYACCOUNT) {
                                 Database.addToHistory("HistoryOrdinary", generationDate, transferData.get("typ"),
                                         userAccountNumber, "",user.phone_number, Double.parseDouble(transferData.get("kwota")),
@@ -203,7 +203,7 @@ public class TransferConfirm {
                                 setBalanceReceiver();
                             }
                         }
-                        else if(transferPanelTitle.equals("Przelew własny")){
+                        else if(transferPanelTitle.equals("Own Transfer")){
                             if(accountChoosedUser==AccountChoosed.ORDINARYACCOUNT) {
                                 Database.addToHistory( "HistoryOrdinary", generationDate, transferData.get("typ"),
                                         userAccountNumber, receiverAccountNr,"",  Double.parseDouble(transferData.get("kwota")),
@@ -233,7 +233,7 @@ public class TransferConfirm {
                         }
                         ;
                         if(isTransferConfirmation){
-                            if(transferPanelTitle.equals("Zlecenie stałe")) {
+                            if(transferPanelTitle.equals("Standing Order")) {
                                 try {
                                     pdfGenerator = new PdfFactory(generationDate,user,accountChoosedUser,receiver,accountChoosedReceiver,transferData).getPdfGenerator(PdfFactory.PdfType.ZLECENIESTALE);
                                 } catch (IOException ioException) {
@@ -242,7 +242,7 @@ public class TransferConfirm {
                                     fontFormatException.printStackTrace();
                                 }
                             }
-                            else if(transferPanelTitle.equals("Przelew BLIK na telefon")) {
+                            else if(transferPanelTitle.equals("BLIK Phone Transfer")) {
                                 try {
                                     pdfGenerator = new PdfFactory(generationDate,user,accountChoosedUser,receiver,accountChoosedReceiver,transferData).getPdfGenerator(PdfFactory.PdfType.BLIK);
                                 } catch (IOException ioException) {
@@ -251,7 +251,7 @@ public class TransferConfirm {
                                     fontFormatException.printStackTrace();
                                 }
                             }
-                            else if(transferPanelTitle.equals("Przelew własny")) {
+                            else if(transferPanelTitle.equals("Own Transfer")) {
                                 try {
                                     pdfGenerator = new PdfFactory(generationDate,user,accountChoosedUser,receiver,accountChoosedReceiver,transferData).getPdfGenerator(PdfFactory.PdfType.WLASNY);
                                 } catch (IOException ioException) {

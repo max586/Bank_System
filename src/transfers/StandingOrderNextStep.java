@@ -127,9 +127,9 @@ public class StandingOrderNextStep {
                 }
                 if(!validation.contains(false)) {
                     switch (timeUnit) {
-                        case "dni" -> timeAmount = LocalDateTime.from(dateFrom.toInstant().atZone(ZoneId.of(ZoneId.systemDefault().getId()))).plusDays(Integer.parseInt(timeUnitsTxt.getText()));
-                        case "tygodnie" -> timeAmount = LocalDateTime.from(dateFrom.toInstant().atZone(ZoneId.of(ZoneId.systemDefault().getId()))).plusWeeks(Integer.parseInt(timeUnitsTxt.getText()));
-                        case "miesiące" -> timeAmount = LocalDateTime.from(dateFrom.toInstant().atZone(ZoneId.of(ZoneId.systemDefault().getId()))).plusMonths(Integer.parseInt(timeUnitsTxt.getText()));
+                        case "day" -> timeAmount = LocalDateTime.from(dateFrom.toInstant().atZone(ZoneId.of(ZoneId.systemDefault().getId()))).plusDays(Integer.parseInt(timeUnitsTxt.getText()));
+                        case "week" -> timeAmount = LocalDateTime.from(dateFrom.toInstant().atZone(ZoneId.of(ZoneId.systemDefault().getId()))).plusWeeks(Integer.parseInt(timeUnitsTxt.getText()));
+                        case "month" -> timeAmount = LocalDateTime.from(dateFrom.toInstant().atZone(ZoneId.of(ZoneId.systemDefault().getId()))).plusMonths(Integer.parseInt(timeUnitsTxt.getText()));
                     }
                     if(isEndDateSelected) {
                         if(!dateToValid){
@@ -140,7 +140,7 @@ public class StandingOrderNextStep {
                         }
                         if (dateTo.before(java.util.Date.from(timeAmount.atZone(ZoneId.systemDefault())
                                 .toInstant()))) {
-                            endPaymentWarning.setText("Zbyt krótki odstęp czasu!");
+                            endPaymentWarning.setText("To short time interval");
                             endPaymentWarning.setVisible(true);
                             validation.add(false);
                         } else {
@@ -149,7 +149,7 @@ public class StandingOrderNextStep {
                         }
                     }
                     if(!validation.contains(false)){
-                        transferData.replace("typ","Zlecenie stałe "+"co "+timeUnitsTxt.getText()+" "+timeUnit);
+                        transferData.replace("typ","Standing order "+"every "+timeUnitsTxt.getText()+" "+timeUnit);
                         transferData.put("cykle",timeUnitsTxt.getText());
                         transferData.put("jednostkaczasu",timeUnit);
                         SimpleDateFormat formatter = new SimpleDateFormat("dd.MM.yyyy");
@@ -166,18 +166,18 @@ public class StandingOrderNextStep {
     void setTimeUnitsComboBox(){
         timeUnitsComboBox.addActionListener(event -> {
             JComboBox c = (JComboBox) event.getSource();
-            if (c.getSelectedItem() == "dzień") {
-                timeUnit = "dni";
+            if (c.getSelectedItem() == "day") {
+                timeUnit = "day";
                 timeUnitsValid = true;
                 timeUnitsWarning2.setVisible(false);
             }
-            else if(c.getSelectedItem()=="tydzień"){
-                timeUnit = "tygodnie";
+            else if(c.getSelectedItem()=="week"){
+                timeUnit = "week";
                 timeUnitsValid=true;
                 timeUnitsWarning2.setVisible(false);
             }
-            else if(c.getSelectedItem()=="miesiąc"){
-                timeUnit = "miesiące";
+            else if(c.getSelectedItem()=="month"){
+                timeUnit = "month";
                 timeUnitsValid=true;
                 timeUnitsWarning2.setVisible(false);
             }
@@ -200,7 +200,7 @@ public class StandingOrderNextStep {
                             dateFrom = (Date) e.getNewValue();
                             if(dateFrom.before(localDate)){
                                 dateFromValid = false;
-                                startPaymentWarning.setText("Data nie może być wcześniejsza od dzisiejszej!");
+                                startPaymentWarning.setText("Date cannot be earlier than today");
                                 startPaymentWarning.setVisible(true);
                             }
                             else{
@@ -227,15 +227,15 @@ public class StandingOrderNextStep {
                         if ("date".equals(e.getPropertyName())) {
                             dateTo = (Date) e.getNewValue();
                             switch (timeUnit) {
-                                case "dni" -> timeAmount = LocalDateTime.from(dateFrom.toInstant().atZone(ZoneId.of(ZoneId.systemDefault().getId()))).plusDays(Integer.parseInt(timeUnitsTxt.getText()));
-                                case "tygodnie" -> timeAmount = LocalDateTime.from(dateFrom.toInstant().atZone(ZoneId.of(ZoneId.systemDefault().getId()))).plusWeeks(Integer.parseInt(timeUnitsTxt.getText()));
-                                case "miesiące" -> timeAmount = LocalDateTime.from(dateFrom.toInstant().atZone(ZoneId.of(ZoneId.systemDefault().getId()))).plusMonths(Integer.parseInt(timeUnitsTxt.getText()));
+                                case "day" -> timeAmount = LocalDateTime.from(dateFrom.toInstant().atZone(ZoneId.of(ZoneId.systemDefault().getId()))).plusDays(Integer.parseInt(timeUnitsTxt.getText()));
+                                case "week" -> timeAmount = LocalDateTime.from(dateFrom.toInstant().atZone(ZoneId.of(ZoneId.systemDefault().getId()))).plusWeeks(Integer.parseInt(timeUnitsTxt.getText()));
+                                case "month" -> timeAmount = LocalDateTime.from(dateFrom.toInstant().atZone(ZoneId.of(ZoneId.systemDefault().getId()))).plusMonths(Integer.parseInt(timeUnitsTxt.getText()));
                             }
 
                             if(dateTo.before(java.util.Date.from(timeAmount.atZone(ZoneId.systemDefault())
                                     .toInstant()))){
                                 dateToValid = false;
-                                endPaymentWarning.setText("Zbyt krótki odstęp czasu!");
+                                endPaymentWarning.setText("To short time interval");
                                 endPaymentWarning.setVisible(true);
                             }
                             else{

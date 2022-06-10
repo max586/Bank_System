@@ -60,7 +60,7 @@
           <gridbag weightx="0.0" weighty="0.0" ipady="20"/>
         </constraints>
         <properties>
-          <text value="Incountry Transfer"/>
+          <text value="Domestic Transfer"/>
         </properties>
       </component>
       <vspacer id="f27b7">
