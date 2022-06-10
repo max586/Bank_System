@@ -5,7 +5,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 public class Database {
-    public static Statement st = connectToDatabase("bank1006","root","Adix_23/09/1999");
+    public static Statement st = connectToDatabase("bank_system","root","password");
     public static Statement connectToDatabase(String database_name,String username, String password){
         Connection con=null;
         Statement st=null;
@@ -70,30 +70,14 @@ public class Database {
                                      String transferTitle, String startDate, String endDate, int transferCycle,
                                      String transferCycleUnits,String first_name,String last_name,String town,
                                     String postcode, String street, String street_nr){
-        switch(database){
-            case "HistoryOrdinary":
                 try {
-                    st.executeUpdate("insert into HistoryOrdinary values('"+operationDate+"','"+transferType+"','"+senderAccountNumber+"','"
+                    st.executeUpdate("insert into "+database+" values('"+operationDate+"','"+transferType+"','"+senderAccountNumber+"','"
                             +receiverAccountNumber+"','"+phone_nr+"','"+transferAmount+"','"+transferCurrency+"','"+totalTransferCost+"','"
                             +transferTitle+"','"+startDate+"','"+endDate+"','"+transferCycle+"','"+transferCycleUnits+"','"+
                             first_name+"','"+last_name+"','"+town+"','"+postcode+"','"+street+"','"+street_nr+"');");
                 } catch (SQLException e) {
                     System.out.println(e);
                 }
-                break;
-            case "HistorySavings":
-                try {
-                    st.executeUpdate("insert into HistorySavings values('"+operationDate+"','"+transferType+"','"+senderAccountNumber+"','"
-                            +receiverAccountNumber+"','"+phone_nr+"','"+transferAmount+"','"+transferCurrency+"','"+totalTransferCost+"','"
-                            +transferTitle+"','"+startDate+"','"+endDate+"','"+transferCycle+"','"+transferCycleUnits+"','"+
-                            first_name+"','"+last_name+"','"+town+"','"+postcode+"','"+street+"','"+street_nr+"');");
-                } catch (SQLException e) {
-                    System.out.println(e);
-                }
-                break;
-            default:
-                System.out.println("Incorrect database!");
-        }
     }
     public static String[][] getHistoryFrom(String database, String username){
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd");
@@ -105,10 +89,10 @@ public class Database {
         else{accounts="SavingsAccounts";}
         try{
             int number_of_rows;
-            ResultSet rs = st.executeQuery("select count(*) from '"+ database +"' h join '"+ accounts+"' o on h.`Account nr from` = o.`Account number` where h.`Operation Date` >= '"+sday+"'and o.username='"+username+"';");
+            ResultSet rs = st.executeQuery("select count(*) from "+ database +" h join "+ accounts+" o on h.`Account nr from` = o.`Account number` where h.`Operation Date` >= '"+sday+"'and o.username='"+username+"';");
             rs.next();
             number_of_rows=rs.getInt(1);
-            rs = st.executeQuery("select `Operation Date`,`Transfer Type` ,`Account nr to` ,`Phone nr to` ,`Transfer Amount` ,`Transfer Currency` ,`Total Transfer Cost` ,`Transfer Title` ,`Start Date` ,`End Date` ,`Transfer Cycle` ,`Transfer Cycle Units` ,`First name` ,`Last name` ,Town ,Postcode ,Street ,`Street number` from '"+ database +"' h join '"+ accounts+"' o on h.`Account nr from` = o.`Account number` where h.`Operation Date` >= '"+sday+"'and o.username='"+username+"';");
+            rs = st.executeQuery("select `Operation Date`,`Transfer Type` ,`Account nr to` ,`Phone nr to` ,`Transfer Amount` ,`Transfer Currency` ,`Total Transfer Cost` ,`Transfer Title` ,`Start Date` ,`End Date` ,`Transfer Cycle` ,`Transfer Cycle Units` ,`First name` ,`Last name` ,Town ,Postcode ,Street ,`Street number` from "+ database +" h join "+ accounts+" o on h.`Account nr from` = o.`Account number` where h.`Operation Date` >= '"+sday+"'and o.username='"+username+"';");
             String[][] transactions_history = new String[number_of_rows][18];
             rs.next();
             for(int i=0;i<number_of_rows;i++){
@@ -134,10 +118,10 @@ public class Database {
         else{accounts="SavingsAccounts";}
         try{
             int number_of_rows;
-            ResultSet rs = st.executeQuery("select count(*) from '"+ database +"' h join '"+ accounts+"' o on h.`Account nr to` = o.`Account number` where h.`Operation Date` >= '"+sday+"'and o.username='"+username+"';");
+            ResultSet rs = st.executeQuery("select count(*) from "+ database +" h join "+ accounts+" o on h.`Account nr to` = o.`Account number` where h.`Operation Date` >= '"+sday+"'and o.username='"+username+"';");
             rs.next();
             number_of_rows=rs.getInt(1);
-            rs = st.executeQuery("select `Operation Date`,`Transfer Type` ,`Account nr from` ,`Phone nr to` ,`Transfer Amount` ,`Transfer Currency` ,`Total Transfer Cost` ,`Transfer Title` ,`Start Date` ,`End Date` ,`Transfer Cycle` ,`Transfer Cycle Units` ,`First name` ,`Last name` ,Town ,Postcode ,Street ,`Street number` from '"+ database +"' h join '"+ accounts+"' o on h.`Account nr to` = o.`Account number` where h.`Operation Date` >= '"+sday+"'and o.username='"+username+"';");
+            rs = st.executeQuery("select `Operation Date`,`Transfer Type` ,`Account nr from` ,`Phone nr to` ,`Transfer Amount` ,`Transfer Currency` ,`Total Transfer Cost` ,`Transfer Title` ,`Start Date` ,`End Date` ,`Transfer Cycle` ,`Transfer Cycle Units` ,`First name` ,`Last name` ,Town ,Postcode ,Street ,`Street number` from "+ database +" h join "+ accounts+" o on h.`Account nr to` = o.`Account number` where h.`Operation Date` >= '"+sday+"'and o.username='"+username+"';");
             rs.next();
             String[][] transactions_history = new String[number_of_rows][18];
             for(int i=0;i<number_of_rows;i++){
