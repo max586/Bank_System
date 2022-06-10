@@ -1,5 +1,7 @@
 package src.transfers;
 import src.Database;
+import src.MainScreen;
+import src.Screen;
 import src.User;
 import src.mainFrame.MainFrame;
 import src.timer.AppTimer;
@@ -187,6 +189,8 @@ public class TransferConfirm {
                                         transferData.get("waluta"), Double.parseDouble(transferData.get("kwotaPLN")), transferData.get("tytul"),
                                         transferData.get("startdata"), transferData.get("enddata"), Integer.parseInt(transferData.get("cykle")),
                                         transferData.get("jednostkaczasu"),receiver.firstName,receiver.lastName,receiver.city,receiver.post_code,receiver.street,receiver.street_nr);
+                                setBalanceSender(user,AccountChoosed.ORDINARYACCOUNT);
+                                setBalanceReceiver();
                             }
                         }
                         else if(transferPanelTitle.equals("Przelew BLIK na telefon")){
@@ -195,6 +199,8 @@ public class TransferConfirm {
                                         userAccountNumber, "",user.phone_number, Double.parseDouble(transferData.get("kwota")),
                                         "PLN", Double.parseDouble(transferData.get("kwota")), transferData.get("tytul"),
                                         "", "", 0,"","","","","","","");
+                                setBalanceSender(user,AccountChoosed.ORDINARYACCOUNT);
+                                setBalanceReceiver();
                             }
                         }
                         else if(transferPanelTitle.equals("Przelew własny")){
@@ -203,12 +209,16 @@ public class TransferConfirm {
                                         userAccountNumber, receiverAccountNr,"",  Double.parseDouble(transferData.get("kwota")),
                                         "PLN", Double.parseDouble(transferData.get("kwota")), transferData.get("tytul"),
                                         "", "", 0, "","","","","","","");
+                                setBalanceSender(user,AccountChoosed.ORDINARYACCOUNT);
+                                setBalanceReceiver();
                             }
                             else{
                                 Database.addToHistory( "HistorySavings", generationDate, transferData.get("typ"),
                                         userAccountNumber, receiverAccountNr,"",  Double.parseDouble(transferData.get("kwota")),
                                         "PLN", Double.parseDouble(transferData.get("kwota")), transferData.get("tytul"),
                                         "", "", 0, "","","","","","","");
+                                setBalanceSender(user,AccountChoosed.SAVINGSACCOUNT);
+                                setBalanceReceiver();
                             }
                         }
                         else {
@@ -217,10 +227,11 @@ public class TransferConfirm {
                                         userAccountNumber, receiverAccountNr, "", Double.parseDouble(transferData.get("kwota")),
                                         transferData.get("waluta"), Double.parseDouble(transferData.get("kwotaPLN")), transferData.get("tytul"),
                                         "", "", 0, "",receiver.firstName,receiver.lastName,receiver.city,receiver.post_code,receiver.street,receiver.street_nr);
-
+                                setBalanceSender(user,AccountChoosed.ORDINARYACCOUNT);
+                                setBalanceReceiver();
                             }
                         }
-
+                        ;
                         if(isTransferConfirmation){
                             if(transferPanelTitle.equals("Zlecenie stałe")) {
                                 try {
@@ -264,6 +275,8 @@ public class TransferConfirm {
                                 ioException.printStackTrace();
                             }
                         }
+                        frame.getjFrame().dispose();
+                        new MainScreen(user,null,new Screen()).CreateScreen();
                     }
                 }
             }
@@ -285,7 +298,20 @@ public class TransferConfirm {
     }
 
     void setBalanceReceiver(){
-
+        if(Database.isAccountNumberOrdinary(receiverAccountNr)){
+            String receiverUserName = Database.getUserNameByAccount(receiverAccountNr,"Ordinary");
+            float receiverAmount = Database.getOrdinaryAccountBalance(receiverUserName);
+            float transferAmount = (float) Double.parseDouble(transferData.get("kwotaPLN"));
+            receiverAmount = receiverAmount + transferAmount;
+            Database.setOrdinaryAccountBalance(receiverUserName, receiverAmount);
+        }
+        else{
+            String receiverUserName = Database.getUserNameByAccount(receiverAccountNr,"Savings");
+            float receiverAmount = Database.getSavingsAccountBalance(receiverUserName);
+            float transferAmount = (float) Double.parseDouble(transferData.get("kwotaPLN"));
+            receiverAmount = receiverAmount + transferAmount;
+            Database.setSavingsAccountBalance(receiverUserName, receiverAmount);
+        }
     }
 
     JPanel getTransferConfirmPanel(){

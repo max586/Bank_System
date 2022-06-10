@@ -284,6 +284,7 @@ public class BlikPhoneTransfer implements Transfer{
                     else receiver.lastName = "";
                     transferData.put("tytul", transferTitleTextArea.getText());
                     transferData.put("kwota", transferAmount1Txt.getText()+"."+ transferAmount2Txt.getText());
+                    transferData.put("kwotaPLN", transferAmount1Txt.getText()+"."+ transferAmount2Txt.getText());
                     transferData.put("oplata","0.00");
                     transferData.put("typ",panelTitleLabel.getText());
                     TransferNextStep pCd = new TransferNextStep(accountChoosed,user,AccountChoosed.ORDINARYACCOUNT,receiver,transferData,frame, blikPhonePanel);

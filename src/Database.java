@@ -5,7 +5,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 public class Database {
-    public static Statement st = connectToDatabase("bank_system","root","password");
+    public static Statement st = connectToDatabase("bank1006","root","Adix_23/09/1999");
     public static Statement connectToDatabase(String database_name,String username, String password){
         Connection con=null;
         Statement st=null;
@@ -450,6 +450,64 @@ public class Database {
         }catch(SQLException e) {
             System.out.println("Couldn't execute the query");
             System.out.println(e);
+        }
+        return userName;
+    }
+
+    public static boolean isAccountNumberOrdinary(String accountNumber){
+        try{
+            ResultSet rs = st.executeQuery("select count(*) from OrdinaryAccounts where `Account number`='"+accountNumber+"';");
+            rs.next();
+            int res=rs.getInt(1);
+            return(res == 1);
+        }
+        catch(SQLException e){
+            System.out.println("Couldn't execute the query");
+            System.out.println(e);
+        }
+        return false;
+    }
+
+    public static boolean isAccountNumberSavings(String accountNumber){
+        try{
+            ResultSet rs = st.executeQuery("select count(*) from SavingsAccounts where `Account number`='"+accountNumber+"';");
+            rs.next();
+            int res=rs.getInt(1);
+            return(res == 1);
+        }
+        catch(SQLException e){
+            System.out.println("Couldn't execute the query");
+            System.out.println(e);
+        }
+        return false;
+    }
+
+    public static String getUserNameByAccount(String accountNumber, String table){
+        String userName = "";
+        switch (table){
+            case "Ordinary":
+                try{
+                    ResultSet rs = st.executeQuery("select * from OrdinaryAccounts where `Account number`='"+accountNumber+"';");
+                    rs.next();
+                    userName=rs.getString(1);
+                }catch(SQLException e) {
+                    System.out.println("Couldn't execute the query");
+                    System.out.println(e);
+                }
+                break;
+            case "Savings":
+                try{
+                    ResultSet rs = st.executeQuery("select * from SavingsAccounts where `Account number`='"+accountNumber+"';");
+                    rs.next();
+                    userName=rs.getString(1);
+                }catch(SQLException e) {
+                    System.out.println("Couldn't execute the query");
+                    System.out.println(e);
+                }
+                break;
+            default:
+                userName = "";
+                break;
         }
         return userName;
     }

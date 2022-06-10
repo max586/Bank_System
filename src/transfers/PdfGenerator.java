@@ -108,13 +108,12 @@ class PdfGeneratorStandard implements PdfGenerator {
         yCoordinate -= titleFontSize;
         int i=0;
         for (Map.Entry<String, String> entry : data.entrySet()) {
-            System.out.println(entry.getKey());
-            System.out.println(entry.getValue());
             contentStream.setFont(titlesFont,dataFontSize);
             contentStream.beginText();
             contentStream.newLineAtOffset(startX+titleFontSize, yCoordinate);
             contentStream.showText(entry.getKey());
             contentStream.setFont(dataFont,dataFontSize);
+            contentStream.showText(entry.getValue());
             contentStream.endText();
             yCoordinate-=dataFontSize;
             contentStream.moveTo(startX+titleFontSize, yCoordinate);
@@ -195,7 +194,9 @@ class PdfGeneratorOwn extends PdfGeneratorStandard implements PdfGenerator{
         data.put("Typ operacji: ",transferData.get("typ"));
         data.put("Data księgowania: ", operationDate);
         data.put("Data transakcji: ", operationDate);
-        if(accountChoosed1==AccountChoosed.ORDINARYACCOUNT) userAccountNumber = user1.ordinary_account_number;
+        if(accountChoosed1==AccountChoosed.ORDINARYACCOUNT){
+            userAccountNumber = user1.ordinary_account_number;
+        }
         else userAccountNumber = user1.savings_account_number;
         if(accountChoosed2==AccountChoosed.ORDINARYACCOUNT) receiverAccountNumber = receiver1.ordinary_account_number;
         else receiverAccountNumber = receiver1.savings_account_number;
