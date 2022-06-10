@@ -217,8 +217,10 @@ public class TransferConfirm {
                                         userAccountNumber, receiverAccountNr, "", Double.parseDouble(transferData.get("kwota")),
                                         transferData.get("waluta"), Double.parseDouble(transferData.get("kwotaPLN")), transferData.get("tytul"),
                                         "", "", 0, "",receiver.firstName,receiver.lastName,receiver.city,receiver.post_code,receiver.street,receiver.street_nr);
+
                             }
                         }
+
                         if(isTransferConfirmation){
                             if(transferPanelTitle.equals("Zlecenie stałe")) {
                                 try {
@@ -266,6 +268,24 @@ public class TransferConfirm {
                 }
             }
         });
+    }
+    void setBalanceSender(User user1, AccountChoosed accountChoosed){
+        if(accountChoosed==AccountChoosed.ORDINARYACCOUNT) {
+            float senderAmount = user1.ordinary_account_balance;
+            float transferAmount = (float) Double.parseDouble(transferData.get("kwotaPLN"));
+            senderAmount = senderAmount - transferAmount;
+            Database.setOrdinaryAccountBalance(user1.username, senderAmount);
+        }
+        else{
+            float senderAmount = user1.savings_account_balance;
+            float transferAmount = (float) Double.parseDouble(transferData.get("kwotaPLN"));
+            senderAmount = senderAmount - transferAmount;
+            Database.setSavingsAccountBalance(user1.username, senderAmount);
+        }
+    }
+
+    void setBalanceReceiver(){
+
     }
 
     JPanel getTransferConfirmPanel(){
