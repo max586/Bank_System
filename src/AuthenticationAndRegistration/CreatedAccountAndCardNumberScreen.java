@@ -67,6 +67,7 @@ public class CreatedAccountAndCardNumberScreen extends Screen {
             public void actionPerformed(ActionEvent actionEvent) {
                 JOptionPane.showMessageDialog(frame, "Welcome to our bank!");
                 frame.dispose();
+                appTimer.stop();
                 new AuthenticationScreen(null,null,new Screen()).CreateScreen();
             }
         });
@@ -75,6 +76,7 @@ public class CreatedAccountAndCardNumberScreen extends Screen {
             @Override
             public void actionPerformed(ActionEvent e){
                 frame.dispose();
+                appTimer.stop();
                 if(prev_screen!=null){
                     prev_screen.frame.setVisible(true);
                 }

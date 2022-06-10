@@ -135,12 +135,14 @@ public class MainScreen extends Screen {
         wylogujButton.addActionListener(e->
         {
             frame.dispose();
+            appTimer.stop();
             new AuthenticationScreen(null,null,new Screen()).CreateScreen();
         });
 
         prevButton.addActionListener(e->
         {
             frame.dispose();
+            appTimer.stop();
             if(prev_screen!=null){
                 prev_screen.frame.setVisible(true);
         }

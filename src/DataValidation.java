@@ -65,6 +65,15 @@ public class DataValidation {
         }
         return false;
     }
+    public static boolean postcodeIsValid(String postcode){
+        return Pattern.matches("\\d\\d-\\d\\d\\d",postcode);
+    }
+    public static boolean phoneNrIsValid(String phone_nr){
+        return Pattern.matches("\\d\\d\\d\\d\\d\\d\\d\\d\\d",phone_nr);
+    }
+    public static boolean streetNrIsValid(String street_nr){
+        return street_nr.length()<10 && Pattern.matches("\\d+/\\d+",street_nr);
+    }
     public static boolean isNumber(String word){
         return word.length()<=10 && Pattern.matches("[0-9]+\\.?[0-9]*",word);
     }
