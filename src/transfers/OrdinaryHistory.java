@@ -26,6 +26,9 @@ public class OrdinaryHistory {
     private JScrollPane IncomingHistoryPane;
     private MainFrame frame;
     public OrdinaryHistory(MainFrame mainFrame, User user) throws SQLException {
+
+        OutcomingHistoryTable.setEnabled(false);
+        IncomingHistoryTable.setEnabled(false);
         frame = mainFrame;
         AppTimer appTimer = new AppTimer(timeLabel,frame);
         ordinaryPanel.addMouseMotionListener(new MouseAction(appTimer));
