@@ -7,34 +7,21 @@
     <list default="true" id="bea002ff-8e44-4e85-a29b-66b1294d710d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database_scripts/CreateDatabase.sql" beforeDir="false" afterPath="$PROJECT_DIR$/database_scripts/CreateDatabase.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database_scripts/FillTables.sql" beforeDir="false" afterPath="$PROJECT_DIR$/database_scripts/FillTables.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database_scripts/Script-1.sql" beforeDir="false" afterPath="$PROJECT_DIR$/database_scripts/Script-1.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/database_scripts/CreateDatabase.sql" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/database_scripts/CreateDatabase.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/database_scripts/Script-1.sql" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/database_scripts/Script-1.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/ChooseAccountNumberScreen$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/ChooseAccountNumberScreen$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/ChooseAccountNumberScreen$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/ChooseAccountNumberScreen$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/ChooseAccountNumberScreen$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/ChooseAccountNumberScreen$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/ChooseAccountNumberScreen.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/ChooseAccountNumberScreen.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Database.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/Database.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/database_scripts/FillTables.sql" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/database_scripts/FillTables.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/AuthenticationScreen$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/AuthenticationScreen$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/AuthenticationScreen$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/AuthenticationScreen$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/AuthenticationScreen$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/AuthenticationScreen$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/AuthenticationScreen.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/AuthenticationScreen.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/CreatedAccountAndCardNumberScreen.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/CreatedAccountAndCardNumberScreen.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/MainScreen$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/MainScreen$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/MainScreen$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/MainScreen$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/MainScreen$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/MainScreen$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/MainScreen$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/MainScreen$4.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/MainScreen.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/MainScreen.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/BlikPhoneTransfer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/BlikPhoneTransfer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/ForeignStandardTransfer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/ForeignStandardTransfer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/OrdinaryHistory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/OrdinaryHistory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/OwnTransfer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/OwnTransfer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/SavingsHistory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/SavingsHistory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/StandardTransfer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/StandardTransfer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationAndRegistration/ChooseAccountNumberScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AuthenticationAndRegistration/ChooseAccountNumberScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Database.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AuthenticationAndRegistration/AuthenticationScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AuthenticationAndRegistration/AuthenticationScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AuthenticationAndRegistration/CreatedAccountAndCardNumberScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AuthenticationAndRegistration/CreatedAccountAndCardNumberScreen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MainScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/transfers/BlikPhoneTransfer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfers/BlikPhoneTransfer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/transfers/ForeignStandardTransfer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfers/ForeignStandardTransfer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/transfers/OrdinaryHistory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfers/OrdinaryHistory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/transfers/OwnTransfer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfers/OwnTransfer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/transfers/SavingsHistory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfers/SavingsHistory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/transfers/StandardTransfer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfers/StandardTransfer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,13 +117,13 @@
       <recent name="src.AuthenticationAndRegistration" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.MainScreen">
-    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="src.App" />
+  <component name="RunManager" selected="Application.AuthenticationScreen">
+    <configuration name="AuthenticationScreen" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="src.AuthenticationAndRegistration.AuthenticationScreen" />
       <module name="bank_system_project" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="src.*" />
+          <option name="PATTERN" value="src.AuthenticationAndRegistration.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -144,8 +131,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AuthenticationScreen" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="src.AuthenticationAndRegistration.AuthenticationScreen" />
+    <configuration name="ChooseAccountNumberScreen" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="src.AuthenticationAndRegistration.ChooseAccountNumberScreen" />
       <module name="bank_system_project" />
       <extension name="coverage">
         <pattern>
@@ -191,19 +178,19 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.ChooseAccountNumberScreen" />
       <item itemvalue="Application.AuthenticationScreen" />
       <item itemvalue="Application.Database" />
-      <item itemvalue="Application.App" />
       <item itemvalue="Application.LaunchApp" />
       <item itemvalue="Application.MainScreen" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.MainScreen" />
-        <item itemvalue="Application.LaunchApp" />
         <item itemvalue="Application.AuthenticationScreen" />
+        <item itemvalue="Application.ChooseAccountNumberScreen" />
+        <item itemvalue="Application.LaunchApp" />
+        <item itemvalue="Application.MainScreen" />
         <item itemvalue="Application.Database" />
-        <item itemvalue="Application.App" />
       </list>
     </recent_temporary>
   </component>
@@ -417,7 +404,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654790239663</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="lol">
+      <created>1654809960398</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1654809960398</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -459,7 +453,8 @@
     <MESSAGE value="sth added" />
     <MESSAGE value="database changed" />
     <MESSAGE value="-database changed&#10;-added timer for all classes(Screen and MainFrame now inherit from PreScreen)" />
-    <option name="LAST_COMMIT_MESSAGE" value="-database changed&#10;-added timer for all classes(Screen and MainFrame now inherit from PreScreen)" />
+    <MESSAGE value="lol" />
+    <option name="LAST_COMMIT_MESSAGE" value="lol" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -481,13 +476,23 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/MainScreen.java</url>
-          <line>49</line>
+          <line>47</line>
           <option name="timeStamp" value="18" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/MainScreen.java</url>
-          <line>147</line>
+          <line>145</line>
           <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/transfers/StandardTransfer.java</url>
+          <line>347</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/transfers/StandardTransfer.java</url>
+          <line>352</line>
+          <option name="timeStamp" value="22" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

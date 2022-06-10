@@ -141,7 +141,4 @@ public class CreatedAccountAndCardNumberScreen extends Screen {
         new CreatedAccountAndCardNumberScreen(test_user,null,new Screen()).CreateScreen();
     }
 
-    private void createUIComponents() {
-        // TODO: place custom component creation code here
-    }
 }

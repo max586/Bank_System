@@ -38,8 +38,6 @@ public class MainScreen extends Screen {
     }
 
     public void CreateScreen(){
-
-        frame = new JFrame();
         frame.setSize(1080,720);
         frame.setTitle("MainScreen");
         AppTimer appTimer = new AppTimer(timeLabel,this);

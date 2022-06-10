@@ -61,10 +61,14 @@ public class AuthenticationScreen extends Screen {
                     user.street_nr=user_data[7];
                     user.pesel=user_data[8];
                     user.ordinary_account_number = Database.getOrdinaryAccountNumber( user.username);
+                    user.ordinary_account_balance=Database.getOrdinaryAccountBalance(user.username);
                     user.savings_account_number = Database.getSavingsAccountNumber( user.username);
+                    user.savings_account_balance=Database.getSavingsAccountBalance(user.username);
                     String[] card = Database.getCard(user.username);
                     user.card_number=card[0];
                     user.pin_code=card[1];
+
+                    frame.dispose();
                     if(next_screen!=null){
                         new ChooseAccountNumberScreen(user, AuthenticationScreen.this,new Screen()).CreateScreen();
                     }
