@@ -31,8 +31,8 @@ public class OrdinaryHistory {
         AppTimer appTimer = new AppTimer(timeLabel,frame);
         ordinaryPanel.addMouseMotionListener(new MouseAction(appTimer));
         appTimer.start();
-        //String[][]data = Database.getHistoryOrdinary("HistoryOrdinary",user.username);
-        String[][]data = Database.getHistoryOrdinary("HistoryOrdinary","test_user");
+        //String[][]data = Database.getHistoryFrom("HistoryOrdinary",user.username);
+        String[][]data = Database.getHistoryFrom("HistoryOrdinary","test_user");
         String[] cols = {"Operation Date","Transfer Type", "Account nr from", "Account nr to", "Phone nr to",
         "Transfer amount","Transfer currency","Total Cost","Transfer title","Start date","End date",
                 "Transfer cycle","Cycle units","Receiver name","Receiver surname","Receiver Town","Receiver Street","Receiver Street nr"};
