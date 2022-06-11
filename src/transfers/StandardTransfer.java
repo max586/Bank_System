@@ -358,22 +358,22 @@ public class StandardTransfer implements Transfer {
                     accountNumberWarning.setVisible(false);
                     validation.add(true);
                 }
-                if(!Database.verifyOrdinaryAccountNumber(accountNumberTxt.getText())){
-                    if(!Database.verifySavingsAccountNumber(accountNumberTxt.getText())){
+                if(!Database.verifyOrdinaryAccountNumber(countryISO+accountNumberTxt.getText())){
+                    if(!Database.verifySavingsAccountNumber(countryISO+accountNumberTxt.getText())){
                         validation.add(false);
                         accountNumberWarning.setText("Given account number doesn't exist");
                         accountNumberWarning.setVisible(true);
                     }
                     else{
                         validation.add(true);
-                        receiver.savings_account_number = accountNumberTxt.getText();
+                        receiver.savings_account_number = countryISO+accountNumberTxt.getText();
                         accountChoosedReceiver = AccountChoosed.SAVINGSACCOUNT;
                         accountNumberWarning.setVisible(false);
                     }
                 }
                 else{
                     validation.add(true);
-                    receiver.ordinary_account_number = accountNumberTxt.getText();
+                    receiver.ordinary_account_number = countryISO+accountNumberTxt.getText();
                     accountChoosedReceiver = AccountChoosed.ORDINARYACCOUNT;
                     accountNumberWarning.setVisible(false);
                 }
