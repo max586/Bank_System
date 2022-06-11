@@ -50,16 +50,28 @@ public class RegistrationScreen2Test {
         assertEquals("Last name is invalid",screen.lastNameField.getText());
     }
     @Test
-    public void invalidAddress(){
-        screen.streetField.setText("ul. pol");
+    public void invalidStreet(){
+        screen.streetField.setText("");
         screen.submitButton.doClick();
-        assertEquals("Address is invalid",screen.streetField.getText());
-        screen.streetField.setText("ul Ret");
+        assertEquals("Street is invalid",screen.streetField.getText());
+        screen.streetField.setText("Re1t");
         screen.submitButton.doClick();
-        assertEquals("Address is invalid",screen.streetField.getText());
-        screen.streetField.setText("ul, 1234");
+        assertEquals("Street is invalid",screen.streetField.getText());
+        screen.streetField.setText("abcd");
         screen.submitButton.doClick();
-        assertEquals("Address is invalid",screen.streetField.getText());
+        assertEquals("Street is invalid",screen.streetField.getText());
+    }
+    @Test
+    public void invalidStreetNr(){
+        screen.streetNrField.setText("");
+        screen.submitButton.doClick();
+        assertEquals("Street number is invalid",screen.streetNrField.getText());
+        screen.streetNrField.setText("12/abc");
+        screen.submitButton.doClick();
+        assertEquals("Street number is invalid",screen.streetNrField.getText());
+        screen.streetNrField.setText("12 21");
+        screen.submitButton.doClick();
+        assertEquals("Street number is invalid",screen.streetNrField.getText());
     }
     @Test
     public void invalidCity(){
@@ -87,19 +99,35 @@ public class RegistrationScreen2Test {
         assertEquals("PESEL is invalid",screen.peselField.getText());
     }
     @Test
+    public void invalidPhoneNr(){
+        screen.phoneNrField.setText("123 456 789");
+        screen.submitButton.doClick();
+        assertEquals("Phone nr is invalid",screen.phoneNrField.getText());
+        screen.phoneNrField.setText("+48123456789");
+        screen.submitButton.doClick();
+        assertEquals("Phone nr is invalid",screen.phoneNrField.getText());
+        screen.phoneNrField.setText("abc");
+        screen.submitButton.doClick();
+        assertEquals("Phone nr is invalid",screen.phoneNrField.getText());
+    }
+    @Test
     public void validData(){
         screen.firstNameField.setText("Abc");
         screen.lastNameField.setText("Def");
         screen.sexComboBox.setSelectedItem("M");
-        screen.streetField.setText("ul. Aa, 123");
+        screen.streetField.setText("Abcdef");
+        screen.streetNrField.setText("123/321");
         screen.cityField.setText("Qwerty");
         screen.peselField.setText("92030786311");
+        screen.phoneNrField.setText("123456789");
         screen.submitButton.doClick();
         assertEquals("ok",screen.firstNameField.getText());
         assertEquals("ok",screen.lastNameField.getText());
         assertEquals("ok",screen.streetField.getText());
+        assertEquals("ok",screen.streetNrField.getText());
         assertEquals("ok",screen.cityField.getText());
         assertEquals("ok",screen.peselField.getText());
+        assertEquals("ok",screen.phoneNrField.getText());
     }
     @After
     public void deleteUser(){Database.deleteUser(user.username);}

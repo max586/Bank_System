@@ -13,17 +13,17 @@ import javax.swing.table.DefaultTableModel;
 import java.sql.SQLException;
 
 public class SavingsHistory {
-        private JPanel ordinaryPanel ;
-        private JLabel panelTitleLabel;
-        private JPanel timerPanel;
-        private JLabel timeLabel;
-        private JScrollPane scrollPane;
-        private JButton cancelButton;
-    private JTable outgoingHistoryTable;
-    private JScrollPane outgoingHistoryPane;
-    private JScrollPane IncomingHistoryPane;
-    private JTable IncomingHistoryTable;
-    private MainFrame frame;
+        public JPanel ordinaryPanel ;
+        public JLabel panelTitleLabel;
+        public JPanel timerPanel;
+        public JLabel timeLabel;
+        public JScrollPane scrollPane;
+        public JButton cancelButton;
+    public JTable outgoingHistoryTable;
+    public JScrollPane outgoingHistoryPane;
+    public JScrollPane IncomingHistoryPane;
+    public JTable IncomingHistoryTable;
+    public MainFrame frame;
         public SavingsHistory(MainFrame mainFrame, User user) throws SQLException {
             outgoingHistoryTable.setEnabled(false);
             IncomingHistoryTable.setEnabled(false);

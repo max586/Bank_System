@@ -30,12 +30,12 @@ public class MainScreen extends Screen {
     public JButton foreignTransferButton;
     public JButton ownTransferButton;
     public JButton standingOrderTransferButton;
-    private JButton ordinaryHistoryButton;
-    private JButton savingsHistoryButton;
-    private JLabel panelTitleLabel;
-    private JButton FAQButton;
-    private JPanel timerPanel;
-    private JLabel timeLabel;
+    public JButton ordinaryHistoryButton;
+    public JButton savingsHistoryButton;
+    public JLabel panelTitleLabel;
+    public JButton FAQButton;
+    public JPanel timerPanel;
+    public JLabel timeLabel;
     public int counter = 0;
     AccountChoosed chosenAcc;
     String []options = {"one","two"};

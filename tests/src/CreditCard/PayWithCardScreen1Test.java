@@ -28,7 +28,7 @@ public class PayWithCardScreen1Test {
     }
     @Test
     public void incorrectCardNr(){
-        screen.nrField.setText("666");
+        screen.nrField.setText("1234567887654322");
         screen.submitButton.doClick();
         assertEquals("wrong card number or pin",screen.jpane.getMessage());
     }
