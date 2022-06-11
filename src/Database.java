@@ -4,8 +4,9 @@ import java.sql.*;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-public class Database {
-    public static Statement st = connectToDatabase("bank_system","root","password");
+public class Database
+{
+    public static Statement st = connectToDatabase("bank_system","root","17391425");
     public static Statement connectToDatabase(String database_name,String username, String password){
         Connection con=null;
         Statement st=null;
