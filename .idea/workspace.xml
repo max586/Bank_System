@@ -150,11 +150,11 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/src/User.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/CreditCard/PayWithCardScreen2.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/AuthenticationAndRegistration/AuthenticationScreen.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/CreditCard/PayWithCardScreen2.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/DataValidation.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Screen.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/User.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -190,6 +190,19 @@
     </key>
   </component>
   <component name="RunManager" selected="Application.LaunchApp">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="AuthenticationScreen" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="src.AuthenticationAndRegistration.AuthenticationScreen" />
       <module name="bank_system_project" />
@@ -245,19 +258,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -618,12 +618,10 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="- changed database&#10;- separated user from operations with database. Now all of them are static methods in class Database&#10;- refactored all screens(classes) in AuthenticationAndRegistration package" />
     <MESSAGE value="refactored screens in Settings package" />
-    <MESSAGE value="sth" />
     <MESSAGE value="AuthenticationScreen.form added" />
     <MESSAGE value="added screen with generated accounts and credit card numbers after registration(CreatedAccountAndCardNumberScreen)" />
     <MESSAGE value="duplicated windows bug solved" />
@@ -643,7 +641,8 @@
     <MESSAGE value="22.45" />
     <MESSAGE value="23.18" />
     <MESSAGE value="23.20" />
-    <option name="LAST_COMMIT_MESSAGE" value="23.20" />
+    <MESSAGE value="sth" />
+    <option name="LAST_COMMIT_MESSAGE" value="sth" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
