@@ -87,6 +87,12 @@ public class SettingsMainScreen extends Screen {
                 }
             }
         });
+        exitButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                frame.dispose();
+            }
+        });
         frame.setSize(800,600);
         frame.setVisible(true);
     }

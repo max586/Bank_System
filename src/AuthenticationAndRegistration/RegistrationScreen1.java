@@ -40,6 +40,7 @@ public class RegistrationScreen1 extends Screen {
     }
 
     public void CreateScreen() {
+        repeatPasswordField.setTransferHandler(null);
         frame.setTitle("First registration screen");
         frame.setContentPane(panel);
         AppTimer appTimer = new AppTimer(timeLabel,this);

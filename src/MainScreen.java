@@ -6,12 +6,15 @@ import src.mainFrame.MainFrame;
 import src.timer.AppTimer;
 import src.timer.MouseAction;
 import src.transfers.AccountChoosed;
+import src.transfers.OrdinaryHistory;
+import src.transfers.SavingsHistory;
 import src.transfers.TransferFactory;
 
 import javax.swing.*;
 import java.io.IOException;
 import javax.swing.JPanel;
 import java.awt.event.*;
+import java.sql.SQLException;
 
 public class MainScreen extends Screen {
     public JPanel AuthPanel;
@@ -19,8 +22,6 @@ public class MainScreen extends Screen {
     public JButton incountryButton;
     public JButton KREDYTYButton;
     public JButton wylogujButton;
-    public JButton prevButton;
-    public JLabel timeLabel;
     public JLabel AccNumber;
     public JLabel OrdAccNum;
     public JLabel SavAccNum;
@@ -29,7 +30,13 @@ public class MainScreen extends Screen {
     public JButton foreignTransferButton;
     public JButton ownTransferButton;
     public JButton standingOrderTransferButton;
-    private JButton historyButton;
+    private JButton ordinaryHistoryButton;
+    private JButton savingsHistoryButton;
+    private JLabel panelTitleLabel;
+    private JButton FAQButton;
+    private JPanel timerPanel;
+    private JLabel timeLabel;
+    private JButton blikButton;
     public int counter = 0;
     AccountChoosed chosenAcc;
     String []options = {"one","two"};
@@ -74,7 +81,39 @@ public class MainScreen extends Screen {
                 }
             }
         });
+        blikButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                frame.dispose();
+                try {
+                    new TransferFactory(AccountChoosed.ORDINARYACCOUNT, user, new MainFrame()).getTransfer(TransferFactory.TransferType.TELEFONBLIK);
+                } catch (Exception e2) {
 
+                }
+            }
+        });
+        ordinaryHistoryButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                frame.dispose();
+                try {
+                    new OrdinaryHistory(new MainFrame(),user);
+                } catch (SQLException throwables) {
+                    throwables.printStackTrace();
+                }
+            }
+        });
+        savingsHistoryButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                frame.dispose();
+                try {
+                    new SavingsHistory(new MainFrame(),user);
+                } catch (SQLException throwables) {
+                    throwables.printStackTrace();
+                }
+            }
+        });
         ownTransferButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -113,14 +152,6 @@ public class MainScreen extends Screen {
             new AuthenticationScreen(null,null,new Screen()).CreateScreen();
         });
 
-        prevButton.addActionListener(e->
-        {
-            frame.dispose();
-            if(prev_screen!=null){
-                prev_screen.frame.setVisible(true);
-        }
-
-        });
         frame.setContentPane(AuthPanel);
         frame.setVisible(true);
     }

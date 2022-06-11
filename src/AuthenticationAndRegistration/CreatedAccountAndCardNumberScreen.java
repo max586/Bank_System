@@ -67,6 +67,7 @@ public class CreatedAccountAndCardNumberScreen extends Screen {
             public void actionPerformed(ActionEvent actionEvent) {
                 JOptionPane.showMessageDialog(frame, "Welcome to our bank!");
                 frame.dispose();
+                appTimer.stop();
                 new AuthenticationScreen(null,null,new Screen()).CreateScreen();
             }
         });
@@ -75,6 +76,7 @@ public class CreatedAccountAndCardNumberScreen extends Screen {
             @Override
             public void actionPerformed(ActionEvent e){
                 frame.dispose();
+                appTimer.stop();
                 if(prev_screen!=null){
                     prev_screen.frame.setVisible(true);
                 }
@@ -91,7 +93,7 @@ public class CreatedAccountAndCardNumberScreen extends Screen {
         frame.setVisible(true);
     }
 
-    public String generateAccountNumber(){
+    public static String generateAccountNumber(){
         String account_number="1137";
         String date = LocalDateTime.now().toString().substring(0,10);
         date=date.replace("-", "");
@@ -116,19 +118,19 @@ public class CreatedAccountAndCardNumberScreen extends Screen {
         account_number="PL"+Integer.toString((checksum-checksum%10)/10)+Integer.toString(checksum%10)+account_number;
         return account_number;
     }
-    public String generateCardNumber(){
+    public static String generateCardNumber(){
         String nr="";
         Random rnd = new Random();
         for(int i=0;i<16;i++){nr+=Integer.toString(rnd.nextInt(10));}
         return nr;
     }
-    public String generatePIN(){
+    public static String generatePIN(){
         String pin="";
         Random rnd = new Random();
         for(int i=0;i<4;i++){pin+=Integer.toString(rnd.nextInt(10));}
         return pin;
     }
-    public String generateAppCode(){
+    public static String generateAppCode(){
         String pin="";
         Random rnd = new Random();
         for(int i=0;i<4;i++){pin+=Integer.toString(rnd.nextInt(10));}
@@ -139,6 +141,9 @@ public class CreatedAccountAndCardNumberScreen extends Screen {
         User test_user = new User();
         test_user.username="test_user";
         new CreatedAccountAndCardNumberScreen(test_user,null,new Screen()).CreateScreen();
+        for(int i=0;i<10;i++){
+            System.out.println(generateAccountNumber());
+        }
     }
 
 }

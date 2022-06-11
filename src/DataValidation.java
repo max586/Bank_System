@@ -6,7 +6,7 @@ public class DataValidation {
     public static boolean passwordMatches(String password1,String password2){return password1.equals(password2);}
     public static boolean passwordLength(String password){return password.length()>=12;}
     public static boolean letterInPassword(String password){
-        return Pattern.matches(".*[a-z].*",password)&&Pattern.matches(".*[A-Z].*", password);
+        return Pattern.matches(".*[A-Za-z].*",password);
     }
     public static boolean digitInPassword(String password){
         return Pattern.matches(".*[0-9].*",password);
@@ -14,7 +14,10 @@ public class DataValidation {
     public static boolean specialCharInPassword(String password){
         return Pattern.matches(".*\\W.*",password);
     }
-
+    public static boolean passwordIsValid(String password1,String password2){
+        return passwordMatches(password1,password2)&&passwordLength(password1)&&digitInPassword(password1)&&letterInPassword(password1)
+                &&specialCharInPassword(password1);
+    }
     public static boolean peselIsValid(String pesel, boolean man){
         //numer pesel
         String pattern="\\d{2}(0[0-9]|10|11|12)(0[0-9]|1[0-9]|2[0-9]|30|31)\\d{5}";
@@ -51,26 +54,28 @@ public class DataValidation {
         }
         return false;
     }
-    public static boolean addressIsValid(String address){
-        if(address.length()>=5 && address.length()<=30){
-            String pattern="ul\\. [A-Z]\\w*, \\d+";
-            return Pattern.matches(pattern,address);
-        }
-        return false;
-    }
     public static boolean cityIsValid(String address){
         if(address.length()>=3 && address.length()<=20){
-            String pattern="[A-Z]\\w*";
+            String pattern="[A-Z][a-z]*";
             return Pattern.matches(pattern,address);
         }
         return false;
     }
+    public static boolean postcodeIsValid(String postcode){
+        return Pattern.matches("\\d\\d-\\d\\d\\d",postcode);
+    }
+    public static boolean phoneNrIsValid(String phone_nr){
+        return Pattern.matches("\\d\\d\\d\\d\\d\\d\\d\\d\\d",phone_nr);
+    }
+    public static boolean streetNrIsValid(String street_nr){
+        return street_nr.length()<10 && Pattern.matches("\\d+(/\\d+)?",street_nr);
+    }
     public static boolean isNumber(String word){
-        return word.length()<=10 && Pattern.matches("[0-9]+\\.?[0-9]*",word);
+        return word.length()<=10 && Pattern.matches("[1-9][0-9]*\\.?[0-9]*",word);
     }
     public static void main(String[] args) {
         System.out.println(nameIsValid("Max"));
-        System.out.println(addressIsValid("ul. Ankm, 10"));
+        //System.out.println(addressIsValid("ul. Ankm, 10"));
         System.out.println(cityIsValid("Abc"));
 
         //System.out.println(Pattern.matches("(0[0-9]|[10,11])","11"));

@@ -38,6 +38,7 @@ public class ChangePasswordScreen2 extends Screen{
         super(user,prev_screen,next_screen);
     }
     public void CreateScreen() {
+        repeatedPasswordField.setTransferHandler(null);
         frame.setTitle("Change password second screen");
         frame.setContentPane(panel);
         AppTimer appTimer = new AppTimer(timeLabel,this);

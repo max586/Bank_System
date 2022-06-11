@@ -60,7 +60,7 @@ foreign key(username) references Users(username) on update cascade on delete cas
 );
 
 create table HistoryOrdinary(
-`Operation Date` varchar(30) not null,
+`Operation Date` datetime not null,
 `Transfer Type` varchar(50) not null,
 `Account nr from` varchar(28) not null,
 `Account nr to` varchar(28),
@@ -69,8 +69,8 @@ create table HistoryOrdinary(
 `Transfer Currency` varchar(3) not null,
 `Total Transfer Cost` double check (`Total Transfer Cost`>0),
 `Transfer Title` varchar(1000) not null,
-`Start Date` varchar(30),
-`End Date` varchar(30),
+`Start Date` varchar(10),
+`End Date` varchar(10),
 `Transfer Cycle` int,
 `Transfer Cycle Units` varchar(10),
 `First name` varchar(20),

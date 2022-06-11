@@ -11,17 +11,13 @@ import static org.junit.Assert.*;
 public class EmailVerificationScreenTest {
     EmailVerificationScreen screen;
     @Before
-    public void initiate(){
+    public void initiate() {
         User user = new User();
-        user.email="maks.ovsienko2@gmail.com";
-        screen = new EmailVerificationScreen(user,null,null);
+        user.email = "maks.ovsienko2@gmail.com";
+        screen = new EmailVerificationScreen(user, null, null);
         screen.CreateScreen();
         screen.frame.dispose();
-        screen.code="123456";
-    }
-    @Test
-    public void incorrectEmail(){
-
+        screen.code = "123456";
     }
     @Test
     public void incorrectCode(){
@@ -31,6 +27,7 @@ public class EmailVerificationScreenTest {
             screen.jdialog.dispose();
             assertEquals("Wrong code! "+(4-i)+" attempts left",screen.jpane.getMessage());
         }
+        assertEquals(false,screen.frame.isDisplayable());
     }
     @Test
     public void correctCode(){

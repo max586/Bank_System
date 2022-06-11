@@ -68,7 +68,7 @@ public class OwnTransfer implements Transfer {
         }
         numbersOnly = new OnlyNumbers().getKeyAdapter();
         transferData = new HashMap<>();
-        transferData.put("waluta","PLN");
+        transferData.put("currency","PLN");
         setLabels();
         setjMenu();
         setTransferAmountTxt(transferAmount1Txt);
@@ -83,11 +83,11 @@ new MainScreen(user,null,new Screen()).CreateScreen();        });
     }
 
     void setjMenu(){
-        jMenu = new JMenu("Wybierz konto");
-        JMenuItem j0 = new JMenuItem("Wybierz konto");
+        jMenu = new JMenu("Choose account");
+        JMenuItem j0 = new JMenuItem("Choose account");
         j0.setFont(customFont);
-        MenuInfo.m1 = new JMenu("Konto główne");
-        MenuInfo.m2 = new JMenu("Konto oszczędnościowe");
+        MenuInfo.m1 = new JMenu("Ordinary account");
+        MenuInfo.m2 = new JMenu("Savings account");
         MenuInfo.m1.setPreferredSize(new Dimension(350,100));
         MenuInfo.m2.setPreferredSize(new Dimension(350,100));
         MenuInfo.accountNumber1 = user.ordinary_account_number;
@@ -199,7 +199,7 @@ new MainScreen(user,null,new Screen()).CreateScreen();        });
                         finalTransferAmount = transferAmount1+transferAmount2;
                         isAmountValid = !(finalTransferAmount>senderAmount);
                     }
-                    transferAmountWarning.setText("Nie masz wystarczających środków");
+                    transferAmountWarning.setText("You don't have enough money");
                     transferAmountWarning.setVisible(!isAmountValid);
                 }
             }
@@ -220,7 +220,7 @@ new MainScreen(user,null,new Screen()).CreateScreen();        });
                     validation.add(true);
                 }
                 if(transferAmount1Txt.getText().length()==0){
-                    transferAmountWarning.setText("To pole jest wymagane");
+                    transferAmountWarning.setText("This field is required");
                     transferAmountWarning.setVisible(true);
                     validation.add(false);
                 }
@@ -237,7 +237,7 @@ new MainScreen(user,null,new Screen()).CreateScreen();        });
                     validation.add(true);
                 }
                 if(finalTransferAmount>senderAmount){
-                    transferAmountWarning.setText("Nie masz wystarczających środków");
+                    transferAmountWarning.setText("You don't have enough money");
                     transferAmountWarning.setVisible(true);
                     validation.add(false);
                 }
@@ -247,17 +247,20 @@ new MainScreen(user,null,new Screen()).CreateScreen();        });
                         accountChoosedUser = AccountChoosed.ORDINARYACCOUNT;
                         accountChoosedReceiver = AccountChoosed.SAVINGSACCOUNT;
                         receiver.savings_account_number = choosedAcount;
+                        receiver.ordinary_account_number = "";
                     }
                     else {
                         accountChoosedUser = AccountChoosed.SAVINGSACCOUNT;
                         accountChoosedReceiver = AccountChoosed.ORDINARYACCOUNT;
                         receiver.ordinary_account_number = choosedAcount;
+                        receiver.savings_account_number = "";
                     }
                     receiver.firstName = user.lastName;
-                    transferData.put("tytul", transferTitleTextArea.getText());
-                    transferData.put("kwota", transferAmount1Txt.getText()+"."+ transferAmount2Txt.getText());
-                    transferData.put("oplata","0.00");
-                    transferData.put("typ",panelTitleLabel.getText());
+                    transferData.put("title", transferTitleTextArea.getText());
+                    transferData.put("transferamount", transferAmount1Txt.getText()+"."+ transferAmount2Txt.getText());
+                    transferData.put("totaltransferamount", transferAmount1Txt.getText()+"."+ transferAmount2Txt.getText());
+                    transferData.put("payment","0.00");
+                    transferData.put("type",panelTitleLabel.getText());
                     TransferNextStep pCd = new TransferNextStep(accountChoosedUser,user,accountChoosedReceiver,receiver,transferData,frame, OwnTransferPanel);
                     frame.getjFrame().setContentPane(pCd.getTransferNextStepPanel());
                     frame.getjFrame().setVisible(true);

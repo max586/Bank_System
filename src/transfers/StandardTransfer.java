@@ -136,7 +136,7 @@ public class StandardTransfer implements Transfer {
     }
 
     void setCurrency(){
-        transferData.put("waluta","PLN");
+        transferData.put("currency","PLN");
     }
     void setLabels(){
         currencyInfoLabel.setVisible(false);
@@ -170,23 +170,23 @@ public class StandardTransfer implements Transfer {
             JComboBox c = (JComboBox) event.getSource();
             receiverName1Warning.setVisible(false);
             receiverName2Warning.setVisible(false);
-            if (c.getSelectedItem() == "Firma") {
+            if (c.getSelectedItem() == "Company") {
                 isCompany = true;
                 if (isPerson) {
                     receiverName2Label.setVisible(false);
                     receiverName2Txt.setVisible(false);
                 }
-                receiverName1Label.setText("Nazwa firmy");
+                receiverName1Label.setText("Company name");
                 receiverName1Label.setVisible(true);
                 receiverName1Txt.setVisible(true);
                 receiverName2Warning.setVisible(false);
-            } else if (c.getSelectedItem() == "Osoba") {
+            } else if (c.getSelectedItem() == "Person") {
                 isPerson = true;
                 if (isCompany) {
                     receiverName1Label.setVisible(false);
                     receiverName1Txt.setVisible(false);
                 }
-                receiverName1Label.setText("Imię");
+                receiverName1Label.setText("Name");
                 receiverName1Label.setVisible(true);
                 receiverName1Txt.setVisible(true);
                 receiverName2Label.setVisible(true);
@@ -229,7 +229,7 @@ public class StandardTransfer implements Transfer {
                         finalTransferAmount = transferAmount1+transferAmount2;
                         isAmountValid = !(finalTransferAmount>senderAmount);
                     }
-                    transferAmountWarning.setText("Nie masz wystarczających środków");
+                    transferAmountWarning.setText("You don't have enough money");
                     transferAmountWarning.setVisible(!isAmountValid);
                 }
             }
@@ -274,7 +274,7 @@ public class StandardTransfer implements Transfer {
                 }
                 if(postcodeTxt==postcode1Txt) isPostCodeValid = (s1.length() == 2);
                 else isPostCodeValid = (s1.length()==3);
-                postcodeWarning.setText("Niepoprawny kod pocztowy");
+                postcodeWarning.setText("Invalid post code");
                 postcodeWarning.setVisible(!isPostCodeValid);
             }
         });
@@ -291,7 +291,7 @@ public class StandardTransfer implements Transfer {
                 else {
                     isAccountNumberValid = e.getKeyChar() != KeyEvent.VK_BACK_SPACE;
                 }
-                accountNumberWarning.setText("Niepoprawny numer rachunku");
+                accountNumberWarning.setText("Invalid account number");
                 accountNumberWarning.setVisible(!isAccountNumberValid);
             }
         });
@@ -350,7 +350,7 @@ public class StandardTransfer implements Transfer {
             public void actionPerformed(ActionEvent e) {
                 validation = new Vector<>();
                 if(accountNumberTxt.getText().length()==0){
-                    accountNumberWarning.setText("To pole jest wymagane");
+                    accountNumberWarning.setText("This field is required");
                     accountNumberWarning.setVisible(true);
                     validation.add(false);
                 }
@@ -361,7 +361,7 @@ public class StandardTransfer implements Transfer {
                 if(!Database.verifyOrdinaryAccountNumber(countryISO+accountNumberTxt.getText())){
                     if(!Database.verifySavingsAccountNumber(countryISO+accountNumberTxt.getText())){
                         validation.add(false);
-                        accountNumberWarning.setText("Podany numer konta nie istnieje");
+                        accountNumberWarning.setText("Given account number doesn't exist");
                         accountNumberWarning.setVisible(true);
                     }
                     else{
@@ -377,7 +377,7 @@ public class StandardTransfer implements Transfer {
                     accountChoosedReceiver = AccountChoosed.ORDINARYACCOUNT;
                     accountNumberWarning.setVisible(false);
                 }
-                if(receiverNameCombo.getSelectedItem() == "Wybierz"){
+                if(receiverNameCombo.getSelectedItem() == "Choose"){
                     receiverName1Warning.setVisible(true);
                     validation.add(false);
                 }
@@ -385,7 +385,7 @@ public class StandardTransfer implements Transfer {
                     receiverName1Warning.setVisible(false);
                     validation.add(true);
                 }
-                if(receiverNameCombo.getSelectedItem() == "Osoba"){
+                if(receiverNameCombo.getSelectedItem() == "Person"){
                     if(receiverName1Txt.getText().length()==0){
                         receiverName1Warning.setVisible(true);
                         validation.add(false);
@@ -403,7 +403,7 @@ public class StandardTransfer implements Transfer {
                         validation.add(true);
                     }
                 }
-                if(receiverNameCombo.getSelectedItem() == "Firma"){
+                if(receiverNameCombo.getSelectedItem() == "Company"){
                     if(receiverName1Txt.getText().length()==0){
                         receiverName1Warning.setVisible(true);
                         validation.add(false);
@@ -439,7 +439,7 @@ public class StandardTransfer implements Transfer {
                         validation.add(true);
                     }
                     if (postcode1Txt.getText().length() == 0 || postcode2Txt.getText().length() == 0) {
-                        postcodeWarning.setText("To pole jest wymagane");
+                        postcodeWarning.setText("This field is required");
                         postcodeWarning.setVisible(true);
                         validation.add(false);
                     } else {
@@ -455,7 +455,7 @@ public class StandardTransfer implements Transfer {
                     }
                 }
                 if(transferAmount1Txt.getText().length()==0){
-                    transferAmountWarning.setText("To pole jest wymagane");
+                    transferAmountWarning.setText("This field is required");
                     transferAmountWarning.setVisible(true);
                     validation.add(false);
                 }
@@ -472,7 +472,7 @@ public class StandardTransfer implements Transfer {
                     validation.add(true);
                 }
                 if(finalTransferAmount>senderAmount){
-                    transferAmountWarning.setText("Nie masz wystarczających środków");
+                    transferAmountWarning.setText("You don't have enough money");
                     transferAmountWarning.setVisible(true);
                     validation.add(false);
                 }
@@ -480,10 +480,9 @@ public class StandardTransfer implements Transfer {
                 buttonValid = !validation.contains(false);
                 if(buttonValid){
                     receiver.firstName = receiverName1Txt.getText();
-                    if(receiverNameCombo.getSelectedItem() == "Osoba") receiver.lastName = receiverName2Txt.getText();
+                    if(receiverNameCombo.getSelectedItem() == "Person") receiver.lastName = receiverName2Txt.getText();
                     else receiver.lastName="";
                     if(isAddress) {
-                        //if(isCountry) receiverData.put("kraj",countryNameTxt.getText());
                         receiver.city = townNameTxt.getText();
                         receiver.post_code = postcode1Txt.getText()+"-"+postcode2Txt.getText();
                         receiver.street = streetNameTxt.getText();
@@ -491,16 +490,16 @@ public class StandardTransfer implements Transfer {
                             receiver.street_nr =  streetNumber1Txt.getText() + "/" + streetNumber2Txt.getText();
                         else receiver.street_nr = streetNumber1Txt.getText();
                     }
-                    transferData.put("tytul", transferTitleTextArea.getText());
-                    transferData.put("kwota", transferAmount1Txt.getText()+"."+ transferAmount2Txt.getText());
-                    transferData.put("kwotaPLN", String.valueOf(finalTransferAmount));
+                    transferData.put("title", transferTitleTextArea.getText());
+                    transferData.put("transferamount", transferAmount1Txt.getText()+"."+ transferAmount2Txt.getText());
+                    transferData.put("totaltransferamount", String.valueOf(finalTransferAmount));
                     if(isPayment){
-                        transferData.put("oplata","5.00");
-                        transferData.put("typ",panelTitleLabel.getText()+" natychmiastowy");
+                        transferData.put("payment","5.00");
+                        transferData.put("type",panelTitleLabel.getText()+" express");
                     }
                     else{
-                        transferData.put("oplata","0.00");
-                        transferData.put("typ",panelTitleLabel.getText()+" zwykły");
+                        transferData.put("payment","0.00");
+                        transferData.put("type",panelTitleLabel.getText()+" standard");
                     }
                     TransferNextStep pCd = new TransferNextStep(accountChoosedUser, user, accountChoosedReceiver,receiver, transferData, frame, transferPanel1);
                     frame.getjFrame().setContentPane(pCd.getTransferNextStepPanel());

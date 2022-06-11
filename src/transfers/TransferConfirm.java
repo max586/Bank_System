@@ -1,5 +1,7 @@
 package src.transfers;
 import src.Database;
+import src.MainScreen;
+import src.Screen;
 import src.User;
 import src.mainFrame.MainFrame;
 import src.timer.AppTimer;
@@ -78,9 +80,9 @@ public class TransferConfirm {
         appTimer.start();
         otherPanel = transferNextStepPanel;
         transferData = transferData1;
-        if(transferData.get("typ").equals("Przelew BLIK na telefon")) transferPanelTitle = transferData.get("typ");
+        if(transferData.get("type").equals("BLIK Phone Transfer")) transferPanelTitle = transferData.get("type");
         else {
-            String[] arr = transferData.get("typ").split("\\s+");
+            String[] arr = transferData.get("type").split("\\s+");
             transferPanelTitle = arr[0] + " " + arr[1];
         }
         transferPanelTitleLabel.setText(transferPanelTitle);
@@ -156,19 +158,19 @@ public class TransferConfirm {
                 }
                 confirmButtonValid = !confirmButtonValidation.contains(false);
                 if(!confirmButtonValid){
-                    appCodeWarning.setText("Podaj czterocyfrowy kod");
+                    appCodeWarning.setText("This field is required");
                     appCodeWarning.setVisible(true);
                 }
                 else{
                     appCodeWarning.setVisible(false);
-                    appCodeWarning.setText("Podany kod jest nieprawidłowy");
+                    appCodeWarning.setText("Invalid App Code");
                     StringBuilder podanyKod = new StringBuilder();
                     for(JTextField t: applicationCode) podanyKod.append(t.getText());
                     if(!appCodeStr.equals(String.valueOf(podanyKod))){
                         appCodeWarning.setVisible(true);
                     }
                     else {
-                        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm:ss");
+                        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
                         LocalDateTime now = LocalDateTime.now();
                         String generationDate = dtf.format(now);
                         String town, postCode,street,streetNumber;
@@ -180,47 +182,58 @@ public class TransferConfirm {
                         }
                         else {town="";postCode="";street="";streetNumber="";}
                         appCodeWarning.setVisible(false);
-                        if(transferPanelTitle.equals("Zlecenie stałe")){
+                        if(transferPanelTitle.equals("Standing Order")){
                             if(accountChoosedUser==AccountChoosed.ORDINARYACCOUNT) {
-                                Database.addToHistory("HistoryOrdinary", generationDate, transferData.get("typ"),
-                                        userAccountNumber, receiverAccountNr, "" ,Double.parseDouble(transferData.get("kwota")),
-                                        transferData.get("waluta"), Double.parseDouble(transferData.get("kwotaPLN")), transferData.get("tytul"),
-                                        transferData.get("startdata"), transferData.get("enddata"), Integer.parseInt(transferData.get("cykle")),
-                                        transferData.get("jednostkaczasu"),receiver.firstName,receiver.lastName,receiver.city,receiver.post_code,receiver.street,receiver.street_nr);
+                                Database.addToHistory("HistoryOrdinary", generationDate, transferData.get("type"),
+                                        userAccountNumber, receiverAccountNr, "" ,Double.parseDouble(transferData.get("transferamount")),
+                                        transferData.get("currency"), Double.parseDouble(transferData.get("kwotaPLN")), transferData.get("title"),
+                                        transferData.get("startdate"), transferData.get("enddate"), Integer.parseInt(transferData.get("cicles")),
+                                        transferData.get("timeunit"),receiver.firstName,receiver.lastName,receiver.city,receiver.post_code,receiver.street,receiver.street_nr);
+                                setBalanceSender(user,AccountChoosed.ORDINARYACCOUNT);
+                                setBalanceReceiver();
                             }
                         }
-                        else if(transferPanelTitle.equals("Przelew BLIK na telefon")){
+                        else if(transferPanelTitle.equals("BLIK Phone Transfer")){
                             if(accountChoosedUser==AccountChoosed.ORDINARYACCOUNT) {
-                                Database.addToHistory("HistoryOrdinary", generationDate, transferData.get("typ"),
-                                        userAccountNumber, "",user.phone_number, Double.parseDouble(transferData.get("kwota")),
-                                        "PLN", Double.parseDouble(transferData.get("kwota")), transferData.get("tytul"),
+                                Database.addToHistory("HistoryOrdinary", generationDate, transferData.get("type"),
+                                        userAccountNumber, "",user.phone_number, Double.parseDouble(transferData.get("transferamount")),
+                                        "PLN", Double.parseDouble(transferData.get("transferamount")), transferData.get("title"),
                                         "", "", 0,"","","","","","","");
+                                setBalanceSender(user,AccountChoosed.ORDINARYACCOUNT);
+                                setBalanceReceiver();
                             }
                         }
-                        else if(transferPanelTitle.equals("Przelew własny")){
+                        else if(transferPanelTitle.equals("Own Transfer")){
                             if(accountChoosedUser==AccountChoosed.ORDINARYACCOUNT) {
-                                Database.addToHistory( "HistoryOrdinary", generationDate, transferData.get("typ"),
-                                        userAccountNumber, receiverAccountNr,"",  Double.parseDouble(transferData.get("kwota")),
-                                        "PLN", Double.parseDouble(transferData.get("kwota")), transferData.get("tytul"),
+                                Database.addToHistory( "HistoryOrdinary", generationDate, transferData.get("type"),
+                                        userAccountNumber, receiverAccountNr,"",  Double.parseDouble(transferData.get("transferamount")),
+                                        "PLN", Double.parseDouble(transferData.get("transferamount")), transferData.get("title"),
                                         "", "", 0, "","","","","","","");
+                                setBalanceSender(user,AccountChoosed.ORDINARYACCOUNT);
+                                setBalanceReceiver();
                             }
                             else{
-                                Database.addToHistory( "HistorySavings", generationDate, transferData.get("typ"),
-                                        userAccountNumber, receiverAccountNr,"",  Double.parseDouble(transferData.get("kwota")),
-                                        "PLN", Double.parseDouble(transferData.get("kwota")), transferData.get("tytul"),
+                                Database.addToHistory( "HistorySavings", generationDate, transferData.get("type"),
+                                        userAccountNumber, receiverAccountNr,"",  Double.parseDouble(transferData.get("transferamount")),
+                                        "PLN", Double.parseDouble(transferData.get("transferamount")), transferData.get("title"),
                                         "", "", 0, "","","","","","","");
+                                setBalanceSender(user,AccountChoosed.SAVINGSACCOUNT);
+                                setBalanceReceiver();
                             }
                         }
                         else {
                             if(accountChoosedUser==AccountChoosed.ORDINARYACCOUNT) {
-                                Database.addToHistory("HistoryOrdinary", generationDate, transferData.get("typ"),
-                                        userAccountNumber, receiverAccountNr, "", Double.parseDouble(transferData.get("kwota")),
-                                        transferData.get("waluta"), Double.parseDouble(transferData.get("kwotaPLN")), transferData.get("tytul"),
+                                Database.addToHistory("HistoryOrdinary", generationDate, transferData.get("type"),
+                                        userAccountNumber, receiverAccountNr, "", Double.parseDouble(transferData.get("transferamount")),
+                                        transferData.get("currency"), Double.parseDouble(transferData.get("totaltransferamount")), transferData.get("title"),
                                         "", "", 0, "",receiver.firstName,receiver.lastName,receiver.city,receiver.post_code,receiver.street,receiver.street_nr);
+                                setBalanceSender(user,AccountChoosed.ORDINARYACCOUNT);
+                                setBalanceReceiver();
                             }
                         }
+                        ;
                         if(isTransferConfirmation){
-                            if(transferPanelTitle.equals("Zlecenie stałe")) {
+                            if(transferPanelTitle.equals("Standing Order")) {
                                 try {
                                     pdfGenerator = new PdfFactory(generationDate,user,accountChoosedUser,receiver,accountChoosedReceiver,transferData).getPdfGenerator(PdfFactory.PdfType.ZLECENIESTALE);
                                 } catch (IOException ioException) {
@@ -229,7 +242,7 @@ public class TransferConfirm {
                                     fontFormatException.printStackTrace();
                                 }
                             }
-                            else if(transferPanelTitle.equals("Przelew BLIK na telefon")) {
+                            else if(transferPanelTitle.equals("BLIK Phone Transfer")) {
                                 try {
                                     pdfGenerator = new PdfFactory(generationDate,user,accountChoosedUser,receiver,accountChoosedReceiver,transferData).getPdfGenerator(PdfFactory.PdfType.BLIK);
                                 } catch (IOException ioException) {
@@ -238,7 +251,7 @@ public class TransferConfirm {
                                     fontFormatException.printStackTrace();
                                 }
                             }
-                            else if(transferPanelTitle.equals("Przelew własny")) {
+                            else if(transferPanelTitle.equals("Own Transfer")) {
                                 try {
                                     pdfGenerator = new PdfFactory(generationDate,user,accountChoosedUser,receiver,accountChoosedReceiver,transferData).getPdfGenerator(PdfFactory.PdfType.WLASNY);
                                 } catch (IOException ioException) {
@@ -262,10 +275,45 @@ public class TransferConfirm {
                                 ioException.printStackTrace();
                             }
                         }
+                        frame.getjFrame().dispose();
+                        new MainScreen(user,null,new Screen()).CreateScreen();
                     }
                 }
             }
         });
+    }
+    void setBalanceSender(User user1, AccountChoosed accountChoosed){
+        if(accountChoosed==AccountChoosed.ORDINARYACCOUNT) {
+            float senderAmount = user1.ordinary_account_balance;
+            float transferAmount = (float) Double.parseDouble(transferData.get("totaltransferamount"));
+            senderAmount = senderAmount - transferAmount;
+            user1.ordinary_account_balance=senderAmount;
+            Database.setOrdinaryAccountBalance(user1.username, senderAmount);
+        }
+        else{
+            float senderAmount = user1.savings_account_balance;
+            float transferAmount = (float) Double.parseDouble(transferData.get("totaltransferamount"));
+            senderAmount = senderAmount - transferAmount;
+            user1.savings_account_balance=senderAmount;
+            Database.setSavingsAccountBalance(user1.username, senderAmount);
+        }
+    }
+
+    void setBalanceReceiver(){
+        if(Database.isAccountNumberOrdinary(receiverAccountNr)){
+            String receiverUserName = Database.getUserNameByAccount(receiverAccountNr,"Ordinary");
+            float receiverAmount = Database.getOrdinaryAccountBalance(receiverUserName);
+            float transferAmount = (float) Double.parseDouble(transferData.get("totaltransferamount"));
+            receiverAmount = receiverAmount + transferAmount;
+            Database.setOrdinaryAccountBalance(receiverUserName, receiverAmount);
+        }
+        else{
+            String receiverUserName = Database.getUserNameByAccount(receiverAccountNr,"Savings");
+            float receiverAmount = Database.getSavingsAccountBalance(receiverUserName);
+            float transferAmount = (float) Double.parseDouble(transferData.get("totaltransferamount"));
+            receiverAmount = receiverAmount + transferAmount;
+            Database.setSavingsAccountBalance(receiverUserName, receiverAmount);
+        }
     }
 
     JPanel getTransferConfirmPanel(){

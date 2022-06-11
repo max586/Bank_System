@@ -24,7 +24,7 @@
           <maximumSize width="400" height="25"/>
           <minimumSize width="400" height="41"/>
           <preferredSize width="400" height="40"/>
-          <text value="Przelew krajowy"/>
+          <text value="Domestic Transfer"/>
           <verticalAlignment value="1"/>
           <verticalTextPosition value="1"/>
         </properties>
@@ -126,7 +126,7 @@
         </constraints>
         <properties>
           <font name="Futura" size="20" style="0"/>
-          <text value="Przelew z"/>
+          <text value="Transfer from"/>
         </properties>
       </component>
       <hspacer id="f2646">
@@ -175,7 +175,7 @@
         </constraints>
         <properties>
           <font name="Futura" size="20" style="0"/>
-          <text value="Tytuł przelewu"/>
+          <text value="Transfer title"/>
         </properties>
       </component>
       <component id="29329" class="javax.swing.JLabel" binding="transferTitle">
@@ -226,7 +226,7 @@
         </constraints>
         <properties>
           <font name="Futura" size="20" style="0"/>
-          <text value="Kwota przelewu"/>
+          <text value="Transfer Amount"/>
         </properties>
       </component>
       <vspacer id="b2729">
@@ -265,7 +265,7 @@
         </constraints>
         <properties>
           <font name="Futura" size="20" style="0"/>
-          <text value="Opłata"/>
+          <text value="Payment"/>
         </properties>
       </component>
       <vspacer id="f64ad">
@@ -304,7 +304,7 @@
         </constraints>
         <properties>
           <font name="Futura" size="20" style="0"/>
-          <text value="Typ przelewu"/>
+          <text value="Transfer type"/>
         </properties>
       </component>
       <vspacer id="43301">
@@ -334,7 +334,7 @@
           <foreground color="-4521984"/>
           <minimumSize width="265" height="50"/>
           <preferredSize width="265" height="50"/>
-          <text value="Anuluj"/>
+          <text value="Cancel"/>
         </properties>
       </component>
       <component id="e7303" class="javax.swing.JButton" binding="nextButton">
@@ -347,7 +347,7 @@
           <foreground color="-14566656"/>
           <minimumSize width="265" height="50"/>
           <preferredSize width="265" height="50"/>
-          <text value="Potwierdź"/>
+          <text value="Next"/>
         </properties>
       </component>
       <vspacer id="c57d5">
@@ -459,7 +459,7 @@
         </constraints>
         <properties>
           <font name="Futura" size="20" style="0"/>
-          <text value="Opłata"/>
+          <text value="Payment"/>
         </properties>
       </component>
       <component id="7f20a" class="javax.swing.JLabel">
@@ -469,7 +469,7 @@
         </constraints>
         <properties>
           <font name="Futura" size="20" style="0"/>
-          <text value="Przelew do"/>
+          <text value="Transfer to"/>
         </properties>
       </component>
       <component id="947cc" class="javax.swing.JLabel" binding="receiverName">
@@ -561,7 +561,7 @@
             </constraints>
             <properties>
               <font name="Futura" size="14" style="1"/>
-              <text value="Automatyczne wylogowanie:"/>
+              <text value="Automatic logout"/>
             </properties>
           </component>
           <component id="30236" class="javax.swing.JLabel" binding="timeLabel">

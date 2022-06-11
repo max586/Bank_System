@@ -83,17 +83,17 @@ public class TransferNextStep {
         equalsLabel.setVisible(false);
         polishCurrencyAmountLabel.setVisible(false);
         polishCurrencyLabel.setVisible(false);
-        if(transferData.get("typ").equals("Przelew BLIK na telefon")){
-            transferPanelTitle = transferData.get("typ");
+        if(transferData.get("type").equals("BLIK Phone Transfer")){
+            transferPanelTitle = transferData.get("type");
             transferPanelTitleLabel.setText(transferPanelTitle);
         }
         else {
-            String[] arr = transferData.get("typ").split("\\s+");
+            String[] arr = transferData.get("type").split("\\s+");
             transferPanelTitle = arr[0] + " " + arr[1];
             transferPanelTitleLabel.setText(transferPanelTitle);
-            if (transferPanelTitle.equals("Przelew zagraniczny")) {
+            if (transferPanelTitle.equals("Foreign Transfer")) {
                 equalsLabel.setVisible(true);
-                if (arr[2].equals("natychmiastowy"))
+                if (arr[2].equals("express"))
                     polishCurrencyAmountLabel.setText(String.format("%.2f", Double.parseDouble(transferData.get("kwotaPLN")) - 5.00));
                 else
                     polishCurrencyAmountLabel.setText(String.format("%.2f", Double.parseDouble(transferData.get("kwotaPLN"))));
@@ -101,13 +101,13 @@ public class TransferNextStep {
                 polishCurrencyLabel.setVisible(true);
             }
         }
-        if(transferPanelTitle.equals("Zlecenie stałe")){
-            feeLabel.setText("Obowiązuje od");
-            dateToLabel.setText("Obowiązuje do");
-            dateFrom.setText(transferData.get("startdata"));
+        if(transferPanelTitle.equals("Standing Order")){
+            feeLabel.setText("Start date");
+            dateToLabel.setText("End date");
+            dateFrom.setText(transferData.get("startdate"));
             dateFrom.setVisible(true);
-            if(transferData.containsKey("enddata")) {
-                dateTo.setText(transferData.get("enddata"));
+            if(transferData.containsKey("enddate")) {
+                dateTo.setText(transferData.get("enddate"));
                 dateToLabel.setVisible(true);
                 dateTo.setVisible(true);
             }
@@ -118,19 +118,19 @@ public class TransferNextStep {
         senderSurname.setText(user.lastName);
         receiverName.setText(receiver.firstName);
         receiverSurname.setText(receiver.lastName);
-        if(transferPanelTitle.equals("Przelew BLIK na telefon")){
-            senderAccountNumber.setText("Nr. konta: "+userAccountNumber);
-            receiverAccountNumber.setText("Nr. telefonu: "+receiver.phone_number);
+        if(transferPanelTitle.equals("BLIK Phone Transfer")){
+            senderAccountNumber.setText("Account nr.: "+userAccountNumber);
+            receiverAccountNumber.setText("Phone nr.: "+receiver.phone_number);
         }
         else {
             senderAccountNumber.setText(userAccountNumber);
             receiverAccountNumber.setText(receiverAccountNr);
         }
-        transferTitle.setText(transferData.get("tytul"));
-        transferAmount.setText(transferData.get("kwota"));
-        transferPayment.setText(transferData.get("oplata"));
-        transferType.setText(transferData.get("typ"));
-        currencyLabel.setText(transferData.get("waluta"));
+        transferTitle.setText(transferData.get("title"));
+        transferAmount.setText(transferData.get("transferamount"));
+        transferPayment.setText(transferData.get("payment"));
+        transferType.setText(transferData.get("type"));
+        currencyLabel.setText(transferData.get("currency"));
     }
     void setNextButton(JButton nextButton){
         nextButton.addActionListener(new ActionListener() {

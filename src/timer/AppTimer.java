@@ -8,7 +8,6 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
-import src.mainPanel.MainPanel;
 public class AppTimer {
         JLabel timeLabel;
         public int initMinutes = 2;
@@ -24,12 +23,12 @@ public class AppTimer {
             frame = mainFrame;
             timer = new Timer(1000, new ActionListener() {
                 public void actionPerformed(ActionEvent e) {
+                    if(!frame.getjFrame().isDisplayable()){stop();}
                     elapsedTime=elapsedTime-1000;
                     if(elapsedTime==0) {
                         stop();
                         frame.getjFrame().dispose();
                         new AuthenticationScreen(null,null,new Screen()).CreateScreen();
-
                         //nawrotka do panelu logowania
                     }
                     minutes = (elapsedTime/60000) % 60;

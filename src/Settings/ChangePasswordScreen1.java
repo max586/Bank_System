@@ -84,6 +84,7 @@ public class ChangePasswordScreen1 extends Screen{
         returnButton.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e){
+                frame.setVisible(false);
                 frame.dispose();
                 if(prev_screen!=null){
                     prev_screen.frame.setVisible(true);

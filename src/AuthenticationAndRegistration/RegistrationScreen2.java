@@ -64,9 +64,9 @@ public class RegistrationScreen2 extends Screen{
                 String street = streetField.getText();
                 String street_nr = streetNrField.getText();
                 boolean lname_is_valid= DataValidation.nameIsValid(lastName), fname_is_valid=DataValidation.nameIsValid(firstName),
-                        pesel_is_valid=DataValidation.peselIsValid(pesel, (sex=="M")),post_code_is_valid=true,
-                        city_is_valid=DataValidation.cityIsValid(city),street_is_valid=true,street_nr_is_valid=true,
-                        phone_nr_is_valid=true;
+                        pesel_is_valid=DataValidation.peselIsValid(pesel, (sex=="M")),post_code_is_valid=DataValidation.postcodeIsValid(post_code),
+                        city_is_valid=DataValidation.cityIsValid(city),street_is_valid=DataValidation.cityIsValid(street),street_nr_is_valid=DataValidation.streetNrIsValid(street_nr),
+                        phone_nr_is_valid=DataValidation.phoneNrIsValid(phone_nr);
                 if(!fname_is_valid){firstNameField.setText("First name is invalid");}
                 else{firstNameField.setText("ok");}
                 if(!lname_is_valid){lastNameField.setText("Last name is invalid");}
@@ -85,9 +85,6 @@ public class RegistrationScreen2 extends Screen{
                 else{peselField.setText("ok");}
                 if(fname_is_valid&&lname_is_valid&&phone_nr_is_valid&&city_is_valid&&post_code_is_valid&&street_is_valid&&street_nr_is_valid&&pesel_is_valid){
 
-                    Database.addUser( user.username, user.password, user.email,user.appCode);
-                    Database.addUserData( user.username, user.firstName, user.lastName, user.sex, user.phone_number,user.city,user.post_code,user.street, user.street_nr, user.pesel);
-
                     user.firstName=firstName;
                     user.lastName=lastName;
                     user.sex=sex;
@@ -97,6 +94,9 @@ public class RegistrationScreen2 extends Screen{
                     user.street=street;
                     user.street_nr=street_nr;
                     user.pesel=pesel;
+
+                    Database.addUser( user.username, user.password, user.email,user.appCode);
+                    Database.addUserData( user.username, user.firstName, user.lastName, user.sex, user.phone_number,user.city,user.post_code,user.street, user.street_nr, user.pesel);
 
                     frame.dispose();
                     if(next_screen!=null){
@@ -122,7 +122,7 @@ public class RegistrationScreen2 extends Screen{
             }
         });
 
-        frame.setSize(800,600);
+        frame.setSize(1000,800);
         frame.setVisible(true);
     }
 

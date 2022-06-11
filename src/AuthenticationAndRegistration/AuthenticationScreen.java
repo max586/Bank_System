@@ -70,6 +70,7 @@ public class AuthenticationScreen extends Screen {
 
                     frame.dispose();
                     if(next_screen!=null){
+                        //appTimer.stop();
                         new MainScreen(user, AuthenticationScreen.this,new Screen()).CreateScreen();
                     }
                 }
