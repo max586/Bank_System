@@ -30,12 +30,13 @@ public class MainScreen extends Screen {
     public JButton foreignTransferButton;
     public JButton ownTransferButton;
     public JButton standingOrderTransferButton;
-    public JButton ordinaryHistoryButton;
-    public JButton savingsHistoryButton;
-    public JLabel panelTitleLabel;
-    public JButton FAQButton;
-    public JPanel timerPanel;
-    public JLabel timeLabel;
+    private JButton ordinaryHistoryButton;
+    private JButton savingsHistoryButton;
+    private JLabel panelTitleLabel;
+    private JButton FAQButton;
+    private JPanel timerPanel;
+    private JLabel timeLabel;
+    private JButton blikButton;
     public int counter = 0;
     AccountChoosed chosenAcc;
     String []options = {"one","two"};
@@ -77,6 +78,17 @@ public class MainScreen extends Screen {
                     try {
                         new TransferFactory(AccountChoosed.ORDINARYACCOUNT, user, new MainFrame()).getTransfer(TransferFactory.TransferType.KRAJOWY);
                     } catch (Exception e2) {
+                }
+            }
+        });
+        blikButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                frame.dispose();
+                try {
+                    new TransferFactory(AccountChoosed.ORDINARYACCOUNT, user, new MainFrame()).getTransfer(TransferFactory.TransferType.TELEFONBLIK);
+                } catch (Exception e2) {
+
                 }
             }
         });

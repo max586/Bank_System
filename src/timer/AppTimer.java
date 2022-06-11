@@ -8,7 +8,6 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
-import src.mainPanel.MainPanel;
 public class AppTimer {
         JLabel timeLabel;
         public int initMinutes = 2;

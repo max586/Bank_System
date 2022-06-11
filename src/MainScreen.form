@@ -101,7 +101,7 @@
           <gridbag weightx="0.0" weighty="0.0"/>
         </constraints>
       </vspacer>
-      <component id="1d8d7" class="javax.swing.JButton" default-binding="true">
+      <component id="1d8d7" class="javax.swing.JButton" binding="blikButton">
         <constraints>
           <grid row="21" column="9" row-span="1" col-span="5" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
           <gridbag weightx="0.0" weighty="0.0" ipady="20"/>
