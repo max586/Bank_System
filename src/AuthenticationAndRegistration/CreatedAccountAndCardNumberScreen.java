@@ -9,9 +9,6 @@ import src.timer.MouseAction;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
-import java.sql.Statement;
 import java.time.LocalDateTime;
 import java.util.Random;
 
@@ -32,6 +29,8 @@ public class CreatedAccountAndCardNumberScreen extends Screen {
     public JLabel ordinaryAccountdescrLabel;
     public JLabel savingsAccountdescrLabel;
     public JLabel timeLabel;
+    private JTextField appCodeField;
+    private JLabel appCodeLabel;
     public int counter=0;
 
     public CreatedAccountAndCardNumberScreen(User user, Screen prev_screen, Screen next_screen){super(user,prev_screen,next_screen);}
@@ -61,6 +60,7 @@ public class CreatedAccountAndCardNumberScreen extends Screen {
         savingsAccountField.setText(user.savings_account_number);
         cardNumberField.setText(user.card_number);
         pinField.setText(user.pin_code);
+        appCodeField.setText(user.appCode);
 
         OKButton.addActionListener(new ActionListener() {
             @Override
@@ -125,12 +125,6 @@ public class CreatedAccountAndCardNumberScreen extends Screen {
         return nr;
     }
     public static String generatePIN(){
-        String pin="";
-        Random rnd = new Random();
-        for(int i=0;i<4;i++){pin+=Integer.toString(rnd.nextInt(10));}
-        return pin;
-    }
-    public static String generateAppCode(){
         String pin="";
         Random rnd = new Random();
         for(int i=0;i<4;i++){pin+=Integer.toString(rnd.nextInt(10));}

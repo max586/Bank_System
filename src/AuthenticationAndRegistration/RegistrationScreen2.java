@@ -13,6 +13,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.sql.Statement;
+import java.util.Random;
 
 public class RegistrationScreen2 extends Screen{
     public JTextField lastNameField;
@@ -94,6 +95,7 @@ public class RegistrationScreen2 extends Screen{
                     user.street=street;
                     user.street_nr=street_nr;
                     user.pesel=pesel;
+                    user.appCode=generateAppCode();
 
                     Database.addUser( user.username, user.password, user.email,user.appCode);
                     Database.addUserData( user.username, user.firstName, user.lastName, user.sex, user.phone_number,user.city,user.post_code,user.street, user.street_nr, user.pesel);
@@ -125,7 +127,12 @@ public class RegistrationScreen2 extends Screen{
         frame.setSize(1000,800);
         frame.setVisible(true);
     }
-
+    public static String generateAppCode(){
+        String pin="";
+        Random rnd = new Random();
+        for(int i=0;i<4;i++){pin+=Integer.toString(rnd.nextInt(10));}
+        return pin;
+    }
     public static void main(String[] args) {
         User user = new User();
         user.username = "test_user";

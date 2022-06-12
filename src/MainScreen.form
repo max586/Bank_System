@@ -485,8 +485,8 @@
         </constraints>
         <properties>
           <font name="Futura" size="14" style="0"/>
-          <minimumSize width="120" height="40"/>
-          <preferredSize width="120" height="40"/>
+          <minimumSize width="180" height="40"/>
+          <preferredSize width="180" height="40"/>
           <text value="Profile Settings"/>
         </properties>
       </component>

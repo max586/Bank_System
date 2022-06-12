@@ -6,7 +6,7 @@ import java.time.format.DateTimeFormatter;
 
 public class Database
 {
-    public static Statement st = connectToDatabase("bank_system","root","17391425");
+    public static Statement st = connectToDatabase("bank_system","root","password");
     public static Statement connectToDatabase(String database_name,String username, String password){
         Connection con=null;
         Statement st=null;
@@ -32,6 +32,16 @@ public class Database
     public static void addUserData(String username, String firstName, String lastName, String sex,String phoneNumber, String city, String postcode, String street,String street_numb, String pesel){
         try {
             st.executeUpdate("insert into UsersData values('"+username+"','"+firstName+"','"+lastName+"','"+sex+"','"+phoneNumber+"','"+city+"','"+postcode+"','"+street+"','"+street_numb+"','"+pesel+"');");
+        } catch (Exception e) {
+            //TODO: handle exception
+            System.out.println("Couldn't execute the query");
+            System.out.println(e);
+        }
+    }
+
+    public static void setUserData(String username, String firstName, String lastName, String sex,String phoneNumber, String city, String postcode, String street,String street_numb, String pesel){
+        try {
+            st.executeUpdate("update UsersData set `First name`='"+firstName+"',`Last name`='"+lastName+"',sex='"+sex+"',`Phone number`='"+phoneNumber+"',Town='"+city+"',Postcode='"+postcode+"',Street='"+street+"',`Street number`='"+street_numb+"',pesel='"+pesel+"' where username='"+username+"';");
         } catch (Exception e) {
             //TODO: handle exception
             System.out.println("Couldn't execute the query");

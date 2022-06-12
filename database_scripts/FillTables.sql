@@ -1,12 +1,3 @@
-/*delete from Users;
-delete from UsersData ;
-DELETE from OrdinaryAccounts ;
-delete from SavingsAccounts ;
-delete from HistorySavings;
-delete from HistoryOrdinary;
-delete from Cards;
-delete from Credits;x
-*/
 
 insert into Users values
 ("test_user","password","maks.ovsienko2@gmail.com","1234"),("user1","q[q]sqsmq0smlZX","abc@sth.com","3567"),("user2","zapkzpakzq1A../","jojo@kok","9999"),("user3",",za;x;xmaxmslxM;oihhJGJ1","poplp@qui","8281"),("user4","31okspqswKHh8VV./","ihkkl@mnqk","0000"),

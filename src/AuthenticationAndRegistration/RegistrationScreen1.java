@@ -49,15 +49,18 @@ public class RegistrationScreen1 extends Screen {
         
         submitButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                Boolean password_is_valid = true, username_is_taken;
+                Boolean password_is_valid = true, username_is_taken=true,username_is_valid=false;
                 user = new User();
                 user.username = usernameField.getText();
-                if (Database.isUsernameTaken( user.username)) {
-                    username_is_taken = true;
+                if(!DataValidation.isUsernameValid(user.username)){
+                    usernameField.setText("username is invalid");
+                }
+                else if (Database.isUsernameTaken( user.username)) {
                     usernameField.setText("username is already taken");
                 } else {
                     usernameField.setText("ok");
                     username_is_taken = false;
+                    username_is_valid=true;
                 }
                 user.password = new String(passwordField.getPassword());
                 String repeated_password = new String(repeatPasswordField.getPassword());
@@ -94,8 +97,7 @@ public class RegistrationScreen1 extends Screen {
                     password_is_valid = false;
                 }
 
-                if (password_is_valid && !username_is_taken) {
-                    //new_user.addUser(st);
+                if (password_is_valid && !username_is_taken && username_is_valid) {
                     frame.dispose();
                     if (next_screen != null) {
                         new EmailVerificationScreen(user, RegistrationScreen1.this, new RegistrationScreen2()).CreateScreen();

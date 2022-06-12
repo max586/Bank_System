@@ -40,7 +40,7 @@
       </component>
       <component id="c2467" class="javax.swing.JButton" binding="OKButton" default-binding="true">
         <constraints>
-          <grid row="8" column="2" row-span="1" col-span="5" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="9" column="2" row-span="1" col-span="5" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
           <gridbag weightx="1.0" weighty="0.2"/>
         </constraints>
         <properties>
@@ -51,7 +51,7 @@
       </component>
       <component id="ab07d" class="javax.swing.JButton" binding="returnButton" default-binding="true">
         <constraints>
-          <grid row="9" column="2" row-span="1" col-span="5" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="10" column="2" row-span="1" col-span="5" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
           <gridbag weightx="1.0" weighty="0.2"/>
         </constraints>
         <properties>
@@ -62,7 +62,7 @@
       </component>
       <component id="7f5b2" class="javax.swing.JButton" binding="exitButton" default-binding="true">
         <constraints>
-          <grid row="10" column="2" row-span="1" col-span="5" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="11" column="2" row-span="1" col-span="5" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
           <gridbag weightx="1.0" weighty="0.2"/>
         </constraints>
         <properties>
@@ -152,7 +152,7 @@
       </component>
       <vspacer id="5a7e6">
         <constraints>
-          <grid row="7" column="3" row-span="1" col-span="3" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+          <grid row="8" column="3" row-span="1" col-span="3" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
           <gridbag weightx="0.0" weighty="0.3"/>
         </constraints>
       </vspacer>
@@ -170,17 +170,17 @@
       </component>
       <component id="2fc87" class="javax.swing.JLabel" binding="timeLabel">
         <constraints>
-          <grid row="10" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="11" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
           <gridbag weightx="0.0" weighty="0.0"/>
         </constraints>
         <properties>
           <font size="16"/>
-          <text value="aaa"/>
+          <text value=""/>
         </properties>
       </component>
       <component id="dd6fa" class="javax.swing.JLabel">
         <constraints>
-          <grid row="10" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="11" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
           <gridbag weightx="0.0" weighty="0.0"/>
         </constraints>
         <properties>
@@ -201,6 +201,28 @@
           <opaque value="false"/>
           <preferredSize width="350" height="40"/>
           <text value=""/>
+        </properties>
+      </component>
+      <component id="59b39" class="javax.swing.JLabel" binding="appCodeLabel">
+        <constraints>
+          <grid row="7" column="0" row-span="1" col-span="6" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.5" weighty="0.2"/>
+        </constraints>
+        <properties>
+          <font size="18"/>
+          <text value="App code"/>
+        </properties>
+      </component>
+      <component id="a1de3" class="javax.swing.JTextField" binding="appCodeField">
+        <constraints>
+          <grid row="7" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+          <gridbag weightx="1.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font size="18"/>
+          <preferredSize width="250" height="40"/>
         </properties>
       </component>
     </children>

@@ -3,8 +3,9 @@ package src;
 import java.util.regex.*;
 
 public class DataValidation {
+    public static boolean isUsernameValid(String username){return Pattern.matches("\\w+",username) && username.length()>=3 && username.length()<=30;}
     public static boolean passwordMatches(String password1,String password2){return password1.equals(password2);}
-    public static boolean passwordLength(String password){return password.length()>=12;}
+    public static boolean passwordLength(String password){return password.length()>=12 && password.length()<=30;}
     public static boolean letterInPassword(String password){
         return Pattern.matches(".*[A-Za-z].*",password);
     }
