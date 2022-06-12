@@ -27,7 +27,7 @@ public class CurrenciesExchangeRate {
         //setCurrenciesWithAmounts();
     }
     void setCurrencies() throws IOException {
-        ZipFile zip = new ZipFile("currenciesNBP.zip");
+        ZipFile zip = new ZipFile("currenciesNBP.csv.zip");
         ZipEntry ze = zip.getEntry("currenciesNBP.csv");
         InputStream inputStream = zip.getInputStream(ze);
         BufferedReader br = new BufferedReader(new InputStreamReader(inputStream));
