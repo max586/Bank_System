@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="src.FAQScreen">
+  <grid id="27dc6" binding="faqPanel" layout-manager="GridBagLayout">
+    <constraints>
+      <xy x="20" y="20" width="1009" height="689"/>
+    </constraints>
+    <properties/>
+    <border type="none"/>
+    <children>
+      <component id="55824" class="javax.swing.JLabel" binding="panelTitleLabel">
+        <constraints>
+          <grid row="3" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="1.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <alignmentY value="0.0"/>
+          <background color="-12836031"/>
+          <enabled value="true"/>
+          <focusable value="true"/>
+          <font name="Futura" size="30" style="1"/>
+          <foreground color="-13475626"/>
+          <horizontalAlignment value="0"/>
+          <horizontalTextPosition value="0"/>
+          <maximumSize width="400" height="25"/>
+          <minimumSize width="400" height="41"/>
+          <preferredSize width="400" height="40"/>
+          <text value="FAQ"/>
+          <verticalAlignment value="1"/>
+          <verticalTextPosition value="1"/>
+        </properties>
+      </component>
+      <hspacer id="80f64">
+        <constraints>
+          <grid row="3" column="6" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+      </hspacer>
+      <vspacer id="4af33">
+        <constraints>
+          <grid row="4" column="3" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+      </vspacer>
+      <vspacer id="984ce">
+        <constraints>
+          <grid row="35" column="3" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="1.0"/>
+        </constraints>
+      </vspacer>
+      <vspacer id="58083">
+        <constraints>
+          <grid row="6" column="3" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+      </vspacer>
+      <vspacer id="4f07d">
+        <constraints>
+          <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+      </vspacer>
+      <vspacer id="dbf6">
+        <constraints>
+          <grid row="1" column="3" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+      </vspacer>
+      <vspacer id="4d3a1">
+        <constraints>
+          <grid row="2" column="3" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+      </vspacer>
+      <hspacer id="586ec">
+        <constraints>
+          <grid row="6" column="5" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+      </hspacer>
+      <hspacer id="c26ba">
+        <constraints>
+          <grid row="6" column="4" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+      </hspacer>
+      <hspacer id="6a1ce">
+        <constraints>
+          <grid row="35" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+      </hspacer>
+      <hspacer id="cee0a">
+        <constraints>
+          <grid row="35" column="1" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+      </hspacer>
+      <hspacer id="cb7c4">
+        <constraints>
+          <grid row="35" column="2" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+      </hspacer>
+      <grid id="1fc74" binding="timerPanel" layout-manager="GridBagLayout">
+        <constraints>
+          <grid row="5" column="3" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <component id="8b5e5" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <font name="Futura" size="14" style="1"/>
+              <text value="Automatic logout"/>
+            </properties>
+          </component>
+          <component id="867c6" class="javax.swing.JLabel" binding="timeLabel">
+            <constraints>
+              <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="1.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <font name="Futura" size="16" style="0"/>
+              <text value="2:00"/>
+            </properties>
+          </component>
+          <hspacer id="36d4">
+            <constraints>
+              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="0.0" weighty="0.0"/>
+            </constraints>
+          </hspacer>
+        </children>
+      </grid>
+      <component id="8853f" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="7" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font name="Futura" size="14" style="1"/>
+          <text value="1. How to create another account?"/>
+        </properties>
+      </component>
+      <component id="332ab" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="9" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font name="Futura" size="14" style="1"/>
+          <text value="2. How to change my personal data?"/>
+        </properties>
+      </component>
+      <component id="78696" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="11" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font name="Futura" size="14" style="1"/>
+          <text value="3.1. How to logout from application?"/>
+        </properties>
+      </component>
+      <component id="273f0" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="15" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font name="Futura" size="14" style="1"/>
+          <text value="4. How to check history of my transfers?"/>
+        </properties>
+      </component>
+      <component id="3052e" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="17" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font name="Futura" size="14" style="1"/>
+          <text value="5. Can I take a loan?"/>
+        </properties>
+      </component>
+      <component id="7767b" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="25" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font name="Futura" size="14" style="1"/>
+          <text value="9.1. Can I print the transfer confirmation?"/>
+        </properties>
+      </component>
+      <component id="f08fd" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="27" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font name="Futura" size="14" style="1"/>
+          <text value="9.2. In what format is the transfer confirmation?"/>
+        </properties>
+      </component>
+      <component id="8a6e6" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="29" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font name="Futura" size="14" style="1"/>
+          <text value="9.3. Where the confirmation of the transfer will be saved?"/>
+        </properties>
+      </component>
+      <component id="182b3" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="8" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font name="Futura" size="12" style="0"/>
+          <text value="In the main panel, select &quot;Logout&quot; button. In the login panel select &quot;Sign up&quot; button and register another account."/>
+        </properties>
+      </component>
+      <component id="1904c" class="javax.swing.JButton" binding="cancelButton">
+        <constraints>
+          <grid row="34" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font name="Futura" size="18" style="0"/>
+          <foreground color="-4520960"/>
+          <hideActionText value="false"/>
+          <preferredSize width="265" height="50"/>
+          <text value="Cancel"/>
+        </properties>
+      </component>
+      <component id="298a8" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="10" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font name="Futura" size="12" style="0"/>
+          <text value="In the main panel, select &quot;Profile settings&quot; button. You can change your personal data there."/>
+        </properties>
+      </component>
+      <component id="b50df" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="12" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font name="Futura" size="12" style="0"/>
+          <text value="In the main panel, select &quot;Logout&quot; button. "/>
+        </properties>
+      </component>
+      <component id="e31e8" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="16" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font name="Futura" size="12" style="0"/>
+          <text value="If you want to check history of your main account, in the main panel select &quot;Ordinary History&quot; button; to check your savings account history press &quot;Savings history&quot; button."/>
+        </properties>
+      </component>
+      <component id="2a237" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="18" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font name="Futura" size="12" style="0"/>
+          <text value="Of course. Our bank offers express loans. In the main panel select &quot;Credit&quot; button and fill out the loan application."/>
+        </properties>
+      </component>
+      <component id="ef71e" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="26" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font name="Futura" size="12" style="0"/>
+          <text value="Yes, you can print the transfer confirmation in the last transfer panel, where you can find the option &quot;Print transfer confirmation (pdf)&quot;"/>
+        </properties>
+      </component>
+      <component id="38167" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="28" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font name="Futura" size="12" style="0"/>
+          <text value="Our transfer confirmation is in the .pdf format."/>
+        </properties>
+      </component>
+      <component id="6e16a" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="30" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font name="Futura" size="12" style="0"/>
+          <text value="When you select &quot;Print transfer confirmation (pdf)&quot; option, then we will show you your filesystem. There, choose the appropriate folder."/>
+        </properties>
+      </component>
+      <component id="6f13d" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="13" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font name="Futura" size="14" style="1"/>
+          <text value="3.2. Whether I will be automatically logged out after a period of inactivity?"/>
+        </properties>
+      </component>
+      <component id="ee5b5" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="14" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <text value="Yes, you will be automatically logged out after 2 minutes of inactivity"/>
+        </properties>
+      </component>
+      <component id="fad2f" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="19" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font name="Futura" size="14" style="1"/>
+          <text value="6. What types of transfers does the bank offer?"/>
+        </properties>
+      </component>
+      <component id="32a38" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="20" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font name="Futura" size="12" style="0"/>
+          <text value="Our bank offers the following types of transfers: domestic transfer, foreign transfer, standing order, BLIK phone transfer and own transfer."/>
+        </properties>
+      </component>
+      <component id="d75f8" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="21" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font name="Futura" size="14" style="1"/>
+          <text value="7. How can I deposit/withdraw money into my savings account?"/>
+        </properties>
+      </component>
+      <component id="39739" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="22" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font name="Futura" size="12" style="0"/>
+          <text value="In the main panel select &quot;Own transfer&quot; button. There you can choose between the main account and the savings account."/>
+        </properties>
+      </component>
+      <component id="f94ef" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="23" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font name="Futura" size="14" style="1"/>
+          <text value="8. In a foreign transfer, what currencies is offered by your bank?"/>
+        </properties>
+      </component>
+      <component id="3bb47" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="24" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font name="Futura" size="12" style="0"/>
+          <text value="Our bank offer's all currencies that are supported in the European Central Bank (ECB). Our exchange rate is based on ECB's exchange rate."/>
+        </properties>
+      </component>
+      <vspacer id="d1fd6">
+        <constraints>
+          <grid row="33" column="3" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+      </vspacer>
+      <component id="46f44" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="31" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font name="Futura" size="14" style="1"/>
+          <text value="10. Whether instant transfer requires an additional fee?"/>
+        </properties>
+      </component>
+      <component id="f02d5" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="32" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font name="Futura" size="12" style="0"/>
+          <text value="Yes, we require an additional fee of 5.00 PLN."/>
+        </properties>
+      </component>
+    </children>
+  </grid>
+</form>

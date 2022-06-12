@@ -18,10 +18,10 @@ import java.sql.SQLException;
 
 public class MainScreen extends Screen {
     public JPanel AuthPanel;
-    public JButton PROFILButton;
-    public JButton incountryButton;
-    public JButton KREDYTYButton;
-    public JButton wylogujButton;
+    public JButton settingsButton;
+    public JButton domesticButton;
+    public JButton creditButton;
+    public JButton logoutButton;
     public JLabel AccNumber;
     public JLabel OrdAccNum;
     public JLabel SavAccNum;
@@ -39,7 +39,6 @@ public class MainScreen extends Screen {
     private JButton blikButton;
     public int counter = 0;
     AccountChoosed chosenAcc;
-    String []options = {"one","two"};
 
 
     public MainScreen(User user, Screen prev_screen, Screen next_screen){
@@ -58,8 +57,13 @@ public class MainScreen extends Screen {
 
             SavAccNum.setText(Database.getSavingsAccountNumber( user.username));
 
-
-//Incountry Transfer, Foreign Transfer, Own Transfer, Standing Order Transfer, BLIK Phone Transfer
+        FAQButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                frame.dispose();
+                new FAQScreen(user,new MainFrame());
+            }
+        });
         foreignTransferButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -71,7 +75,7 @@ public class MainScreen extends Screen {
 
             }
         });
-        incountryButton.addActionListener(new ActionListener() {
+        domesticButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                     frame.dispose();
@@ -135,18 +139,18 @@ public class MainScreen extends Screen {
 
             }
         });
-        KREDYTYButton.addActionListener(e->
+        creditButton.addActionListener(e->
         {
             frame.dispose();
                 new Credit(user, MainScreen.this, new Screen()).CreateScreen();
             });
-        PROFILButton.addActionListener(e->
+        settingsButton.addActionListener(e->
         {
             frame.dispose();
             new SettingsMainScreen(user, MainScreen.this, new Screen()).CreateScreen();
         });
 
-        wylogujButton.addActionListener(e->
+        logoutButton.addActionListener(e->
         {
             frame.dispose();
             new AuthenticationScreen(null,null,new Screen()).CreateScreen();
