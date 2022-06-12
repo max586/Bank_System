@@ -4,6 +4,9 @@ import src.DataValidation;
 import src.Database;
 import src.Screen;
 import src.User;
+import src.timer.AppTimer;
+import src.timer.MouseAction;
+
 import java.lang.Object;
 import java.util.Date;
 import javax.swing.*;
@@ -30,6 +33,7 @@ public class Credit extends Screen
     public JLabel MyDebt;
     public JButton payDebtButton;
     public JButton prevButton;
+    private JLabel timeLabel;
     public JOptionPane jpane;
     public JDialog jdialog;
     private static DecimalFormat df = new DecimalFormat("#.##");
@@ -38,6 +42,9 @@ public class Credit extends Screen
 
     public Credit(User user, Screen prev_screen, Screen next_screen){
         super(user,prev_screen,next_screen);
+        AppTimer appTimer = new AppTimer(timeLabel,this);
+        CreditPanel.addMouseMotionListener(new MouseAction(appTimer));
+        appTimer.start();
         //System.out.println((int)0.5352);
         jpane = new JOptionPane();
         jdialog=jpane.createDialog(CreditPanel,"");

@@ -17,7 +17,6 @@ public class AuthenticationScreen extends Screen {
     public JButton exitButton;
     public JPanel panel;
     public JButton signInButton;
-    public JLabel timeLabel;
     public JOptionPane jpane;
     public JDialog jdialog;
     public int counter=0;
@@ -31,10 +30,6 @@ public class AuthenticationScreen extends Screen {
     public void CreateScreen(){
         frame.setTitle("Authentication Screen");
         frame.setContentPane(panel);
-
-        AppTimer appTimer = new AppTimer(timeLabel,this);
-        panel.addMouseMotionListener(new MouseAction(appTimer));
-        appTimer.start();
 
         signInButton.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
