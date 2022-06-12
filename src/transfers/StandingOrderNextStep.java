@@ -88,6 +88,7 @@ public class StandingOrderNextStep {
         localDate = new Date();
         dateFrom = localDate;
         dateTo = localDate;
+        setTimeUnitsTxt();
         setTimeUnitsComboBox();
         setStartPaymentPanel();
         setEndDateRadioButton();
@@ -96,7 +97,6 @@ public class StandingOrderNextStep {
         setCancelButton();
     }
     void setLabels(){
-        timeUnitsTxt.addKeyListener(numbersOnly);
         timeUnitsWarning.setVisible(false);
         timeUnitsWarning2.setVisible(false);
         endPaymentWarning.setVisible(false);
@@ -270,6 +270,19 @@ public class StandingOrderNextStep {
             public void actionPerformed(ActionEvent e) {
                 frame.getjFrame().setContentPane(cancelPanel);
                 frame.getjFrame().setVisible(true);
+            }
+        });
+    }
+    void setTimeUnitsTxt(){
+        timeUnitsTxt.setDocument(new LimitJTextField(3));
+        //timeUnitsTxt.addKeyListener(numbersOnly);
+        timeUnitsTxt.addKeyListener(new KeyAdapter() {
+            @Override
+            public void keyTyped(KeyEvent e) {
+                char c = e.getKeyChar();
+                if ( ((c < '1') || (c > '9')) && (c != KeyEvent.VK_BACK_SPACE)) {
+                    e.consume();
+                }
             }
         });
     }
