@@ -10,25 +10,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bea002ff-8e44-4e85-a29b-66b1294d710d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/configure.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/src/Credits/CreditTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/bank_system_project_jar/bank_system_project.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/bank_system_project_jar/bank_system_project.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/AuthenticationScreen$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/AuthenticationScreen$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/AuthenticationScreen$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/AuthenticationScreen$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/AuthenticationScreen$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/AuthenticationScreen$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/AuthenticationScreen.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/AuthenticationScreen.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Credits/Credit$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/Credits/Credit$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Credits/Credit$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/Credits/Credit$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Credits/Credit.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/Credits/Credit.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Database.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/Database.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/JavaMail$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/JavaMail$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/JavaMail.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/JavaMail.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationAndRegistration/AuthenticationScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AuthenticationAndRegistration/AuthenticationScreen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Credits/Credit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Credits/Credit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Database.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/JavaMail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/JavaMail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user.conf" beforeDir="false" afterPath="$PROJECT_DIR$/user.conf" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,19 +75,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH": "99",
-    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "189",
-    "WebServerToolWindowFactoryState": "false",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit4",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4": "",
-    "last_opened_file_path": "/home/max/my_files/Money-laundering-system/src/Settings",
-    "project.structure.last.edited": "Artifacts",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH&quot;: &quot;99&quot;,
+    &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH&quot;: &quot;189&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit4&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4&quot;: &quot;&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/max/my_files/Money-laundering-system/src/Settings&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/Settings" />
@@ -117,7 +102,7 @@
       <recent name="src.AuthenticationAndRegistration" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.configure">
+  <component name="RunManager" selected="Application.LaunchApp">
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -198,9 +183,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.LaunchApp" />
         <item itemvalue="Application.configure" />
         <item itemvalue="Application.JavaMail" />
-        <item itemvalue="Application.LaunchApp" />
         <item itemvalue="JUnit.CreditTest.takeNewCreditTest" />
         <item itemvalue="JUnit.AuthenticationScreenTest" />
       </list>
@@ -223,6 +208,7 @@
       <workItem from="1654875625417" duration="22318000" />
       <workItem from="1654952491695" duration="742000" />
       <workItem from="1655017719891" duration="6286000" />
+      <workItem from="1655061417276" duration="339000" />
     </task>
     <task id="LOCAL-00003" summary="sth">
       <created>1654153919128</created>

@@ -53,29 +53,29 @@ public class Credit extends Screen
             {
                 if(!Database.hasCredit(user.username))//jezeli uzitkownik nie ma kredytu
                 {
-                        if(yesCheckBox.isSelected())
+                    if(yesCheckBox.isSelected())
+                    {
+                        if(isProvidedDataIsValid())
                         {
-                                if(isProvidedDataIsValid())
-                                {
-                                    jpane.setMessage("Now you have the credit");
-                                    Date Today = new Date();
-                                    Database.setOrdinaryAccountBalance(user.username,Database.getOrdinaryAccountBalance(user.username) + Float.parseFloat(Amount.getText()));
-                                    //Years.setText(Integer.toString((int)Float.parseFloat(Years.getText())));
-                                    Database.addCredit(user.username, Float.parseFloat(Amount.getText()), 0, convertDateToString(Today),(int)Float.parseFloat(Years.getText()));
-                                    String[] CreditInfo = Database.getCredit(user.username);//Amount , AmountPayed , StartDate , Duration
-                                    Balance.setText(String.valueOf(Database.getOrdinaryAccountBalance(user.username)));
-                                    MyCreditAmount.setText(CreditInfo[0]);
-                                    MyPayedCredit.setText(CreditInfo[1]);
-                                    MyDebt.setText(String.valueOf(checkDebt()));
-                                }else
-                                {
-                                    jpane.setMessage("You are allowed to type only numbers nad year must be > 0");
-                                }
-
+                            jpane.setMessage("Now you have the credit");
+                            Date Today = new Date();
+                            Database.setOrdinaryAccountBalance(user.username,Database.getOrdinaryAccountBalance(user.username) + Float.parseFloat(Amount.getText()));
+                            //Years.setText(Integer.toString((int)Float.parseFloat(Years.getText())));
+                            Database.addCredit(user.username, Float.parseFloat(Amount.getText()), 0, convertDateToString(Today),(int)Float.parseFloat(Years.getText()));
+                            String[] CreditInfo = Database.getCredit(user.username);//Amount , AmountPayed , StartDate , Duration
+                            Balance.setText(String.valueOf(Database.getOrdinaryAccountBalance(user.username)));
+                            MyCreditAmount.setText(CreditInfo[0]);
+                            MyPayedCredit.setText(CreditInfo[1]);
+                            MyDebt.setText(String.valueOf(checkDebt()));
                         }else
                         {
-                            jpane.setMessage("you must accept the terms to take the credit");
+                            jpane.setMessage("You are allowed to type only numbers nad year must be from 1 to 50");
                         }
+
+                    }else
+                    {
+                        jpane.setMessage("you must accept the terms to take the credit");
+                    }
 
                 }else
                 {
@@ -114,9 +114,9 @@ public class Credit extends Screen
                         Date Today = new Date();
                         Date StartDate = new Date(Integer.parseInt(CreditInfo[2].substring(0,4))-1900,Integer.parseInt(CreditInfo[2].substring(5,7)),Integer.parseInt(CreditInfo[2].substring(8,10)));
                         jpane.setMessage("You payed your debt");
-                       // Date DiffOfYears = new Date(Today.getTime() - StartDate.getTime());
+                        // Date DiffOfYears = new Date(Today.getTime() - StartDate.getTime());
                         int currentYear = diffOfYear(Today,StartDate);//DiffOfYears.getYear() - 70;
-                            //System.out.println(currentYear+" "+Integer.parseInt(CreditInfo[3]));
+                        //System.out.println(currentYear+" "+Integer.parseInt(CreditInfo[3]));
                         if (currentYear >= Integer.parseInt(CreditInfo[3]) && checkDebt() == 0)
                         {
                             Database.deleteCredit(user.username);
@@ -194,11 +194,11 @@ public class Credit extends Screen
         {
             Years.setText(Integer.toString((int)Float.parseFloat(Years.getText())));
         }
-        return (DataValidation.isNumber(Amount.getText()) && DataValidation.isNumber(Years.getText()) &&  (int)Float.parseFloat(Years.getText())>0);
+        return (DataValidation.isNumber(Amount.getText()) && DataValidation.isNumber(Years.getText()) &&  (int)Float.parseFloat(Years.getText())>0 && (int)Float.parseFloat(Years.getText())<51);
     }
     public Date convertStringToDate(String dateInString)
     {
-       return  new Date(Integer.parseInt(dateInString.substring(0,4))-1900,Integer.parseInt(dateInString.substring(5,7)),Integer.parseInt(dateInString.substring(8,10)));
+        return  new Date(Integer.parseInt(dateInString.substring(0,4))-1900,Integer.parseInt(dateInString.substring(5,7)),Integer.parseInt(dateInString.substring(8,10)));
 
     }
 
@@ -242,7 +242,7 @@ public class Credit extends Screen
         //Date StartDate = new Date(Integer.parseInt(CreditInfo[2].substring(0,4))-1900,Integer.parseInt(CreditInfo[2].substring(5,7)),Integer.parseInt(CreditInfo[2].substring(8,10)));
         //Date StartDate = new Date(2000-1900,4,8);//ile Lat juz się ma kredyt
 
-       // Date DiffOfYears = new Date(Today.getTime() - StartDate.getTime());
+        // Date DiffOfYears = new Date(Today.getTime() - StartDate.getTime());
         int currentYear = diffOfYear(Today,StartDate);//DiffOfYears.getYear()-70;
 
         float needToPay = 0;
@@ -252,7 +252,7 @@ public class Credit extends Screen
             needToPay+=creditAmount/yearsAll + (creditAmount - i*creditAmount/yearsAll)*percent;
         }
         return Float.parseFloat( df.format(needToPay - currentCreditPayment));
-            //return (needToPay - currentCreditPayment);
+        //return (needToPay - currentCreditPayment);
     }
 
     public static void main(String[] args) throws IOException {
@@ -262,3 +262,4 @@ public class Credit extends Screen
     }
 
 }
+
