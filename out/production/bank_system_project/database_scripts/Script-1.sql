@@ -1,0 +1,12 @@
+#delete from Credits where username="test_user";
+#update OrdinaryAccounts set `Account number` = 'PL12122666666666666666666666' where username='user2';
+#select `Operation Date`,`Transfer Type` ,`Account nr to` ,`Phone nr to` ,`Transfer Amount` ,`Transfer Currency` ,`Total Transfer Cost` ,`Transfer Title` ,`Start Date` ,`End Date` ,`Transfer Cycle` ,`Transfer Cycle Units` ,`First name` ,`Last name` ,Town ,Postcode ,Street ,`Street number` from HistoryOrdinary;
+select * from Users;
+select * from UsersData;
+select * from OrdinaryAccounts;
+select * from SavingsAccounts;
+select * from Credits;
+select * from Cards;
+select * from HistoryOrdinary;
+select * from HistorySavings;
+#select h.* from HistoryOrdinary h join OrdinaryAccounts o on h.`Account nr from` = o.`Account number`where h.`Operation Date` >= '2022-06-05'and o.username='test_user';
