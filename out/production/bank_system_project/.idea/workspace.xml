@@ -1,147 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="bank_system_project:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bea002ff-8e44-4e85-a29b-66b1294d710d" name="Changes" comment="Repaired Credits">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/LaunchApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/LaunchApp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/App.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/AuthenticationScreenTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/AuthenticationScreenTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/ChooseAccountNumberScreen$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/ChooseAccountNumberScreen$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/ChooseAccountNumberScreen$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/ChooseAccountNumberScreen.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/CreatedAccountAndCardNumberScreen$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/CreatedAccountAndCardNumberScreen$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/CreatedAccountAndCardNumberScreen$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/CreatedAccountAndCardNumberScreen$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/CreatedAccountAndCardNumberScreen$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/CreatedAccountAndCardNumberScreen$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/CreatedAccountAndCardNumberScreen.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/CreatedAccountAndCardNumberScreen.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/EmailVerificationScreen$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/EmailVerificationScreen$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/EmailVerificationScreen$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/EmailVerificationScreen$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/EmailVerificationScreen$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/EmailVerificationScreen$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/EmailVerificationScreen.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/EmailVerificationScreen.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/EmailVerificationScreenTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/EmailVerificationScreenTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/RegistrationScreen1$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/RegistrationScreen1$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/RegistrationScreen1$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/RegistrationScreen1$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/RegistrationScreen1$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/RegistrationScreen1$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/RegistrationScreen1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/RegistrationScreen1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/RegistrationScreen1Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/RegistrationScreen1Test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/RegistrationScreen2$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/RegistrationScreen2$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/RegistrationScreen2$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/RegistrationScreen2$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/RegistrationScreen2$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/RegistrationScreen2$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/RegistrationScreen2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/RegistrationScreen2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/RegistrationScreen2Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/RegistrationScreen2Test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/CreditCard/PayWithCardScreen1$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/CreditCard/PayWithCardScreen1$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/CreditCard/PayWithCardScreen1$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/CreditCard/PayWithCardScreen1$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/CreditCard/PayWithCardScreen1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/CreditCard/PayWithCardScreen1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/CreditCard/PayWithCardScreen1Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/CreditCard/PayWithCardScreen1Test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/CreditCard/PayWithCardScreen2$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/CreditCard/PayWithCardScreen2$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/CreditCard/PayWithCardScreen2$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/CreditCard/PayWithCardScreen2$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/CreditCard/PayWithCardScreen2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/CreditCard/PayWithCardScreen2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/CreditCard/PayWithCardScreen2Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/CreditCard/PayWithCardScreen2Test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Credits/Credit$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/Credits/Credit$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Credits/Credit$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/Credits/Credit$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Credits/Credit.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/Credits/Credit.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/DataValidation.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/DataValidation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Database.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/Database.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/JavaMail$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/JavaMail$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/JavaMail.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/JavaMail.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/JavaMailTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/JavaMailTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Screen.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/Screen.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ChangeEmailScreen$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ChangeEmailScreen$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ChangeEmailScreen$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ChangeEmailScreen$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ChangeEmailScreen$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ChangeEmailScreen$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ChangeEmailScreen.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ChangeEmailScreen.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ChangePasswordScreen1$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ChangePasswordScreen1$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ChangePasswordScreen1$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ChangePasswordScreen1$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ChangePasswordScreen1$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ChangePasswordScreen1$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ChangePasswordScreen1$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ChangePasswordScreen1$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ChangePasswordScreen1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ChangePasswordScreen1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ChangePasswordScreen2$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ChangePasswordScreen2$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ChangePasswordScreen2$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ChangePasswordScreen2$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ChangePasswordScreen2$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ChangePasswordScreen2$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ChangePasswordScreen2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ChangePasswordScreen2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ChangeUsernameScreen$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ChangeUsernameScreen$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ChangeUsernameScreen$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ChangeUsernameScreen$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ChangeUsernameScreen$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ChangeUsernameScreen$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ChangeUsernameScreen.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ChangeUsernameScreen.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/SettingsMainScreen$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/SettingsMainScreen$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/SettingsMainScreen$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/SettingsMainScreen$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/SettingsMainScreen$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/SettingsMainScreen$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/SettingsMainScreen$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/SettingsMainScreen$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/SettingsMainScreen$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/SettingsMainScreen$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/SettingsMainScreen$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/SettingsMainScreen$6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/SettingsMainScreen.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/SettingsMainScreen.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ShowUserDataScreen$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ShowUserDataScreen$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ShowUserDataScreen$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ShowUserDataScreen$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ShowUserDataScreen.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ShowUserDataScreen.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/mainFrame/MainFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/mainFrame/MainFrame.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/mainPanel/MainPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/mainPanel/MainPanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/timer/AppTimer$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/timer/AppTimer$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/timer/AppTimer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/timer/AppTimer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/timer/MouseAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/timer/MouseAction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/AccountChoosed.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/AccountChoosed.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/BlikPhoneTransfer$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/BlikPhoneTransfer$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/BlikPhoneTransfer$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/BlikPhoneTransfer$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/BlikPhoneTransfer$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/BlikPhoneTransfer$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/BlikPhoneTransfer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/BlikPhoneTransfer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/CurrenciesExchangeRate.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/CurrenciesExchangeRate.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/CurrencyEntry.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/CurrencyEntry.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/FileElement.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/FileElement.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/FileSystem.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/FileSystem.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/MenuInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/MenuInfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/OrdinaryHistory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/OrdinaryHistory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/OwnTransfer$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/OwnTransfer$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/OwnTransfer$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/OwnTransfer$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/OwnTransfer$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/OwnTransfer$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/OwnTransfer$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/OwnTransfer$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/OwnTransfer$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/OwnTransfer$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/OwnTransfer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/OwnTransfer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/PdfFactory$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/PdfFactory$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/PdfFactory$PdfType.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/PdfFactory$PdfType.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/PdfFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/PdfFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/PdfGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/PdfGenerator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/PdfGeneratorBLIK.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/PdfGeneratorBLIK.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/PdfGeneratorOwn.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/PdfGeneratorOwn.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/PdfGeneratorStandard.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/PdfGeneratorStandard.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/PdfGeneratorStandingOrder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/PdfGeneratorStandingOrder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/SampleMenuListenerAccount1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/SampleMenuListenerAccount1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/SampleMenuListenerAccount2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/SampleMenuListenerAccount2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/SavingsHistory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/SavingsHistory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/StandingOrder$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/StandingOrder$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/StandingOrder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/StandingOrder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/StandingOrderNextStep$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/StandingOrderNextStep$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/StandingOrderNextStep$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/StandingOrderNextStep$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/StandingOrderNextStep$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/StandingOrderNextStep$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/StandingOrderNextStep$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/StandingOrderNextStep$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/StandingOrderNextStep$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/StandingOrderNextStep$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/StandingOrderNextStep.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/StandingOrderNextStep.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/Transfer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/Transfer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/TransferConfirm$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/TransferConfirm$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/TransferConfirm$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/TransferConfirm$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/TransferConfirm$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/TransferConfirm$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/TransferConfirm$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/TransferConfirm$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/TransferConfirm.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/TransferConfirm.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/TransferFactory$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/TransferFactory$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/TransferFactory$TransferType.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/TransferFactory$TransferType.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/TransferFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/TransferFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/TransferNextStep$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/TransferNextStep$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/TransferNextStep$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/TransferNextStep$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/TransferNextStep.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/TransferNextStep.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/bank_system_project/src/AuthenticationAndRegistration/AuthenticationScreenTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/bank_system_project/src/AuthenticationAndRegistration/AuthenticationScreenTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/bank_system_project/src/AuthenticationAndRegistration/EmailVerificationScreenTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/bank_system_project/src/AuthenticationAndRegistration/EmailVerificationScreenTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/bank_system_project/src/AuthenticationAndRegistration/RegistrationScreen1Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/bank_system_project/src/AuthenticationAndRegistration/RegistrationScreen1Test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/bank_system_project/src/AuthenticationAndRegistration/RegistrationScreen2Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/bank_system_project/src/AuthenticationAndRegistration/RegistrationScreen2Test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/bank_system_project/src/CreditCard/PayWithCardScreen1Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/bank_system_project/src/CreditCard/PayWithCardScreen1Test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/bank_system_project/src/CreditCard/PayWithCardScreen2Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/bank_system_project/src/CreditCard/PayWithCardScreen2Test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/bank_system_project/src/JavaMailTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/bank_system_project/src/JavaMailTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Credits/Credit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Credits/Credit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Database.java" afterDir="false" />
-    </list>
+    <list default="true" id="bea002ff-8e44-4e85-a29b-66b1294d710d" name="Changes" comment="Repaired Credits" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -172,7 +40,6 @@
       </list>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
@@ -200,30 +67,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;true&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW&quot;: &quot;true&quot;,
-    &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW&quot;: &quot;true&quot;,
-    &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH&quot;: &quot;323&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit4&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4&quot;: &quot;&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;11 (2)&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/max/my_files/io/bank_system_project/libs&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
-  }
-}</component>
+  <component name="PropertiesComponent">
+    <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="200" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/Settings" />
@@ -238,6 +90,19 @@
     </key>
   </component>
   <component name="RunManager" selected="Application.Credit">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="AuthenticationScreen" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="src.AuthenticationAndRegistration.AuthenticationScreen" />
       <module name="bank_system_project" />
@@ -307,10 +172,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Credit" />
-        <item itemvalue="Application.LaunchApp" />
-        <item itemvalue="Application.MainScreen" />
         <item itemvalue="Application.AuthenticationScreen" />
+        <item itemvalue="Application.LaunchApp" />
         <item itemvalue="Application.Database" />
+        <item itemvalue="Application.MainScreen" />
       </list>
     </recent_temporary>
   </component>
@@ -328,7 +193,8 @@
       <workItem from="1654159203927" duration="267000" />
       <workItem from="1654445366373" duration="7379000" />
       <workItem from="1654867836866" duration="7090000" />
-      <workItem from="1654975763602" duration="950000" />
+      <workItem from="1654875625417" duration="22318000" />
+      <workItem from="1654952491695" duration="742000" />
     </task>
     <task id="LOCAL-00001" summary="- changed database&#10;- separated user from operations with database. Now all of them are static methods in class Database&#10;- refactored all screens(classes) in AuthenticationAndRegistration package">
       <created>1654117320616</created>
@@ -540,14 +406,112 @@
       <option name="project" value="LOCAL" />
       <updated>1654872311383</updated>
     </task>
-    <task id="LOCAL-00031" summary="Repaired Credits">
-      <created>1654877176519</created>
+    <task id="LOCAL-00031" summary="MainScreen added accNum labels">
+      <created>1654879320933</created>
       <option name="number" value="00031" />
       <option name="presentableId" value="LOCAL-00031" />
       <option name="project" value="LOCAL" />
-      <updated>1654877176519</updated>
+      <updated>1654879320933</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="MainScreen added accNum labels">
+      <created>1654879396574</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1654879396574</updated>
+    </task>
+    <task id="LOCAL-00033" summary="lol">
+      <created>1654879412068</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1654879412068</updated>
+    </task>
+    <task id="LOCAL-00034" summary="ad">
+      <created>1654881050939</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1654881050939</updated>
+    </task>
+    <task id="LOCAL-00035" summary="ad1">
+      <created>1654882310700</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1654882310700</updated>
+    </task>
+    <task id="LOCAL-00036" summary="34">
+      <created>1654883403431</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1654883403431</updated>
+    </task>
+    <task id="LOCAL-00037" summary="34">
+      <created>1654883616386</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1654883616386</updated>
+    </task>
+    <task id="LOCAL-00038" summary="20.44">
+      <created>1654886667933</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1654886667933</updated>
+    </task>
+    <task id="LOCAL-00039" summary="21.30">
+      <created>1654889427527</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1654889427527</updated>
+    </task>
+    <task id="LOCAL-00040" summary="22.45">
+      <created>1654893930771</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1654893930771</updated>
+    </task>
+    <task id="LOCAL-00041" summary="23.18">
+      <created>1654895913800</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1654895913800</updated>
+    </task>
+    <task id="LOCAL-00042" summary="23.20">
+      <created>1654896013404</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1654896013404</updated>
+    </task>
+    <task id="LOCAL-00043" summary="23.20">
+      <created>1654968787118</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1654968787118</updated>
+    </task>
+    <task id="LOCAL-00044" summary="Repaired Credits">
+      <created>1654989817691</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1654989817691</updated>
+    </task>
+    <task id="LOCAL-00045" summary="Repaired Credits">
+      <created>1654989826614</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1654989826614</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -579,7 +543,6 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="- changed database&#10;- separated user from operations with database. Now all of them are static methods in class Database&#10;- refactored all screens(classes) in AuthenticationAndRegistration package" />
     <MESSAGE value="refactored screens in Settings package" />
-    <MESSAGE value="sth" />
     <MESSAGE value="AuthenticationScreen.form added" />
     <MESSAGE value="added screen with generated accounts and credit card numbers after registration(CreatedAccountAndCardNumberScreen)" />
     <MESSAGE value="duplicated windows bug solved" />
@@ -590,6 +553,16 @@
     <MESSAGE value="database changed" />
     <MESSAGE value="-database changed&#10;-added timer for all classes(Screen and MainFrame now inherit from PreScreen)" />
     <MESSAGE value="MainScreen added accNum labels" />
+    <MESSAGE value="lol" />
+    <MESSAGE value="ad" />
+    <MESSAGE value="ad1" />
+    <MESSAGE value="34" />
+    <MESSAGE value="20.44" />
+    <MESSAGE value="21.30" />
+    <MESSAGE value="22.45" />
+    <MESSAGE value="23.18" />
+    <MESSAGE value="sth" />
+    <MESSAGE value="23.20" />
     <MESSAGE value="Repaired Credits" />
     <option name="LAST_COMMIT_MESSAGE" value="Repaired Credits" />
   </component>
@@ -597,14 +570,14 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Settings/ChangePasswordScreen1.java</url>
-          <line>87</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/tests/src/CreditCard/PayWithCardScreen2Test.java</url>
           <line>50</line>
           <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/AuthenticationAndRegistration/AuthenticationScreen.java</url>
+          <line>40</line>
+          <option name="timeStamp" value="12" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

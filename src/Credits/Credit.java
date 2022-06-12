@@ -54,9 +54,11 @@ public class Credit extends Screen
                                 {
                                     jpane.setMessage("Now you have the credit");
                                     Date Today = new Date();
+                                    Database.setOrdinaryAccountBalance(user.username,Database.getOrdinaryAccountBalance(user.username) + Float.parseFloat(Amount.getText()));
                                     //Years.setText(Integer.toString((int)Float.parseFloat(Years.getText())));
                                     Database.addCredit(user.username, Float.parseFloat(Amount.getText()), 0, convertDateToString(Today),(int)Float.parseFloat(Years.getText()));
                                     String[] CreditInfo = Database.getCredit(user.username);//Amount , AmountPayed , StartDate , Duration
+                                    Balance.setText(String.valueOf(Database.getOrdinaryAccountBalance(user.username)));
                                     MyCreditAmount.setText(CreditInfo[0]);
                                     MyPayedCredit.setText(CreditInfo[1]);
                                     MyDebt.setText(String.valueOf(checkDebt()));
