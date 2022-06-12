@@ -347,7 +347,8 @@ public class StandardTransfer implements Transfer {
     void setNextButton(JButton nextButton){
         nextButton.addActionListener(new ActionListener() {
             @Override
-            public void actionPerformed(ActionEvent e) {
+            public void actionPerformed(ActionEvent e)
+            {
                 validation = new Vector<>();
                 if(accountNumberTxt.getText().length()==0){
                     accountNumberWarning.setText("This field is required");
@@ -478,7 +479,8 @@ public class StandardTransfer implements Transfer {
                 }
                 if(!isAccountNumberValid) validation.add(false);
                 buttonValid = !validation.contains(false);
-                if(buttonValid){
+                if(buttonValid)
+                {
                     receiver.firstName = receiverName1Txt.getText();
                     if(receiverNameCombo.getSelectedItem() == "Person") receiver.lastName = receiverName2Txt.getText();
                     else receiver.lastName="";
