@@ -13,9 +13,9 @@ INSERT INTO Cards values("test_user","1298109280119","1234"),("user1","191991919
 
 INSERT INTO Credits values("user1",9000,900,"2022-06-08",1);
 
-INSERT INTO HistoryOrdinary VALUES("2022-06-08","country transfer","PL666","PL9987","192219219",1000,"PLN",1000,"abc",null,null,null,null,"fn","ln","Gui","30-056","Ahj","12/2"),
-("2022-06-07","country transfer","PL1819","PL666","111999233",999,"PLN",1004,"hello",null,null,null,null,"fnm","lnm","Gpo","30-096","Aoj","23/2"),
-("2022-06-01","transfer abroad","PL666","UK127125","556277111",100,"EUR",1000,"osipq",null,null,null,null,"pol","lop","Mon","30-126","Aplk","122"),
-("2022-06-05","own transfer","PL666","PL999","100888199",120,"PLN",120,"aoiosas",null,null,null,null,"fnio","lpl","Gui","32-890","Mkoi","100"),
-("2022-06-02","standing order","PL1819","PL666","101010191",10000,"PLN",10000,"edjeded","2022-06-02","2022-08-02",2,"month","vbop","bibop","Mnlop","10-056","Aplo","1092/1");
+INSERT INTO HistoryOrdinary VALUES("2022-06-08","country transfer","PL80113720220610261845683381","PL9987","192219219",1000,"PLN",1000,"abc",null,null,null,null,"fn","ln","Gui","30-056","Ahj","12/2"),
+("2022-06-07","country transfer","PL86113720220610812999702392","PL80113720220610261845683381","111999233",999,"PLN",1004,"hello",null,null,null,null,"fnm","lnm","Gpo","30-096","Aoj","23/2"),
+("2022-06-01","transfer abroad","PL80113720220610261845683381","PL12122666666666666666666666","556277111",100,"EUR",1000,"osipq",null,null,null,null,"pol","lop","Mon","30-126","Aplk","122"),
+("2022-06-05","own transfer","PL80113720220610261845683381","PL80113720220610338657127571","100888199",120,"PLN",120,"aoiosas",null,null,null,null,"fnio","lpl","Gui","32-890","Mkoi","100"),
+("2022-06-02","standing order","PL12122666666666666666666666","PL80113720220610261845683381","101010191",10000,"PLN",10000,"edjeded","2022-06-02","2022-08-02",2,"month","vbop","bibop","Mnlop","10-056","Aplo","1092/1");
 

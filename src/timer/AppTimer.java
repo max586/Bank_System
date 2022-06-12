@@ -12,7 +12,7 @@ public class AppTimer {
         JLabel timeLabel;
         public int initMinutes = 2;
         public int initSeconds = 0;
-        public int initElapsedTime = 60000*initMinutes;
+        public int initElapsedTime = 60000*initMinutes+1000*initSeconds;
         public int minutes = initMinutes;
         public int seconds = initSeconds;
         public int elapsedTime = initElapsedTime;
@@ -34,6 +34,7 @@ public class AppTimer {
                     minutes = (elapsedTime/60000) % 60;
                     seconds = (elapsedTime/1000) % 60;
                     timeLabel.setText(String.valueOf(minutes)+":"+String.format("%02d",seconds));
+                    timeLabel.setForeground(Color.green);
                     if(elapsedTime<=10000){
                         timeLabel.setForeground(Color.red);
                     }
@@ -57,6 +58,7 @@ public class AppTimer {
             seconds = initSeconds;
             minutes = initMinutes;
             timeLabel.setText(initMinutes +":"+String.format("%02d",seconds));
+            timeLabel.setForeground(Color.green);
         }
     }
 
