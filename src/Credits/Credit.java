@@ -38,14 +38,12 @@ public class Credit extends Screen
     public JDialog jdialog;
     private static DecimalFormat df = new DecimalFormat("#.##");
 
-
-
     public Credit(User user, Screen prev_screen, Screen next_screen){
         super(user,prev_screen,next_screen);
         AppTimer appTimer = new AppTimer(timeLabel,this);
         CreditPanel.addMouseMotionListener(new MouseAction(appTimer));
         appTimer.start();
-        //System.out.println((int)0.5352);
+
         jpane = new JOptionPane();
         jdialog=jpane.createDialog(CreditPanel,"");
 
@@ -76,7 +74,7 @@ public class Credit extends Screen
 
                         }else
                         {
-                            jpane.setMessage("you must accept the terms to take the credit ");
+                            jpane.setMessage("you must accept the terms to take the credit");
                         }
 
                 }else
@@ -146,7 +144,6 @@ public class Credit extends Screen
         return (UserBalance - creditDebt >= 0);
     }
     public void CreateScreen() {
-
 
         //frame = new JFrame();
 

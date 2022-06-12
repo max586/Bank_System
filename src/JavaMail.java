@@ -11,9 +11,8 @@ import javax.mail.internet.*;
 
 public class JavaMail{
    public static void SendMail(String recepient,String code) throws Exception {
-      Scanner sc = new Scanner(System.in);
-      File file = new File("/home/max/my_files/io/new_file");
-      Scanner myReader = new Scanner(file);
+      File conf_file = new File("user.conf");
+      Scanner myReader = new Scanner(conf_file);
       String myAccountEmail=myReader.nextLine();
       String password=myReader.nextLine();
 

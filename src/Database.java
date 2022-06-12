@@ -1,22 +1,39 @@
 package src;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.sql.*;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.Scanner;
 
 public class Database
 {
-    public static Statement st = connectToDatabase("bank_system","root","password");
-    public static Statement connectToDatabase(String database_name,String username, String password){
+    public static Statement st = connectToDatabase();
+    public static Statement connectToDatabase() {
+        String db_name="", db_username="",db_password="";
+        try {
+            File conf_file = new File("user.conf");
+            Scanner myReader = new Scanner(conf_file);
+            myReader.nextLine();
+            myReader.nextLine();
+            db_name = myReader.nextLine();
+            db_username = myReader.nextLine();
+            db_password = myReader.nextLine();
+        }
+        catch(FileNotFoundException e){
+            System.out.println(e);
+        }
+
         Connection con=null;
         Statement st=null;
         try{  
             Class.forName("com.mysql.cj.jdbc.Driver");  
-            con=DriverManager.getConnection("jdbc:mysql://localhost:3306/"+database_name,username,password);
+            con=DriverManager.getConnection("jdbc:mysql://localhost:3306/"+db_name,db_username,db_password);
             st = con.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE,ResultSet.CONCUR_READ_ONLY);
-            System.out.println("Succesfully connected to "+ database_name+" database!"); 
+            System.out.println("Succesfully connected to "+ db_name+" database!");
         }catch(Exception e){ 
-            System.out.println("Couldn't connect to "+database_name+" database!");
+            System.out.println("Couldn't connect to "+db_name+" database!");
             System.out.println(e);}  
         return st;
     }

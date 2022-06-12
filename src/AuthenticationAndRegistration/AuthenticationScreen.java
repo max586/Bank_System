@@ -30,7 +30,6 @@ public class AuthenticationScreen extends Screen {
     public void CreateScreen(){
         frame.setTitle("Authentication Screen");
         frame.setContentPane(panel);
-
         signInButton.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
                 user = new User();
@@ -65,7 +64,6 @@ public class AuthenticationScreen extends Screen {
 
                     frame.dispose();
                     if(next_screen!=null){
-                        //appTimer.stop();
                         new MainScreen(user, AuthenticationScreen.this,new Screen()).CreateScreen();
                     }
                 }
