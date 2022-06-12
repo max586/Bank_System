@@ -424,6 +424,72 @@
           </hspacer>
         </children>
       </grid>
+      <component id="9cf07" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="8" column="15" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font name="Futura" size="16" style="0"/>
+          <foreground color="-4521984"/>
+          <text value="Attention!"/>
+        </properties>
+      </component>
+      <component id="b5a90" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="10" column="15" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font name="Futura" size="12" style="0"/>
+          <foreground color="-4521984"/>
+          <text value="if the date of the transfer"/>
+        </properties>
+      </component>
+      <component id="84dc9" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="11" column="15" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font name="Futura" size="12" style="0"/>
+          <foreground color="-4521984"/>
+          <text value="will be later than today,"/>
+        </properties>
+      </component>
+      <component id="19b1b" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="12" column="15" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font name="Futura" size="12" style="0"/>
+          <foreground color="-4521984"/>
+          <text value="a bank employee will take care of your transfer."/>
+        </properties>
+      </component>
+      <component id="f7aac" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="13" column="15" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font name="Futura" size="12" style="0"/>
+          <foreground color="-4521984"/>
+          <text value="The amount in your account will be updated by him"/>
+        </properties>
+      </component>
+      <component id="c38a0" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="14" column="15" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font name="Futura" size="12" style="0"/>
+          <foreground color="-4521984"/>
+          <text value="on the selected date and updated on a regular basis."/>
+        </properties>
+      </component>
     </children>
   </grid>
 </form>
