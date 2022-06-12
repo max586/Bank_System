@@ -257,7 +257,7 @@
         </constraints>
         <properties>
           <font name="Futura" size="14" style="1"/>
-          <text value="Automatyczne wylogowanie:"/>
+          <text value="Automatic log out:"/>
         </properties>
       </component>
       <component id="c24a" class="javax.swing.JLabel" binding="timeLabel">

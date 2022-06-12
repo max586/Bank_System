@@ -1,5 +1,6 @@
 package src.Settings;
 
+import src.DataValidation;
 import src.Database;
 import src.Screen;
 import src.User;
@@ -38,7 +39,10 @@ public class ChangeUsernameScreen extends Screen{
                 // TODO Auto-generated method stub
                 
                 String new_username = usernameField.getText();
-                if(Database.isUsernameTaken( new_username)){
+                if(!DataValidation.isUsernameValid(new_username)){
+                    usernameField.setText("username is invalid");
+                }
+                else if(Database.isUsernameTaken( new_username)){
                     usernameField.setText("username is already taken");
                 }
                 else{

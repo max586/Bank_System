@@ -12,9 +12,37 @@
     <list default="true" id="bea002ff-8e44-4e85-a29b-66b1294d710d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/bank_system_project_jar/bank_system_project.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/bank_system_project_jar/bank_system_project.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/database_scripts/Script-1.sql" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/database_scripts/Script-1.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/timer/AppTimer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/timer/AppTimer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AuthenticationAndRegistration/AuthenticationScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AuthenticationAndRegistration/AuthenticationScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/CreatedAccountAndCardNumberScreen.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/CreatedAccountAndCardNumberScreen.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/EmailVerificationScreen.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/EmailVerificationScreen.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/RegistrationScreen1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/RegistrationScreen1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/RegistrationScreen2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/AuthenticationAndRegistration/RegistrationScreen2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/CreditCard/PayWithCardScreen1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/CreditCard/PayWithCardScreen1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/CreditCard/PayWithCardScreen2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/CreditCard/PayWithCardScreen2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Credits/Credit.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/Credits/Credit.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ChangeEmailScreen.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ChangeEmailScreen.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ChangePasswordScreen1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ChangePasswordScreen1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ChangePasswordScreen2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ChangePasswordScreen2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ChangeUsernameScreen$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ChangeUsernameScreen$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ChangeUsernameScreen$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ChangeUsernameScreen$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ChangeUsernameScreen$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ChangeUsernameScreen$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ChangeUsernameScreen.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ChangeUsernameScreen.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/SettingsMainScreen.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/SettingsMainScreen.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ShowUserDataScreen.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/Settings/ShowUserDataScreen.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AuthenticationAndRegistration/CreatedAccountAndCardNumberScreen.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/AuthenticationAndRegistration/CreatedAccountAndCardNumberScreen.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AuthenticationAndRegistration/EmailVerificationScreen.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/AuthenticationAndRegistration/EmailVerificationScreen.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AuthenticationAndRegistration/RegistrationScreen1.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/AuthenticationAndRegistration/RegistrationScreen1.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AuthenticationAndRegistration/RegistrationScreen2.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/AuthenticationAndRegistration/RegistrationScreen2.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CreditCard/PayWithCardScreen.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditCard/PayWithCardScreen.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CreditCard/PayWithCardScreen2.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditCard/PayWithCardScreen2.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Credits/Credit.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/Credits/Credit.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Settings/ChangeDataScreen.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/Settings/ChangeDataScreen.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Settings/ChangeEmailScreen.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/Settings/ChangeEmailScreen.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Settings/ChangePasswordScreen1.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/Settings/ChangePasswordScreen1.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Settings/ChangePasswordScreen2.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/Settings/ChangePasswordScreen2.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Settings/ChangeUsernameScreen.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/Settings/ChangeUsernameScreen.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Settings/ChangeUsernameScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Settings/ChangeUsernameScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Settings/SettingsMainScreen.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/Settings/SettingsMainScreen.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Settings/ShowUserDataScreen.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/Settings/ShowUserDataScreen.form" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,10 +106,12 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH": "99",
+    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "3",
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "/home/max/my_files/Money-laundering-system/src/Settings",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2"
   }
 }]]></component>
@@ -98,7 +128,7 @@
       <recent name="src.AuthenticationAndRegistration" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Credit">
+  <component name="RunManager" selected="Application.PayWithCardScreen1">
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -180,9 +210,9 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Credit" />
-        <item itemvalue="Application.LaunchApp" />
         <item itemvalue="Application.PayWithCardScreen1" />
+        <item itemvalue="Application.LaunchApp" />
+        <item itemvalue="Application.Credit" />
         <item itemvalue="Application.AuthenticationScreen" />
         <item itemvalue="Application.Database" />
       </list>
@@ -205,13 +235,6 @@
       <workItem from="1654875625417" duration="22318000" />
       <workItem from="1654952491695" duration="742000" />
       <workItem from="1655017719891" duration="6286000" />
-    </task>
-    <task id="LOCAL-00001" summary="- changed database&#10;- separated user from operations with database. Now all of them are static methods in class Database&#10;- refactored all screens(classes) in AuthenticationAndRegistration package">
-      <created>1654117320616</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1654117320616</updated>
     </task>
     <task id="LOCAL-00002" summary="refactored screens in Settings package">
       <created>1654124454317</created>
@@ -549,7 +572,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655037394172</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="fixed timer AGAIN">
+      <created>1655040064083</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1655040064085</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -603,7 +633,8 @@
     <MESSAGE value="Repaired Credits" />
     <MESSAGE value="sth added" />
     <MESSAGE value="fixed timer" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed timer" />
+    <MESSAGE value="fixed timer AGAIN" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed timer AGAIN" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -615,7 +646,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/AuthenticationAndRegistration/AuthenticationScreen.java</url>
-          <line>36</line>
+          <line>35</line>
           <option name="timeStamp" value="12" />
         </line-breakpoint>
       </breakpoints>

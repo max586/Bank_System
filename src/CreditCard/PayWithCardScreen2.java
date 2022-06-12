@@ -26,7 +26,7 @@ public class PayWithCardScreen2 extends Screen{
         super(user,prev_screen,next_screen);
         jpane = new JOptionPane();
         jdialog=jpane.createDialog(panel,"");
-        jdialog.setSize(450,200);
+        jdialog.setSize(400,150);
     }
     public void CreateScreen(){
         frame.setTitle("Pay with credit card second Screen");
