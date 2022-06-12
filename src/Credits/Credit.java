@@ -12,6 +12,8 @@ import java.awt.event.ActionListener;
 import java.io.IOException;
 import javax.swing.JPanel;
 import java.sql.Statement;
+import java.text.DecimalFormat;
+
 
 public class Credit extends Screen
 {
@@ -30,10 +32,13 @@ public class Credit extends Screen
     public JButton prevButton;
     public JOptionPane jpane;
     public JDialog jdialog;
+    private static DecimalFormat df = new DecimalFormat("#.##");
+
 
 
     public Credit(User user, Screen prev_screen, Screen next_screen){
         super(user,prev_screen,next_screen);
+        //System.out.println((int)0.5352);
         jpane = new JOptionPane();
         jdialog=jpane.createDialog(CreditPanel,"");
 
@@ -102,7 +107,7 @@ public class Credit extends Screen
                         Date Today = new Date();
                         Date StartDate = new Date(Integer.parseInt(CreditInfo[2].substring(0,4))-1900,Integer.parseInt(CreditInfo[2].substring(5,7)),Integer.parseInt(CreditInfo[2].substring(8,10)));
                         jpane.setMessage("You payed your debt");
-                        Date DiffOfYears = new Date(Today.getTime() - StartDate.getTime());
+                       // Date DiffOfYears = new Date(Today.getTime() - StartDate.getTime());
                         int currentYear = diffOfYear(Today,StartDate);//DiffOfYears.getYear() - 70;
                             //System.out.println(currentYear+" "+Integer.parseInt(CreditInfo[3]));
                         if (currentYear >= Integer.parseInt(CreditInfo[3]) && checkDebt() == 0)
@@ -134,7 +139,7 @@ public class Credit extends Screen
     public void CreateScreen() {
 
 
-        frame = new JFrame();
+        //frame = new JFrame();
 
         frame.setTitle("Credit");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -193,16 +198,16 @@ public class Credit extends Screen
 
     public String convertDateToString(Date today)
     {
-        String year = String.valueOf(today.getYear());
+        String year = String.valueOf(today.getYear()+1900);
 
         String mounth = "";
-        if (today.getMonth()<10)
+        if (today.getMonth()+1<10)
         {
-            mounth = "0"+String.valueOf(today.getMonth());
+            mounth = "0"+String.valueOf(today.getMonth()+1);
         }
         else
         {
-            mounth = String.valueOf(today.getMonth());
+            mounth = String.valueOf(today.getMonth()+1);
         }
         String day = "";
         if (today.getDate()<10)
@@ -240,7 +245,8 @@ public class Credit extends Screen
         {
             needToPay+=creditAmount/yearsAll + (creditAmount - i*creditAmount/yearsAll)*percent;
         }
-            return (needToPay - currentCreditPayment);
+        return Float.parseFloat( df.format(needToPay - currentCreditPayment));
+            //return (needToPay - currentCreditPayment);
     }
 
     public static void main(String[] args) throws IOException {
