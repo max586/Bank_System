@@ -10,8 +10,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bea002ff-8e44-4e85-a29b-66b1294d710d" name="Changes" comment="sth fixed">
-      <change afterPath="$PROJECT_DIR$/Documentation/TestDocumentation.odt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bfg-1.14.0.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/StandardTransferTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/user.conf" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/user.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Credits/Credit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Credits/Credit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/src/Credits/CreditTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/src/Credits/CreditTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user.conf" beforeDir="false" afterPath="$PROJECT_DIR$/user.conf" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,6 +80,8 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH&quot;: &quot;99&quot;,
     &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH&quot;: &quot;189&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
@@ -101,7 +107,7 @@
       <recent name="src.AuthenticationAndRegistration" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.LaunchApp">
+  <component name="RunManager" selected="JUnit.CreditTest.takeNewCreditTest">
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -111,19 +117,6 @@
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="JavaMail" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="src.JavaMail" />
-      <module name="bank_system_project" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="src.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -142,7 +135,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AuthenticationScreenTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="All in bank_system_project" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="bank_system_project" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AuthenticationScreenTest.validUserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="bank_system_project" />
       <extension name="coverage">
         <pattern>
@@ -152,7 +153,8 @@
       </extension>
       <option name="PACKAGE_NAME" value="src.AuthenticationAndRegistration" />
       <option name="MAIN_CLASS_NAME" value="src.AuthenticationAndRegistration.AuthenticationScreenTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="METHOD_NAME" value="validUserTest" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -174,19 +176,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.JavaMail" />
       <item itemvalue="Application.configure" />
       <item itemvalue="Application.LaunchApp" />
-      <item itemvalue="JUnit.AuthenticationScreenTest" />
       <item itemvalue="JUnit.CreditTest.takeNewCreditTest" />
+      <item itemvalue="JUnit.All in bank_system_project" />
+      <item itemvalue="JUnit.AuthenticationScreenTest.validUserTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CreditTest.takeNewCreditTest" />
+        <item itemvalue="JUnit.All in bank_system_project" />
+        <item itemvalue="JUnit.AuthenticationScreenTest.validUserTest" />
         <item itemvalue="Application.LaunchApp" />
         <item itemvalue="Application.configure" />
-        <item itemvalue="Application.JavaMail" />
-        <item itemvalue="JUnit.CreditTest.takeNewCreditTest" />
-        <item itemvalue="JUnit.AuthenticationScreenTest" />
       </list>
     </recent_temporary>
   </component>
@@ -635,6 +637,15 @@
           <url>file://$PROJECT_DIR$/src/JavaMail.java</url>
           <line>13</line>
           <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/tests/src/AuthenticationAndRegistration/EmailVerificationScreenTest.java</url>
+          <line>22</line>
+          <properties class="src.AuthenticationAndRegistration.EmailVerificationScreenTest" method="incorrectCode">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="17" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

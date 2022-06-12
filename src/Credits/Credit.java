@@ -59,6 +59,7 @@ public class Credit extends Screen
                         {
                             jpane.setMessage("Now you have the credit");
                             Date Today = new Date();
+                            user.ordinary_account_balance+=Float.parseFloat(Amount.getText());
                             Database.setOrdinaryAccountBalance(user.username,Database.getOrdinaryAccountBalance(user.username) + Float.parseFloat(Amount.getText()));
                             //Years.setText(Integer.toString((int)Float.parseFloat(Years.getText())));
                             Database.addCredit(user.username, Float.parseFloat(Amount.getText()), 0, convertDateToString(Today),(int)Float.parseFloat(Years.getText()));
@@ -100,6 +101,7 @@ public class Credit extends Screen
 
                     if (hasEnoughtMoney(UserBalance, CreditDebt))
                     {
+                        user.ordinary_account_balance=UserBalance-CreditDebt;
                         Database.setOrdinaryAccountBalance(user.username, UserBalance - CreditDebt);
                         Database.setCreditAmountPayed(user.username, CreditPayed + CreditDebt);
                         CreditInfo = Database.getCredit(user.username);
