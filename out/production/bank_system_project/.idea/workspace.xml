@@ -1,0 +1,585 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="bank_system_project:jar" />
+    </artifacts-to-build>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="bea002ff-8e44-4e85-a29b-66b1294d710d" name="Changes" comment="Repaired Credits" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JUnit4 Test Class" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Pull.Settings">
+    <option name="OPTIONS">
+      <set>
+        <option value="NO_VERIFY" />
+      </set>
+    </option>
+  </component>
+  <component name="Git.Rebase.Settings">
+    <option name="NEW_BASE" value="main" />
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="max586 &lt;104138587+max586@users.noreply.github.com&gt;" />
+      </list>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="56024e65-efa6-4a98-a6eb-fff4b16340e1" />
+        <option name="url" value="https://github.com/max586/Money-laundering-system.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/AuthenticationAndRegistration/AuthenticationScreen.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/CreditCard/PayWithCardScreen2.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/DataValidation.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Screen.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/User.java" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="29lKhDJRJaZSHbgwyOUvpxav2ga" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="200" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/Settings" />
+      <recent name="$PROJECT_DIR$/src/AuthenticationAndRegistration" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="src.CreditCard" />
+      <recent name="src.AuthenticationAndRegistration" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Credit">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AuthenticationScreen" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="src.AuthenticationAndRegistration.AuthenticationScreen" />
+      <module name="bank_system_project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="src.AuthenticationAndRegistration.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Credit" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="src.Credits.Credit" />
+      <module name="bank_system_project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="src.Credits.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Database" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="src.Database" />
+      <module name="bank_system_project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="src.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LaunchApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="LaunchApp" />
+      <module name="bank_system_project" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainScreen" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="src.MainScreen" />
+      <module name="bank_system_project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="src.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Credit" />
+      <item itemvalue="Application.AuthenticationScreen" />
+      <item itemvalue="Application.Database" />
+      <item itemvalue="Application.LaunchApp" />
+      <item itemvalue="Application.MainScreen" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Credit" />
+        <item itemvalue="Application.AuthenticationScreen" />
+        <item itemvalue="Application.LaunchApp" />
+        <item itemvalue="Application.Database" />
+        <item itemvalue="Application.MainScreen" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bea002ff-8e44-4e85-a29b-66b1294d710d" name="Changes" comment="" />
+      <created>1653682357944</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1653682357944</updated>
+      <workItem from="1654157732703" duration="610000" />
+      <workItem from="1654158348150" duration="5000" />
+      <workItem from="1654158570270" duration="613000" />
+      <workItem from="1654159203927" duration="267000" />
+      <workItem from="1654445366373" duration="7379000" />
+      <workItem from="1654867836866" duration="7090000" />
+      <workItem from="1654875625417" duration="22318000" />
+      <workItem from="1654952491695" duration="742000" />
+    </task>
+    <task id="LOCAL-00001" summary="- changed database&#10;- separated user from operations with database. Now all of them are static methods in class Database&#10;- refactored all screens(classes) in AuthenticationAndRegistration package">
+      <created>1654117320616</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1654117320616</updated>
+    </task>
+    <task id="LOCAL-00002" summary="refactored screens in Settings package">
+      <created>1654124454317</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1654124454317</updated>
+    </task>
+    <task id="LOCAL-00003" summary="sth">
+      <created>1654153919128</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1654153919128</updated>
+    </task>
+    <task id="LOCAL-00004" summary="AuthenticationScreen.form added">
+      <created>1654174648187</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1654174648187</updated>
+    </task>
+    <task id="LOCAL-00005" summary="added screen with generated accounts and credit card numbers after registration(CreatedAccountAndCardNumberScreen)">
+      <created>1654177400386</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1654177400386</updated>
+    </task>
+    <task id="LOCAL-00006" summary="added screen with generated accounts and credit card numbers after registration(CreatedAccountAndCardNumberScreen)">
+      <created>1654177490183</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1654177490183</updated>
+    </task>
+    <task id="LOCAL-00007" summary="sth added">
+      <created>1654203265974</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1654203265974</updated>
+    </task>
+    <task id="LOCAL-00008" summary="sth added">
+      <created>1654245622568</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1654245622568</updated>
+    </task>
+    <task id="LOCAL-00009" summary="duplicated windows bug solved">
+      <created>1654255869454</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1654255869454</updated>
+    </task>
+    <task id="LOCAL-00010" summary="duplicated windows bug solved">
+      <created>1654525866490</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1654525866490</updated>
+    </task>
+    <task id="LOCAL-00011" summary="junit test classes added(tests folder)">
+      <created>1654540390519</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1654540390519</updated>
+    </task>
+    <task id="LOCAL-00012" summary="123">
+      <created>1654540511815</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1654540511815</updated>
+    </task>
+    <task id="LOCAL-00013" summary="refactored">
+      <created>1654582583727</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1654582583727</updated>
+    </task>
+    <task id="LOCAL-00014" summary="refactored">
+      <created>1654692537551</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1654692537551</updated>
+    </task>
+    <task id="LOCAL-00015" summary="refactored">
+      <created>1654692551255</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1654692551255</updated>
+    </task>
+    <task id="LOCAL-00016" summary="sth added">
+      <created>1654698716709</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1654698716709</updated>
+    </task>
+    <task id="LOCAL-00017" summary="database changed">
+      <created>1654721677422</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1654721677423</updated>
+    </task>
+    <task id="LOCAL-00018" summary="database changed">
+      <created>1654722123060</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1654722123060</updated>
+    </task>
+    <task id="LOCAL-00019" summary="database changed">
+      <created>1654726130121</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1654726130121</updated>
+    </task>
+    <task id="LOCAL-00020" summary="refactored">
+      <created>1654727260179</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1654727260179</updated>
+    </task>
+    <task id="LOCAL-00021" summary="refactored">
+      <created>1654727592404</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1654727592404</updated>
+    </task>
+    <task id="LOCAL-00022" summary="refactored">
+      <created>1654728208997</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1654728208997</updated>
+    </task>
+    <task id="LOCAL-00023" summary="refactored">
+      <created>1654728406295</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1654728406295</updated>
+    </task>
+    <task id="LOCAL-00024" summary="refactored">
+      <created>1654732830222</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1654732830222</updated>
+    </task>
+    <task id="LOCAL-00025" summary="sth added">
+      <created>1654762266526</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1654762266526</updated>
+    </task>
+    <task id="LOCAL-00026" summary="sth added">
+      <created>1654762632824</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1654762632824</updated>
+    </task>
+    <task id="LOCAL-00027" summary="sth added">
+      <created>1654765257111</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1654765257111</updated>
+    </task>
+    <task id="LOCAL-00028" summary="database changed">
+      <created>1654790239663</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1654790239663</updated>
+    </task>
+    <task id="LOCAL-00029" summary="MainScreen added accNum labels">
+      <created>1654870360949</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1654870360949</updated>
+    </task>
+    <task id="LOCAL-00030" summary="MainScreen added accNum labels">
+      <created>1654872311383</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1654872311383</updated>
+    </task>
+    <task id="LOCAL-00031" summary="MainScreen added accNum labels">
+      <created>1654879320933</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1654879320933</updated>
+    </task>
+    <task id="LOCAL-00032" summary="MainScreen added accNum labels">
+      <created>1654879396574</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1654879396574</updated>
+    </task>
+    <task id="LOCAL-00033" summary="lol">
+      <created>1654879412068</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1654879412068</updated>
+    </task>
+    <task id="LOCAL-00034" summary="ad">
+      <created>1654881050939</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1654881050939</updated>
+    </task>
+    <task id="LOCAL-00035" summary="ad1">
+      <created>1654882310700</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1654882310700</updated>
+    </task>
+    <task id="LOCAL-00036" summary="34">
+      <created>1654883403431</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1654883403431</updated>
+    </task>
+    <task id="LOCAL-00037" summary="34">
+      <created>1654883616386</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1654883616386</updated>
+    </task>
+    <task id="LOCAL-00038" summary="20.44">
+      <created>1654886667933</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1654886667933</updated>
+    </task>
+    <task id="LOCAL-00039" summary="21.30">
+      <created>1654889427527</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1654889427527</updated>
+    </task>
+    <task id="LOCAL-00040" summary="22.45">
+      <created>1654893930771</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1654893930771</updated>
+    </task>
+    <task id="LOCAL-00041" summary="23.18">
+      <created>1654895913800</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1654895913800</updated>
+    </task>
+    <task id="LOCAL-00042" summary="23.20">
+      <created>1654896013404</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1654896013404</updated>
+    </task>
+    <task id="LOCAL-00043" summary="23.20">
+      <created>1654968787118</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1654968787118</updated>
+    </task>
+    <task id="LOCAL-00044" summary="Repaired Credits">
+      <created>1654989817691</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1654989817691</updated>
+    </task>
+    <task id="LOCAL-00045" summary="Repaired Credits">
+      <created>1654989826614</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1654989826614</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="- changed database&#10;- separated user from operations with database. Now all of them are static methods in class Database&#10;- refactored all screens(classes) in AuthenticationAndRegistration package" />
+    <MESSAGE value="refactored screens in Settings package" />
+    <MESSAGE value="AuthenticationScreen.form added" />
+    <MESSAGE value="added screen with generated accounts and credit card numbers after registration(CreatedAccountAndCardNumberScreen)" />
+    <MESSAGE value="duplicated windows bug solved" />
+    <MESSAGE value="junit test classes added(tests folder)" />
+    <MESSAGE value="123" />
+    <MESSAGE value="refactored" />
+    <MESSAGE value="sth added" />
+    <MESSAGE value="database changed" />
+    <MESSAGE value="-database changed&#10;-added timer for all classes(Screen and MainFrame now inherit from PreScreen)" />
+    <MESSAGE value="MainScreen added accNum labels" />
+    <MESSAGE value="lol" />
+    <MESSAGE value="ad" />
+    <MESSAGE value="ad1" />
+    <MESSAGE value="34" />
+    <MESSAGE value="20.44" />
+    <MESSAGE value="21.30" />
+    <MESSAGE value="22.45" />
+    <MESSAGE value="23.18" />
+    <MESSAGE value="sth" />
+    <MESSAGE value="23.20" />
+    <MESSAGE value="Repaired Credits" />
+    <option name="LAST_COMMIT_MESSAGE" value="Repaired Credits" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/tests/src/CreditCard/PayWithCardScreen2Test.java</url>
+          <line>50</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/AuthenticationAndRegistration/AuthenticationScreen.java</url>
+          <line>40</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

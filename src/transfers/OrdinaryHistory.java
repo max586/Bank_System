@@ -13,18 +13,18 @@ import javax.swing.table.DefaultTableModel;
 import java.sql.SQLException;
 
 public class OrdinaryHistory {
-    private JPanel ordinaryPanel;
-    private JLabel panelTitleLabel;
-    private JPanel timerPanel;
-    private JLabel timeLabel;
-    private JButton cancelButton;
-    private JTable historyTable;
-    private JPanel historyPanel;
-    private JTable OutcomingHistoryTable;
-    private JScrollPane OutcomingHistoryPane;
-    private JTable IncomingHistoryTable;
-    private JScrollPane IncomingHistoryPane;
-    private MainFrame frame;
+    public JPanel ordinaryPanel;
+    public JLabel panelTitleLabel;
+    public JPanel timerPanel;
+    public JLabel timeLabel;
+    public JButton cancelButton;
+    public JTable historyTable;
+    public JPanel historyPanel;
+    public JTable OutcomingHistoryTable;
+    public JScrollPane OutcomingHistoryPane;
+    public JTable IncomingHistoryTable;
+    public JScrollPane IncomingHistoryPane;
+    public MainFrame frame;
     public OrdinaryHistory(MainFrame mainFrame, User user) throws SQLException {
 
         OutcomingHistoryTable.setEnabled(false);

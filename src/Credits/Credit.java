@@ -12,6 +12,8 @@ import java.awt.event.ActionListener;
 import java.io.IOException;
 import javax.swing.JPanel;
 import java.sql.Statement;
+import java.text.DecimalFormat;
+
 
 public class Credit extends Screen
 {
@@ -30,10 +32,13 @@ public class Credit extends Screen
     public JButton prevButton;
     public JOptionPane jpane;
     public JDialog jdialog;
+    private static DecimalFormat df = new DecimalFormat("#.##");
+
 
 
     public Credit(User user, Screen prev_screen, Screen next_screen){
         super(user,prev_screen,next_screen);
+        //System.out.println((int)0.5352);
         jpane = new JOptionPane();
         jdialog=jpane.createDialog(CreditPanel,"");
 
@@ -45,45 +50,15 @@ public class Credit extends Screen
                 {
                         if(yesCheckBox.isSelected())
                         {
-                            if(!DataValidation.isNumber(Amount.getText()))
-                            {
-                                Amount.setText("Error");
-                            }
-                            if(!DataValidation.isNumber(Years.getText()) )
-                            {
-
-                                    Years.setText("Error");
-                            }
-                            if(DataValidation.isNumber(Years.getText()) )
-                            {
-                                Years.setText(Integer.toString((int)Float.parseFloat(Years.getText())));
-                            }
-
-                                if(DataValidation.isNumber(Amount.getText()) && DataValidation.isNumber(Years.getText()) &&  (int)Float.parseFloat(Years.getText())>0)
+                                if(isProvidedDataIsValid())
                                 {
-                                    jpane.setMessage("Now you must pay us some money, hehe");
+                                    jpane.setMessage("Now you have the credit");
                                     Date Today = new Date();
+                                    Database.setOrdinaryAccountBalance(user.username,Database.getOrdinaryAccountBalance(user.username) + Float.parseFloat(Amount.getText()));
                                     //Years.setText(Integer.toString((int)Float.parseFloat(Years.getText())));
-                                    String mounth = "";
-                                    if (Today.getMonth()<10)
-                                    {
-                                        mounth = "0"+String.valueOf(Today.getMonth());
-                                    }
-                                    else
-                                    {
-                                        mounth = String.valueOf(Today.getMonth());
-                                    }
-                                    String day = "";
-                                    if (Today.getDate()<10)
-                                    {
-                                        day = "0"+String.valueOf(Today.getDate());
-                                    }
-                                    else
-                                    {
-                                        day = String.valueOf(Today.getDate());
-                                    }
-                                    Database.addCredit(user.username, Float.parseFloat(Amount.getText()), 0, Today.getYear()+1900+"-"+mounth+"-"+day ,(int)Float.parseFloat(Years.getText()));
+                                    Database.addCredit(user.username, Float.parseFloat(Amount.getText()), 0, convertDateToString(Today),(int)Float.parseFloat(Years.getText()));
                                     String[] CreditInfo = Database.getCredit(user.username);//Amount , AmountPayed , StartDate , Duration
+                                    Balance.setText(String.valueOf(Database.getOrdinaryAccountBalance(user.username)));
                                     MyCreditAmount.setText(CreditInfo[0]);
                                     MyPayedCredit.setText(CreditInfo[1]);
                                     MyDebt.setText(String.valueOf(checkDebt()));
@@ -107,7 +82,8 @@ public class Credit extends Screen
                 jdialog.setVisible(true);
             }
         });
-        payDebtButton.addActionListener(new ActionListener() {
+        payDebtButton.addActionListener(new ActionListener()
+        {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if(Database.hasCredit(user.username))
@@ -117,7 +93,7 @@ public class Credit extends Screen
                     float CreditDebt = checkDebt();
                     float CreditPayed = Float.parseFloat(CreditInfo[1]);
 
-                    if (UserBalance - CreditDebt >= 0)
+                    if (hasEnoughtMoney(UserBalance, CreditDebt))
                     {
                         Database.setOrdinaryAccountBalance(user.username, UserBalance - CreditDebt);
                         Database.setCreditAmountPayed(user.username, CreditPayed + CreditDebt);
@@ -130,12 +106,11 @@ public class Credit extends Screen
                         MyDebt.setText(String.valueOf(checkDebt()));
 
                         //Date StartDate = new Date(2000-1900,4,8);//ile Lat juz się ma kredyt
-                        Date StartDate = new Date(Integer.parseInt(CreditInfo[2].substring(0,4))-1900,Integer.parseInt(CreditInfo[2].substring(5,7)),Integer.parseInt(CreditInfo[2].substring(8,10)));
-                       System.out.println(StartDate);
-                        jpane.setMessage("You payed your debt");
                         Date Today = new Date();
-                        Date DiffOfYears = new Date(Today.getTime() - StartDate.getTime());
-                        int currentYear = DiffOfYears.getYear() - 70;
+                        Date StartDate = new Date(Integer.parseInt(CreditInfo[2].substring(0,4))-1900,Integer.parseInt(CreditInfo[2].substring(5,7)),Integer.parseInt(CreditInfo[2].substring(8,10)));
+                        jpane.setMessage("You payed your debt");
+                       // Date DiffOfYears = new Date(Today.getTime() - StartDate.getTime());
+                        int currentYear = diffOfYear(Today,StartDate);//DiffOfYears.getYear() - 70;
                             //System.out.println(currentYear+" "+Integer.parseInt(CreditInfo[3]));
                         if (currentYear >= Integer.parseInt(CreditInfo[3]) && checkDebt() == 0)
                         {
@@ -158,10 +133,15 @@ public class Credit extends Screen
                 jdialog.setVisible(true);
             }
         });
+
+    }
+    public boolean hasEnoughtMoney(float UserBalance,float creditDebt ){
+        return (UserBalance - creditDebt >= 0);
     }
     public void CreateScreen() {
 
-        frame = new JFrame();
+
+        //frame = new JFrame();
 
         frame.setTitle("Credit");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -174,8 +154,8 @@ public class Credit extends Screen
         {
             String[] CreditInfo = Database.getCredit(user.username);//Amount , AmountPayed , StartDate , Duration
             MyCreditAmount.setText(CreditInfo[0]);
-        MyPayedCredit.setText(CreditInfo[1]);
-        MyDebt.setText(String.valueOf(checkDebt()));
+            MyPayedCredit.setText(CreditInfo[1]);
+            MyDebt.setText(String.valueOf(checkDebt()));
         }
         else
         {
@@ -195,17 +175,71 @@ public class Credit extends Screen
         frame.setSize(1080, 720);
         frame.setVisible(true);
     }
+    public boolean isProvidedDataIsValid()
+    {
+        if(!DataValidation.isNumber(Amount.getText()))
+        {
+            Amount.setText("Error");
+        }
+        if(!DataValidation.isNumber(Years.getText()) )
+        {
+
+            Years.setText("Error");
+        }
+        if(DataValidation.isNumber(Years.getText()) )
+        {
+            Years.setText(Integer.toString((int)Float.parseFloat(Years.getText())));
+        }
+        return (DataValidation.isNumber(Amount.getText()) && DataValidation.isNumber(Years.getText()) &&  (int)Float.parseFloat(Years.getText())>0);
+    }
+    public Date convertStringToDate(String dateInString)
+    {
+       return  new Date(Integer.parseInt(dateInString.substring(0,4))-1900,Integer.parseInt(dateInString.substring(5,7)),Integer.parseInt(dateInString.substring(8,10)));
+
+    }
+
+    public String convertDateToString(Date today)
+    {
+        String year = String.valueOf(today.getYear()+1900);
+
+        String mounth = "";
+        if (today.getMonth()+1<10)
+        {
+            mounth = "0"+String.valueOf(today.getMonth()+1);
+        }
+        else
+        {
+            mounth = String.valueOf(today.getMonth()+1);
+        }
+        String day = "";
+        if (today.getDate()<10)
+        {
+            day = "0"+String.valueOf(today.getDate());
+        }
+        else
+        {
+            day = String.valueOf(today.getDate());
+        }
+        return (year+"-"+mounth+"-"+day);
+    }
+    public int  diffOfYear(Date today, Date startDate)
+    {
+        Date DiffOfYears = new Date(today.getTime() - startDate.getTime());
+        return DiffOfYears.getYear()-70;
+    }
     public float checkDebt()
     {
         String[] CreditInfo = Database.getCredit(user.username);//Amount , AmountPayed , StartDate , Duration
         float creditAmount = Float.parseFloat(CreditInfo[0]);
         float currentCreditPayment = Float.parseFloat(CreditInfo[1]);
         float yearsAll = Float.parseFloat(CreditInfo[3]);
-        Date StartDate = new Date(Integer.parseInt(CreditInfo[2].substring(0,4))-1900,Integer.parseInt(CreditInfo[2].substring(5,7)),Integer.parseInt(CreditInfo[2].substring(8,10)));
-        //Date StartDate = new Date(2000-1900,4,8);//ile Lat juz się ma kredyt
+        Date StartDate = convertStringToDate(CreditInfo[2]);
         Date Today = new Date();
-        Date DiffOfYears = new Date(Today.getTime() - StartDate.getTime());
-        int currentYear = DiffOfYears.getYear()-70;
+        //Date StartDate = new Date(Integer.parseInt(CreditInfo[2].substring(0,4))-1900,Integer.parseInt(CreditInfo[2].substring(5,7)),Integer.parseInt(CreditInfo[2].substring(8,10)));
+        //Date StartDate = new Date(2000-1900,4,8);//ile Lat juz się ma kredyt
+
+       // Date DiffOfYears = new Date(Today.getTime() - StartDate.getTime());
+        int currentYear = diffOfYear(Today,StartDate);//DiffOfYears.getYear()-70;
 
         float needToPay = 0;
         float percent = (float)0.05;
@@ -213,7 +247,8 @@ public class Credit extends Screen
         {
             needToPay+=creditAmount/yearsAll + (creditAmount - i*creditAmount/yearsAll)*percent;
         }
-            return (needToPay - currentCreditPayment);
+        return Float.parseFloat( df.format(needToPay - currentCreditPayment));
+            //return (needToPay - currentCreditPayment);
     }
 
     public static void main(String[] args) throws IOException {

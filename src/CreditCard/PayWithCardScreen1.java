@@ -69,13 +69,13 @@ public class PayWithCardScreen1 extends Screen {
             }
         });
 
-        frame.setSize(400,300);
+        frame.setSize(600,400);
         frame.setVisible(true);
     }
 
     public static void main(String[] args) {
         User test_user = new User();
         test_user.username="test_user";
-        new PayWithCardScreen1(test_user,null,null).CreateScreen();
+        new PayWithCardScreen1(test_user,null,new Screen()).CreateScreen();
     }
 }

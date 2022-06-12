@@ -287,12 +287,14 @@ public class TransferConfirm {
             float senderAmount = user1.ordinary_account_balance;
             float transferAmount = (float) Double.parseDouble(transferData.get("totaltransferamount"));
             senderAmount = senderAmount - transferAmount;
+            user1.ordinary_account_balance=senderAmount;
             Database.setOrdinaryAccountBalance(user1.username, senderAmount);
         }
         else{
             float senderAmount = user1.savings_account_balance;
             float transferAmount = (float) Double.parseDouble(transferData.get("totaltransferamount"));
             senderAmount = senderAmount - transferAmount;
+            user1.savings_account_balance=senderAmount;
             Database.setSavingsAccountBalance(user1.username, senderAmount);
         }
     }
