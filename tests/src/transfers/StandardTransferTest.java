@@ -42,30 +42,9 @@ public class StandardTransferTest {
     }
     @Test
     public void correctAccountNr(){
-        screen.accountNumberTxt.setText(user.ordinary_account_number);
+        screen.accountNumberTxt.setText(user.ordinary_account_number.substring(2));
         screen.nextButton.doClick();
         assertEquals(false,screen.accountNumberWarning.isVisible());
-    }
-    @Test
-    public void receiverWrongData(){
-        screen.transferAmount1Txt.setText("10000");
-        screen.nextButton.doClick();
-        //assertEquals(true, screen.receiverName1Warning.isVisible());
-        //screen.nextButton.doClick();
-        //screen.receiverName1Txt.setText("123");
-        //screen.receiverName2Txt.setText("456");
-        //assertEquals(true, screen.receiverName1Warning.isVisible());
-        //assertEquals(true, screen.receiverName2Warning.isVisible());
-    }
-    @Test
-    public void incorrectAmount(){
-        screen.transferAmount1Txt.setText("10001");
-        screen.nextButton.doClick();
-        assertEquals(true,screen.transferAmountWarning.isVisible());
-        //screen.transferAmount1Txt.setText("10000");
-        //screen.expressTransferRadioButton.setSelected(true);
-        //screen.nextButton.doClick();
-        //assertEquals(true,screen.expressTransferWarning.isVisible());
     }
     @After
     public void deleteUser(){Database.deleteUser(user.username);}
