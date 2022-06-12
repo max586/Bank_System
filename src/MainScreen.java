@@ -37,6 +37,8 @@ public class MainScreen extends Screen {
     private JPanel timerPanel;
     private JLabel timeLabel;
     private JButton blikButton;
+    private JLabel OrdBalance;
+    private JLabel SavBalance;
     public int counter = 0;
     AccountChoosed chosenAcc;
     String []options = {"one","two"};
@@ -55,8 +57,10 @@ public class MainScreen extends Screen {
 
 
             OrdAccNum.setText(Database.getOrdinaryAccountNumber(user.username));
+            OrdBalance.setText(String.valueOf(Database.getOrdinaryAccountBalance(user.username)));
 
             SavAccNum.setText(Database.getSavingsAccountNumber( user.username));
+            SavBalance.setText(String.valueOf(Database.getSavingsAccountBalance(user.username)));
 
 
 //Incountry Transfer, Foreign Transfer, Own Transfer, Standing Order Transfer, BLIK Phone Transfer
