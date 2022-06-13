@@ -206,20 +206,7 @@
       <workItem from="1655017719891" duration="6286000" />
       <workItem from="1655061417276" duration="5487000" />
       <workItem from="1655074140670" duration="28000" />
-    </task>
-    <task id="LOCAL-00010" summary="duplicated windows bug solved">
-      <created>1654525866490</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1654525866490</updated>
-    </task>
-    <task id="LOCAL-00011" summary="junit test classes added(tests folder)">
-      <created>1654540390519</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1654540390519</updated>
+      <workItem from="1655074171652" duration="125000" />
     </task>
     <task id="LOCAL-00012" summary="123">
       <created>1654540511815</created>
@@ -550,7 +537,21 @@
       <option name="project" value="LOCAL" />
       <updated>1655074157160</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="sth fixed">
+      <created>1655074175079</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1655074175079</updated>
+    </task>
+    <task id="LOCAL-00060" summary="sth fixed">
+      <created>1655074256148</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1655074256148</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
