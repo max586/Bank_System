@@ -69,21 +69,21 @@ public class RegistrationScreen2 extends Screen{
                         city_is_valid=DataValidation.cityIsValid(city),street_is_valid=DataValidation.cityIsValid(street),street_nr_is_valid=DataValidation.streetNrIsValid(street_nr),
                         phone_nr_is_valid=DataValidation.phoneNrIsValid(phone_nr);
                 if(!fname_is_valid){firstNameField.setText("First name is invalid");}
-                else{firstNameField.setText("ok");}
+                //else{firstNameField.setText("ok");}
                 if(!lname_is_valid){lastNameField.setText("Last name is invalid");}
-                else{lastNameField.setText("ok");}
+                //else{lastNameField.setText("ok");}
                 if(!phone_nr_is_valid){phoneNrField.setText("Phone nr is invalid");}
-                else{phoneNrField.setText("ok");}
+                //else{phoneNrField.setText("ok");}
                 if(!city_is_valid){cityField.setText("City is invalid");}
-                else{cityField.setText("ok");}
+                //else{cityField.setText("ok");}
                 if(!post_code_is_valid){postCodeField.setText("Post code is invalid");}
-                else{postCodeField.setText("ok");}
+                //else{postCodeField.setText("ok");}
                 if(!street_is_valid){streetField.setText("Street is invalid");}
-                else{streetField.setText("ok");}
+                //else{streetField.setText("ok");}
                 if(!street_nr_is_valid){streetNrField.setText("Street number is invalid");}
-                else{streetNrField.setText("ok");}
+                //else{streetNrField.setText("ok");}
                 if(!pesel_is_valid){peselField.setText("PESEL is invalid");}
-                else{peselField.setText("ok");}
+                //else{peselField.setText("ok");}
                 if(fname_is_valid&&lname_is_valid&&phone_nr_is_valid&&city_is_valid&&post_code_is_valid&&street_is_valid&&street_nr_is_valid&&pesel_is_valid){
 
                     user.firstName=firstName;

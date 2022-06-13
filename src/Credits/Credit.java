@@ -1,9 +1,7 @@
 package src.Credits;
 import java.util.Date;
-import src.DataValidation;
-import src.Database;
-import src.Screen;
-import src.User;
+
+import src.*;
 import src.timer.AppTimer;
 import src.timer.MouseAction;
 
@@ -172,10 +170,9 @@ public class Credit extends Screen
 
         prevButton.addActionListener(e->
         {
-            frame.dispose();
-            if(prev_screen!=null){
-                prev_screen.frame.setVisible(true);
-            }
+            {
+                frame.dispose();
+                new MainScreen(user,null,new Screen()).CreateScreen();        }
 
         });
         frame.setSize(1080, 720);
