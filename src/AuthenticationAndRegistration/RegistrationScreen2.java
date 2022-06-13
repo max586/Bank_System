@@ -75,7 +75,7 @@ public class RegistrationScreen2 extends Screen{
                 if(!phone_nr_is_valid){phoneNrField.setText("Phone nr is invalid");}
                 //else{phoneNrField.setText("ok");}
                 if(!city_is_valid){cityField.setText("City is invalid");}
-                //else{cityField.setText("ok");}
+                //else{cityField.setText("ok");}wd
                 if(!post_code_is_valid){postCodeField.setText("Post code is invalid");}
                 //else{postCodeField.setText("ok");}
                 if(!street_is_valid){streetField.setText("Street is invalid");}
