@@ -2,7 +2,7 @@
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="src.transfers.StandingOrderNextStep">
   <grid id="27dc6" binding="StandingOrderNextPanel" layout-manager="GridBagLayout">
     <constraints>
-      <xy x="20" y="20" width="889" height="799"/>
+      <xy x="20" y="20" width="889" height="530"/>
     </constraints>
     <properties/>
     <border type="none"/>
@@ -29,12 +29,6 @@
           <verticalTextPosition value="1"/>
         </properties>
       </component>
-      <hspacer id="10f89">
-        <constraints>
-          <grid row="3" column="19" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-          <gridbag weightx="0.0" weighty="0.0"/>
-        </constraints>
-      </hspacer>
       <vspacer id="a47a0">
         <constraints>
           <grid row="7" column="4" row-span="1" col-span="8" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
@@ -74,18 +68,6 @@
       <hspacer id="9ff0d">
         <constraints>
           <grid row="3" column="2" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-          <gridbag weightx="0.0" weighty="0.0"/>
-        </constraints>
-      </hspacer>
-      <hspacer id="5817f">
-        <constraints>
-          <grid row="3" column="18" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-          <gridbag weightx="0.0" weighty="0.0"/>
-        </constraints>
-      </hspacer>
-      <hspacer id="d68e6">
-        <constraints>
-          <grid row="3" column="17" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
           <gridbag weightx="0.0" weighty="0.0"/>
         </constraints>
       </hspacer>
@@ -136,77 +118,12 @@
           <gridbag weightx="0.0" weighty="0.0"/>
         </constraints>
       </vspacer>
-      <vspacer id="effba">
-        <constraints>
-          <grid row="13" column="9" row-span="1" col-span="3" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
-          <gridbag weightx="0.0" weighty="0.0"/>
-        </constraints>
-      </vspacer>
-      <vspacer id="68a36">
-        <constraints>
-          <grid row="14" column="9" row-span="1" col-span="3" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
-          <gridbag weightx="0.0" weighty="0.0"/>
-        </constraints>
-      </vspacer>
-      <component id="5d02c" class="javax.swing.JLabel" binding="startPaymentLabel">
-        <constraints>
-          <grid row="15" column="4" row-span="1" col-span="8" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-          <gridbag weightx="0.0" weighty="0.0"/>
-        </constraints>
-        <properties>
-          <font name="Futura" size="20" style="0"/>
-          <text value="First payment on the day"/>
-        </properties>
-      </component>
-      <vspacer id="61f95">
-        <constraints>
-          <grid row="16" column="9" row-span="1" col-span="3" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
-          <gridbag weightx="0.0" weighty="0.0"/>
-        </constraints>
-      </vspacer>
-      <vspacer id="34736">
-        <constraints>
-          <grid row="19" column="11" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
-          <gridbag weightx="0.0" weighty="0.0"/>
-        </constraints>
-      </vspacer>
-      <vspacer id="9b23c">
-        <constraints>
-          <grid row="20" column="11" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
-          <gridbag weightx="0.0" weighty="0.0"/>
-        </constraints>
-      </vspacer>
       <vspacer id="fbb14">
         <constraints>
-          <grid row="21" column="9" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+          <grid row="14" column="9" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
           <gridbag weightx="0.0" weighty="0.0"/>
         </constraints>
       </vspacer>
-      <grid id="c1831" binding="startPaymentPanel" layout-manager="BorderLayout" hgap="0" vgap="0">
-        <constraints>
-          <grid row="17" column="4" row-span="2" col-span="8" vsize-policy="3" hsize-policy="3" anchor="9" fill="0" indent="0" use-parent-layout="false"/>
-          <gridbag weightx="0.0" weighty="0.0"/>
-        </constraints>
-        <properties>
-          <minimumSize width="200" height="50"/>
-          <preferredSize width="200" height="40"/>
-        </properties>
-        <border type="none"/>
-        <children/>
-      </grid>
-      <component id="a4395" class="javax.swing.JButton" binding="cancelButton">
-        <constraints>
-          <grid row="30" column="4" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-          <gridbag weightx="0.0" weighty="0.0"/>
-        </constraints>
-        <properties>
-          <font name="Futura" size="18" style="0"/>
-          <foreground color="-4520960"/>
-          <hideActionText value="false"/>
-          <preferredSize width="265" height="50"/>
-          <text value="Cancel"/>
-        </properties>
-      </component>
       <hspacer id="84f4b">
         <constraints>
           <grid row="10" column="8" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
@@ -228,33 +145,21 @@
           </model>
         </properties>
       </component>
-      <component id="e4ecc" class="javax.swing.JButton" binding="nextButton">
-        <constraints>
-          <grid row="30" column="15" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
-          <gridbag weightx="0.0" weighty="0.0"/>
-        </constraints>
-        <properties>
-          <font name="Futura" size="18" style="0"/>
-          <foreground color="-14566656"/>
-          <preferredSize width="265" height="50"/>
-          <text value="Next"/>
-        </properties>
-      </component>
       <vspacer id="47082">
         <constraints>
-          <grid row="33" column="14" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+          <grid row="26" column="14" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
           <gridbag weightx="0.0" weighty="1.0"/>
         </constraints>
       </vspacer>
       <vspacer id="92736">
         <constraints>
-          <grid row="32" column="14" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+          <grid row="25" column="14" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
           <gridbag weightx="0.0" weighty="0.0"/>
         </constraints>
       </vspacer>
       <vspacer id="cff82">
         <constraints>
-          <grid row="31" column="14" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+          <grid row="24" column="14" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
           <gridbag weightx="0.0" weighty="0.0"/>
         </constraints>
       </vspacer>
@@ -266,24 +171,13 @@
       </vspacer>
       <hspacer id="a339b">
         <constraints>
-          <grid row="15" column="13" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <grid row="13" column="13" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
           <gridbag weightx="0.0" weighty="0.0"/>
         </constraints>
       </hspacer>
-      <component id="acb1" class="javax.swing.JLabel" binding="startPaymentWarning">
-        <constraints>
-          <grid row="19" column="4" row-span="1" col-span="7" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-          <gridbag weightx="0.0" weighty="0.0"/>
-        </constraints>
-        <properties>
-          <font name="Futura" size="10" style="0"/>
-          <foreground color="-4521984"/>
-          <text value="This field is required"/>
-        </properties>
-      </component>
       <component id="a29e4" class="javax.swing.JRadioButton" binding="endDateRadioButton">
         <constraints>
-          <grid row="21" column="4" row-span="1" col-span="5" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="14" column="4" row-span="1" col-span="5" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
           <gridbag weightx="0.0" weighty="0.0"/>
         </constraints>
         <properties>
@@ -293,7 +187,7 @@
       </component>
       <component id="5c4f8" class="javax.swing.JLabel" binding="endPaymentLabel">
         <constraints>
-          <grid row="23" column="4" row-span="1" col-span="11" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="16" column="4" row-span="1" col-span="11" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
           <gridbag weightx="0.0" weighty="0.0"/>
         </constraints>
         <properties>
@@ -303,7 +197,7 @@
       </component>
       <grid id="7e6c" binding="endPaymentPanel" layout-manager="BorderLayout" hgap="0" vgap="0">
         <constraints>
-          <grid row="25" column="4" row-span="1" col-span="11" vsize-policy="3" hsize-policy="3" anchor="9" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="18" column="4" row-span="1" col-span="11" vsize-policy="3" hsize-policy="3" anchor="9" fill="0" indent="0" use-parent-layout="false"/>
           <gridbag weightx="0.0" weighty="0.0"/>
         </constraints>
         <properties>
@@ -315,7 +209,7 @@
       </grid>
       <component id="6debe" class="javax.swing.JLabel" binding="endPaymentWarning">
         <constraints>
-          <grid row="26" column="4" row-span="1" col-span="4" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="19" column="4" row-span="1" col-span="4" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
           <gridbag weightx="0.0" weighty="0.0"/>
         </constraints>
         <properties>
@@ -326,31 +220,31 @@
       </component>
       <vspacer id="e1021">
         <constraints>
-          <grid row="22" column="4" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+          <grid row="15" column="4" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
           <gridbag weightx="0.0" weighty="0.0"/>
         </constraints>
       </vspacer>
       <vspacer id="b4e8">
         <constraints>
-          <grid row="24" column="4" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+          <grid row="17" column="4" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
           <gridbag weightx="0.0" weighty="0.0"/>
         </constraints>
       </vspacer>
       <vspacer id="c9e40">
         <constraints>
-          <grid row="28" column="5" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+          <grid row="21" column="5" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
           <gridbag weightx="0.0" weighty="0.0"/>
         </constraints>
       </vspacer>
       <vspacer id="81b9f">
         <constraints>
-          <grid row="29" column="5" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+          <grid row="22" column="5" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
           <gridbag weightx="0.0" weighty="0.0"/>
         </constraints>
       </vspacer>
       <vspacer id="f7b82">
         <constraints>
-          <grid row="27" column="5" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+          <grid row="20" column="5" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
           <gridbag weightx="0.0" weighty="0.0"/>
         </constraints>
       </vspacer>
@@ -379,12 +273,6 @@
       <hspacer id="f4e21">
         <constraints>
           <grid row="10" column="3" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-          <gridbag weightx="1.0" weighty="0.0"/>
-        </constraints>
-      </hspacer>
-      <hspacer id="fcfba">
-        <constraints>
-          <grid row="11" column="16" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
           <gridbag weightx="1.0" weighty="0.0"/>
         </constraints>
       </hspacer>
@@ -424,6 +312,31 @@
           </hspacer>
         </children>
       </grid>
+      <component id="e4ecc" class="javax.swing.JButton" binding="nextButton">
+        <constraints>
+          <grid row="23" column="11" row-span="3" col-span="3" vsize-policy="0" hsize-policy="3" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font name="Futura" size="18" style="0"/>
+          <foreground color="-14566656"/>
+          <preferredSize width="265" height="50"/>
+          <text value="Next"/>
+        </properties>
+      </component>
+      <component id="a4395" class="javax.swing.JButton" binding="cancelButton">
+        <constraints>
+          <grid row="23" column="4" row-span="3" col-span="4" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font name="Futura" size="18" style="0"/>
+          <foreground color="-4520960"/>
+          <hideActionText value="false"/>
+          <preferredSize width="265" height="50"/>
+          <text value="Cancel"/>
+        </properties>
+      </component>
     </children>
   </grid>
 </form>

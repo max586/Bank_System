@@ -7,6 +7,12 @@ import src.timer.MouseAction;
 import javax.swing.*;
 import java.awt.event.*;
 import java.sql.Statement;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Date;
 
 public class AuthenticationScreen extends Screen {
     public JTextField usernameField;
@@ -28,6 +34,8 @@ public class AuthenticationScreen extends Screen {
     }
     @Override
     public void CreateScreen(){
+        updateStandingOrders();
+
         frame.setTitle("Authentication Screen");
         frame.setContentPane(panel);
         signInButton.addActionListener(new ActionListener(){
@@ -92,6 +100,38 @@ public class AuthenticationScreen extends Screen {
         });
         frame.setSize(800,600);
         frame.setVisible(true);
+    }
+    public void updateStandingOrders(){
+        String[][] standing_orders = Database.getStandingOrders();
+        for(int i=0;i<standing_orders.length;i++){
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+            LocalDate start_date = LocalDate.parse(standing_orders[i][1], formatter);
+            LocalDate cur_date = LocalDate.now();
+            int transfer_cycle=Integer.parseInt(standing_orders[i][2]);
+            if(standing_orders[i][3].equals("day")){
+                cur_date=cur_date.minusDays(transfer_cycle);
+            }
+            else if(standing_orders[i][3].equals("week")){
+                cur_date=cur_date.minusWeeks(transfer_cycle);
+            }
+            else{
+                cur_date=cur_date.minusMonths(transfer_cycle);
+            }
+            if(cur_date.isEqual(start_date) || cur_date.isAfter(start_date)){
+                float amount = Float.parseFloat(standing_orders[i][6]);
+                String username_from=Database.getUserNameByAccount(standing_orders[i][4],"Ordinary");
+                String username_to=Database.getUserNameByAccount(standing_orders[i][5],"Ordinary");
+                float account_balance_from = Database.getOrdinaryAccountBalance(username_from);
+                float account_balance_to = Database.getOrdinaryAccountBalance(username_to);
+                if(amount<=account_balance_from) {
+                    Database.setOrdinaryAccountBalance(username_from,account_balance_from-amount);
+                    Database.setOrdinaryAccountBalance(username_to,account_balance_to+amount);
+                    int id = Integer.parseInt(standing_orders[i][0]);
+                    String cur_dates = cur_date.format(formatter);
+                    Database.setStartDate(LocalDate.now().format(formatter), id);
+                }
+            }
+        }
     }
 
     public static void main(String[] args) {

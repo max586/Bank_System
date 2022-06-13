@@ -10,4 +10,6 @@ select * from Credits;
 select * from Cards;
 select * from HistoryOrdinary;
 select * from HistorySavings;
+select h.`Start Date`,h.`Transfer Cycle` ,h.`Transfer Cycle Units` ,h.`Account nr from` ,h.`Account nr to` ,h.`Transfer Amount`  from HistoryOrdinary h where `Transfer Type` = "standing order" and  (SELECT CURDATE())  <`End Date`;
+
 #select h.* from HistoryOrdinary h join OrdinaryAccounts o on h.`Account nr from` = o.`Account nucmber`where h.`Operation Date` >= '2022-06-05'and o.username='test_user';

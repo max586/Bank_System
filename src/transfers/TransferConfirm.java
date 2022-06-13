@@ -1,4 +1,5 @@
 package src.transfers;
+import com.mysql.cj.util.StringUtils;
 import src.Database;
 import src.MainScreen;
 import src.Screen;
@@ -15,8 +16,12 @@ import java.awt.event.*;
 import java.io.File;
 import java.io.IOException;
 import java.sql.Statement;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.Date;
 import java.util.Map;
 import java.util.Vector;
 
@@ -182,15 +187,26 @@ public class TransferConfirm {
                         }
                         else {town="";postCode="";street="";streetNumber="";}
                         appCodeWarning.setVisible(false);
-                        if(transferPanelTitle.equals("Standing Order")){
+                        if(transferPanelTitle.equals("standing order")){
                             if(accountChoosedUser==AccountChoosed.ORDINARYACCOUNT) {
-                                Database.addToHistory("HistoryOrdinary", generationDate, transferData.get("type"),
-                                        userAccountNumber, receiverAccountNr, "" ,Double.parseDouble(transferData.get("transferamount")),
-                                        transferData.get("currency"), Double.parseDouble(transferData.get("kwotaPLN")), transferData.get("title"),
-                                        transferData.get("startdate"), transferData.get("enddate"), Integer.parseInt(transferData.get("cicles")),
-                                        transferData.get("timeunit"),receiver.firstName,receiver.lastName,receiver.city,receiver.post_code,receiver.street,receiver.street_nr);
-                                setBalanceSender(user,AccountChoosed.ORDINARYACCOUNT);
-                                setBalanceReceiver();
+                                DateTimeFormatter dtf2 = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+                                String generationDate2 = dtf2.format(now);
+                                try {
+                                    Date dateFrom=new SimpleDateFormat("yyyy-MM-dd").parse(generationDate2);
+                                    Date dateTo = new SimpleDateFormat("yyyy-MM-dd").parse(transferData.get("startdate"));
+                                    Database.addToHistory("HistoryOrdinary", generationDate, transferData.get("type"),
+                                            userAccountNumber, receiverAccountNr, "" ,Double.parseDouble(transferData.get("transferamount")),
+                                            transferData.get("currency"), Double.parseDouble(transferData.get("totaltransferamount")), transferData.get("title"),
+                                            transferData.get("startdate"), transferData.get("enddate"), Integer.parseInt(transferData.get("cicles")),
+                                            transferData.get("timeunit"),receiver.firstName,receiver.lastName,receiver.city,receiver.post_code,receiver.street,receiver.street_nr);
+                                    if(!dateTo.after(dateFrom)) {
+                                        setBalanceSender(user, AccountChoosed.ORDINARYACCOUNT);
+                                        setBalanceReceiver();
+                                    }
+
+                                } catch (ParseException parseException) {
+                                    parseException.printStackTrace();
+                                }
                             }
                         }
                         else if(transferPanelTitle.equals("BLIK Phone Transfer")){
