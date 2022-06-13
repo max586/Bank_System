@@ -10,7 +10,7 @@ DROP TABLE if exists Users;
 create table Users(
 username varchar(30) not NULL PRIMARY key,
 `password` varchar(30) not null,
-email varchar(30),
+email varchar(50),
 appCode varchar(4)
 );
 
@@ -60,6 +60,7 @@ foreign key(username) references Users(username) on update cascade on delete cas
 );
 
 create table HistoryOrdinary(
+Id int NOT NULL AUTO_INCREMENT primary key,
 `Operation Date` datetime not null,
 `Transfer Type` varchar(50) not null,
 `Account nr from` varchar(28) not null,
@@ -83,6 +84,7 @@ create table HistoryOrdinary(
 );
 
 create table HistorySavings(
+Id int NOT NULL AUTO_INCREMENT primary key,
 `Operation Date` varchar(30) not null,
 `Transfer Type` varchar(50) not null,
 `Account nr from` varchar(28) not null,

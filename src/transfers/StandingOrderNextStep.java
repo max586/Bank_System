@@ -14,6 +14,7 @@ import java.beans.PropertyChangeListener;
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.util.Date;
@@ -27,12 +28,9 @@ public class StandingOrderNextStep {
     public JComboBox timeUnitsComboBox;
     public JTextField timeUnitsTxt;
     public JPanel StandingOrderNextPanel;
-    public JLabel startPaymentLabel;
-    public JPanel startPaymentPanel;
     public JPanel endPaymentPanel;
     public JButton cancelButton;
     public JButton nextButton;
-    public JLabel startPaymentWarning;
     public JRadioButton endDateRadioButton;
     public JLabel endPaymentLabel;
     public JLabel endPaymentWarning;
@@ -40,7 +38,6 @@ public class StandingOrderNextStep {
     public JLabel timeUnitsWarning2;
     public JPanel timerPanel;
     public JLabel timeLabel;
-    public JDateChooser dateChooserFrom;
     public JDateChooser dateChooserTo;
     public boolean isEndDateSelected;
     public Date dateFrom;
@@ -90,7 +87,7 @@ public class StandingOrderNextStep {
         dateTo = localDate;
         setTimeUnitsTxt();
         setTimeUnitsComboBox();
-        setStartPaymentPanel();
+        dateFrom = localDate;
         setEndDateRadioButton();
         setEndPaymentPanel();
         setNextButton();
@@ -100,7 +97,6 @@ public class StandingOrderNextStep {
         timeUnitsWarning.setVisible(false);
         timeUnitsWarning2.setVisible(false);
         endPaymentWarning.setVisible(false);
-        startPaymentWarning.setVisible(false);
     }
     void setNextButton(){
         nextButton.addActionListener(new ActionListener() {
@@ -153,7 +149,7 @@ public class StandingOrderNextStep {
                         transferData.put("cicles",timeUnitsTxt.getText());
                         transferData.put("timeunit",timeUnit);
                         SimpleDateFormat formatter = new SimpleDateFormat("dd.MM.yyyy");
-                        transferData.put("startdate",formatter.format(dateChooserFrom.getDate()));
+                        transferData.put("startdate",formatter.format(dateFrom));
                         if(isEndDateSelected) transferData.put("enddate",formatter.format(dateChooserTo.getDate()));
                         TransferNextStep transferNextStep = new TransferNextStep(accountChoosedUser, user,accountChoosedReceiver,receiver, transferData, frame, StandingOrderNextPanel);
                         frame.getjFrame().setContentPane(transferNextStep.getTransferNextStepPanel());
@@ -187,30 +183,6 @@ public class StandingOrderNextStep {
                 timeUnitsWarning2.setVisible(true);
             }
         });
-    }
-    void setStartPaymentPanel(){
-        dateChooserFrom = new JDateChooser();
-        dateChooserFrom.setFont(customFont);
-        dateChooserFrom.setDate(localDate);
-        dateChooserFrom.getDateEditor().addPropertyChangeListener(
-                new PropertyChangeListener() {
-                    @Override
-                    public void propertyChange(PropertyChangeEvent e) {
-                        if ("date".equals(e.getPropertyName())) {
-                            dateFrom = (Date) e.getNewValue();
-                            if(dateFrom.before(localDate)){
-                                dateFromValid = false;
-                                startPaymentWarning.setText("Date cannot be earlier than today");
-                                startPaymentWarning.setVisible(true);
-                            }
-                            else{
-                                dateFromValid = true;
-                                startPaymentWarning.setVisible(false);
-                            }
-                        }
-                    }
-                });
-        startPaymentPanel.add(dateChooserFrom);
     }
 
     void setEndPaymentPanel(){

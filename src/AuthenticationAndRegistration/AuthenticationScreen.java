@@ -128,7 +128,7 @@ public class AuthenticationScreen extends Screen {
                     Database.setOrdinaryAccountBalance(username_to,account_balance_to+amount);
                     int id = Integer.parseInt(standing_orders[i][0]);
                     String cur_dates = cur_date.format(formatter);
-                    Database.setStartDate(cur_dates, id);
+                    Database.setStartDate(LocalDate.now().format(formatter), id);
                 }
             }
         }

@@ -200,8 +200,8 @@ public class TransferConfirm {
                                             transferData.get("startdate"), transferData.get("enddate"), Integer.parseInt(transferData.get("cicles")),
                                             transferData.get("timeunit"),receiver.firstName,receiver.lastName,receiver.city,receiver.post_code,receiver.street,receiver.street_nr);
                                     if(!dateTo.after(dateFrom)) {
-                                        //setBalanceSender(user, AccountChoosed.ORDINARYACCOUNT);
-                                        //setBalanceReceiver();
+                                        setBalanceSender(user, AccountChoosed.ORDINARYACCOUNT);
+                                        setBalanceReceiver();
                                     }
 
                                 } catch (ParseException parseException) {
