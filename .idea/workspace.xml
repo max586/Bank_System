@@ -10,11 +10,101 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bea002ff-8e44-4e85-a29b-66b1294d710d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Documentation/.~lock.ProgramExecutionInstruction.odt#" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentation/.~lock.TestDocumentation.odt#" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Documentation/ProgramExecutionInstruction.odt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/activation.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/fontbox-2.0.26.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/javax.annotation-api-1.3.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/javax.annotation-api-1.3.21.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/moneta-convert-1.4.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/moneta-convert-1.4.21.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/moneta-convert-ecb-1.4.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/moneta-convert-ecb-1.4.21.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/moneta-core-1.4.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/moneta-core-1.4.21.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/money-api-1.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/money-api-1.11.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/mysql-connector-java-8.0.28.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/pdfbox-2.0.26.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/pdfbox-app-2.0.26.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/pdfbox-tools-2.0.26.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/preflight-2.0.26.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/xmpbox-2.0.26.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AuthenticationAndRegistration/AuthenticationScreen$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AuthenticationAndRegistration/AuthenticationScreen$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AuthenticationAndRegistration/AuthenticationScreen$3.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AuthenticationAndRegistration/AuthenticationScreen.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Credits/Credit$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Credits/Credit$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Credits/Credit.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Database.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/MainScreen$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/MainScreen$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/MainScreen$3.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/MainScreen$4.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/MainScreen$5.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/MainScreen$6.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/MainScreen$7.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/MainScreen$8.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/MainScreen.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/PreScreen.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Screen.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/User.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/mainFrame/MainFrame.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/timer/AppTimer$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/timer/AppTimer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/timer/MouseAction.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/transfers/AccountChoosed.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/StandingOrderNextStep$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/StandingOrderNextStep$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/TransferConfirm$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/src/transfers/TransferConfirm$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/transfers/StandingOrderNextStep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfers/StandingOrderNextStep.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/transfers/TransferConfirm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfers/TransferConfirm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentation/TestDocumentation.odt" beforeDir="false" afterPath="$PROJECT_DIR$/Documentation/TestDocumentation.odt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LaunchApp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LaunchApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/BankApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank_system_project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/bank_system_project.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bfg-1.14.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/activation.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/fontbox-2.0.26.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/javax.annotation-api-1.3.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/javax.annotation-api-1.3.21.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/javax.mail.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/jcalendar-1.4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/moneta-convert-1.4.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/moneta-convert-1.4.21.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/moneta-convert-ecb-1.4.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/moneta-convert-ecb-1.4.21.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/moneta-core-1.4.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/moneta-core-1.4.21.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/money-api-1.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/money-api-1.11.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/mysql-connector-java-8.0.28.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/pdfbox-2.0.26.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/pdfbox-app-2.0.26.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/pdfbox-tools-2.0.26.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/preflight-2.0.26.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/xmpbox-2.0.26.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/LaunchApp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/libs/activation.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/libs/fontbox-2.0.26.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/libs/javax.annotation-api-1.3.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/libs/javax.annotation-api-1.3.21.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/libs/javax.mail.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/libs/jcalendar-1.4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/libs/moneta-convert-1.4.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/libs/moneta-convert-1.4.21.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/libs/moneta-convert-ecb-1.4.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/libs/moneta-convert-ecb-1.4.21.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/libs/moneta-core-1.4.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/libs/moneta-core-1.4.21.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/libs/money-api-1.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/libs/money-api-1.11.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/libs/mysql-connector-java-8.0.28.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/libs/pdfbox-2.0.26.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/libs/pdfbox-app-2.0.26.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/libs/pdfbox-tools-2.0.26.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/libs/preflight-2.0.26.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/libs/xmpbox-2.0.26.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bank_system_project/user.conf" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bank_system_project/user.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user.conf" beforeDir="false" afterPath="$PROJECT_DIR$/user.conf" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,8 +176,8 @@
     "WebServerToolWindowFactoryState": "false",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit4",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4": "",
-    "last_opened_file_path": "/home/max/my_files/Money-laundering-system/src/Settings",
-    "project.structure.last.edited": "Artifacts",
+    "last_opened_file_path": "/home/max/my_files/Money-laundering-system/lib",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2"
   }
@@ -106,7 +196,7 @@
       <recent name="src.AuthenticationAndRegistration" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.LaunchApp">
+  <component name="RunManager" selected="Application.BankApp">
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -133,8 +223,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LaunchApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="LaunchApp" />
+    <configuration name="BankApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="BankApp" />
       <module name="bank_system_project" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -181,15 +271,15 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.BankApp" />
       <item itemvalue="Application.AuthenticationScreen" />
-      <item itemvalue="Application.LaunchApp" />
       <item itemvalue="JUnit.CreditTest.takeNewCreditTest" />
       <item itemvalue="JUnit.All in bank_system_project" />
       <item itemvalue="JUnit.AuthenticationScreenTest.validUserTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.LaunchApp" />
+        <item itemvalue="Application.BankApp" />
         <item itemvalue="Application.AuthenticationScreen" />
         <item itemvalue="JUnit.CreditTest.takeNewCreditTest" />
         <item itemvalue="JUnit.All in bank_system_project" />
@@ -215,13 +305,6 @@
       <workItem from="1654952491695" duration="742000" />
       <workItem from="1655017719891" duration="6286000" />
       <workItem from="1655061417276" duration="4789000" />
-    </task>
-    <task id="LOCAL-00009" summary="duplicated windows bug solved">
-      <created>1654255869454</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1654255869454</updated>
     </task>
     <task id="LOCAL-00010" summary="duplicated windows bug solved">
       <created>1654525866490</created>
@@ -559,7 +642,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655101265487</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="standing order fixed">
+      <created>1655103145515</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1655103145515</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
