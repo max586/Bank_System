@@ -209,20 +209,7 @@
       <workItem from="1654952491695" duration="742000" />
       <workItem from="1655017719891" duration="6286000" />
       <workItem from="1655061417276" duration="4789000" />
-    </task>
-    <task id="LOCAL-00010" summary="duplicated windows bug solved">
-      <created>1654525866490</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1654525866490</updated>
-    </task>
-    <task id="LOCAL-00011" summary="junit test classes added(tests folder)">
-      <created>1654540390519</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1654540390519</updated>
+      <workItem from="1655109238432" duration="140000" />
     </task>
     <task id="LOCAL-00012" summary="123">
       <created>1654540511815</created>
@@ -553,7 +540,21 @@
       <option name="project" value="LOCAL" />
       <updated>1655103145515</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="sth fixed">
+      <created>1655109270108</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1655109270108</updated>
+    </task>
+    <task id="LOCAL-00060" summary="sth fixed">
+      <created>1655109312064</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1655109312064</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -609,10 +610,10 @@
     <MESSAGE value="sth added" />
     <MESSAGE value="fixed timer" />
     <MESSAGE value="fixed timer AGAIN" />
-    <MESSAGE value="sth fixed" />
     <MESSAGE value="standing order update added" />
     <MESSAGE value="standing order fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="standing order fixed" />
+    <MESSAGE value="sth fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="sth fixed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
