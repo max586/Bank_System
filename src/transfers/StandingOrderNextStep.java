@@ -149,7 +149,7 @@ public class StandingOrderNextStep {
                         }
                     }
                     if(!validation.contains(false)){
-                        transferData.replace("type","Standing order "+"every "+timeUnitsTxt.getText()+" "+timeUnit);
+                        transferData.replace("type","Standing Order "+"every "+timeUnitsTxt.getText()+" "+timeUnit);
                         transferData.put("cicles",timeUnitsTxt.getText());
                         transferData.put("timeunit",timeUnit);
                         SimpleDateFormat formatter = new SimpleDateFormat("dd.MM.yyyy");
@@ -275,16 +275,7 @@ public class StandingOrderNextStep {
     }
     void setTimeUnitsTxt(){
         timeUnitsTxt.setDocument(new LimitJTextField(3));
-        //timeUnitsTxt.addKeyListener(numbersOnly);
-        timeUnitsTxt.addKeyListener(new KeyAdapter() {
-            @Override
-            public void keyTyped(KeyEvent e) {
-                char c = e.getKeyChar();
-                if ( ((c < '1') || (c > '9')) && (c != KeyEvent.VK_BACK_SPACE)) {
-                    e.consume();
-                }
-            }
-        });
+        timeUnitsTxt.addKeyListener(numbersOnly);
     }
     public JPanel getStandingOrderNextPanel(){
         return StandingOrderNextPanel;
