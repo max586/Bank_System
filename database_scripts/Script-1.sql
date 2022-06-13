@@ -10,4 +10,7 @@ select * from Credits;
 select * from Cards;
 select * from HistoryOrdinary;
 select * from HistorySavings;
+select h.`Account nr from` ,h.`Account nr to` ,h.`Transfer Amount`  from HistoryOrdinary h
+where ((SELECT CURDATE() AS Today)-h.`Start Date`)  <= 
+
 #select h.* from HistoryOrdinary h join OrdinaryAccounts o on h.`Account nr from` = o.`Account nucmber`where h.`Operation Date` >= '2022-06-05'and o.username='test_user';

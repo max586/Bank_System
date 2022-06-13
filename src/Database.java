@@ -37,6 +37,37 @@ public class Database
             System.out.println(e);}  
         return st;
     }
+    public static String[][] getStandingOrders(){
+        try {
+            ResultSet  rs = st.executeQuery("select count(*) from HistoryOrdinary h where `Transfer Type` = 'standing order' and  (SELECT CURDATE())  <`End Date`;");
+            rs.next();
+            int rows_number = rs.getInt(1);
+            String[][] rez = new String[rows_number][7];
+            rs = st.executeQuery("select h.Id, h.`Start Date`,h.`Transfer Cycle` ,h.`Transfer Cycle Units` ,h.`Account nr from` ,h.`Account nr to` ,h.`Transfer Amount`  from HistoryOrdinary h where `Transfer Type` = 'standing order' and  (SELECT CURDATE())  <`End Date`;");
+            rs.next();
+            for(int i=0;i<rows_number;i++){
+                for(int j=0;j<7;j++) {
+                    rez[i][j]=rs.getString(j+1);
+                }
+                rs.next();
+            }
+            return rez;
+        } catch (SQLException e) {
+            //TODO: handle exception
+            System.out.println("Couldn't execute the query");
+        System.out.println(e);
+        }
+        return null;
+    }
+    public static void setStartDate(String start_date,int id){
+        try{
+            st.executeUpdate("update HistoryOrdinary set `Start date`='"+start_date+"' where Id='"+id+"';");
+        } catch (SQLException e) {
+            //TODO: handle exception
+            System.out.println("Couldn't execute the query");
+            System.out.println(e);
+        }
+    }
     public static void addUser(String username, String password, String email, String app_code){
         try {
             st.executeUpdate("insert into Users values('"+username+"','"+password+"','"+email+"','"+app_code+"');");
@@ -99,7 +130,7 @@ public class Database
                                      String transferCycleUnits,String first_name,String last_name,String town,
                                     String postcode, String street, String street_nr){
                 try {
-                    st.executeUpdate("insert into "+database+" values('"+operationDate+"','"+transferType+"','"+senderAccountNumber+"','"
+                    st.executeUpdate("insert into "+database+"(`Operation Date`,`Transfer Type`,`Account nr from`,`Account nr to`,`Phone nr to`,`Transfer Amount`,`Transfer Currency`,`Total Transfer Cost`,`Transfer Title`,`Start Date`,`End Date`,`Transfer Cycle`,`Transfer Cycle Units`,`First name`,`Last name`,`Town`,`Postcode`,`Street`,`Street number`) values('"+operationDate+"','"+transferType+"','"+senderAccountNumber+"','"
                             +receiverAccountNumber+"','"+phone_nr+"','"+transferAmount+"','"+transferCurrency+"','"+totalTransferCost+"','"
                             +transferTitle+"','"+startDate+"','"+endDate+"','"+transferCycle+"','"+transferCycleUnits+"','"+
                             first_name+"','"+last_name+"','"+town+"','"+postcode+"','"+street+"','"+street_nr+"');");
