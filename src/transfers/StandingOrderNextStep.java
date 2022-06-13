@@ -145,10 +145,10 @@ public class StandingOrderNextStep {
                         }
                     }
                     if(!validation.contains(false)){
-                        transferData.replace("type","Standing Order "+"every "+timeUnitsTxt.getText()+" "+timeUnit);
+                        transferData.replace("type","standing order");
                         transferData.put("cicles",timeUnitsTxt.getText());
                         transferData.put("timeunit",timeUnit);
-                        SimpleDateFormat formatter = new SimpleDateFormat("dd.MM.yyyy");
+                        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
                         transferData.put("startdate",formatter.format(dateFrom));
                         if(isEndDateSelected) transferData.put("enddate",formatter.format(dateChooserTo.getDate()));
                         TransferNextStep transferNextStep = new TransferNextStep(accountChoosedUser, user,accountChoosedReceiver,receiver, transferData, frame, StandingOrderNextPanel);

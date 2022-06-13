@@ -187,13 +187,13 @@ public class TransferConfirm {
                         }
                         else {town="";postCode="";street="";streetNumber="";}
                         appCodeWarning.setVisible(false);
-                        if(transferPanelTitle.equals("Standing Order")){
+                        if(transferPanelTitle.equals("standing order")){
                             if(accountChoosedUser==AccountChoosed.ORDINARYACCOUNT) {
-                                DateTimeFormatter dtf2 = DateTimeFormatter.ofPattern("dd.MM.yyyy");
+                                DateTimeFormatter dtf2 = DateTimeFormatter.ofPattern("yyyy-MM-dd");
                                 String generationDate2 = dtf2.format(now);
                                 try {
-                                    Date dateFrom=new SimpleDateFormat("dd.MM.yyyy").parse(generationDate2);
-                                    Date dateTo = new SimpleDateFormat("dd.MM.yyyy").parse(transferData.get("startdate"));
+                                    Date dateFrom=new SimpleDateFormat("yyyy-MM-dd").parse(generationDate2);
+                                    Date dateTo = new SimpleDateFormat("yyyy-MM-dd").parse(transferData.get("startdate"));
                                     Database.addToHistory("HistoryOrdinary", generationDate, transferData.get("type"),
                                             userAccountNumber, receiverAccountNr, "" ,Double.parseDouble(transferData.get("transferamount")),
                                             transferData.get("currency"), Double.parseDouble(transferData.get("totaltransferamount")), transferData.get("title"),
